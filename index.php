@@ -78,6 +78,9 @@
       ga('create', 'UA-44441011-2', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <meta name="google-site-verification" content="YgnQtrZEtnYHo_da7UW1Ixj8NRA9WNH4MvU5nW0nBvA" />
+
 	</head>
 
 	<body>
