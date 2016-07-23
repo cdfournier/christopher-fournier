@@ -116,8 +116,8 @@
       <ul>
         <li><a href="mailto:chris.d.fournier@gmail.com?subject=Hi!"><i class="icon ion-ios-email"></i>Email</a></li>
         <li><a href="tel:6178999004"><i class="icon ion-ios-telephone"></i>Phone</a></li>
-        <li><a href="http://www.linkedin.com/pub/christopher-fournier/29/887/942/" target="_blank"><i class="icon ion-social-linkedin"></i>LinkedIn</a></li>
-        <li><a href="assets/docs/christopher-fournier-resume.pdf" target="_blank"><i class="icon ion-document"></i>Resume</a></li>
+        <li><a href="http://www.linkedin.com/pub/christopher-fournier/29/887/942/" target="_blank" rel="noopener"><i class="icon ion-social-linkedin"></i>LinkedIn</a></li>
+        <li><a href="assets/docs/christopher-fournier-resume.pdf" target="_blank" rel="noopener"><i class="icon ion-document"></i>Resume</a></li>
       </ul>
     </section> <!-- close contact -->
 
@@ -137,25 +137,25 @@
       <q>The only place success comes before work is in the dictionary.</q><cite>Vince Lombardi</cite>
         <article>
           <h2>2012 to Today</h2>
-          <h3><a href="https://www.panerabread.com/en-us/home.html" target="_blank">Panera Bread</a></h3>
+          <h3><a href="https://www.panerabread.com/en-us/home.html" target="_blank" rel="noopener">Panera Bread</a></h3>
           <h3>Senior Manager, Digital Marketing</h3>
-          <p>Leads internal team supporting <a href="https://www.panerabread.com/en-us/home.html" target="_blank">panerabread.com</a>. Ensures cohesive brand experience across site attributes and functionality resulting in a 26% increase in sessions, 24% increase in users, 60% increase in average session duration, and a drop of 1.37% in the bounce rate. Directed development, deployment and promotion of a web-based, template-driven asset management system to improve local marketing through application of national brand standards generating a 167% increase in users, 503% increase in photography downloads, and a 375% increase in approved, brand-sanctioned marketing collateral.</p>
+          <p>Leads internal team supporting <a href="https://www.panerabread.com/en-us/home.html" target="_blank" rel="noopener">panerabread.com</a>. Ensures cohesive brand experience across site attributes and functionality resulting in a 26% increase in sessions, 24% increase in users, 60% increase in average session duration, and a drop of 1.37% in the bounce rate. Directed development, deployment and promotion of a web-based, template-driven asset management system to improve local marketing through application of national brand standards generating a 167% increase in users, 503% increase in photography downloads, and a 375% increase in approved, brand-sanctioned marketing collateral.</p>
         </article>
         <article>
           <h2>2007 to 2012</h2>
-          <h3><a href="https://www.panerabread.com/en-us/home.html" target="_blank">Panera Bread</a></h3>
+          <h3><a href="https://www.panerabread.com/en-us/home.html" target="_blank" rel="noopener">Panera Bread</a></h3>
           <h3>Senior Manager, Marketing Services</h3>
-          <p>Worked cross-functionally with Catering, Loyalty, Field Marketing, Retail Advertising, Public Relations, and Franchise on Marketing Special projects. Implemented internal process improvements to ensure coordinated marketing efforts in support of multiple sales driving initiatives. Led creative development and marketing implementation under CEO and founder <a href="http://ronshaich.com/" target="_blank">Ron Shaich</a>, building <a href="http://paneracares.org/" target="_blank">Panera Cares&#8482;</a>, a charitable foundation created to address the epidemic of hunger in the United States.</p>
+          <p>Worked cross-functionally with Catering, Loyalty, Field Marketing, Retail Advertising, Public Relations, and Franchise on Marketing Special projects. Implemented internal process improvements to ensure coordinated marketing efforts in support of multiple sales driving initiatives. Led creative development and marketing implementation under CEO and founder <a href="http://ronshaich.com/" target="_blank" rel="noopener">Ron Shaich</a>, building <a href="http://paneracares.org/" target="_blank" rel="noopener">Panera Cares&#8482;</a>, a charitable foundation created to address the epidemic of hunger in the United States.</p>
         </article>
         <article>
           <h2>2007</h2>
-          <h3><a href="https://www.partnersandsimons.com/" target="_blank">PARTNERS+simons</a></h3>
+          <h3><a href="https://www.partnersandsimons.com/" target="_blank" rel="noopener">PARTNERS+simons</a></h3>
           <h3>Creative Traffic Manager</h3>
           <p>Managed timelines, workflow and resources for marketing projects for clients including Blue Cross/Blue Shield, Sovereign Bank, Genzyme, and others in the health care and financial industries, including delivery and execution of coordinated multi-channel marketing campaigns comprised of print, online advertising, website development, out of home, and broadcast media. Coordinated project work with client account managers, copywriters, designers, and production.</p>
         </article>
         <article>
           <h2>2004 to 2007</h2>
-          <h3><a href="https://www.linkedin.com/company/vertis-communications" target="_blank">Vertis Communication</a></h3>
+          <h3><a href="https://www.linkedin.com/company/vertis-communications" target="_blank" rel="noopener">Vertis Communication</a></h3>
           <h3>Creative Traffic Manager</h3>
           <p>Managed L.L. Bean client relationship, including creative development and production of materials in support of L.L. Bean’s catalog, retail and e-commerce business. Directed support resources for all layout and photography deliverables. Reduced costly on-press errors by 97% and decreased internal production time 18% by implementing improved workflows and quality control. </p>
         </article>
