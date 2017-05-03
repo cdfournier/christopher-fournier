@@ -1,0 +1,1293 @@
+/* ------------------------------------------
+  COLOR
+---------------------------------------------
+/*
+	White
+	#ffffff;
+	rgba(255,255,255,1);
+
+	Cream
+	#eef1e8;
+	rgba(238,241,232,1);
+
+	Green
+	#384332;
+	rgba(56,67,50,1)
+	
+	Orange
+	#e85c45;
+	rgba(232,92,69,1);
+*/
+
+
+/* ------------------------------------------
+  FONTS
+--------------------------------------------- */
+
+@font-face {
+  font-family: "metropolis-thin";
+    src: url("../fonts/metropolis/metropolis-thin.eot");
+    src: url("../fonts/metropolis/metropolis-thin.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-thin.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-thin.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-thin.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-light";
+    src: url("../fonts/metropolis/metropolis-light.eot");
+    src: url("../fonts/metropolis/metropolis-light.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-light.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-light.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-regular";
+    src: url("../fonts/metropolis/metropolis-regular.eot");
+    src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-bold";
+    src: url("../fonts/metropolis/metropolis-bold.eot");
+    src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gonzocons";
+    src: url("../fonts/gonzocons/gonzocons.eot");
+    src: url("../fonts/gonzocons/gonzocons.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/gonzocons/gonzocons.woff") format("woff"),
+         url("../fonts/gonzocons/gonzocons.ttf") format("truetype"),
+         url("../fonts/gonzocons/gonzocons.svg#gonzocons/gonzocons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ------------------------------------------
+  BASE SITE STYLES
+--------------------------------------------- */
+
+html, body {
+  width: 100%;
+  height: 100%;
+	overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+  background-color: #ffffff;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+::selection {
+  background: #384332;
+  color: #ffffff;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: initial;
+	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media (min-width: 41.6875em) {body {font-size: 112.5%;}}
+
+@media (min-width: 48em) {body {font-size: 125%;}}
+
+
+/* ------------------------------------------
+  TYPOGRAPHY
+--------------------------------------------- */
+
+h1, h2, p {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+	padding: 0;
+	font-weight: normal;
+  color: #384332;
+}
+
+h1 {
+	margin: 0 0 0.25em;
+	font-family: "metropolis-thin", sans-serif;
+	font-size: 2em;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+h1 span {
+	display: block;
+	width: 100%;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 0.375em;
+  line-height: 2;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: "metropolis-thin", sans-serif;
+	font-size: 1.25em;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+h2 span {
+	display: block;
+	width: 100%;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 0.75em;
+  line-height: 2.25;
+	text-transform: uppercase;
+}
+
+p, strong {
+  width: 100%;
+	margin: 0;
+	padding: 0;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 0.825em;
+	font-weight: normal;
+	line-height: 1.5;
+  color: #384332;
+}
+
+h1 a, h2 a, p a {
+  font-family: "metropolis-regular", sans-serif;
+  text-decoration: none;
+  color: #384332;
+	opacity: 1;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover,
+h1 a:focus, h2 a:focus, h3 a:focus,
+p a:hover, p a:focus {color: #e85c45;}
+
+strong {
+  display: block;
+  margin: 0.25em 0;
+  font-family: "metropolis-regular", sans-serif;
+  line-height: 1.25;
+}
+
+small {
+  width: 100%;
+	margin: 0;
+	padding: 0;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 0.675em;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: left;
+  color: #384332;
+}
+
+
+/* ------------------------------------------
+  BUTTONS
+--------------------------------------------- */
+
+.button {
+  display: inline-block;
+	width: auto;
+  margin: 1em auto 0;
+	padding: 0.675em 1.5em 0.5em 1.5em;
+	border: 1px solid #384332;
+  font-family: "metropolis-bold", sans-serif;
+	font-size: 0.675em;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #384332;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.button:hover, .button:focus {
+	color: #ffffff;
+	background-color: #384332;
+}
+
+.button.white {
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.button.white:hover, .button.white:focus {
+	color: #384332;
+	background-color: #ffffff;
+}
+
+
+/* ------------------------------------------
+	HEADER
+--------------------------------------------- */
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 1em 0;
+  background-color: transparent;
+}
+
+
+/* ------------------------------------------
+  NAVIGATION
+--------------------------------------------- */
+
+nav {width: 100%;}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+	width: 100%;
+	margin: 0;
+	padding: 0 1em;
+	list-style-type: none;
+	column-span: all;
+}
+
+nav li {
+  display: block;
+  width: initial;
+  margin: 0 1em 0 0;
+  padding: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 0.75em;
+  font-weight: inherit;
+  line-height: 1;
+  text-transform: capitalize;
+  color: #ffffff;
+  opacity: 1;
+}
+
+nav li:last-child {
+  position: absolute;
+  right: 0;
+}
+
+nav li a {
+  position: relative;
+  padding-bottom: 0.5em;
+  color: #ffffff;
+}
+
+nav li a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  content: "";
+  transition: width 0.2s;
+}
+
+nav li a:hover, nav li a:focus {color: #ffffff;}
+
+nav li a:hover:after, nav li a:focus:after, nav li a.active:after {width: 100%;}
+
+nav li a.active {color: #ffffff;}
+
+
+/* ------------------------------------------
+  FOOTER
+--------------------------------------------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 100%;
+	margin: 0;
+	padding: 1em;	
+  background-color: #384332;
+}
+
+footer h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+	width: inherit;
+	margin: 1em auto 0;
+	padding: 0;
+	list-style-type: none;
+  font-family: "metropolis-regular", sans-serif;
+	font-size: 0.625em;
+	font-weight: inherit;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 0;
+	padding: 0 1em;
+	text-align: center;
+}
+
+footer ul li a {
+  color: #ffffff;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+footer ul li a:hover, footer ul li a:focus {color: #e85c45;}
+
+footer ul li a:hover span.icon-email, footer ul li a:focus span.icon-email,
+footer ul li a:hover span.icon-mobile, footer ul li a:focus span.icon-mobile,
+footer ul li a:hover span.icon-linkedin, footer ul li a:focus span.icon-linkedin,
+footer ul li a:hover span.icon-article, footer ul li a:focus span.icon-article,
+footer ul li a:hover span.icon-arrow-up, footer ul li a:focus span.icon-arrow-up {color: #e85c45;}
+
+.icon-email, .icon-mobile, .icon-linkedin, .icon-article, .icon-arrow-up {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+p.copyright {
+  width: 100%;
+	margin: 0;
+	padding: 2em 1em 0;	
+  font-family: "metropolis-regular", sans-serif;
+	font-size: 0.675em;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+}
+
+@media (min-width: 35.5em) {footer ul {width: 50%;}}
+
+
+/* ------------------------------------------
+  JUMP
+--------------------------------------------- */
+
+.jump {
+  position: absolute;
+  z-index: 25;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3em 0 0;
+  text-align: center;
+}
+
+.jump a {
+  font-family: "metropolis-bold", sans-serif;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	color: transparent;
+}
+
+.jump a:hover, .jump a:focus {color: #ffffff;}
+
+
+/* ------------------------------------------
+	BANNERS
+--------------------------------------------- */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.banner .background-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-attachment: inherit;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner .copy {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6em 2em;
+}
+
+.banner .copy h1, .banner .copy p {color: #ffffff;}
+
+.banner.home .copy h1 {
+	font-size: 2.25em;
+	text-transform: uppercase;
+}
+
+.banner.home .copy h1, .banner.home .copy p {text-align: center;}
+
+@media (min-width: 48em) {
+.banner .copy {padding: 10em 2em;}
+.banner .background-image {background-attachment: fixed;}}
+
+
+/* ------------------------------------------
+  TOOLS
+--------------------------------------------- */
+
+.tools {padding: 0 0 3em;}
+
+.tools .background-image {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  height: auto;
+  margin: -6em auto 0;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 48em) {.tools {padding: 0 0 6em;}}
+
+
+/* ------------------------------------------
+  TALENTS
+--------------------------------------------- */
+
+.talents {padding: 2em 0;}
+
+.talents h1 {text-align: center;}
+
+.talents ul {
+  display: flex;
+  flex-direction: column;
+	width: 80%;
+	margin: 1em auto;
+	padding: 0;
+	list-style-type: none;
+}
+
+.talents ul li {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em 0;
+	border-bottom: 1px solid #999999;
+}
+
+.talents ul li:first-child {padding: 0 0 1em;}
+
+.talents ul li:last-child {border-bottom: none;}
+
+@media (min-width: 64em) {.talents ul {width: 60%;}}
+
+
+/* ------------------------------------------
+  PREVIEW CARDS
+--------------------------------------------- */
+
+.preview {text-align: center;}
+
+.preview-cta {
+	display: inline-block;
+  position: relative;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.preview-cta a {
+	display: inline-block;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 0.75em;
+	font-weight: normal;
+  text-transform: uppercase;
+  color: #384332;
+}
+
+.preview-cta a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #384332;
+  content: "";
+  transition: width 0.2s;
+}
+
+.preview-cta a:hover, .preview-cta a:focus {color: #384332;}
+
+.preview-cta a:hover:after, .preview-cta a:focus:after {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.preview .card {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 2em 0;
+  background-color: #ffffff;
+}
+
+.preview .card:last-of-type {padding: 2em;}
+
+.preview .card .background-image {
+	position: relative;
+	width: 35%;
+	margin: 0;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.preview .card .background-image.big {width: 65%;}
+
+.preview .card .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0 0;
+}
+
+.preview .card .copy h2, .preview .card .copy p {text-align: center;}
+
+@media (min-width: 30em) {
+.preview .card {flex-direction: row;}
+.preview .card.reverse {flex-direction: row-reverse;}
+.preview .card .copy {padding: 0 0 0 2em;}
+.preview .card.reverse .copy {padding: 0;}
+.preview .card .copy h2, .preview .card .copy p {text-align: left;}
+.preview .card .copy .button {margin: 1em auto 0 0;}}
+
+@media (min-width: 48em) {.preview .card {width: 80%;}}
+
+
+/* ------------------------------------------
+  STUDIES CARDS
+--------------------------------------------- */
+
+.studies {text-align: center;}
+
+.studies .card {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 2em 0;
+  background-color: #ffffff;
+}
+
+.studies .card:last-of-type {padding: 2em;}
+
+.studies .card .background-image {
+	position: relative;
+	width: 35%;
+	margin: 0;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.studies .card .background-image.big {width: 65%;}
+
+.studies .card .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1em;
+}
+
+.studies .card.wide {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 2em auto 0;
+  padding: 0;
+}
+
+.studies .card.wide .background-image {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.studies .card.wide .details {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0.125em;
+	left: 0;
+	background-color: rgba(0,0,0,0.25);
+}
+
+.studies .card.wide .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.studies .card.wide .copy h2, .studies .card.wide .copy p {
+	text-align: left;
+	color: #ffffff;
+}
+
+.studies .card.wide .copy .button {margin: 1em auto 0 0;}
+
+@media (min-width: 30em) {
+.studies .card {flex-direction: row;}
+.studies .card.reverse {flex-direction: row-reverse;}
+.studies .card .copy {padding: 0 0 0 2em;}
+.studies .card.reverse .copy {padding: 0;}
+.studies .card .copy h2, .studies .card .copy p {text-align: left;}
+.studies .card .copy .button {margin: 1em auto 0 0;}}
+
+@media (min-width: 48em) {
+.studies .card {width: 80%;}
+.studies .card .copy {padding: 0;}
+.studies .card.reverse .copy {padding: 0 0 0 2em;}}
+
+
+/* ------------------------------------------
+  PROJECT CARDS
+--------------------------------------------- */
+
+.project .card {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 2em 0;
+  background-color: #ffffff;
+}
+
+.project .card:last-of-type {padding: 2em;}
+
+.project .card .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1em;
+}
+
+.project .card .copy:last-of-type {padding: 0;}
+
+.project .card .copy h2, .project .card .copy p {text-align: left;}
+
+.project .card .copy h2 {margin: 0.5em 0;}
+
+.project .card .copy h2:first-of-type {margin: 0 0 0.5em;}
+
+.project .card .copy p {margin: 0 0 1em;}
+
+.project .card .copy p:last-of-type {margin: 0;}
+
+.project .card .background-image {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 2em 0 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.project .card.reverse .background-image {padding: 0 0 2em;}
+
+.project .card .row {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.project .card .row .background-image:first-of-type {padding: 0 0 1em 0;}
+
+.project .card .row .background-image:last-of-type {padding: 1em 0 0 0;}
+
+.project .card.wide {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 2em 0;
+  background-color: #ffffff;
+}
+
+.project .card.wide .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1em;
+}
+
+.project .card.wide .background-image {padding: 0;}
+
+.project .card.wide:last-of-type {padding: 2em;}
+
+@media (min-width: 30em) {
+.project .card .row {flex-direction: row;}
+.project .card .row .background-image:first-of-type {padding: 0 1em 0 0;}
+.project .card .row .background-image:last-of-type {padding: 0 0 0 1em;}}
+
+@media (min-width: 41.6875em) {
+.project .card {flex-direction: row;}
+.project .card .background-image {padding: 0 0 0 1em;}
+.project .card.reverse {flex-direction: row-reverse;}
+.project .card.reverse .background-image {padding: 0 0 0 1em;}
+.project .card .row .background-image:first-of-type {padding: 0 1em 0 0;}
+.project .card .row .background-image:last-of-type {padding: 0 0 0 1em;}
+.project .card .copy {padding: 0 1em 0 0;}
+.project .card .copy:last-of-type {padding: 0 1em 0 0;}}
+
+
+/* ------------------------------------------
+  TEASE CARDS
+--------------------------------------------- */
+
+.tease {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tease .card {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2em 2em 2em;
+  background-color: #ffffff;
+}
+
+.tease .card.wide {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tease .card.wide .background-image {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tease .card.wide .details {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0.25em;
+	left: 0;
+	background-color: rgba(0,0,0,0.25);
+}
+
+.tease .card.wide .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.tease .card.wide .copy h2, .tease .card.wide .copy p {
+	text-align: left;
+	color: #ffffff;
+}
+
+.tease .card.wide .copy .button {margin: 1em auto 0 0;}
+
+@media (min-width: 41.6875em) {
+.tease {flex-direction: row;}
+.tease .card:first-of-type {padding: 0 1em 2em 2em;}
+.tease .card:last-of-type {padding: 0 2em 2em 1em;}
+.tease .card.wide {padding: 0;}
+}
+
+/* ------------------------------------------
+  PROFILE
+--------------------------------------------- */
+
+.profile {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 0 0;
+  background-color: #eef1e8;
+}
+
+.profile-copy {
+	width: 100%;
+/* 	padding: 0 2em 1em 2em; */
+	padding: 0 2em 2em 2em;
+	text-align: left;
+}
+
+.profile-image {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.profile-image .background-image {
+	position: relative;
+	width: 80%;
+	margin: 0 auto -0.195em;
+	padding: 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media (min-width: 30em) {
+.profile {
+	align-items: flex-end;
+	flex-direction: row;
+	padding: 0;
+}
+.profile-copy {
+  width: 100%;
+  padding: 2em 0 2em 2em;
+}
+.profile-image {padding: 1em 0 0;}
+.profile-copy h1, .profile-copy p {text-align: left;}}
+
+@media (min-width: 41.6875em) {
+.profile {
+	align-items: center;
+}
+.profile-copy {
+  width: 100%;
+/*   padding: 0 0 0 2em; */
+}}
+
+
+/* ------------------------------------------
+  MAXIMS
+--------------------------------------------- */
+
+.maxims {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  margin: -0.125em auto 0;
+  padding: 2em;
+  background-color: #eef1e8;
+}
+
+.maxims-carousel {
+	width: 100%;
+	padding-bottom: 11em;
+}
+
+.maxims-carousel .flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
+
+.maxims-carousel .carousel-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.maxims-carousel .carousel-cell h2 {margin: 0 0 0.5em;}
+
+.maxims-carousel .flickity-page-dots {bottom: 1em;}
+
+.maxims-carousel .flickity-page-dots .dot {
+  margin: 0 0.25em;
+  width: 0.675em;
+  height: 0.675em;
+  border: 2px solid #384332;
+  background: transparent;
+  opacity: 1;
+}
+
+.maxims-carousel .flickity-page-dots .dot.is-selected {background: #384332;}
+
+
+/* ------------------------------------------
+  DOWNLOAD
+--------------------------------------------- */
+
+.download {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  margin: 0 auto 0;
+  padding: 2em;
+  background-color: #eef1e8;
+}
+
+.download h1, .download h2, .download p {color: #384332;}
+
+.download h2 {padding: 2em 0 1em;}
+
+.download .button {
+	margin: 2em auto 0 0;
+	border: 1px solid #384332;
+	color: #384332;
+}
+
+.download .button:hover, .download .button:focus {
+	background-color: #384332;
+	color: #eef1e8;
+}
+
+
+/* ------------------------------------------
+  EXPERIENCE
+--------------------------------------------- */
+
+.experience {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 2em 0;
+}
+
+.employer {margin-bottom: 2em;}
+
+.employer h2 {font-size: 0.825em;}
+
+.experience-stack {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.experience .experience-stack .employer:last-of-type {margin-bottom: 0;}
+
+@media (min-width: 48em) {
+.experience-stack {flex-direction: row;}
+.experience-stack article {width: 50%;}
+.experience-stack article:first-child {padding-right: 1em;}
+.experience-stack article:last-child {padding-left: 1em;}
+.experience .experience-stack .employer {margin: 0;}}
+
+
+/* ------------------------------------------
+  SKILLS
+--------------------------------------------- */
+
+.skills {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.skills h2 {margin: 0 0 0.25em 0;}
+
+.skills h2.right {margin-top: 2em;}
+
+.skills-stack {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.skills ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+	list-style-type: none;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 0.75em;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: left;
+  color: #384332;
+}
+
+.skills ul li {
+  display: inline-block;
+  width: 100%;
+  line-height: 1;
+}
+
+.skills ul li span {float: right;}
+
+.icon-star {
+  font-family: "gonzocons";
+  font-style: normal;
+  font-weight: normal;
+  color: #384332;
+}
+
+.icon-star.disabled {
+  font-family: "gonzocons";
+  font-style: normal;
+  font-weight: normal;
+  color: #d2d2d2;
+}
+
+@media (min-width: 30em) {.skills ul {font-size: 0.875em;}}
+
+@media (min-width: 48em) {
+.skills-stack {flex-direction: row;}
+.skills h2.right {margin-top: 0;}
+.skills-stack article {width: 50%;}
+.skills-stack article:first-child {padding-right: 1em;}
+.skills-stack article:last-child {padding-left: 1em;}
+.skills ul {font-size: 0.75em;}}
+
+
+/* ------------------------------------------
+  INTANGIBLES
+--------------------------------------------- */
+
+.intangibles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #eef1e8;
+}
+
+.intangibles h1 {text-align: center;}
+
+.intangibles-carousel {
+	width: 100%;
+	padding-bottom: 8em;
+}
+
+.intangibles-carousel .flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
+
+.intangibles .carousel-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 0;
+  padding: 1em;
+  font-family: "metropolis-regular", sans-serif;
+	font-size: 0.825em;
+	font-weight: inherit;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.intangibles-carousel .carousel-cell::after {
+  display: block;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 1px;
+  height: 50%;
+  background-color: #384332;
+  content: "";
+  transition: width 0.2s;
+}
+
+.icon-idea, .icon-share, .icon-lab, .icon-pin, .icon-power {
+  display: block;
+  margin-bottom: 0.25em;
+  font-family: "gonzocons";
+  font-size: 4em;
+  font-style: normal;
+  font-weight: normal;
+  color: #384332;
+}
+
+.intangibles .flickity-page-dots {bottom: 0;}
+
+.intangibles .flickity-page-dots .dot {
+  margin: 0 0.25em;
+  width: 0.675em;
+  height: 0.675em;
+  border: 2px solid #384332;
+  background: transparent;
+  opacity: 1;
+}
+
+.intangibles .flickity-page-dots .dot.is-selected {background: #384332;}
+
+@media (min-width: 30em) {.intangibles .carousel-cell {width: 50%;}}
