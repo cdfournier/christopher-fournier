@@ -469,8 +469,8 @@ p.copyright {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-attachment: inherit;
-	background-position: center center;
+	background-attachment: initial;
+	background-position: initial;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -491,9 +491,7 @@ p.copyright {
 
 .banner.home .copy h1, .banner.home .copy p {text-align: center;}
 
-@media (min-width: 48em) {
-.banner .copy {padding: 10em 2em;}
-.banner .background-image {background-attachment: fixed;}}
+@media (min-width: 48em) {.banner .copy {padding: 10em 2em;}}
 
 
 /* ------------------------------------------
