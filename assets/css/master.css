@@ -505,13 +505,15 @@ p.copyright {
   z-index: 10;
   width: 90%;
   height: auto;
-  margin: -6em auto 0;
+  margin: -4em auto 0;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-@media (min-width: 48em) {.tools {padding: 0 0 6em;}}
+@media (min-width: 48em) {
+.tools {padding: 0 0 6em;}
+.tools .background-image {margin: -6em auto 0;}}
 
 
 /* ------------------------------------------
