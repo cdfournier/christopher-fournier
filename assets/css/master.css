@@ -1084,6 +1084,8 @@ footer.error {
 
 @media (min-width: 41.6875em) {.profile {align-items: center;}}
 
+@media (min-width: 48em) {.profile-copy {width: 80%;}}
+
 
 /* ------------------------------------------
   MAXIMS
@@ -1201,6 +1203,7 @@ footer.error {
 .experience .experience-stack .employer:last-of-type {margin-bottom: 0;}
 
 @media (min-width: 48em) {
+.experience {width: 80%;}
 .experience-stack {flex-direction: row;}
 .experience-stack article {width: 50%;}
 .experience-stack article:first-child {padding-right: 1em;}
@@ -1278,6 +1281,8 @@ footer.error {
 .skills-stack article {width: 50%;}
 .skills-stack article:first-child {padding-right: 1em;}
 .skills-stack article:last-child {padding-left: 1em;}}
+
+@media (min-width: 64em) {.skills {width: 80%;}}
 
 
 /* ------------------------------------------
