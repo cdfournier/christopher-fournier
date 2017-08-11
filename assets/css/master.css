@@ -152,7 +152,7 @@ h1, h2, p {
 h1 {
   margin: 0 0 0.25em;
   font-family: "metropolis-thin", sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
   line-height: 1;
   text-transform: capitalize;
 }
@@ -176,8 +176,8 @@ h2 {
 h2 span {
   display: block;
   width: 100%;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 0.75em;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 0.575em;
   line-height: 2.25;
   text-transform: uppercase;
 }
@@ -211,7 +211,7 @@ small {
   margin: 0;
   padding: 0;
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.675em;
+  font-size: 0.75em;
   font-weight: normal;
   line-height: 1.5;
   text-align: left;
@@ -230,7 +230,7 @@ small {
   padding: 0.675em 1.5em 0.5em 1.5em;
   border: 1px solid #384332;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 0.675em;
+  font-size: 0.75em;
   font-weight: normal;
   text-align: center;
   text-decoration: none;
@@ -271,7 +271,7 @@ small {
 
 .jump a {
   font-family: "metropolis-bold", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: transparent;
 }
@@ -340,10 +340,10 @@ nav li {
   margin: 0 1.5em 0 0;
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 0.675em;
+  font-size: 0.75em;
   font-weight: inherit;
   line-height: 1;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #ffffff;
   opacity: 1;
 }
@@ -482,6 +482,7 @@ footer.error {
   justify-content: center;
   position: relative;
   width: 100%;
+  min-height: 50vh;
   margin: 0 auto;
   padding: 0;
   background-attachment: initial;
@@ -490,14 +491,21 @@ footer.error {
   background-size: cover;
 }
 
+.bg-holder {
+  width: 100%;
+  height: 100%;
+}
+
 .no-touch .banner {background-attachment: fixed;}
 
 .banner .copy {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 8em 2em;
+  padding: 0 2em;
 }
+
+.banner .copy h1 {font-size: 2.25em;}
 
 .banner .copy h1, .banner .copy p {color: #ffffff;}
 
@@ -514,9 +522,7 @@ footer.error {
 
 @media (min-width: 35.5em) {.banner.home .copy {padding: 6em 1em 8em;}}
 
-@media (min-width: 48em) {
-.banner .copy {padding: 10em 2em;}
-.banner.home .copy h1 {font-size: 4em;}}
+@media (min-width: 48em) {.banner.home .copy h1 {font-size: 4em;}}
 
 
 /* ------------------------------------------
@@ -539,6 +545,8 @@ footer.error {
 @media (min-width: 48em) {
 .tools {padding: 0 0 6em;}
 .tools .background-image {margin: -6em auto 0;}}
+
+@media (min-width: 64em) {.tools .background-image {width: 70%;}}
 
 
 /* ------------------------------------------
@@ -636,7 +644,7 @@ footer.error {
 
 .preview .card .background-image {
   position: relative;
-  width: 35%;
+  width: 8em;
   margin: 0;
   padding: 0;
   background-position: center center;
@@ -644,7 +652,7 @@ footer.error {
   background-size: contain;
 }
 
-.preview .card .background-image.big {width: 65%;}
+.preview .card .background-image.big {width: 16em;}
 
 .preview .card .copy {
   display: flex;
@@ -664,12 +672,18 @@ footer.error {
 @media (min-width: 30em) {
 .preview .card {flex-direction: row;}
 .preview .card.reverse {flex-direction: row-reverse;}
-.preview .card .copy {padding: 0 0 0 2em;}
-.preview .card.reverse .copy {padding: 0;}
+.preview .card .copy {
+  width: initial;
+  margin: 0;
+  padding: 0 0 0 2em;
+}
+.preview .card.reverse .copy {
+  width: initial;
+  margin: 0;
+  padding: 0 2em 0 0;
+}
 .preview .card .copy h2, .preview .card .copy p {text-align: left;}
 .preview .card .copy .button {margin: 1em auto 0 0;}}
-
-@media (min-width: 35.5em) {.preview .card {width: 80%;}}
 
 
 /* ------------------------------------------
@@ -695,7 +709,7 @@ footer.error {
 
 .studies .card .background-image {
   position: relative;
-  width: 35%;
+  width: 8em;
   margin: 0;
   padding: 0;
   background-position: center center;
@@ -703,7 +717,7 @@ footer.error {
   background-size: contain;
 }
 
-.studies .card .background-image.big {width: 65%;}
+.studies .card .background-image.big {width: 16em;}
 
 .studies .card .copy {
   display: flex;
@@ -773,15 +787,18 @@ footer.error {
 @media (min-width: 30em) {
 .studies .card {flex-direction: row;}
 .studies .card.reverse {flex-direction: row-reverse;}
-.studies .card .copy {padding: 0 0 0 2em;}
-.studies .card.reverse .copy {padding: 0;}
+.studies .card .copy {
+  width: initial;
+  margin: 0;
+  padding: 0 2em 0 0;
+}
+.studies .card.reverse .copy {
+  width: initial;
+  margin: 0;
+  padding: 0 0 0 2em;
+}
 .studies .card .copy h2, .studies .card .copy p {text-align: left;}
 .studies .card .copy .button {margin: 1em auto 0 0;}}
-
-@media (min-width: 48em) {
-.studies .card {width: 80%;}
-.studies .card .copy {padding: 0;}
-.studies .card.reverse .copy {padding: 0 0 0 2em;}}
 
 
 /* ------------------------------------------
@@ -1149,6 +1166,7 @@ footer.error {
 .employer {margin-bottom: 2em;}
 
 .employer h2 {
+  margin-bottom: 0.25em;
   font-family: "metropolis-medium", sans-serif;
   font-size: 0.875em;
   line-height: 1.5;
@@ -1206,7 +1224,7 @@ footer.error {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 2em;
+  padding: 2em 2em 0;
 }
 
 .skills h2 {margin: 0 0 0.25em 0;}
@@ -1245,6 +1263,15 @@ footer.error {
 
 .skills ul li span {float: right;}
 
+.skills:after {
+  display: block;
+  width: 80%;
+  height: 1px;
+  margin: 2em 10% 0;
+  background-color: #384332;
+  content: "";
+}
+
 .icon-star {
   font-family: "gonzocons";
   font-style: normal;
@@ -1278,69 +1305,43 @@ footer.error {
   height: 100%;
   margin: 0 auto;
   padding: 2em;
-  background-color: #eef1e8;
 }
 
-.intangibles h1 {text-align: center;}
-
-.intangibles-carousel {
+.intangibles ul {
+  display: block;
   width: 100%;
-  padding-bottom: 8em;
-}
-
-.intangibles-carousel .flickity-viewport {
-  position: absolute;
-  width: 100%;
-}
-
-.intangibles .carousel-cell {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
   margin: 0;
-  padding: 1em;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 0.825em;
-  font-weight: inherit;
+  padding: 0;
+  list-style-type: none;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+  color: #384332;
+}
+
+.intangibles ul li {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0;
+  font-size: 0.875em;
   line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-.intangibles-carousel .carousel-cell::after {
-  display: block;
-  position: absolute;
-  top: 25%;
-  right: 0;
-  width: 1px;
-  height: 50%;
-  background-color: #384332;
-  content: "";
-  transition: width 0.2s;
-}
+.intangibles ul li span {float: left;}
 
-.icon-idea, .icon-share, .icon-lab, .icon-pin, .icon-power {
+.icon-idea, .icon-chat, .icon-share, .icon-lab, .icon-pin, .icon-heart, .icon-power {
   display: block;
-  margin-bottom: 0.25em;
+  margin: 0 0.5em 0 0;
   font-family: "gonzocons";
-  font-size: 4em;
+  font-size: 2em;
   font-style: normal;
   font-weight: normal;
   color: #384332;
 }
 
-.intangibles .flickity-page-dots {bottom: 0;}
+@media (min-width: 30em) {.intangibles ul {column-count: 2;}}
 
-.intangibles .flickity-page-dots .dot {
-  margin: 0 0.25em;
-  width: 0.675em;
-  height: 0.675em;
-  border: 2px solid #384332;
-  background: transparent;
-  opacity: 1;
-}
-
-.intangibles .flickity-page-dots .dot.is-selected {background: #384332;}
-
-@media (min-width: 30em) {.intangibles .carousel-cell {width: 50%;}}
+@media (min-width: 48em) {.intangibles ul {column-count: 3;}}
