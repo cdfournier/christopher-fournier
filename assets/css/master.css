@@ -486,18 +486,12 @@ footer.error {
   justify-content: center;
   position: relative;
   width: 100%;
-  min-height: 50vh;
   margin: 0 auto;
   padding: 0;
   background-attachment: initial;
-  background-position: initial;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bg-holder {
-  width: 100%;
-  height: 100%;
 }
 
 .no-touch .banner {background-attachment: fixed;}
@@ -506,16 +500,14 @@ footer.error {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 8em 2em;
 }
 
 .banner .copy h1 {font-size: 2.25em;}
 
 .banner .copy h1, .banner .copy p {color: #ffffff;}
 
-.banner.home {min-height: 70vh;}
-
-.banner.home .copy {padding: 4em 1em 8em;}
+.banner.home .copy {padding: 10em 2em;}
 
 .banner.home .copy h1 {
   font-size: 2.25em;
@@ -523,8 +515,6 @@ footer.error {
 }
 
 .banner.home .copy h1, .banner.home .copy p {text-align: center;}
-
-@media (min-width: 35.5em) {.banner.home .copy {padding: 6em 1em 8em;}}
 
 @media (min-width: 48em) {.banner.home .copy h1 {font-size: 4em;}}
 
@@ -538,7 +528,7 @@ footer.error {
 .tools .background-image {
   position: relative;
   z-index: 10;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: -6em auto 0;
   background-position: center center;
