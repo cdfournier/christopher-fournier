@@ -405,7 +405,7 @@ footer h1 {
 footer ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   width: inherit;
   margin: 1em auto 0;
   padding: 0;
@@ -421,7 +421,7 @@ footer ul {
 footer ul li {
   display: inline-block;
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
   text-align: center;
 }
 
@@ -438,10 +438,11 @@ footer ul li a:hover, footer ul li a:focus {color: #e85c45;}
 footer ul li a:hover span.icon-email, footer ul li a:focus span.icon-email,
 footer ul li a:hover span.icon-mobile, footer ul li a:focus span.icon-mobile,
 footer ul li a:hover span.icon-linkedin, footer ul li a:focus span.icon-linkedin,
+footer ul li a:hover span.icon-github, footer ul li a:focus span.icon-github,
 footer ul li a:hover span.icon-article, footer ul li a:focus span.icon-article,
 footer ul li a:hover span.icon-arrow-up, footer ul li a:focus span.icon-arrow-up {color: #e85c45;}
 
-.icon-email, .icon-mobile, .icon-linkedin, .icon-article, .icon-arrow-up {
+.icon-email, .icon-mobile, .icon-linkedin, .icon-github, .icon-article, .icon-arrow-up {
   display: block;
   margin-bottom: 0.25em;
   font-size: 2.5em;
@@ -463,13 +464,16 @@ p.copyright {
   color: #ffffff;
 }
 
-@media (min-width: 35.5em) {footer ul {width: 50%;}}
-
-@media (min-height: 35.5em) {
+@media (min-width: 35.5em) {
+footer ul {width: 80%;}
 footer.error {
   position: absolute;
   bottom: 0;
 }}
+
+@media (min-width: 48em) {footer ul {width: 60%;}}
+
+@media (min-width: 64em) {footer ul {width: 40%;}}
 
 
 /* ------------------------------------------
