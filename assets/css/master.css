@@ -356,7 +356,7 @@ nav li a {
   color: #ffffff;
 }
 
-nav li a:after {
+.no-touch nav li a:after {
   display: block;
   position: absolute;
   left: 0;
@@ -372,13 +372,13 @@ nav li a:after {
 
 nav li a:hover, nav li a:focus {color: #ffffff;}
 
-nav li a:hover:after, nav li a:focus:after, nav li a.active:after {width: 100%;}
+.no-touch nav li a:hover:after, .no-touch nav li a:focus:after, .no-touch nav li a.active:after {width: 100%;}
 
 nav li a.white {color: #384332;}
-nav li a.white:hover:after, nav li a.white:focus:after, nav li a.white.active:after {background-color: #384332;}
+.no-touch nav li a.white:hover:after, .no-touch nav li a.white:focus:after, .no-touch nav li a.white.active:after {background-color: #384332;}
 
 nav li a.none {color: #ffffff;}
-nav li a.none:hover:after, nav li a.none:focus:after, nav li a.none.active:after {background-color: #ffffff;}
+.no-touch nav li a.none:hover:after, .no-touch nav li a.none:focus:after, .no-touch nav li a.none.active:after {background-color: #ffffff;}
 
 
 /* ------------------------------------------
@@ -600,7 +600,7 @@ footer.error {
   color: #384332;
 }
 
-.preview-cta a:after {
+.no-touch .preview-cta a:after {
   display: block;
   position: absolute;
   left: 0;
@@ -616,7 +616,7 @@ footer.error {
 
 .preview-cta a:hover, .preview-cta a:focus {color: #384332;}
 
-.preview-cta a:hover:after, .preview-cta a:focus:after {
+.no-touch .preview-cta a:hover:after, .preview-cta a:focus:after {
   margin: 0 auto;
   width: 100%;
 }
