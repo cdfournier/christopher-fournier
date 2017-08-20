@@ -340,7 +340,7 @@ nav li {
   margin: 0 1.5em 0 0;
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.675em;
   font-weight: inherit;
   line-height: 1;
   text-transform: uppercase;
@@ -380,6 +380,8 @@ nav li a.white {color: #384332;}
 nav li a.none {color: #ffffff;}
 .no-touch nav li a.none:hover:after, .no-touch nav li a.none:focus:after, .no-touch nav li a.none.active:after {background-color: #ffffff;}
 
+@media (min-width: 30em) {nav li {font-size: 0.75em;}}
+
 
 /* ------------------------------------------
   FOOTER
@@ -393,7 +395,7 @@ footer {
   z-index: 10;
   width: 100%;
   margin: 0;
-  padding: 1em;	
+  padding: 2em;	
   background-color: #384332;
 }
 
@@ -1284,7 +1286,7 @@ footer.error {
 .skills-stack {flex-direction: row;}
 .skills h2.right {margin-top: 0;}
 .skills-stack article {width: 50%;}
-.skills-stack article:first-child {padding-right: 1em;}
+.skills-stack article:first-of-type {padding-right: 1em;}
 .skills-stack article:last-child {padding-left: 1em;}}
 
 
@@ -1319,7 +1321,7 @@ footer.error {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  padding: 1em 0;
+  padding: 0 0 1em 0;
   font-size: 0.875em;
   line-height: 1;
 }
