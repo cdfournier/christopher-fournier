@@ -1152,7 +1152,7 @@ footer.error {
   display: block;
   width: 80%;
   height: 1px;
-  margin: 2em 10% 0;
+  margin: 0 10% 0;
   background-color: #384332;
   content: "";
 }
