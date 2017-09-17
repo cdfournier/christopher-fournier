@@ -1061,30 +1061,27 @@ footer.error {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  /*   padding: 2em 0 0; for after a profile picture is added */
-  padding: 0;
+  padding: 2em 0 0 0;
   background-color: #eef1e8;
 }
 
 .profile-copy {
   width: 100%;
-  /* 	padding: 0 2em 2em 2em; for after a profile picture is added */
-  padding: 2em;
+  padding: 0 2em;
   text-align: left;
 }
 
 .profile-image {
-  /* 	display: flex; for after a profile picture is added */
-  display: none;
+  display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .profile-image .background-image {
   position: relative;
   width: 80%;
-  margin: 0 auto -0.195em;
+  margin: 0 auto -0.215em;
   padding: 0;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1097,7 +1094,7 @@ footer.error {
   flex-direction: row;
   padding: 0;
 }
-.profile-image {padding: 1em 0 0;}
+.profile-copy {padding: 0 0 0 2em;}
 .profile-copy h1, .profile-copy p {text-align: left;}}
 
 @media (min-width: 41.6875em) {.profile {align-items: center;}}
