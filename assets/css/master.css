@@ -153,6 +153,7 @@ h1 {
   font-size: 1.75em;
   line-height: 1;
   text-transform: capitalize;
+  column-span: all;
 }
 
 h1 span {
@@ -1132,6 +1133,55 @@ footer.error {
 
 
 /* ------------------------------------------
+  EXPERTISE
+--------------------------------------------- */
+
+.expertise {
+  position: relative;
+  margin: 0 auto;
+  padding: 2em 2em 0 2em;
+}
+
+.expertise:after {
+  display: block;
+  width: 80%;
+  height: 1px;
+  margin: 2em 10% 0;
+  background-color: #384332;
+  content: "";
+  column-span: all;
+}
+
+.expertise ul {
+  display: block;
+  margin: -0.75em 0 0 0;
+  padding: 0 0 0 1em;
+  list-style: disc;
+  text-align: left;
+}
+
+.expertise ul li {
+  width: 100%;
+  margin: 0;
+  padding: 1em 0 0 0;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 0.825em;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+  color: #384332;
+}
+
+@media (min-width: 30em) {
+.expertise ul {
+  column-count: 2;
+  column-gap: 2em;
+}}
+
+@media (min-width: 64em) {.expertise ul {column-count: 3;}}
+
+
+/* ------------------------------------------
   EXPERIENCE
 --------------------------------------------- */
 
@@ -1346,10 +1396,7 @@ footer.error {
 .intangibles ul {
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  column-count: 2;
 }
 .intangibles ul li {padding: 0 0.5em 1em;}}
-
-@media (min-width: 48em) {.intangibles ul {column-count: 3;}}
