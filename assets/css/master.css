@@ -139,7 +139,7 @@ img {
   TYPOGRAPHY
 --------------------------------------------- */
 
-h1, h2, p {
+h1, h2, h3, p {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -165,7 +165,7 @@ h1 span {
   text-transform: uppercase;
 }
 
-h2 {
+h2, h3 {
   font-family: "metropolis-thin", sans-serif;
   font-size: 1.25em;
   line-height: 1;
@@ -1206,17 +1206,26 @@ footer.error {
 
 .employer {margin-bottom: 2em;}
 
-.employer h2 {
-  margin-bottom: 0.25em;
+.employer h2, .employer h2 span, .employer h3 {
   font-family: "metropolis-medium", sans-serif;
   font-size: 0.875em;
+  font-weight: normal;
   line-height: 1.5;
 }
 
-.employer strong {
-  display: block;
-  margin: 1em 0 0;
+.employer h2 {
+  display: flex;
+  flex-direction: row;
 }
+
+.employer h2 a {width: 65%;}
+
+.employer h2 span {
+  width: inherit;
+  font-size: 1em;
+}
+
+.employer h3 {margin-top: 0;}
 
 .employer ul {
   display: block;
@@ -1245,6 +1254,16 @@ footer.error {
 }
 
 .experience .experience-stack .employer:last-of-type {margin-bottom: 0;}
+
+@media (min-width: 48em) {
+.employer h2 {flex-direction: row-reverse;}
+.employer h2 a {width: inherit;}
+.employer h2 span {width: 25%;}
+.employer h3 {margin: 0 0 0 20%;}
+.employer ul {
+  width: 80%;
+  margin-left: 20%;
+}}
 
 @media (min-width: 64em) {
 .experience-stack {flex-direction: row;}
