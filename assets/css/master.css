@@ -1223,6 +1223,7 @@ footer.error {
 .employer h2 span {
   width: inherit;
   font-size: 1em;
+  text-align: right;
 }
 
 .employer h3 {margin-top: 0;}
@@ -1258,7 +1259,10 @@ footer.error {
 @media (min-width: 48em) {
 .employer h2 {flex-direction: row-reverse;}
 .employer h2 a {width: inherit;}
-.employer h2 span {width: 25%;}
+.employer h2 span {
+  width: 25%;
+  text-align: left;
+}
 .employer h3 {margin: 0 0 0 20%;}
 .employer ul {
   width: 80%;
