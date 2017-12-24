@@ -192,7 +192,7 @@ p, strong {
   color: #384332;
 }
 
-h1 a, h2 a, p a {
+h1 a, h2 a, p a, li a {
   font-family: "metropolis-medium", sans-serif;
   text-decoration: none;
   color: #384332;
@@ -201,7 +201,8 @@ h1 a, h2 a, p a {
 
 h1 a:hover, h2 a:hover, h3 a:hover,
 h1 a:focus, h2 a:focus, h3 a:focus,
-p a:hover, p a:focus {color: #e85c45;}
+p a:hover, p a:focus,
+li a:hover, li a:focus {color: #e85c45;}
 
 strong {font-family: "metropolis-medium", sans-serif;}
 
@@ -352,6 +353,7 @@ nav li:last-child {margin: 0;}
 nav li a {
   position: relative;
   padding-bottom: 0.5em;
+  font-family: "metropolis-bold", sans-serif;
   color: #ffffff;
 }
 
