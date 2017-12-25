@@ -1220,7 +1220,7 @@ footer.error {
   flex-direction: row;
 }
 
-.employer h2 a {width: 65%;}
+.employer h2 a {width: 100%;}
 
 .employer h2 span {
   width: inherit;
