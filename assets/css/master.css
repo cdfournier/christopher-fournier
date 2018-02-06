@@ -1066,13 +1066,12 @@ footer.error {
   position: relative;
   width: 100%;
   margin: 0 auto;
-/*   padding: 2em 0 0 0; */
   background-color: #eef1e8;
 }
 
 .profile-copy {
   width: 100%;
-  padding: 2em;
+  padding: 2em 2em 1em;
   text-align: left;
 }
 
@@ -1099,12 +1098,10 @@ footer.error {
   flex-direction: row;
   padding: 0;
 }
-/* .profile-copy {padding: 0 0 0 2em;} */
+.profile-copy {padding: 2em;}
 .profile-copy h1, .profile-copy p {text-align: left;}}
 
 @media (min-width: 41.6875em) {.profile {align-items: center;}}
-
-/* @media (min-width: 48em) {.profile-copy {width: 80%;}} */
 
 
 /* ------------------------------------------
