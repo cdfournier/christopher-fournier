@@ -1,57 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:39+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/</loc>
+  <lastmod>2018-02-06T21:34:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:35+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/index.html</loc>
+  <lastmod>2018-02-06T00:41:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/resume/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:40+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/resume/index.html</loc>
+  <lastmod>2018-02-06T21:34:59+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/panera-bread/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:32+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/panera-bread/index.html</loc>
+  <lastmod>2018-02-06T00:41:46+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/shit-don-draper-said/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:33+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/gitlab-web/index.html</loc>
+  <lastmod>2018-02-06T00:41:42+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:39+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/assets/docs/christopher-fournier-resume.pdf</loc>
+  <lastmod>2018-02-06T00:41:38+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/east-wind/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:33+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/index.html</loc>
+  <lastmod>2018-02-06T21:34:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/my-phishtory/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:34+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/gitlab-ux/index.html</loc>
+  <lastmod>2018-02-06T00:41:40+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-	<loc>http://chris.blackcoffeeshoppe.com/case-studies/my-brand/index.html</loc>
-	<priority>0.5</priority>
-	<lastmod>2017-08-12T12:41:30+00:00</lastmod>
-	<changefreq>daily</changefreq>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/east-wind/index.html</loc>
+  <lastmod>2018-02-06T00:54:44+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
 </url>
+<url>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/shit-don-draper-said/index.html</loc>
+  <lastmod>2018-02-06T00:54:47+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/my-phishtory/index.html</loc>
+  <lastmod>2018-02-06T00:54:45+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://chris.blackcoffeeshoppe.com/case-studies/my-brand/index.html</loc>
+  <lastmod>2018-01-03T17:32:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://chris.blackcoffeeshoppe.com/assets/docs/christopher-fournier-case-studies.pdf</loc>
+  <lastmod>2018-02-06T16:18:45+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
