@@ -1021,7 +1021,7 @@ footer.error {
 
 .maxims-carousel {
   width: 100%;
-  padding-bottom: 11em;
+  padding-bottom: 12em;
 }
 
 .maxims-carousel .flickity-viewport {
@@ -1034,12 +1034,11 @@ footer.error {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
 }
 
 .maxims-carousel .carousel-cell h2 {margin: 0 0 0.5em;}
 
-.maxims-carousel .flickity-page-dots {bottom: 1em;}
+.maxims-carousel .flickity-page-dots {bottom: 0em;}
 
 .maxims-carousel .flickity-page-dots .dot {
   margin: 0 0.25em;
