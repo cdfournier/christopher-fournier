@@ -133,7 +133,7 @@ img {
   margin: 0;
 }
 
-@media (min-width: 64rem) {html {font-size: 110%;}}
+/* @media (min-width: 48rem) {html {font-size: 125%;}} */
 
 
 /* ------------------------------------------
@@ -144,13 +144,13 @@ h1, h2, h3, p, strong, small {
   width: 100%;
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
 h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   font-family: "metropolis-bold", sans-serif;
   font-size: 1.75rem;
-  font-size: 2rem;
   line-height: 1;
   text-transform: capitalize;
   color: #384332;
@@ -160,16 +160,16 @@ h1 {
 h1 span {
   display: block;
   width: 100%;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 0.75rem;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 0.575rem;
   line-height: 2;
   text-transform: uppercase;
 }
 
 h2, h3 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.125rem;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1;
   text-transform: capitalize;
   color: #384332;
@@ -186,7 +186,7 @@ h2 span {
 
 p {
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   line-height: 1.5;
   color: #000000;
 }
@@ -216,7 +216,7 @@ h1 a, h2 a, p a, li a {
 h1 a:hover, h2 a:hover, h3 a:hover,
 h1 a:focus, h2 a:focus, h3 a:focus,
 p a:hover, p a:focus,
-li a:hover, li a:focus {color: #e85c45;}
+li a:hover, li a:focus {color: #ff7376;}
 
 
 /* ------------------------------------------
@@ -226,14 +226,14 @@ li a:hover, li a:focus {color: #e85c45;}
 .button {
   display: inline-block;
   width: auto;
-  margin: 1rem auto 0;
-  padding: 0.75rem 1.25rem 0.625rem 1.25rem;
+  margin: 0.5rem auto 0;
+  padding: 0.625rem 1.25rem;
   border: 1px solid #384332;
   font-family: "metropolis-medium", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 0.875;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -242,7 +242,7 @@ li a:hover, li a:focus {color: #e85c45;}
   cursor: pointer;
 }
 
-.button.left {margin: 2rem auto 0 0;}
+.button.left {margin: 0.5rem auto 0 0;}
 
 .button:hover, .button:focus {
   color: #ffffff;
@@ -284,28 +284,6 @@ li a:hover, li a:focus {color: #e85c45;}
   color: #ffffff;
   color: #384332;
 }
-
-
-/* ------------------------------------------
-  HEADER
---------------------------------------------- */
-
-header.logo {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 2rem;
-  background-color: #f0f5f8;
-}
-
-header.logo .box {
-  width: 12rem;
-  margin: 0;
-  padding: 2rem 0 0;
-}
-
-@media (min-width: 48rem) {header.logo {padding: 0 4rem;}}
 
 
 /* ------------------------------------------
@@ -374,172 +352,10 @@ p.copyright {
 
 
 /* ------------------------------------------
-  COPY
---------------------------------------------- */
-
-.copy {padding: 2rem 2rem 0;}
-
-@media (min-width: 48rem) {.copy {padding: 4rem 4rem 0;}}
-
-
-/* ------------------------------------------
   BANNERS
 --------------------------------------------- */
 
 .banner {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.no-touch .banner {background-attachment: fixed;}
-
-.banner.transferx {
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  background-color: #f0f5f8;
-}
-
-.banner.transferx figure {
-  margin: 0 0 -1rem;
-  padding: 0 4rem;
-}
-
-.banner.transferx figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
-
-.banner.panera {
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  background-color: #e9f0e5;
-}
-
-.banner.panera figure {
-  margin: 0 0 -10rem;
-  padding: 0 4rem;
-}
-
-.banner.panera figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
-
-.banner.east-wind {
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  background-color: #552a80;
-}
-
-.banner.east-wind figure {
-  margin: 0;
-  padding: 0 4rem 2rem;
-}
-
-.banner.east-wind figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
-
-.banner.east-wind figcaption h1, .banner.east-wind figcaption p {color: #ffffff;}
-
-.banner.east-wind figcaption .button.white:hover, .banner.east-wind figcaption .button.white:focus {
-  color: #552a80;
-  background-color: #ffffff;
-}
-
-.banner.my-brand {
-  flex-direction: column-reverse;
-  justify-content: space-between;
-}
-
-.banner.my-brand figure {
-  margin: 0;
-  padding: 0 2rem 2rem;
-}
-
-.banner.my-brand figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
-
-@media (min-width: 48rem) {
-.banner {min-height: inherit;}
-.banner.transferx {flex-direction: row-reverse; align-items: center;}
-.banner.transferx figure {padding: 0 4rem 0 0;}
-.banner.transferx figcaption {width: 80%; padding: 4rem 0 4rem 4rem;}
-.banner.panera {flex-direction: row; align-items: center;}
-.banner.panera figure {padding: 4rem 0 0 4rem;}
-.banner.panera figcaption {width: 80%; padding: 4rem;}
-.banner.east-wind {flex-direction: row; align-items: center;}
-.banner.east-wind figure {padding: 4rem;}
-.banner.east-wind figcaption {padding: 4rem 4rem 4rem 0;}
-.banner.my-brand {flex-direction: row-reverse; align-items: center;}
-.banner.my-brand figure {margin: 4rem 0 0 0; padding: 0 4rem 0 0;}
-.banner.my-brand figcaption {padding: 4rem 0 0 4rem; width: 100%;}}
-
-.banner.east-wind-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-east-wind-06.jpg);
-  background-position: 70% center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.panera-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-panera-03.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.my-brand-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-my-brand-enamel-mug.jpg);
-  background-position: 60% center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.transferx-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-transferx-09.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 48rem) {
-.banner.east-wind-study,
-.banner.panera-study,
-.banner.my-brand-study,
-.banner.transferx-study {min-height: 100vh;}
-}
-
-
-/* ------------------------------------------
-  ABOUT
---------------------------------------------- */
-
-.about {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -549,29 +365,147 @@ p.copyright {
   margin: 0 auto;
   padding: 0;
   background-attachment: initial;
-  background-image: url(../images/banner-about.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.about.logo {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+.no-touch .banner {background-attachment: fixed;}
+
+
+/* ------------------------------------------
+  CARDS
+--------------------------------------------- */
+
+.card {
+  display: block;
+  position: relative;
   width: 100%;
-  padding: 4rem 2rem;
+  margin: 0;
+  padding: 2rem 2rem 0;
 }
 
-.about.logo .box {
-  width: 10rem;
+.card:last-of-type {margin: 0;}
+
+.card figure {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
   margin: 0;
-  padding: 0;
+}
+
+.card figure img {height: 100%;}
+
+.card figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  bottom: 0;
+  left: 2rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.25);
+}
+
+@media (min-width: 41.6875rem) {
+.card {width: 50%;}
+.card:nth-child(odd) {padding-left: 1rem;}
+.card:nth-child(even) {padding-right: 1rem;}
+.card:nth-child(odd).card figcaption {left: 1rem;}
+.card:nth-child(even).card figcaption {right: 1rem;}}
+
+@media (min-width: 48rem) {
+.card {padding: 4rem 4rem 0;}
+.card:nth-child(odd) {padding-left: 2rem;}
+.card:nth-child(even) {padding-right: 2rem;}
+.card figcaption {
+  top: 4rem;
+  right: 4rem;
+  bottom: 0;
+  left: 4rem;
+}
+.card:nth-child(odd).card figcaption {left: 2rem;}
+.card:nth-child(even).card figcaption {right: 2rem;}}
+
+
+
+/* ------------------------------------------
+  COPY
+--------------------------------------------- */
+
+.copy {padding: 2rem 2rem 0;}
+
+@media (min-width: 48rem) {.copy {padding: 4rem 4rem 0;}}
+
+
+/* ------------------------------------------
+  WELCOME
+--------------------------------------------- */
+
+.welcome .logo {
+  width: 14rem;
+  margin: 0 auto;
+  padding: 2rem 0 0;
 }
 
 @media (min-width: 48rem) {
-.about.logo {padding: 4rem;}
-.about.logo .box {width: 14rem;}
+.welcome .logo {
+  width: 20rem;
+  padding: 4rem 0 0;
+}
+.welcome .copy h1 {font-size: 2.5rem;}
+.welcome .copy p {font-size: 1.25rem;}}
+
+
+/* ------------------------------------------
+  WORK
+--------------------------------------------- */
+
+.work {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 41.6875rem) {
+.work {
+  flex-direction: row;
+  flex-wrap: wrap;
+}}
+
+
+/* ------------------------------------------
+  ABOUT
+--------------------------------------------- */
+
+.about .banner {align-items: flex-start;}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about .logo {
+  width: 14rem;
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+
+.about img {
+  width: 10rem;
+  margin: 0 auto;
+  padding: 2rem 0 0;
+}
+
+@media (min-width: 48rem) {
+.about .logo {
+  width: 20rem;
+  padding: 4rem 0 0;
+}
 .bio .copy h1 {font-size: 2.5rem;}
 .bio .copy p {font-size: 1.25rem;}}
 
@@ -598,10 +532,7 @@ p.copyright {
   list-style-type: none;
 }
 
-.maxims ul li {
-  display: inline-block;
-  padding: 0 0 1rem;
-}
+.maxims ul li {padding: 0 0 1rem;}
 
 .maxims ul li h2 span {
   display: block;
@@ -616,10 +547,7 @@ p.copyright {
 .maxims ul li:last-of-type {padding: 0;}
 
 @media (min-width: 48rem) {
-.maxims {
-  margin: 4rem auto 0;
-  padding: 0 0 3rem;
-}
+.maxims {margin: 4rem auto 0;}
 .maxims ul  {
   flex-direction: row;
   flex-wrap: wrap;
@@ -635,11 +563,8 @@ p.copyright {
 
 .talents {
   margin: 0 auto;
-  padding: 0 0 2rem;
-  background-color: #384332;
+  padding: 0;
 }
-
-.talents h1 {color: #ffffff;}
 
 .talents ul {
   display: flex;
@@ -651,27 +576,20 @@ p.copyright {
   font-size: 0.825rem;
   line-height: 1.5;
   list-style-type: none;
-  color: #ffffff;
 }
 
-.talents ul li {
-  display: inline-block;
-  padding: 0 0 1rem;
-}
+.talents ul li {padding: 0 0 1rem;}
 
 .talents ul li:last-of-type {padding: 0;}
-
-.talents ul li h2 {color: #ffffff;}
 
 .talents ul li span.icon-vector, .talents ul li span.icon-html5, 
 .talents ul li span.icon-star, .talents ul li span.icon-megaphone {
   display: block;
   width: 100%;
-  margin-bottom: -1.25rem;
-  font-size: 3rem;
+  margin-bottom: -0.75rem;
+  font-size: 2.5rem;
   line-height: 1;
   color: #eef1e8;
-  opacity: 0.5;
 }
 
 @media (min-width: 41.6875rem) {
@@ -685,7 +603,6 @@ p.copyright {
 .talents ul li:nth-of-type(3) {padding: 0 1rem 0 0;}}
 
 @media (min-width: 48rem) {
-.talents {padding: 0 0 4rem;}
 .talents ul li:nth-of-type(odd) {padding-right: 2rem;}
 .talents ul li:nth-of-type(even) {padding-left: 2rem;}}
 
@@ -712,7 +629,6 @@ p.copyright {
 }
 
 .favorites ul li {
-  display: inline-block;
   margin: 0 0 1rem;
   padding: 0 0 1rem;
   border-bottom: 1px solid #eef1e8;
@@ -754,8 +670,6 @@ p.copyright {
   padding: 0;
 }
 
-.jobs .copy {padding: 4rem 2rem 0;}
-
 .jobs ul {
   display: flex;
   flex-direction: column;
@@ -769,13 +683,10 @@ p.copyright {
 }
 
 .jobs ul li {
-  display: inline-block;
   margin: 0 0 1rem;
   padding: 0 0 1rem;
   border-bottom: 1px solid #eef1e8;
 }
-
-.jobs ul li h2 {margin: 0 0 0.25rem;}
 
 .jobs ul li:last-of-type {
   margin: 0;
@@ -798,7 +709,6 @@ p.copyright {
 .jobs ul li:nth-of-type(3) {padding: 0 1rem 0 0;}}
 
 @media (min-width: 48rem) {
-.jobs .copy {padding: 4rem 4rem 0;}
 .jobs ul li:nth-of-type(odd) {padding: 0 2rem 2rem 0;}
 .jobs ul li:nth-of-type(even) {padding: 0 0 2rem 2rem;}
 .jobs ul li:nth-of-type(3) {padding: 0 2rem 0 0;}
@@ -822,46 +732,115 @@ p.copyright {
   background-color: #ffffff;
 }
 
-.study .card figure {
-  width: 100%;
-  margin: 0;
-}
+.study .card:last-of-type {padding: 2rem;}
 
-.study .card .row {
-  display: flex;
-  flex-direction: column;
-}
-
-.study .card .row figure:first-of-type {padding: 0 0 1rem 0;}
-
-.study .card .row figure:last-of-type {padding: 1rem 0 0 0;}
-
-.study .copy.cream {
+.study .card.cream {
   margin-top: 2rem;
   padding: 2rem;
   background-color: #eef1e8;
 }
 
-.study .copy p, .study .copy.cream p {margin: 0 0 1rem;}
+.study .card .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+}
 
-.study .copy p:last-of-type, .study .copy.cream p:last-of-type {margin: 0;}
+.study .card .copy:last-of-type {padding: 0;}
 
-.study .card.wide {padding: 2rem 0 0;}
+.study .card .copy h2, .study .card .copy p {text-align: left;}
 
-/*
-.study .card.wide .row figure:first-of-type {padding: 0;}
+.study .card .copy h2 {margin: 0.5rem 0;}
 
-.study .card.wide .row figure:last-of-type {padding: 0;}
-*/
+.study .card .copy h2:first-of-type {margin: 0 0 0.5rem;}
+
+.study .card .copy p {margin: 0 0 1rem;}
+
+.study .card .copy p:last-of-type {margin: 0;}
+
+.study .card .background-image {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.study .card.reverse .background-image {padding: 0 0 2rem;}
+
+.study .card .row {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.study .card .row .background-image:first-of-type {padding: 0 0 1rem 0;}
+
+.study .card .row .background-image:last-of-type {padding: 1rem 0 0 0;}
+
+.study .card.wide {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+  background-color: #ffffff;
+}
+
+.study .card.wide .copy {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+}
+
+.study .card.wide .background-image {padding: 0;}
+
+.study .card.wide:last-of-type {padding: 2rem 2rem 0;}
+
+@media (min-width: 30rem) {
+.study .card .row {flex-direction: row;}
+.study .card .row .background-image:first-of-type {padding: 0 1rem 0 0;}
+.study .card .row .background-image:last-of-type {padding: 0 0 0 1rem;}}
 
 @media (min-width: 48rem) {
-.study .card {padding: 4rem 4rem 0;}
-.study .card .row {flex-direction: row;}
-.study .card .row figure:first-of-type {padding: 0 2rem 0 0;}
-.study .card .row figure:last-of-type {padding: 0 0 0 2rem;}
-.study .copy.cream {
-  margin-top: 4rem;
-  padding: 4rem;
-}
-.study .card.wide {padding: 4rem 0 0;}
-}
+.study article h1 span {font-size: 0.75rem;}
+.study article h1 {font-size: 2.5rem;}
+.study article p {font-size: 1.25rem;}
+.study .card {flex-direction: row; padding: 4rem 4rem 0;}
+.study .card.cream {margin-top: 4rem; padding: 4rem;}
+.study .card .background-image {padding: 0 0 0 2rem;}
+.study .card.reverse {flex-direction: row-reverse;}
+.study .card.reverse .background-image {padding: 0 0 0 2rem;}
+.study .card .row .background-image:first-of-type {padding: 0 2rem 0 0;}
+.study .card .row .background-image:last-of-type {padding: 0 0 0 2rem;}
+.study .card .copy {padding: 0 2rem 0 0;}
+.study .card .copy:last-of-type {padding: 0 2rem 0 0;}
+.study .card.wide {padding: 4rem 4rem 0;}
+.study .card.wide:last-of-type {padding: 4rem 4rem 0;}}
