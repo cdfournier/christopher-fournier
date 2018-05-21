@@ -1,23 +1,18 @@
 /* ------------------------------------------
   COLOR
----------------------------------------------
-
+--------------------------------------------- */
 /*
   White
   color: #ffffff;
   color: rgba(255,255,255,1);
-  
+
   Cream
   color: #eef1e8;
   color: rgba(238,241,232,1);
-  
+
   Green
   color: #384332;
   color: rgba(56,67,50,1)
-  
-  Pale Red
-  color: #ff7376;
-  color: rgba(255,115,118,1);
 
   Orange
   color: #e85c45;
@@ -28,7 +23,6 @@
 /* ------------------------------------------
   FONTS
 --------------------------------------------- */
-
 @font-face {
   font-family: "metropolis-thin";
     src: url("../fonts/metropolis/metropolis-thin.eot");
@@ -88,15 +82,16 @@
 /* ------------------------------------------
   BASE SITE STYLES
 --------------------------------------------- */
-
 html, body {
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
   margin: 0 auto;
   padding: 0;
+  font-family: "metropolis-light", sans-serif;
   font-size: 100%;
-  line-height: 1;
+  font-size: calc(0.75rem + 0.5vw);
+  line-height: 1.45;
+  color: #384332;
 }
 
 * {
@@ -118,28 +113,16 @@ a {
   color: #ffffff;
 }
 
-.content {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
 img {
   width: 100%;
   height: auto;
   margin: 0;
 }
 
-@media (min-width: 64rem) {html {font-size: 110%;}}
-
 
 /* ------------------------------------------
   TYPOGRAPHY
 --------------------------------------------- */
-
 h1, h2, h3, p, strong, small {
   width: 100%;
   margin: 0;
@@ -147,93 +130,75 @@ h1, h2, h3, p, strong, small {
 }
 
 h1 {
-  margin: 0 0 1rem;
+  margin: 0;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 1.75rem;
-  font-size: 2rem;
-  line-height: 1;
+  font-size: 1.728rem;
+  line-height: 1.2;
   text-transform: capitalize;
-  color: #384332;
   column-span: all;
 }
+
+h2, h3 {
+  margin: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 1.44rem;
+  text-transform: capitalize;
+  column-span: all;
+}
+
+h3 {font-size: 1.2rem;}
+
+p {
+  padding: 0 0 1rem;
+  font-family: "metropolis-light", sans-serif;
+  font-size: 1rem;
+}
+
+p:last-of-type {padding: 0;}
+
+strong {font-family: "metropolis-medium", sans-serif;}
+
+small {
+  font-family: inherit;
+  font-size: 0.833rem;
+}
+
+h1.white, h2.white, h3.white, p.white {color: #ffffff;}
 
 h1 span {
   display: block;
   width: 100%;
   font-family: "metropolis-regular", sans-serif;
-  font-size: 0.75rem;
-  line-height: 2;
+  font-size: 0.694rem;
   text-transform: uppercase;
 }
 
-h2, h3 {
-  margin: 0 0 1rem;
-  font-family: "metropolis-bold", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1;
-  text-transform: capitalize;
+
+/* ------------------------------------------
+  TEXT LINKS
+--------------------------------------------- */
+p a, li a {
+  font-family: "metropolis-medium", sans-serif;
   color: #384332;
 }
 
-h2 span {
-  display: block;
-  width: 100%;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 0.625rem;
-  line-height: 2;
-  text-transform: uppercase;
-}
-
-p {
-  font-family: "metropolis-light", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: #000000;
-}
-
-strong {
-  font-family: "metropolis-medium", sans-serif;
-  line-height: inherit;
-  color: inherit;
-}
-
-small {
-  font-family: "metropolis-light", sans-serif;
-  font-size: 0.75rem;
-  line-height: inherit;
-  color: inherit;
-}
-
-h1.white, h2.white, h3.white, p.white {color: #ffffff;}
-
-h1 a, h2 a, p a, li a {
-  font-family: "metropolis-bold", sans-serif;
-  text-decoration: none;
-  color: inherit;
-  opacity: 1;
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover,
-h1 a:focus, h2 a:focus, h3 a:focus,
-p a:hover, p a:focus,
-li a:hover, li a:focus {color: #e85c45;}
+p a:hover, p a:focus, li a:hover, li a:focus {color: #e85c45;}
 
 
 /* ------------------------------------------
   BUTTONS
 --------------------------------------------- */
-
 .button {
   display: inline-block;
   width: auto;
-  margin: 1rem auto 0;
-  padding: 0.75rem 1.25rem 0.625rem 1.25rem;
+  margin: 1rem auto 0 0;
+  padding: 0.694rem 1rem;
   border: 1px solid #384332;
   font-family: "metropolis-medium", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.833rem;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: 1;
+  line-height: 0.833;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -242,7 +207,7 @@ li a:hover, li a:focus {color: #e85c45;}
   cursor: pointer;
 }
 
-.button.left {margin: 2rem auto 0 0;}
+.button.left {margin: 1rem auto 0 0;}
 
 .button:hover, .button:focus {
   color: #ffffff;
@@ -261,40 +226,42 @@ li a:hover, li a:focus {color: #e85c45;}
 
 
 /* ------------------------------------------
-  JUMP
+  CONTAINERS
 --------------------------------------------- */
-
-.jump {
-  position: absolute;
-  z-index: 25;
+header, footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 0 auto;
-  padding: 1rem 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  padding: 2rem;
+  font-family: "metropolis-light", sans-serif;
   text-align: center;
 }
 
-.jump a {
-  font-family: "metropolis-bold", sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: transparent;
+.copy {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 2rem 0 2rem;
 }
 
-.jump a:hover, .jump a:focus {
-  color: #ffffff;
-  color: #384332;
-}
+@media (min-width: 48rem) {footer {text-align: left;}}
+
+@media (min-width: 64rem) {
+footer {padding: 4rem;}
+.copy {padding: 4rem 4rem 0 4rem;}}
 
 
 /* ------------------------------------------
   HEADER
 --------------------------------------------- */
-
 header.logo {
-  display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
   padding: 0 2rem;
   background-color: #f0f5f8;
 }
@@ -311,84 +278,40 @@ header.logo .box {
 /* ------------------------------------------
   FOOTER
 --------------------------------------------- */
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  width: 100%;
-  margin: 0;
-  padding: 2rem;	
-}
-
 footer ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   width: inherit;
-  margin: 0 0 0.5rem;
-  padding: 0;
+  margin: 0;
+  padding: 0 0 0.25rem;
   list-style-type: none;
-  font-size: 0.625rem;
-  font-weight: inherit;
-  line-height: 1;
+  font-family: "metropolis-medium", sans-serif;
+  font-size: 0.833rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-footer ul li, footer ul a li {
+footer ul li, footer ul li a {
   display: inline-block;
   margin: 0;
-  padding: 0 1.25rem 0 0;
-  font-family: "metropolis-medium", sans-serif;
-  text-align: center;
+  padding: 0 1rem 0 0;
   color: #384332;
   transition: all 0.2s ease;
 }
 
-footer ul a:hover li, footer ul a:focus li {color: #ff7376; color: #e85c45;}
+footer ul li:last-of-type, footer ul li a:last-of-type {padding: 0;}
 
-footer ul a:hover li span.icon-home, footer ul a:focus li span.icon-home,
-footer ul a:hover li span.icon-coffee, footer ul a:focus li span.icon-coffee,
-footer ul a:hover li span.icon-email, footer ul a:focus li span.icon-email,
-footer ul a:hover li span.icon-linkedin, footer ul a:focus li span.icon-linkedin {color: #ff7376; color: #e85c45;}
+footer ul li a:hover, footer ul li a:focus {color: #ff7376; color: #e85c45;}
 
-.icon-home, .icon-coffee, .icon-email, .icon-linkedin {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  color: #384332;
-}
-
-p.copyright {
-  font-size: 0.675rem;
-  text-align: left;
-}
-
-@media (min-width: 48rem) {footer {padding: 4rem;}}
-
-
-/* ------------------------------------------
-  COPY
---------------------------------------------- */
-
-.copy {padding: 2rem 2rem 0;}
-
-@media (min-width: 48rem) {.copy {padding: 4rem 4rem 0;}}
+@media (min-width: 48rem) {footer ul {justify-content: flex-start;}}
 
 
 /* ------------------------------------------
   BANNERS
 --------------------------------------------- */
-
 .banner {
   display: flex;
-  position: relative;
   overflow: hidden;
   width: 100vw;
   min-height: 100vh;
@@ -409,17 +332,11 @@ p.copyright {
   padding: 0 4rem;
 }
 
-.banner.transferx figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
+.banner.transferx figcaption {padding: 2rem;}
 
 .banner.panera {
   flex-direction: column-reverse;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #e9f0e5;
 }
 
@@ -428,17 +345,11 @@ p.copyright {
   padding: 0 4rem;
 }
 
-.banner.panera figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
+.banner.panera figcaption {padding: 2rem;}
 
 .banner.east-wind {
   flex-direction: column-reverse;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #552a80;
 }
 
@@ -447,15 +358,7 @@ p.copyright {
   padding: 0 4rem 2rem;
 }
 
-.banner.east-wind figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
-
-.banner.east-wind figcaption h1, .banner.east-wind figcaption p {color: #ffffff;}
+.banner.east-wind figcaption {padding: 2rem;}
 
 .banner.east-wind figcaption .button.white:hover, .banner.east-wind figcaption .button.white:focus {
   color: #552a80;
@@ -464,81 +367,64 @@ p.copyright {
 
 .banner.my-brand {
   flex-direction: column-reverse;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .banner.my-brand figure {
-  margin: 0;
-  padding: 0 2rem 2rem;
+  margin: auto;
+  padding: 0 2rem 2rem 0;
 }
 
-.banner.my-brand figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-}
+.banner.my-brand figcaption {padding: 2rem;}
 
 @media (min-width: 48rem) {
 .banner {min-height: inherit;}
 .banner.transferx {flex-direction: row-reverse; align-items: center;}
-.banner.transferx figure {padding: 0 4rem 0 0;}
-.banner.transferx figcaption {width: 80%; padding: 4rem 0 4rem 4rem;}
+.banner.transferx figure {padding: 0 2rem 0 0;}
+.banner.transferx figcaption {width: 40rem;}
 .banner.panera {flex-direction: row; align-items: center;}
-.banner.panera figure {padding: 4rem 0 0 4rem;}
-.banner.panera figcaption {width: 80%; padding: 4rem;}
+.banner.panera figure {padding: 2rem 0 0 2rem;}
+.banner.panera figcaption {width: 34rem;}
 .banner.east-wind {flex-direction: row; align-items: center;}
+.banner.east-wind figure {padding: 2rem 2.5rem;}
+.banner.east-wind figcaption {}
+.banner.my-brand figure {width: 80%; padding: 0 2rem 0 0;}
+.banner.my-brand figcaption {padding: 2rem 0 0 2rem;}}
+
+@media (min-width: 64rem) {
+.banner.transferx figure {padding: 0 4rem 0 0;}
+.banner.transferx figcaption {padding: 4rem;}
+.banner.panera figure {padding: 4rem 0 0 4rem;}
+.banner.panera figcaption {padding: 4rem;}
 .banner.east-wind figure {padding: 4rem;}
-.banner.east-wind figcaption {padding: 4rem 4rem 4rem 0;}
-.banner.my-brand {flex-direction: row-reverse; align-items: center;}
-.banner.my-brand figure {margin: 4rem 0 0 0; padding: 0 4rem 0 0;}
-.banner.my-brand figcaption {padding: 4rem 0 0 4rem; width: 100%;}}
+.banner.east-wind figcaption {padding: 4rem;}
+.banner.my-brand figure {width: 70%; padding: 0 4rem 0 0;}
+.banner.my-brand figcaption {padding: 4rem 0 0 4rem;}}
 
-.banner.east-wind-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-east-wind-06.jpg);
-  background-position: 70% center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+@media (min-width: 72rem) {
+.banner.my-brand figure {
+  width: 60%;
+  margin: auto;
+}}
 
-.banner.panera-study {
+
+/* ------------------------------------------
+  WORK BANNERS
+--------------------------------------------- */
+.banner.work-panera {
+  min-width: 100vw;
+  min-height: 100vh;
   background-attachment: fixed;
-  background-image: url(../images/work-panera-03.jpg);
+  background-image: url(../images/work-panera-01.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.banner.my-brand-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-my-brand-enamel-mug.jpg);
-  background-position: 60% center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.transferx-study {
-  background-attachment: fixed;
-  background-image: url(../images/work-transferx-09.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 48rem) {
-.banner.east-wind-study,
-.banner.panera-study,
-.banner.my-brand-study,
-.banner.transferx-study {min-height: 100vh;}
 }
 
 
 /* ------------------------------------------
   ABOUT
 --------------------------------------------- */
-
 .about {
   display: flex;
   align-items: center;
@@ -572,14 +458,14 @@ p.copyright {
 @media (min-width: 48rem) {
 .about.logo {padding: 4rem;}
 .about.logo .box {width: 14rem;}
-.bio .copy h1 {font-size: 2.5rem;}
-.bio .copy p {font-size: 1.25rem;}}
+.bio .copy {max-width: 44rem;}
+.bio .copy h1 {font-size: 2.074rem;}
+.bio .copy p {font-size: 1.2rem;}}
 
 
 /* ------------------------------------------
   MAXIMS
 --------------------------------------------- */
-
 .maxims {
   margin: 2rem auto 0;
   padding: 0 0 2rem;
@@ -593,8 +479,7 @@ p.copyright {
   margin: 0;
   padding: 1rem 0 0;
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.825rem;
-  line-height: 1.5;
+  font-size: 1rem;
   list-style-type: none;
 }
 
@@ -606,9 +491,9 @@ p.copyright {
 .maxims ul li h2 span {
   display: block;
   width: 100%;
-  margin-bottom: -0.75rem;
+  margin-bottom: -1rem;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 2rem;
+  font-size: 2.074rem;
   line-height: 1;
   color: #ffffff;
 }
@@ -616,10 +501,6 @@ p.copyright {
 .maxims ul li:last-of-type {padding: 0;}
 
 @media (min-width: 48rem) {
-.maxims {
-  margin: 4rem auto 0;
-  padding: 0 0 3rem;
-}
 .maxims ul  {
   flex-direction: row;
   flex-wrap: wrap;
@@ -628,28 +509,26 @@ p.copyright {
 .maxims ul li:nth-of-type(odd) {padding-right: 2rem;}
 .maxims ul li:nth-of-type(even) {padding-left: 2rem;}}
 
+@media (min-width: 64rem) {.maxims {margin: 4rem auto 0; padding: 0 0 3rem;}}
+
 
 /* ------------------------------------------
   TALENTS
 --------------------------------------------- */
-
 .talents {
   margin: 0 auto;
   padding: 0 0 2rem;
   background-color: #384332;
 }
 
-.talents h1 {color: #ffffff;}
-
 .talents ul {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0 0;
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.825rem;
-  line-height: 1.5;
+  font-size: 1rem;
   list-style-type: none;
   color: #ffffff;
 }
@@ -674,7 +553,7 @@ p.copyright {
   opacity: 0.5;
 }
 
-@media (min-width: 41.6875rem) {
+@media (min-width: 48rem) {
 .talents ul {
   flex-direction: row;
   flex-wrap: wrap;
@@ -682,9 +561,10 @@ p.copyright {
 .talents ul li {width: 50%;}
 .talents ul li:nth-of-type(odd) {padding-right: 1rem;}
 .talents ul li:nth-of-type(even) {padding-left: 1rem;}
-.talents ul li:nth-of-type(3) {padding: 0 1rem 0 0;}}
+.talents ul li:nth-of-type(3) {padding: 0 1rem 0 0;}
+}
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
 .talents {padding: 0 0 4rem;}
 .talents ul li:nth-of-type(odd) {padding-right: 2rem;}
 .talents ul li:nth-of-type(even) {padding-left: 2rem;}}
@@ -693,10 +573,10 @@ p.copyright {
 /* ------------------------------------------
   FAVORITES
 --------------------------------------------- */
-
 .favorites {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 2rem;
+  background-color: #eef1e8;
 }
 
 .favorites ul {
@@ -704,10 +584,9 @@ p.copyright {
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0 0;
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.825rem;
-  line-height: 1.5;
+  font-size: 1rem;
   list-style-type: none;
 }
 
@@ -715,7 +594,15 @@ p.copyright {
   display: inline-block;
   margin: 0 0 1rem;
   padding: 0 0 1rem;
-  border-bottom: 1px solid #eef1e8;
+  border-bottom: 1px solid #384332;
+}
+
+.favorites ul li h2 span {
+  display: block;
+  width: 100%;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 0.694rem;
+  text-transform: uppercase;
 }
 
 .favorites ul li:last-of-type {
@@ -724,7 +611,7 @@ p.copyright {
   border: none;
 }
 
-@media (min-width: 41.6875rem) {
+@media (min-width: 48rem) {
 .favorites ul {
   flex-direction: row;
   flex-wrap: wrap;
@@ -738,7 +625,8 @@ p.copyright {
 .favorites ul li:nth-of-type(even) {padding-left: 1rem;}
 .favorites ul li:nth-of-type(3) {padding: 0 1rem 0 0;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
+.favorites {padding: 0 0 4rem;}
 .favorites ul li:nth-of-type(odd) {padding: 0 2rem 2rem 0;}
 .favorites ul li:nth-of-type(even) {padding: 0 0 2rem 2rem;}
 .favorites ul li:nth-of-type(3) {padding: 0 2rem 0 0;}
@@ -748,23 +636,19 @@ p.copyright {
 /* ------------------------------------------
   JOBS
 --------------------------------------------- */
-
 .jobs {
   margin: 0 auto;
   padding: 0;
 }
-
-.jobs .copy {padding: 4rem 2rem 0;}
 
 .jobs ul {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0 0;
   font-family: "metropolis-light", sans-serif;
-  font-size: 0.825rem;
-  line-height: 1.5;
+  font-size: 1rem;
   list-style-type: none;
 }
 
@@ -776,6 +660,14 @@ p.copyright {
 }
 
 .jobs ul li h2 {margin: 0 0 0.25rem;}
+
+.jobs ul li h2 span {
+  display: block;
+  width: 100%;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 0.694rem;
+  text-transform: uppercase;
+}
 
 .jobs ul li:last-of-type {
   margin: 0;
@@ -798,7 +690,6 @@ p.copyright {
 .jobs ul li:nth-of-type(3) {padding: 0 1rem 0 0;}}
 
 @media (min-width: 48rem) {
-.jobs .copy {padding: 4rem 4rem 0;}
 .jobs ul li:nth-of-type(odd) {padding: 0 2rem 2rem 0;}
 .jobs ul li:nth-of-type(even) {padding: 0 0 2rem 2rem;}
 .jobs ul li:nth-of-type(3) {padding: 0 2rem 0 0;}
@@ -806,62 +697,129 @@ p.copyright {
 
 
 /* ------------------------------------------
-  STUDY CARDS
+  CASE STUDY PAGES
 --------------------------------------------- */
-
-.study .card {
+.card {
   display: flex;
-  align-content: center;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem 2rem 0;
   background-color: #ffffff;
 }
 
-.study .card figure {
+.card figure {
+  display: grid;
   width: 100%;
-  margin: 0;
+  margin: auto;
+  padding: 2rem 0 0;
 }
 
-.study .card .row {
-  display: flex;
-  flex-direction: column;
-}
+.card.wide {flex-direction: row;}
 
-.study .card .row figure:first-of-type {padding: 0 0 1rem 0;}
+.card.wide figure {padding: 0;}
 
-.study .card .row figure:last-of-type {padding: 1rem 0 0 0;}
-
-.study .copy.cream {
-  margin-top: 2rem;
+.text.block {
+  margin: 2rem auto 0;
   padding: 2rem;
   background-color: #eef1e8;
 }
 
-.study .copy p, .study .copy.cream p {margin: 0 0 1rem;}
+.copy.row {flex-direction: column;}
 
-.study .copy p:last-of-type, .study .copy.cream p:last-of-type {margin: 0;}
-
-.study .card.wide {padding: 2rem 0 0;}
-
-/*
-.study .card.wide .row figure:first-of-type {padding: 0;}
-
-.study .card.wide .row figure:last-of-type {padding: 0;}
-*/
+.card.row figure:first-of-type {padding: 0;}
 
 @media (min-width: 48rem) {
-.study .card {padding: 4rem 4rem 0;}
-.study .card .row {flex-direction: row;}
-.study .card .row figure:first-of-type {padding: 0 2rem 0 0;}
-.study .card .row figure:last-of-type {padding: 0 0 0 2rem;}
-.study .copy.cream {
-  margin-top: 4rem;
-  padding: 4rem;
+.card {flex-direction: row; align-items: center;}
+.card .text {flex-grow: 1; width: 40rem;}
+.card figure {flex-grow: 1; padding: 0 0 0 2rem;}
+.card.row figure:first-of-type {padding: 0 1rem 0 0;}
+.card.row figure:last-of-type {padding: 0 0 0 1rem;}
+.card.wide {padding: 2rem 0 0;}
+.card.wide .text {padding: 0 2rem; column-count: 2; column-gap: 2rem;}
+.text.block p {max-width: 34rem; margin: auto;}}
+
+@media (min-width: 64rem) {
+.card {padding: 4rem 4rem 0;}
+.card figure {padding: 0 0 0 4rem;}
+.card.row figure:first-of-type {padding: 0 2rem 0 0;}
+.card.row figure:last-of-type {padding: 0 0 0 2rem;}
+.card.wide {padding: 4rem 0 0;}
+.card.wide .text {padding: 0 4rem; column-gap: 4rem;}
+.text.block {margin: 4rem auto 0; padding: 4rem;}}
+
+
+/* ------------------------------------------
+  PREVIEW GRID
+--------------------------------------------- */
+.preview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2rem 0;
 }
-.study .card.wide {padding: 4rem 0 0;}
+
+.preview .cell {
+  width: 100%;
+  margin: 2rem auto 0;
+}
+
+.preview .cell:first-of-type {margin: 0;}
+
+.preview .cell figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vw;
+  margin: 0;
+}
+
+.preview .cell figure img {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 50%;
+  transform: scale(1);
+  transform-origin: bottom right;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.preview .cell figure img:hover, .preview .cell figure img:focus {transform: scale(1.5);}
+
+.preview .cell figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.preview .cell.transferx {background-color: #f0f5f8;}
+
+.preview .cell.transferx figure img {bottom: -1rem;}
+
+.preview .cell.east-wind {background-color: #552a80;}
+
+.preview .cell.east-wind figure img {
+  right: 1rem;
+  bottom: 20%;
+}
+
+.preview .cell.my-brand {background-color: #ffffff;}
+
+.preview .cell.my-brand figure img {width: 60%;}
+
+@media (min-width: 48rem) {
+.preview {flex-direction: row; justify-content: space-between;}
+.preview .cell {margin: 0;}
+.preview .cell figure {height: 20vw;}}
+
+@media (min-width: 64rem) {
+.preview {padding: 4rem 4rem 0;}
 }
