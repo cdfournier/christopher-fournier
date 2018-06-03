@@ -263,6 +263,23 @@ header.logo.panera .box {
   padding: 2rem 0 0;
 }
 
+header.logo.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: fixed;
+  background-image: url(../images/banner-about.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header.about.logo {
   align-items: flex-start;
   padding: 0 2rem;
@@ -279,7 +296,7 @@ header.about.logo .box {
 @media (min-width: 48rem) {
 header.logo.panera {padding: 0 4rem;}
 header.about.logo .box {padding: 0 0 4rem 2rem;}
-}
+header.error.logo .box {padding: 0 0 4rem 2rem;}}
 
 header.navigation {
   position: fixed;
@@ -359,7 +376,7 @@ footer ul li, footer ul li a {
 
 footer ul li:last-of-type, footer ul li a:last-of-type {padding: 0;}
 
-footer ul li a:hover, footer ul li a:focus {color: #ff7376; color: #e85c45;}
+footer ul li a:hover, footer ul li a:focus {color: #e85c45;}
 
 @media (min-width: 48rem) {
 footer {padding: 4rem; text-align: left; align-items: center;}
@@ -766,23 +783,6 @@ footer.home small {max-width: none;}}
 /* ------------------------------------------
   ABOUT PAGE
 --------------------------------------------- */
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 0;
-  background-attachment: fixed;
-  background-image: url(../images/banner-about.jpg);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @media (min-width: 48rem) {
 .bio.box h1 {font-size: 2.074rem;}
 .bio.box p {font-size: 1.2rem;}}
@@ -978,3 +978,39 @@ footer.home small {max-width: none;}}
 }
 .employers ul li {width: 45%;}
 .employers ul li:nth-of-type(3) {border: none;}}
+
+
+/* ------------------------------------------
+  ERROR PAGES
+--------------------------------------------- */
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: fixed;
+  background-image: url(../images/banner-error.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.error .box {
+  margin: 0;
+  color: #ffffff;
+}
+
+.error footer {
+  text-align: left;
+}
+
+.error footer ul {justify-content: flex-start;}
+
+.error footer ul li, .error footer ul li a, .error footer small {color: #ffffff;}
+
+.error footer ul li a:hover, .error footer ul li a:focus {color: #e85c45;}
