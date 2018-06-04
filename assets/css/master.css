@@ -273,12 +273,15 @@ header.logo.about {
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/banner-about.jpg);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.no-touch header.logo.about {background-attachment: fixed;}
+
 
 header.about.logo {
   align-items: flex-start;
@@ -528,7 +531,7 @@ footer.home small {max-width: none;}}
 .banner.work-panera {
   min-width: 100vw;
   min-height: 100vh;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/work-panera-01.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -538,7 +541,7 @@ footer.home small {max-width: none;}}
 .banner.work-transferx {
   min-width: 100vw;
   min-height: 100vh;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/work-transferx-01.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -548,7 +551,7 @@ footer.home small {max-width: none;}}
 .banner.work-east-wind {
   min-width: 100vw;
   min-height: 100vh;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/work-east-wind-01.jpg);
   background-position: 65% center;
   background-repeat: no-repeat;
@@ -558,7 +561,7 @@ footer.home small {max-width: none;}}
 .banner.work-my-brand {
   min-width: 100vw;
   min-height: 100vh;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/work-my-brand-01.jpg);
   background-position: right center;
   background-repeat: no-repeat;
@@ -567,6 +570,9 @@ footer.home small {max-width: none;}}
 
 .banner.work-panera, .banner.work-transferx,
 .banner.work-east-wind, .banner.work-my-brand {z-index: 15; margin: 0 0 4rem;}
+
+.no-touch .banner.work-panera, .no-touch .banner.work-transferx,
+.no-touch .banner.work-east-wind, .no-touch .banner.work-my-brand {background-attachment: fixed;}
 
 
 /* ------------------------------------------
@@ -993,21 +999,21 @@ footer.home small {max-width: none;}}
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-image: url(../images/banner-error.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.no-touch .error {background-attachment: fixed;}
+
 .error .box {
   margin: 0;
   color: #ffffff;
 }
 
-.error footer {
-  text-align: left;
-}
+.error footer {text-align: left;}
 
 .error footer ul {justify-content: flex-start;}
 
