@@ -397,7 +397,6 @@ footer.home small {max-width: none;}}
   position: relative;
   overflow: hidden;
   width: 100vw;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -416,36 +415,37 @@ footer.home small {max-width: none;}}
 
 .banner .title h1 {
   font-family: "metropolis-thin", sans-serif;
-  font-size: calc(1 * 10vh);
+  font-size: calc(0.75 * 10vh);
   line-height: 1;
   text-align: left;
   color: #ffffff;
 }
 
-.banner.panera {
+.banner figure {
+  display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   justify-content: center;
-  background-color: #e9f0e5;
+  position: relative;
+  width: 100%;
+  margin: 0;
 }
 
-.banner.panera figure {
-  margin: 0 0 -10rem;
-  padding: 0 4rem;
+.banner figcaption {padding: 2rem;}
+
+.banner.panera {background-color: #e9f0e5;}
+
+.banner.panera figure img {
+  width: 60%;
+  margin: 0 auto 2rem;
 }
 
-.banner.panera figcaption {padding: 2rem;}
+.banner.transferx {background-color: #f0f5f8;}
 
-.banner.transferx {
-  flex-direction: column-reverse;
-  background-color: #f0f5f8;
-}
-
-.banner.transferx figure {
+.banner.transferx figure img {
+  width: 80%;
   margin: 0 0 -1rem;
-  padding: 0 4rem;
 }
-
-.banner.transferx figcaption {padding: 2rem;}
 
 .banner.transferx figcaption h1,
 .banner.transferx figcaption p {color: #0d1e27;}
@@ -461,18 +461,9 @@ footer.home small {max-width: none;}}
   background-color: #0d1e27;
 }
 
-.banner.east-wind {
-  flex-direction: column-reverse;
-  justify-content: center;
-  background-color: #ffffff;
-}
+.banner.east-wind {background-color: #ffffff;}
 
-.banner.east-wind figure {
-  margin: 0;
-  padding: 0 0 0 6rem;
-}
-
-.banner.east-wind figcaption {padding: 2rem;}
+.banner.east-wind figure img {margin: 0 0 2rem;}
 
 .banner.east-wind figcaption h1,
 .banner.east-wind figcaption p {color: #552a80;}
@@ -488,40 +479,38 @@ footer.home small {max-width: none;}}
   background-color: #552a80;
 }
 
-.banner.my-brand {
-  flex-direction: column-reverse;
-  justify-content: center;
-  background-color: #eef1e8;
-}
+.banner.my-brand {background-color: #eef1e8;}
 
-.banner.my-brand figure {
-  margin: 0;
-  padding: 0 2rem 2rem 0;
+.banner.my-brand figure img {
+  width: 90%;
+  margin: auto;
 }
-
-.banner.my-brand figcaption {padding: 2rem;}
 
 @media (min-width: 48rem) {
-.banner {min-height: inherit;}
 .banner .title {padding: 4rem;}
-.banner.panera {flex-direction: row; align-items: center;}
-.banner.panera figure {padding: 4rem 0 0 4rem;}
-.banner.panera figcaption {width: 34rem; padding: 4rem;}
-.banner.transferx {flex-direction: row-reverse; align-items: center;}
-.banner.transferx figure {padding: 0 4rem 0 0;}
-.banner.transferx figcaption {width: 40rem; padding: 4rem 0 4rem 4rem;}
-.banner.east-wind {flex-direction: row; align-items: center;}
-.banner.east-wind figure {width: 100%; padding: 4rem 0;}
-.banner.east-wind figcaption {padding: 4rem 4rem 4rem 0;}
-.banner.my-brand {flex-direction: row-reverse; align-items: center;}
-.banner.my-brand figure {width: 100%; margin: 0 0 0 auto; padding: 4rem 4rem 4rem 0;}
-.banner.my-brand figcaption {padding: 0 0 0 4rem;}}
+.banner figure img {position: absolute;}
 
-@media (min-width: 72rem) {
-.banner.my-brand figure {
-  width: 60%;
-  margin: auto;
-}}
+.banner.panera figure {flex-direction: row; justify-content: flex-end; padding: 4rem 0;}
+.banner.panera figure img {top: 2rem; left: 4rem; width: 35%; margin: 0 0 -10rem 0;}
+.banner.panera figure figcaption {width: 60%; padding: 4rem;}
+
+.banner.transferx figure {flex-direction: row-reverse; justify-content: flex-end; padding: 6rem 0;}
+.banner.transferx figure img {top: 0; right: 0; width: 50%; margin: 0 0 -2rem;}
+.banner.transferx figure figcaption {width: 60%; padding: 4rem;}
+
+.banner.east-wind figure {flex-direction: row; justify-content: flex-end; padding: 6rem 0;}
+.banner.east-wind figure img {top: 2rem; left: 0; width: auto; height: 80%;}
+.banner.east-wind figure figcaption {width: 60%; padding: 4rem;}
+
+.banner.my-brand figure {flex-direction: row-reverse; justify-content: flex-end; padding: 6rem 0;}
+.banner.my-brand figure img {right: 4rem; width: 60%; margin: 0;}
+.banner.my-brand figure figcaption {width: 60%; padding: 4rem;}}
+
+@media (min-width: 64rem) {
+.banner.panera figure {padding: 6rem 0;}
+.banner.panera figure img {width: 30%;}
+.banner.transferx figure img {width: 40%;}
+.banner.my-brand figure img {top: 4rem;}}
 
 
 /* ------------------------------------------
