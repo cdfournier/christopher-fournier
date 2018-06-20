@@ -209,10 +209,10 @@ p a:hover, p a:focus, li a:hover, li a:focus {color: #e85c45;}
   display: inline-block;
   width: auto;
   margin: 1rem auto 0 0;
-  padding: 0.694rem 1rem;
+  padding: 0.74rem 1rem 0.694rem 1rem;
   border: 1px solid #384332;
   font-family: "metropolis-medium", sans-serif;
-  font-size: 0.694rem;
+  font-size: 0.833rem;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 0.694;
