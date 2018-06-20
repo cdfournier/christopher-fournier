@@ -613,8 +613,8 @@ footer.home small {max-width: none;}}
 .box figure {max-width: 32rem;}
 .box .text {max-width: 32rem;}
 .box .row {flex-direction: row; max-width: 32rem;}
-.box .row figure:nth-of-type(odd) {padding: 0 1rem 0 0;}
-.box .row figure:nth-of-type(even) {padding: 0 0 0 1rem;}
+.box .row figure:nth-of-type(odd) {padding: 0 2rem 0 0;}
+.box .row figure:nth-of-type(even) {padding: 0 0 0 2rem;}
 .callout {margin: 4rem auto 0; padding: 4rem;}
 .callout p {max-width: 32rem; margin: 0 auto; font-size: 1.2rem;}}
 
