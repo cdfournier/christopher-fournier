@@ -296,6 +296,27 @@ header.about.logo .box {
   padding: 0 0 2rem 0;
 }
 
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0
+}
+
+.headroom {
+  transition: transform .25s ease-in-out;
+  will-change: transform
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
 @media (min-width: 48rem) {
 header.logo.panera {padding: 0 4rem;}
 header.about.logo .box {padding: 0 0 4rem 2rem;}
