@@ -331,10 +331,12 @@ header.navigation {
   background-color: #ffffff;
 }
 
+nav {width: 100%;}
+
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: inherit;
   margin: auto;
   padding: 0;
@@ -359,7 +361,7 @@ nav ul li a:hover, nav ul li a:focus {color: #ff7376; color: #e85c45;}
 
 @media (min-width: 48rem) {
 header.navigation {padding: 2rem;}
-nav ul {justify-content: flex-start; max-width: 32rem;}}
+nav ul {max-width: 32rem;}}
 
 
 /* ------------------------------------------
