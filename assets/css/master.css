@@ -332,7 +332,8 @@ header.about.logo .box {
 }
 
 @media (min-width: 48rem) {
-header.logo.panera {padding: 0 4rem;}
+header.logo.panera,
+header.logo.transferx {padding: 0 4rem;}
 header.about.logo .box {padding: 0 0 4rem 2rem;}
 header.error.logo .box {padding: 0 0 4rem 2rem;}}
 
