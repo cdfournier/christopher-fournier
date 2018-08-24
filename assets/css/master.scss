@@ -251,6 +251,19 @@ header {
   margin: 0;
 }
 
+header.logo.my-brand {
+  align-items: center;
+  padding: 0 2rem;
+}
+
+header.logo.my-brand {background-color: $cream;}
+
+header.logo.my-brand .box {
+  width: 12rem;
+  margin: 0;
+  padding: 2rem 0 0;
+}
+
 header.logo.transferx {
   align-items: center;
   padding: 0 2rem;
@@ -420,7 +433,7 @@ footer {
 
 }
 
-footer.home {background-color: $cream;}
+footer.home {background-color: $panera-bg;}
 
 @media (min-width: 48rem) {
 footer {padding: 4rem; text-align: left; align-items: center;}

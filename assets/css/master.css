@@ -173,6 +173,18 @@ header {
   width: 100%;
   margin: 0; }
 
+header.logo.my-brand {
+  align-items: center;
+  padding: 0 2rem; }
+
+header.logo.my-brand {
+  background-color: #eef1e8; }
+
+header.logo.my-brand .box {
+  width: 12rem;
+  margin: 0;
+  padding: 2rem 0 0; }
+
 header.logo.transferx {
   align-items: center;
   padding: 0 2rem; }
@@ -339,7 +351,7 @@ footer {
     color: #e85c45; }
 
 footer.home {
-  background-color: #eef1e8; }
+  background-color: #e9f0e5; }
 
 @media (min-width: 48rem) {
   footer {
