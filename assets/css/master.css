@@ -33,16 +33,26 @@
   font-weight: normal;
   font-style: normal; }
 
-html, body {
+html {
+  font-family: "metropolis-light", sans-serif;
+  font-size: 100%;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #384332; }
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(1rem + 6 * ((100vw - 20rem) / 680)); } }
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 1.25rem; } }
+
+body {
   width: 100%;
   overflow-x: hidden;
   margin: 0 auto;
-  padding: 0;
-  font-family: "metropolis-light", sans-serif;
-  font-size: 100%;
-  font-size: calc(0.75rem + 0.5vw);
-  line-height: 1.45;
-  color: #384332; }
+  padding: 0; }
 
 body {
   animation: 1s ease-out 0s 1 fadeIn; }
@@ -255,18 +265,18 @@ header.about.logo .box {
   will-change: transform; }
 
 .headroom--pinned {
-  -webkit-transform: translate(0);
-  -moz-transform: translate(0);
-  -ms-transform: translate(0);
-  -o-transform: translate(0);
-  transform: translate(0); }
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); }
 
 .headroom--unpinned {
-  -webkit-transform: translate(-100%);
-  -moz-transform: translate(-100%);
-  -ms-transform: translate(-100%);
-  -o-transform: translate(-100%);
-  transform: translate(-100%); }
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%); }
 
 @media (min-width: 48rem) {
   header.logo.panera,
@@ -413,7 +423,7 @@ footer.home {
 
 .banner.panera figure img {
   width: 60%;
-  margin: 0 auto 2rem; }
+  margin: 0 auto; }
 
 .banner.transferx {
   background-color: #f0f5f8; }
@@ -457,6 +467,9 @@ footer.home {
 .banner.my-brand {
   background-color: #eef1e8; }
 
+.banner.my-brand {
+  padding: 0 0 2rem; }
+
 .banner.my-brand figure img {
   width: 90%;
   margin: auto; }
@@ -473,8 +486,9 @@ footer.home {
   .banner.panera figure img {
     top: 2rem;
     left: 4rem;
-    width: 35%;
-    margin: 0 0 -10rem 0; }
+    width: auto;
+    height: 90%;
+    margin: 0; }
   .banner.panera figure figcaption {
     width: 60%;
     padding: 4rem; }
@@ -517,8 +531,6 @@ footer.home {
 @media (min-width: 64rem) {
   .banner.panera figure {
     padding: 6rem 0; }
-  .banner.panera figure img {
-    width: 30%; }
   .banner.transferx figure img {
     width: 40%; }
   .banner.my-brand figure img {
