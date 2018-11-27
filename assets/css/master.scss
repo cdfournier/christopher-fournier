@@ -1,14 +1,28 @@
 // COLORS
 $white: #ffffff;
+$black: #000000;
 $cream: #eef1e8;
 $green: #384332;
 $orange: #e85c45;
+
+$cool-gray: #f9fbfd;
+$warm-gray: #ebebe8;
 
 $transferx: #0d1e27;
 $transferx-bg: #f0f5f8;
 $panera: #4c753f;
 $panera-bg: #e9f0e5;
 $east-wind: #552a80;
+
+
+// COLORS MIXING
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
 
 
 //MIXINS
@@ -31,29 +45,8 @@ $east-wind: #552a80;
 
 // FONTS
 @font-face {
-  font-family: "metropolis-thin";
-    src: url("../fonts/metropolis/metropolis-thin.eot");
-    src: url("../fonts/metropolis/metropolis-thin.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-thin.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-thin.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-thin.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-light";
-    src: url("../fonts/metropolis/metropolis-light.eot");
-    src: url("../fonts/metropolis/metropolis-light.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-light.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-light.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
   font-family: "metropolis-regular";
+  font-display: auto;
     src: url("../fonts/metropolis/metropolis-regular.eot");
     src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"),
          url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
@@ -65,6 +58,7 @@ $east-wind: #552a80;
 
 @font-face {
   font-family: "metropolis-medium";
+  font-display: auto;
     src: url("../fonts/metropolis/metropolis-medium.eot");
     src: url("../fonts/metropolis/metropolis-medium.eot?#iefix") format("embedded-opentype"),
          url("../fonts/metropolis/metropolis-medium.woff") format("woff"),
@@ -76,6 +70,7 @@ $east-wind: #552a80;
 
 @font-face {
   font-family: "metropolis-bold";
+  font-display: auto;
     src: url("../fonts/metropolis/metropolis-bold.eot");
     src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"),
          url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
@@ -85,8 +80,6 @@ $east-wind: #552a80;
     font-style: normal;
 }
 
-$font-thin: ("metropolis-thin", sans-serif);
-$font-light: ("metropolis-light", sans-serif);
 $font-regular: ("metropolis-regular", sans-serif);
 $font-medium: ("metropolis-medium", sans-serif);
 $font-bold: ("metropolis-bold", sans-serif);
@@ -94,24 +87,31 @@ $font-bold: ("metropolis-bold", sans-serif);
 
 // BASE STYLES
 html {
-  font-family: $font-light;
-  font-size: 100%;
-  font-size: 1rem;
-  line-height: 1.45;
+  font-family: $font-regular;
+  font-size: 0.8rem;
+  font-weight: normal;
+  line-height: 1.2;
   color: $green;
 }
 
-@media screen and (min-width: 320px) {
-html {font-size: calc(1rem + 6 * ((100vw - 20rem) / 680))}}
+// @media (min-width: 23.4375rem) {html {font-size: 1rem;}}
 
+@media screen and (min-width: 320px) {html {font-size: calc(1rem + 6 * ((100vw - 32rem) / 768))}}
+
+/*
 @media screen and (min-width: 1000px) {
 html {font-size: 1.25rem;}}
+*/
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0;
+  background-color: $cool-gray;
 }
 
 body {animation: 1s ease-out 0s 1 fadeIn;}
@@ -133,12 +133,17 @@ body {animation: 1s ease-out 0s 1 fadeIn;}
 
 a {
   text-decoration: none;
-  @include transition (all, 0.2s, ease-in-out);
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+::-moz-selection {
+  color: $white;
+  background: $green;
 }
 
 ::selection {
-  background: $green;
   color: $white;
+  background: $green;
 }
 
 img {
@@ -149,63 +154,39 @@ img {
 
 
 // TYPOGRAPHY
-h1, h2, h3, p, strong, small {
-  width: 100%;
+h1, h2, h3 {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.625rem;
+  font-weight: inherit;
+  line-height: 1.2;
 }
 
 h1 {
-  margin: 0;
+  width: 100%;
   font-family: $font-bold;
-  font-size: 1.728rem;
-  font-weight: normal;
-  line-height: 1.2;
+  font-size: 1.953rem;
+  letter-spacing: -1.2px;
   text-transform: capitalize;
   column-span: all;
 }
 
 h2, h3 {
-  margin: 0;
   font-family: $font-bold;
-  font-size: 1.44rem;
-  font-weight: normal;
-  line-height: 1.2;
+  font-size: 1.563rem;
   text-transform: capitalize;
   column-span: all;
 }
 
-h3 {font-size: 1.2rem;}
+h3 {font-size: 1.25rem;}
 
 p {
-  padding: 0 0 1rem;
+  margin: 0;
+  padding: 0 0 0.625rem;
   font-size: 1rem;
-  font-weight: normal;
   line-height: 1.5;
 }
 
 p:last-of-type {padding: 0;}
-
-strong {
-  font-family: $font-medium;
-  font-weight: normal;
-}
-
-small {
-  font-family: inherit;
-  font-size: 0.833rem;
-}
-
-h1.white, h2.white, h3.white, p.white {color: $white;}
-
-h1 span {
-  display: block;
-  width: 100%;
-  font-family: $font-regular;
-  font-size: 0.694rem;
-  font-weight: normal;
-  text-transform: uppercase;
-}
 
 p a, li a {
   font-family: $font-medium;
@@ -214,25 +195,48 @@ p a, li a {
 
 p a:hover, p a:focus, li a:hover, li a:focus {color: $orange;}
 
+strong {
+  display: block;
+  font-family: $font-bold;
+  font-weight: normal;
+}
+
+small, .font_small, .eyebrow {font-size: 0.8rem;}
+
+.eyebrow {
+  display: block;
+  font-family: $font-regular;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 
 // BUTTONS
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: auto;
+  max-width: 100%;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  overflow: hidden;
   margin: 1rem auto 0 0;
-  padding: 0.74rem 1rem 0.694rem 1rem;
+  padding: 0 1.563rem;
   border: 1px solid $green;
-  font-family: $font-medium;
-  font-size: 0.833rem;
+  border-radius: 0.125rem;
+  font-family: $font-bold;
+  font-size: 0.8rem;
   font-weight: normal;
-  letter-spacing: 1px;
-  line-height: 0.694;
+  line-height: 2.25rem;
   text-align: center;
   text-decoration: none;
+  text-overflow: ellipsis;
   text-transform: uppercase;
   color: $green;
   background-color: transparent;
+  white-space: nowrap;
   cursor: pointer;
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .button:hover, .button:focus {
@@ -240,15 +244,7 @@ p a:hover, p a:focus, li a:hover, li a:focus {color: $orange;}
   background-color: $green;
 }
 
-.button.white {
-  border: 1px solid $white;
-  color: $white;
-}
-
-.button.white:hover, .button.white:focus {
-  color: $green;
-  background-color: $white;
-}
+@media (min-width: 48rem) {button, .button {margin: 2rem auto 0 0;}}
 
 
 // HEADER
@@ -258,77 +254,6 @@ header {
   align-items: flex-start;
   width: 100%;
   margin: 0;
-}
-
-header.logo.my-brand {
-  align-items: center;
-  padding: 0 2rem;
-}
-
-header.logo.my-brand {background-color: $cream;}
-
-header.logo.my-brand .box {
-  width: 12rem;
-  margin: 0;
-  padding: 2rem 0 0;
-}
-
-header.logo.transferx {
-  align-items: center;
-  padding: 0 2rem;
-}
-
-header.logo.transferx {background-color: $transferx-bg;}
-
-header.logo.transferx .box {
-  width: 12rem;
-  margin: 0;
-  padding: 2rem 0 0;
-}
-
-header.logo.panera {
-  align-items: center;
-  padding: 0 2rem;
-}
-
-header.logo.panera {background-color: $panera-bg;}
-
-header.logo.panera .box {
-  width: 12rem;
-  margin: 0;
-  padding: 2rem 0 0;
-}
-
-header.logo.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 0;
-  background-attachment: initial;
-  background-image: url(../images/banner-about.jpg);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.no-touch header.logo.about {background-attachment: fixed;}
-
-header.about.logo {
-  align-items: flex-start;
-  padding: 0 2rem;
-}
-
-header.about.logo .box {
-  width: calc(100% - 50vw);
-  max-width: 18.75rem;
-  min-width: 12rem;
-  margin: 0;
-  padding: 0 0 4rem 0;
 }
 
 .header--fixed {
@@ -344,22 +269,10 @@ header.about.logo .box {
   will-change: transform
 }
 
-.headroom--pinned {
-  @include transform (translateY(0));
-}
+.headroom--pinned {@include transform (translateY(0));}
 
-.headroom--unpinned {
-  @include transform (translateY(-100%));
-}
+.headroom--unpinned {@include transform (translateY(-100%));}
 
-@media (min-width: 48rem) {
-header.logo.panera,
-header.logo.transferx {padding: 0 4rem;}
-header.about.logo .box {padding: 0 0 4rem 2rem;}
-header.error.logo .box {padding: 0 0 4rem 2rem;}}
-
-
-// NAVIGATION
 header.navigation {
   position: fixed;
   z-index: 10;
@@ -368,40 +281,58 @@ header.navigation {
   background-color: $white;
 }
 
+@media (min-width: 48rem) {header.navigation {padding: 1rem 4rem;}}
+
+
+// NAVIGATION
 nav {
   width: 100%;
 
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     width: inherit;
     margin: auto;
-    padding: 0;
-    font-family: $font-medium;
-    font-size: 0.833rem;
-    list-style-type: none;
-    text-align: center;
-    text-transform: uppercase;
+    padding: 0 0 0.8rem;
   }
 
   ul li, ul li a {
     display: inline-block;
     margin: 0;
-    padding: 0 1rem 0 0;
-    color: $green;
+    padding: 0 0.7rem 0 0;
+    font-family: $font-medium;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: $orange;
     @include transition (all, 0.2s, ease-in-out);
   }
 
   ul li:last-of-type, ul li a:last-of-type {padding: 0;}
+  
+  ul li a {
+    font-family: $font-medium;
+    color: $green;
+  }
 
   ul li a:hover, ul li a:focus {color: $orange;}
 
 }
 
-@media (min-width: 48rem) {
-header.navigation {padding: 2rem;}
-nav ul {max-width: 32rem;}}
+@media (min-width: 30rem) {
+nav ul li, nav ul li a {
+  padding: 0 0.8rem 0 0;
+  font-size: 0.8rem;
+}}
+
+header nav ul {
+  justify-content: flex-start;
+  padding: 0;
+}
 
 
 // FOOTER
@@ -411,645 +342,938 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  font-family: $font-light;
-  text-align: center;
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: inherit;
-    margin: 0;
-    padding: 0 0 0.25rem;
-    list-style-type: none;
-    font-family: $font-medium;
-    font-size: 0.833rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  ul li, ul li a {
-    display: inline-block;
-    margin: 0;
-    padding: 0 1rem 0 0;
-    color: $green;
-    transition: all 0.2s ease;
-  }
-
-  ul li:last-of-type, ul li a:last-of-type {padding: 0;}
-
-  ul li a:hover, ul li a:focus {color: $orange;}
-
+  font-family: $font-regular;
 }
 
-footer.home {background-color: $panera-bg;}
-
-@media (min-width: 48rem) {
-footer {padding: 4rem; text-align: left; align-items: center;}
-footer ul {justify-content: flex-start; max-width: 32rem;}
-footer small {max-width: 32rem;}
-footer.home ul {max-width: none;}
-footer.home small {max-width: none;}}
-
-
-// BANNERS
-.banner {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: $white;
+footer .logo {
+  width: 10rem;
+  margin: 0 auto 1rem;
 }
 
-.no-touch .banner {background-attachment: fixed;}
+footer small {text-align: center;}
 
-.banner .title {
+
+// FIGURES
+figure {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 2rem 2rem 6rem;
-  background: rgba(0,0,0,0.25);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
-}
-
-.banner .title h1 {
-  font-family: $font-thin;
-  font-size: calc(0.75 * 10vh);
-  line-height: 1;
-  text-align: left;
-  color: $white;
-}
-
-.banner figure {
-  display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   width: 100%;
   margin: 0;
-}
-
-.banner figcaption {padding: 2rem;}
-
-.banner.panera {background-color: $panera-bg;}
-
-.banner.panera figure img {
-  width: 60%;
-  margin: 0 auto;
-}
-
-.banner.transferx {background-color: $transferx-bg;}
-
-.banner.transferx figure img {
-  width: 80%;
-  margin: 0 0 -1rem;
-}
-
-.banner.transferx figcaption h1,
-.banner.transferx figcaption p {color: $transferx;}
-
-.banner.transferx figcaption .button {
-  border-color: $transferx;
-  color: $transferx;
-}
-
-.banner.transferx figcaption .button:hover,
-.banner.transferx figcaption .button:focus {
-  color: $white;
-  background-color: $transferx;
-}
-
-.banner.east-wind {background-color: $white;}
-
-.banner.east-wind figure img {margin: 0 0 2rem;}
-
-.banner.east-wind figcaption h1,
-.banner.east-wind figcaption p {color: $east-wind;}
-
-.banner.east-wind figcaption .button {
-  border-color: $east-wind;
-  color: $east-wind;
-}
-
-.banner.east-wind figcaption .button:hover,
-.banner.east-wind figcaption .button:focus {
-  color: $white;
-  background-color: $east-wind;
-}
-
-.banner.my-brand {background-color: $cream;}
-
-.banner.my-brand {padding: 0 0 2rem;}
-
-.banner.my-brand figure img {
-  width: 90%;
-  margin: auto;
-}
-
-@media (min-width: 48rem) {
-.banner .title {padding: 4rem;}
-.banner figure img {position: absolute;}
-
-.banner.panera figure {flex-direction: row; justify-content: flex-end; padding: 4rem 0;}
-.banner.panera figure img {top: 2rem; left: 4rem; width: auto; height: 90%; margin: 0;}
-.banner.panera figure figcaption {width: 60%; padding: 4rem;}
-
-.banner.transferx figure {flex-direction: row-reverse; justify-content: flex-end; padding: 6rem 0;}
-.banner.transferx figure img {top: 0; right: 0; width: 50%; margin: 0 0 -2rem;}
-.banner.transferx figure figcaption {width: 60%; padding: 4rem;}
-
-.banner.east-wind figure {flex-direction: row; justify-content: flex-end; padding: 6rem 0;}
-.banner.east-wind figure img {top: 2rem; left: 0; width: auto; height: 80%;}
-.banner.east-wind figure figcaption {width: 60%; padding: 4rem;}
-
-.banner.my-brand figure {flex-direction: row-reverse; justify-content: flex-end; padding: 6rem 0;}
-.banner.my-brand figure img {right: 4rem; width: 60%; margin: 0;}
-.banner.my-brand figure figcaption {width: 60%; padding: 4rem;}}
-
-@media (min-width: 64rem) {
-.banner.panera figure {padding: 6rem 0;}
-.banner.transferx figure img {width: 40%;}
-.banner.my-brand figure img {top: 4rem;}}
-
-
-// TITLE BANNERS
-.banner.title-panera {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-attachment: initial;
-  background-image: url(../images/work-panera-01.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.title-transferx {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-attachment: initial;
-  background-image: url(../images/work-transferx-01.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.title-east-wind {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-attachment: initial;
-  background-image: url(../images/work-east-wind-01.jpg);
-  background-position: 65% center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.title-my-brand {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-attachment: initial;
-  background-image: url(../images/work-my-brand-01.jpg);
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.banner.title-panera, .banner.title-transferx,
-.banner.title-east-wind, .banner.title-my-brand {z-index: 15; margin: 0 0 4rem;}
-
-.no-touch .banner.title-panera, .no-touch .banner.title-transferx,
-.no-touch .banner.title-east-wind, .no-touch .banner.title-my-brand {background-attachment: fixed;}
-
-
-// BOXES
-.box {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-  padding: 2rem 2rem 0;
-}
-
-.box figure {
-  display: grid;
-  width: 100%;
-  margin: auto;
-  padding: 0;
-}
-
-.box .text, .box .row {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-}
-
-.box .text.center {text-align: center;}
-
-.box .row figure {
-  display: grid;
-  width: 100%;
-  margin: auto;
-  padding: 0 0 2rem;
-}
-
-.box .row figure:last-child {padding: 0;}
-
-.callout {
-  margin: 2rem auto 0;
   padding: 2rem;
 }
 
-.callout.panera {background-color: $panera-bg;}
-
-.callout.transferx {background-color: $transferx-bg;}
-
-@media (min-width: 48rem) {
-.box {padding: 4rem 4rem 0;}
-.box figure {max-width: 32rem;}
-.box .text {max-width: 32rem;}
-.box .row {flex-direction: row; max-width: 32rem;}
-.box .row figure:nth-of-type(odd) {padding: 0 2rem 0 0;}
-.box .row figure:nth-of-type(even) {padding: 0 0 0 2rem;}
-.callout {margin: 4rem auto 0; padding: 4rem;}
-.callout p {max-width: 32rem; margin: 0 auto; font-size: 1.2rem;}}
-
-
-// PREVIEW GRID
-.preview {
+figcaption {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {figure {padding: 4rem;}}
+
+
+// HOME WELCOME
+.welcome figure {
+  min-height: 100vh;
+  padding: 2rem 2rem 6rem;
+}
+
+.welcome figure img {max-width: 32rem;}
+
+.welcome figcaption {
+  max-width: 32rem;
   padding: 2rem 0 0;
 }
 
-.preview .wide {
-  width: 100%;
-  margin: 0 auto;
-}
+@media (min-width: 41.6875rem) {
+.welcome figure {flex-direction: row-reverse;}
+.welcome figure img {width: 50%;}
+.welcome figcaption {padding: 0;}}
 
-.preview .wide .cell {width: 100%;}
+@media (min-width: 48rem) {.welcome figure {padding: 4rem;}}
 
-.preview .wide .cell figure {
-  display: grid;
-  position: relative;
-  overflow: hidden;
+
+// HOME TRIVIALITIES
+.trivialities ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
-  height: 50vw;
   margin: 0;
+  padding: 2rem;
+  list-style: none;
+  background-color: $warm-gray;
 }
 
-.preview .wide .cell figure img {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  width: 50%;
-}
-
-.preview .wide .cell figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  padding: 1rem;
-}
-
-.preview .row {
+.trivialities ul li {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.preview .row .cell {
-  width: 100%;
-  margin: 2rem auto 0;
-}
-
-.preview .row .cell figure {
-  display: grid;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 50vw;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
   margin: 0;
   padding: 0;
 }
 
-.preview .row .cell figure img {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  width: 50%;
+.trivialities ul li:last-child {display: none;;}
+
+.trivialities ul li span.icon {
+  font-size: 2.441rem;
+  line-height: 1;
 }
 
-.preview .row .cell figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  padding: 1rem;
+.trivialities ul li span.icon i.la.la-coffee {
+  position: relative;
+  top: 0.25rem;
+  left: -0.25rem;
 }
 
-.preview .cell.panera {background-color: $panera-bg;}
-
-.preview .cell.panera figure img {
-  bottom: -5rem;
-  right: 0.25rem;
-  width: 40%;
-}
-
-.preview .cell.transferx {background-color: $transferx-bg;}
-
-.preview .cell.transferx figure img {
-  right: -2rem;
-  bottom: -1rem;
-}
-
-.preview .cell.transferx figcaption h2,
-.preview .cell.transferx figcaption p {color: $transferx;}
-
-.preview .cell.transferx figcaption .button {
-  border-color: $transferx;
-  color: $transferx;
-}
-
-.preview .cell.transferx figcaption .button:hover,
-.preview .cell.transferx figcaption .button:focus {
-  color: $white;
-  background-color: $transferx;
-}
-
-.preview .cell.east-wind {background-color: $white;}
-
-.preview .cell.east-wind figure img {
-  right: 0;
-  bottom: 0;
-}
-
-.preview .cell.east-wind figcaption h2,
-.preview .cell.east-wind figcaption p {color: $east-wind;}
-
-.preview .cell.east-wind figcaption .button {
-  border-color: $east-wind;
-  color: $east-wind;
-}
-
-.preview .cell.east-wind figcaption .button:hover,
-.preview .cell.east-wind figcaption .button:focus {
-  color: $white;
-  background-color: $east-wind;
-}
-
-.preview .cell.my-brand {background-color: $cream;}
-
-.preview .cell.my-brand figure img {
-  right: 1rem;
-  bottom: 1rem;
-  width: 60%;
-}
-
-@media (min-width: 48rem) {
-.preview .wide {max-width: 32rem;}
-.preview .wide .cell figure {height: 40vw;}
-.preview .wide .cell figcaption {padding: 2rem;}
-.preview .row {flex-direction: row; max-width: 32rem;}
-.preview .row .cell {width: 50%;}
-.preview .row .cell:nth-of-type(odd) {margin-right: 1rem;}
-.preview .row .cell:nth-of-type(even) {margin-left: 1rem;}
-.preview .row .cell figure {height: 20vw;}}
-
-@media (min-width: 64rem) {
-.preview .wide .cell figure {height: 32vw;}
-.preview .row .cell figure {height: 16vw;}}
-
-
-// BIO
-@media (min-width: 48rem) {
-.bio.box h1 {font-size: 2.074rem;}
-.bio.box p {font-size: 1.2rem;}}
-
-
-// MAXIMS
-.maxims {margin: 0 auto;}
-
-.maxims ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0 0;
-  font-size: 1rem;
-  list-style-type: none;
-}
-
-.maxims ul li {
-  display: inline-block;
-  padding: 0 0 1rem;
-}
-
-.maxims ul li h2 span {
-  display: block;
-  width: 100%;
-  margin-bottom: -1rem;
+.trivialities ul li span.counter,
+.trivialities ul li span.numscroller,
+.trivialities ul li span.counter-value {
   font-family: $font-bold;
-  font-size: 2.074rem;
-  line-height: 1;
-  color: $cream;
+  font-size: 1.563rem;
+  letter-spacing: -0.046875rem;
 }
 
-.maxims ul li:last-of-type {padding: 0;}
-
-@media (min-width: 48rem) {
-.maxims ul {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.maxims ul li {width: 45%;}}
-
-
-// TALENTS
-.talents {
-  margin: 2rem auto 0;
-  padding: 2rem;
-  background-color: $green;
-}
-
-.talents ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0 0;
-  font-size: 1rem;
-  list-style-type: none;
-  color: $white;
-}
-
-.talents ul li {
-  display: inline-block;
-  padding: 0 0 1rem;
-}
-
-.talents ul li:last-of-type {padding: 0;}
-
-.talents ul li h2 {color: $white;}
-
-.talents ul li span.icon-vector, .talents ul li span.icon-html5, 
-.talents ul li span.icon-star, .talents ul li span.icon-megaphone {
-  display: block;
-  width: 100%;
-  margin-bottom: -1.25rem;
-  font-size: 3rem;
-  line-height: 1;
-  color: #eef1e8;
-  opacity: 0.5;
-}
-
-@media (min-width: 48rem) {
-.talents {padding: 4rem;}
-.talents ul {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.talents ul li {width: 45%;}}
-
-
-// FAVORITES
-.favorites {
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: $cream;
-}
-
-.favorites ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0 0;
-  font-size: 1rem;
-  list-style-type: none;
-}
-
-.favorites ul li {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0 0 1rem;
-  border-bottom: 1px solid $green;
-}
-
-.favorites ul li h2 span {
-  display: block;
-  width: 100%;
-  font-family: $font-regular;
-  font-size: 0.694rem;
+.trivialities ul li p {
+  padding: 0;
+  font-family: $font-medium;
+  font-size: 0.8rem;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.favorites ul li:last-of-type {
-  margin: 0;
-  padding: 0;
-  border: none;
+@media (min-width: 41.6875rem) {
+.trivialities ul li {width: 30%;}
+.trivialities ul li:last-child {display: flex;}}
+
+@media (min-width: 48rem) {.trivialities ul {padding: 4rem;}}
+
+
+// HOME PANERA
+.panera {
+  position: relative;
+  z-index: 1;
+  background-color: $panera-bg;
 }
 
-@media (min-width: 48rem) {
-.favorites {padding: 4rem;}
-.favorites ul {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.favorites ul li {width: 45%;}
-.favorites ul li:nth-of-type(3) {
-  margin: 0;
-  padding: 0;
-  border: none;
-}}
-
-
-// EMPLOYERS
-.employers {margin: 0 auto;}
-
-.employers ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0 0;
-  font-size: 1rem;
-  list-style-type: none;
-}
-
-.employers ul li {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0 0 1rem;
-  border-bottom: 1px solid $cream;
-}
-
-.employers ul li h2 span {
+.panera:before {
   display: block;
-  width: 100%;
-  font-family: $font-regular;
-  font-size: 0.694rem;
-  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  height: 50%;
+  background-color: inherit;
+  content: "";
+  transform: skewY(1.5deg);
+  transform-origin: 100%;
 }
 
-.employers ul li:last-of-type {
-  margin: 0;
-  padding: 0;
-  border: none;
+.panera:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  height: 50%;
+  background-color: inherit;
+  content: "";
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
 }
+
+.panera figure {
+  flex-direction: column-reverse;
+  max-width: 56rem;
+}
+
+.panera figure img {width: 40%;}
+
+.panera figcaption {padding: 0 0 2rem;}
+
+@media (min-width: 41.6875rem) {
+.panera figure {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.panera figure img {width: 20%;}
+.panera figcaption {padding: 0 2rem 0 0;}}
 
 @media (min-width: 48rem) {
-.employers ul {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.panera figure {margin: 0 auto;}
+.panera figcaption {padding: 0 4rem 0 0;}}
+
+@media (min-width: 64rem) {.panera figcaption {width: calc(100% - 16rem);}}
+
+
+// HOME EAST WIND
+.east-wind figure {
+  flex-direction: column-reverse;
+  max-width: 56rem;
 }
-.employers ul li {width: 45%;}
-.employers ul li:nth-of-type(3) {border: none;}}
+
+.east-wind figure img {width: 20%;}
+
+.east-wind figcaption {padding: 0 0 2rem;}
+
+@media (min-width: 41.6875rem) {
+.east-wind figure {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.east-wind figure img {width: 10%;}
+.east-wind figcaption {padding: 0 0 0 2rem;}}
+
+@media (min-width: 48rem) {
+.east-wind figure {margin: 0 auto;}
+.east-wind figcaption {padding: 0 0 0 4rem;}}
+
+@media (min-width: 64rem) {.east-wind figcaption {width: calc(100% - 16rem);}}
 
 
-// ERROR PAGES
-.error {
+// ABOUT ME BANNER
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   position: relative;
+  z-index: 15;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
   background-attachment: initial;
-  background-image: url(../images/banner-error.jpg);
+  background-image: url(../images/banner-about-1x.jpg);
+  background-position: 86% bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+.no-touch .about {background-attachment: fixed;}
+
+.about figure {
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 2rem 2rem 6rem;
+}
+
+.about figure .logo {
+  width: calc(100% - 50vw);
+  max-width: 18.75rem;
+  min-width: 12rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+.about figure {
+  margin: 0 auto;
+  padding: 4rem 4rem 6rem;
+}}
+
+@media (min-width: 64rem) {.about {background-image: url(../images/banner-about-2x.jpg);}}
+
+
+// ABOUT ME BIO
+.bio figure {
+  margin: 2rem 0;
+  background-attachment: initial;
+  background-image: url(../images/born-in-maine.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bio figcaption {text-align: center;}
+
+.bio figcaption p {
+  font-family: $font-medium;
+  line-height: 2;
+}
+
+@media (min-width: 48rem) {
+.bio figure {margin: 4rem 0;}
+.bio figcaption {max-width: 40rem;}}
+
+
+// ABOUT ME DO
+.do {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: $white;
+}
+
+.do h1 {text-align: center;}
+
+.do h1:after {
+  display: block;
+  width: 35%;
+  height: 1px;
+  margin: 0.5rem auto;
+  background-color: $green;
+  content: "";
+}
+
+.do ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 22.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  list-style: none;
+}
+
+.do ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.do ul li:last-child {margin: 0;}
+
+.do ul li h2 {padding: 0;}
+
+.do ul li span {
+  font-size: 2.441rem;
+  line-height: 0.875;
+}
+
+@media (min-width: 41.6875rem) {
+.do {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.do h1 {
+  padding: 0;
+  font-size: 4rem;
+  line-height: 1;
+  text-align: left;
+  color: $cream;
+}
+.do h1:after {display: none;}
+.do ul {padding: 0 0 0 2rem;}}
+
+@media (min-width: 48rem) {
+.do {padding: 4rem;}
+.do h1 {width: 50%;}
+.do ul {padding: 0 0 0 4rem;}}
+
+@media (min-width: 64rem) {.do h1 {width: 40%;}}
+
+
+// ABOUT ME PRINCIPLES
+.principles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.principles h1 {text-align: center;}
+
+.principles h1:after {
+  display: block;
+  width: 35%;
+  height: 1px;
+  margin: 0.5rem auto;
+  background-color: $green;
+  content: "";
+}
+
+.principles ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 22.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principles ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.principles ul li:last-child {margin: 0;}
+
+.principles ul li h2 {padding: 0;}
+
+.principles ul li h2 span {
+  display: block;
+  width: 100%;
+  margin-bottom: -1rem;
+  font-family: $font-bold;
+  font-size: 2.441rem;
+  line-height: 1;
+  color: $cream;
+}
+
+@media (min-width: 41.6875rem) {
+.principles {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+}
+.principles h1 {
+  width: 50%;
+  padding: 0;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: left;
+  color: $cream;
+}
+.principles h1:after {display: none;}
+.principles ul {padding: 0 2rem 0 0;}}
+
+@media (min-width: 48rem) {
+.principles {padding: 4rem 4rem 0;}
+.principles h1 {width: 50%;}
+.principles ul {padding: 0 2rem 0 0;}}
+
+@media (min-width: 54rem) {.principles h1 {font-size: 3.5rem;}}
+
+@media (min-width: 64rem) {
+.principles h1 {
+  width: 45%;
+  font-size: 4rem;
+}}
+
+
+// ABOUT ME CONTACT ME
+.contact {
+  margin: 2rem 0 0;
+  background-color: $green;
+}
+
+.contact article {
+  max-width: 48rem;
+  padding: 2rem;
+  color: $white;
+}
+
+.contact article .button {
+  border-color: $white;
+  color: $white;
+}
+
+.contact article .button:hover, .contact article .button:focus {
+  color: $green;
+  background-color: $white;
+}
+
+@media (min-width: 48rem) {
+.contact {margin: 4rem 0 2rem;}
+.contact article {padding: 4rem;}}
+
+
+// RESUME HEADER
+header.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+header.resume .logo {
+  width: 80%;
+  max-width: 14rem;
+}
+
+header.resume .contact {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 0;
+  background-color: transparent;
+}
+
+header.resume .contact ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header.resume .contact ul li {
+  padding: 0 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+header.resume .contact ul li span {
+  display: block;
+  width: 100%;
+  font-family: $font-bold;
+  text-transform: uppercase;
+  color: $orange;
+}
+
+@media (min-width: 35.5rem) {
+header.resume {flex-direction: row;}
+header.resume .contact {padding: 0 0 0 2rem;}}
+
+@media (min-width: 48rem) {
+header.resume {padding: 4rem 4rem 0;}
+header.resume .contact {padding: 0 0 0 4rem;}}
+
+
+// RESUME ABOUT ME
+.resume .about-me p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-medium;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+
+// RESUME EXPERIENCE
+.resume .experience article {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 2rem;
+}
+
+.resume .experience article:last-of-type {padding: 0;}
+
+.resume .experience article .dates {display: none;}
+
+.resume .experience h2 + p {
+  padding: 0.2rem 0 0;
+  font-family: $font-bold;
+  line-height: 1.2;
+}
+
+.resume .experience p, .resume .experience p:last-of-type {padding: 1rem 0 0;}
+
+.resume .experience article h2 span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  font-family: $font-bold;
+  font-size: 0.9rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: $green;
+}
+
+@media (min-width: 30rem) {
+.resume .experience article,
+.resume .experience article:last-of-type {padding-left: 1.75rem;}}
+
+@media (min-width: 35.5rem) {
+.resume .experience article {flex-direction: row;}
+.resume .experience article .dates {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 0;
+  font-family: $font-bold;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $green;
+}
+.resume .experience article .dates span:after {
+  display: block;
+  width: inherit;
+  height: 1px;
+  margin: 0.075rem 0 0.2rem;
+  background-color: $green;
+  content: "";
+}
+.resume .experience article h2 span {display: none;}}
+
+@media (min-width: 64rem) {
+.resume .experience .history {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.resume .experience article {width: 50%;}
+.resume .experience article:nth-of-type(3n) {padding-bottom: 0;}}
+
+@media (min-width: 90rem) {
+.resume .experience article,
+.resume .experience article:last-of-type {padding-left: 4.75rem;}}
+
+
+// RESUME SKILLS
+.resume .skills {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 0;
+}
+
+.resume .skills .group {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume .skills article {
+  display: block;
+  width: 100%;
+  padding: 0 0 2rem 0;
+}
+
+.resume .skills article:last-of-type {padding: 0;}
+
+.resume .skills article ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume .skills article ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.2rem 0 0;
+  font-family: $font-medium;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.resume .skills article ul li span {
+  position: absolute;
+  right: 0;
+  font-size: 0.8rem;
+  text-align: right;
+  color: $orange;
+}
+
+.resume .skills article ul li span i.la.la-star-o.no {color: tint($green, 50%);}
+
+@media (min-width: 64rem) {
+.resume .skills article:first-of-type {padding-bottom: 0;}
+.resume .skills .group {flex-direction: row;}}
+
+@media (min-width: 90rem) {.resume .skills article ul li span {font-size: 0.9rem;}}
+
+
+// RESUME MORE ABOUT ME
+.resume .more p, .resume .more p:last-of-type {padding-bottom: 1rem;}
+
+
+// COMMON RESUME STYLES
+.resume .about-me,
+.resume .experience,
+.resume .more {
+  display: block;
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 0;
+}
+
+.resume h1 {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.625rem 0;
+  padding: 0;
+  font-family: $font-regular;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.resume h1:after {
+  display: block;
+  position: relative;
+  top: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: $green;
+  content: "";
+}
+
+.resume h1 span {
+  display: inline-block;
+  position: relative;
+  left: 0.25rem;
+  margin: 0;
+  font-family: $font-bold;
+  text-transform: uppercase;
+}
+
+.resume h1 span:after {
+  display: block;
+  width: inherit;
+  height: 3px;
+  background-color: $green;
+  content: "";
+}
+
+.resume h2, .resume h2 a {
+  position: relative;
+  padding: 0;
+  font-family: $font-bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $orange;
+}
+
+.resume h2 a:hover, .resume h2 a:focus {color: $green;}
+
+.resume p {font-size: 0.9rem;}
+
+@media (min-width: 30rem) {
+header.resume .contact ul,
+.resume .about-me p,
+.resume .skills article,
+.resume .skills article:last-of-type,
+.resume .more p {padding-left: 1.75rem;}}
+
+@media (min-width: 48rem) {
+.resume h1 span {left: 3.5rem;}
+.resume .about-me,
+.resume .experience,
+.resume .skills,
+.resume .more {padding: 4rem 4rem 0;}
+header.resume .contact ul,
+.resume .about-me p,
+.resume .skills article,
+.resume .skills article:last-of-type,
+.resume .more p {padding-left: 4.975rem;}}
+
+
+// CASE STUDY BANNER
+.case-study.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: initial;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.no-touch .error {background-attachment: fixed;}
+.case-study.banner.panera-bread {background-image: url(../images/work-panera-01-1x.jpg);}
 
-.error .box {
-  margin: 0;
+.case-study.banner.east-wind {background-image: url(../images/work-east-wind-01-1x.jpg);}
+
+.case-study.banner.enservio {
+  background-image: url(../images/work-enservio-01-1x.jpg);
+  background-position: right bottom;
+}
+
+.case-study.banner.transferx {background-image: url(../images/work-transferx-01-1x.jpg);}
+
+.no-touch .case-study.banner {background-attachment: fixed;}
+
+.case-study.banner article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 2rem 6rem;
+  background: rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, black 0%, transparent 50%);
+}
+
+.case-study.banner article h2 {
+  padding: 0;
+  font-size: 1.953rem;
   color: $white;
 }
 
-.error footer {text-align: left;}
+@media (min-width: 48rem) {.case-study.banner article {padding: 4rem;}}
 
-.error footer ul {justify-content: flex-start;}
+@media (min-width: 64rem) {
+.case-study.banner.panera-bread {background-image: url(../images/work-panera-01-2x.jpg);}
+.case-study.banner.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}
+.case-study.banner.enservio {background-image: url(../images/work-enservio-01-2x.jpg);}
+.case-study.banner.transferx {background-image: url(../images/work-transferx-01-2x.jpg);}}
 
-.error footer ul li, .error footer ul li a, .error footer small {color: $white;}
 
-.error footer ul li a:hover, .error footer ul li a:focus {color: $orange;}
+// CASE STUDY DETAILS
+.details article {padding: 2rem 2rem 0;}
+
+.details article h2 {
+  width: max-content;
+  padding: 1rem 0 0;
+}
+
+.details article h2:after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 0.5rem 0;
+  background-color: $green;
+  content: "";
+}
+
+.details article h2:first-of-type {padding: 0;}
+
+@media (min-width: 41.6875rem) {
+.details article h2 {
+  margin-bottom: -1.5rem;
+  font-size: 3rem;
+  color: $cream;
+}
+.details article h2:after {display: none;}}
+
+@media (min-width: 48rem) {
+.details article {padding: 4rem 4rem 0;}
+.details article h2 {padding: 2rem 0 0;}}
+
+
+// BILLBOARDS
+.billboard {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.billboard.single figure, .billboard.double figure, .billboard.triple figure {padding: 2rem 2rem 0;}
+
+.billboard.fixed {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-touch .billboard.fixed {background-attachment: fixed;}
+
+.billboard.fixed.my-brand {
+  background-image: url(../images/work-my-brand-01-1x.jpg);
+  background-position: 86% bottom;
+}
+
+.billboard.single.enservio figure {padding: 2rem 0 0;}
+
+@media (min-width: 48rem) {
+.billboard.fixed.my-brand {background-image: url(../images/work-my-brand-01-2x.jpg);}
+.billboard.single.enservio figure {padding: 4rem 0 0;}
+.billboard.single figure {padding: 4rem 4rem 0;}
+.billboard.double figure,
+.billboard.triple figure:nth-of-type(2n),
+.billboard.triple figure:nth-of-type(3n) {
+  float: left;
+  width: 50%;
+}
+.billboard.double figure:nth-of-type(1n) {padding: 4rem 2rem 0 4rem;}
+.billboard.double figure:nth-of-type(2n) {padding: 4rem 4rem 0 2rem;}
+.billboard.triple figure:nth-of-type(1n) {padding: 4rem 4rem 0;}
+.billboard.triple figure:nth-of-type(2n) {padding: 4rem 2rem 0 4rem;}
+.billboard.triple figure:nth-of-type(3n) {padding: 4rem 4rem 0 2rem;}}
+
+@media (min-width: 77.5rem) {
+.billboard.triple {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 2rem 0;
+}
+.billboard.triple figure:nth-of-type(1n),
+.billboard.triple figure:nth-of-type(2n),
+.billboard.triple figure:nth-of-type(3n) {
+  float: none;
+  width: auto;
+  padding: 0 2rem;
+}}
+
+
+// ERROR PAGE
+body.error {
+  justify-content: flex-end;
+  background-image: url(../images/banner-error-1x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-touch body.error {background-attachment: fixed;}
+
+.error-message {
+  max-width: 40rem;
+  padding: 2rem;
+}
+
+.error-message h1, .error-message p, .error footer nav ul li a, .error footer small {color: $white;}
+
+.error-message .button {
+  border-color: $white;
+  color: $white;
+}
+
+.error footer nav ul li a:hover, .error footer nav ul li a:focus {color: $orange;}
+
+.error-message .button:hover, .error-message .button:focus {
+  color: $green;
+  background-color: $white;
+}
+
+@media (min-width: 48rem) {
+body.error {background-image: url(../images/banner-error-2x.jpg);}
+.error-message {padding: 4rem;}}
+
+@media (min-width: 64rem) {.error-message {padding: 0 4rem;}}
+
+
+// PARALLAX
+.lax {will-change: transform;}
