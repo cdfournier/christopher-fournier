@@ -189,7 +189,7 @@ p {
 p:last-of-type {padding: 0;}
 
 p a, li a {
-  font-family: $font-medium;
+  font-family: $font-bold;
   color: $green;
 }
 
@@ -302,7 +302,7 @@ nav {
     display: inline-block;
     margin: 0;
     padding: 0 0.7rem 0 0;
-    font-family: $font-medium;
+    font-family: $font-bold;
     font-size: 0.7rem;
     line-height: 1.5;
     list-style-type: none;
@@ -315,7 +315,7 @@ nav {
   ul li:last-of-type, ul li a:last-of-type {padding: 0;}
   
   ul li a {
-    font-family: $font-medium;
+    font-family: $font-bold;
     color: $green;
   }
 
@@ -413,7 +413,8 @@ figcaption {
   margin: 0;
   padding: 2rem;
   list-style: none;
-  background-color: $warm-gray;
+  color: $white;
+  background-color: $green;
 }
 
 .trivialities ul li {
@@ -488,8 +489,8 @@ figcaption {
   position: absolute;
   right: 0;
   left: 0;
-  z-index: -1;
   bottom: 0;
+  z-index: -1;
   height: 50%;
   background-color: inherit;
   content: "";
@@ -864,7 +865,7 @@ header.resume .contact {padding: 0 0 0 4rem;}}
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: $font-medium;
+  font-family: $font-regular;
   font-size: 1rem;
   line-height: 2;
 }
@@ -978,7 +979,7 @@ header.resume .contact {padding: 0 0 0 4rem;}}
   width: 100%;
   margin: 0 auto;
   padding: 0.2rem 0 0;
-  font-family: $font-medium;
+  font-family: $font-regular;
   font-size: 0.9rem;
   line-height: 1.5;
   text-align: left;
