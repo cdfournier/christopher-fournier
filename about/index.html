@@ -110,8 +110,8 @@
   				<li><a href="../index.html">Home</a></li>
   				<li>About</li>
   				<li><a href="../resume/index.html">Resume</a></li>
-  				<li><a href="https://goo.gl/Xwhb28" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-  				<li><a href="https://goo.gl/xvUuJd" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+  				<li><a href="https://tinyurl.com/ybf843cc" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  				<li><a href="https://tinyurl.com/ycwzknf9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
   			</ul>
 			</nav>
     </header>
@@ -128,7 +128,7 @@
   			<figure data-aos="fade-up">
     			<figcaption>
       			<h1 style="display: none;">About Me</h1>
-      			<p>I was born and raised in Maine. I love black coffee, hazy New England IPAs, and food that's not good for me. I also have an eye for design and an appreciation of the principles and the beauty behind great code.</p>
+      			<p>I was born and raised in Maine. I love black coffee, hazy New England IPAs, and pizza. I also have an eye for design and an appreciation of the principles and the beauty behind great code.</p>
     			</figcaption>
   			</figure>
 			</section>
@@ -171,7 +171,7 @@
   			<article>
     			<h2>Say Hello</h2>
     			<p>Let’s grab a coffee or a beer and talk about working together. I’m available for freelance work and more.</p>
-      		<a href="http://tny.im/gCA" role="button" class="button">Contact Me</a>
+      		<a href="https://tinyurl.com/yb8nushc" role="button" class="button">Contact Me</a>
     		</article>
 			</section>
       <section class="trivialities" data-aos="fade-up">
@@ -201,8 +201,8 @@
   				<li><a href="../index.html">Home</a></li>
   				<li>About</li>
   				<li><a href="../resume/index.html">Resume</a></li>
-  				<li><a href="https://goo.gl/Xwhb28" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-  				<li><a href="https://goo.gl/xvUuJd" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+  				<li><a href="https://tinyurl.com/ybf843cc" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  				<li><a href="https://tinyurl.com/ycwzknf9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
   			</ul>
 			</nav>
   		<small>&copy;&nbsp;2018 Christopher Fournier. American Made. Powered by Coffee.</small>
@@ -235,16 +235,21 @@
       window.requestAnimationFrame( setScrollParallax );
     </script>
     <script>
-      var n = 32140;
+      var n = 40880;
 
-      // Create Day difference (because it increases by 1 each day)
-      var start = new Date("10/04/2014");
+      var start = new Date("12/25/2018");
       var today = new Date();
       var timeDiff = Math.abs(today.getTime() - start.getTime());
       var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      var coffee = n + diffDays;
-      jQuery('.coffee').text(coffee);
-      $("#coffee").append(coffee);
+      var coffee = n + (diffDays * 4);
+
+      function coffeeCommas(coffee) {
+          var parts = coffee.toString().split(".");
+          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          return parts.join(".");
+      }
+
+      $('.coffee').text(coffeeCommas(coffee));
     </script>
   </body>
 </html>
