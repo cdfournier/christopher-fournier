@@ -164,7 +164,7 @@ small, .font_small, .eyebrow {
   color: #ffffff;
   background-color: #384332; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   button, .button {
     margin: 2rem auto 0 0; } }
 
@@ -211,7 +211,7 @@ header.navigation {
   padding: 1rem 2rem;
   background-color: #ffffff; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   header.navigation {
     padding: 1rem 4rem; } }
 
@@ -273,6 +273,9 @@ footer .logo {
 footer small {
   text-align: center; }
 
+@media (min-width: 46.75rem) {
+  footer: 4rem 4rem 2rem; }
+
 figure {
   display: flex;
   flex-direction: column;
@@ -295,7 +298,7 @@ figcaption {
   margin: 0;
   padding: 0; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   figure {
     padding: 4rem; } }
 
@@ -318,12 +321,9 @@ figcaption {
   .welcome figcaption {
     padding: 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .welcome figure {
     padding: 4rem; } }
-
-.enservio {
-  background-color: #ffffff; }
 
 .enservio figure {
   flex-direction: column-reverse;
@@ -345,7 +345,7 @@ figcaption {
   .enservio figcaption {
     padding: 0 0 0 2rem; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .enservio figure {
     margin: 0 auto; }
   .enservio figcaption {
@@ -370,20 +370,20 @@ figcaption {
   height: 50%;
   background-color: inherit;
   content: "";
-  transform: skewY(1.5deg);
+  transform: skewY(1deg);
   transform-origin: 100%; }
 
 .panera:after {
   display: block;
   position: absolute;
   right: 0;
+  bottom: -0.75rem;
   left: 0;
-  bottom: 0;
   z-index: -1;
   height: 50%;
   background-color: inherit;
   content: "";
-  transform: skewY(-1.5deg);
+  transform: skewY(1deg);
   transform-origin: 100%; }
 
 .panera figure {
@@ -406,7 +406,7 @@ figcaption {
   .panera figcaption {
     padding: 0 2rem 0 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .panera figure {
     margin: 0 auto; }
   .panera figcaption {
@@ -440,7 +440,7 @@ figcaption {
   .east-wind figure.reverse figcaption {
     padding: 0 2rem 0 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .east-wind figure {
     margin: 0 auto; }
   .east-wind figcaption {
@@ -489,7 +489,7 @@ figcaption {
   margin: 0;
   padding: 0; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .about figure {
     margin: 0 auto;
     padding: 4rem 4rem 6rem; } }
@@ -513,7 +513,7 @@ figcaption {
   font-family: "metropolis-medium", sans-serif;
   line-height: 2; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .bio figure {
     margin: 4rem 0; }
   .bio figcaption {
@@ -583,7 +583,7 @@ figcaption {
   .do ul {
     padding: 0 0 0 2rem; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .do {
     padding: 4rem; }
   .do h1 {
@@ -665,7 +665,7 @@ figcaption {
   .principles ul {
     padding: 0 2rem 0 0; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .principles {
     padding: 4rem 4rem 0; }
   .principles h1 {
@@ -699,7 +699,7 @@ figcaption {
   color: #384332;
   background-color: #ffffff; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .contact {
     margin: 4rem 0 0; }
   .contact article {
@@ -779,7 +779,7 @@ figcaption {
   .trivialities ul li:last-child {
     display: flex; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .trivialities {
     padding: 4rem 4rem 0; } }
 
@@ -827,7 +827,7 @@ header.resume .contact ul li span {
   header.resume .contact {
     padding: 0 0 0 2rem; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   header.resume {
     padding: 4rem 4rem 0; }
   header.resume .contact {
@@ -1039,7 +1039,7 @@ header.resume .contact ul li span {
   .resume .more p {
     padding-left: 1.75rem; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .resume h1 span {
     left: 3.5rem; }
   .resume .about-me,
@@ -1102,7 +1102,7 @@ header.resume .contact ul li span {
   font-size: 1.953rem;
   color: #ffffff; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .case-study.banner article {
     padding: 4rem; } }
 
@@ -1142,7 +1142,7 @@ header.resume .contact ul li span {
   .details article h2:after {
     display: none; } }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .details article {
     padding: 4rem 4rem 0; }
   .details article h2 {
@@ -1181,7 +1181,7 @@ header.resume .contact ul li span {
 .billboard.single.enservio figure {
   padding: 2rem 0 0; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   .billboard.fixed.my-brand {
     background-image: url(../images/work-my-brand-01-2x.jpg); }
   .billboard.single.stretch figure {
@@ -1244,7 +1244,7 @@ body.error {
   color: #384332;
   background-color: #ffffff; }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
   body.error {
     background-image: url(../images/banner-error-2x.jpg); }
   .error-message {

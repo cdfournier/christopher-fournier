@@ -13,6 +13,7 @@ $transferx-bg: #f0f5f8;
 $panera: #4c753f;
 $panera-bg: #e9f0e5;
 $east-wind: #552a80;
+$enservio: #2e84ed;
 
 
 // COLORS MIXING
@@ -236,7 +237,7 @@ small, .font_small, .eyebrow {font-size: 0.8rem;}
   background-color: $green;
 }
 
-@media (min-width: 48rem) {button, .button {margin: 2rem auto 0 0;}}
+@media (min-width: 46.75rem) {button, .button {margin: 2rem auto 0 0;}}
 
 
 // HEADER
@@ -273,7 +274,7 @@ header.navigation {
   background-color: $white;
 }
 
-@media (min-width: 48rem) {header.navigation {padding: 1rem 4rem;}}
+@media (min-width: 46.75rem) {header.navigation {padding: 1rem 4rem;}}
 
 
 // NAVIGATION
@@ -345,6 +346,8 @@ footer .logo {
 
 footer small {text-align: center;}
 
+@media (min-width: 46.75rem) {footer: 4rem 4rem 2rem;}
+
 
 // FIGURES
 figure {
@@ -371,7 +374,7 @@ figcaption {
   padding: 0;
 }
 
-@media (min-width: 48rem) {figure {padding: 4rem;}}
+@media (min-width: 46.75rem) {figure {padding: 4rem;}}
 
 
 // HOME WELCOME
@@ -392,12 +395,10 @@ figcaption {
 .welcome figure img {width: 50%;}
 .welcome figcaption {padding: 0;}}
 
-@media (min-width: 48rem) {.welcome figure {padding: 4rem;}}
+@media (min-width: 46.75rem) {.welcome figure {padding: 4rem;}}
 
 
 // HOME ENSERVIO
-.enservio {background-color: $white;}
-
 .enservio figure {
   flex-direction: column-reverse;
   max-width: 56rem;
@@ -416,7 +417,7 @@ figcaption {
 .enservio figure img {width: 20%;}
 .enservio figcaption {padding: 0 0 0 2rem;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .enservio figure {margin: 0 auto;}
 .enservio figcaption {padding: 0 0 0 4rem;}}
 
@@ -440,7 +441,7 @@ figcaption {
   height: 50%;
   background-color: inherit;
   content: "";
-  transform: skewY(1.5deg);
+  transform: skewY(1deg);
   transform-origin: 100%;
 }
 
@@ -448,13 +449,13 @@ figcaption {
   display: block;
   position: absolute;
   right: 0;
+  bottom: -0.75rem;
   left: 0;
-  bottom: 0;
   z-index: -1;
   height: 50%;
   background-color: inherit;
   content: "";
-  transform: skewY(-1.5deg);
+  transform: skewY(1deg);
   transform-origin: 100%;
 }
 
@@ -476,7 +477,7 @@ figcaption {
 .panera figure img {width: 20%;}
 .panera figcaption {padding: 0 2rem 0 0;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .panera figure {margin: 0 auto;}
 .panera figcaption {padding: 0 4rem 0 0;}}
 
@@ -504,7 +505,7 @@ figcaption {
 .east-wind figure.reverse {flex-direction: row-reverse;}
 .east-wind figure.reverse figcaption {padding: 0 2rem 0 0;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .east-wind figure {margin: 0 auto;}
 .east-wind figcaption {padding: 0 0 0 4rem;}
 .east-wind figure.reverse figcaption {padding: 0 4rem 0 0;}}
@@ -548,7 +549,7 @@ figcaption {
   padding: 0;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .about figure {
   margin: 0 auto;
   padding: 4rem 4rem 6rem;
@@ -574,7 +575,7 @@ figcaption {
   line-height: 2;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .bio figure {margin: 4rem 0;}
 .bio figcaption {max-width: 40rem;}}
 
@@ -646,7 +647,7 @@ figcaption {
 .do h1:after {display: none;}
 .do ul {padding: 0 0 0 2rem;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .do {padding: 4rem;}
 .do h1 {width: 50%;}
 .do ul {padding: 0 0 0 4rem;}}
@@ -727,7 +728,7 @@ figcaption {
 .principles h1:after {display: none;}
 .principles ul {padding: 0 2rem 0 0;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .principles {padding: 4rem 4rem 0;}
 .principles h1 {width: 50%;}
 .principles ul {padding: 0 2rem 0 0;}}
@@ -763,7 +764,7 @@ figcaption {
   background-color: $white;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .contact {margin: 4rem 0 0;}
 .contact article {padding: 4rem;}}
 
@@ -848,7 +849,7 @@ figcaption {
 .trivialities ul li {width: 30%;}
 .trivialities ul li:last-child {display: flex;}}
 
-@media (min-width: 48rem) {.trivialities {padding: 4rem 4rem 0;}}
+@media (min-width: 46.75rem) {.trivialities {padding: 4rem 4rem 0;}}
 
 
 // RESUME HEADER
@@ -900,7 +901,7 @@ header.resume .contact ul li span {
 header.resume {flex-direction: row;}
 header.resume .contact {padding: 0 0 0 2rem;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 header.resume {padding: 4rem 4rem 0;}
 header.resume .contact {padding: 0 0 0 4rem;}}
 
@@ -1120,7 +1121,7 @@ header.resume .contact ul,
 .resume .skills article:last-of-type,
 .resume .more p {padding-left: 1.75rem;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .resume h1 span {left: 3.5rem;}
 .resume .about-me,
 .resume .experience,
@@ -1182,7 +1183,7 @@ header.resume .contact ul,
   color: $white;
 }
 
-@media (min-width: 48rem) {.case-study.banner article {padding: 4rem;}}
+@media (min-width: 46.75rem) {.case-study.banner article {padding: 4rem;}}
 
 @media (min-width: 64rem) {
 .case-study.banner.panera-bread {background-image: url(../images/work-panera-01-2x.jpg);}
@@ -1218,7 +1219,7 @@ header.resume .contact ul,
 }
 .details article h2:after {display: none;}}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .details article {padding: 4rem 4rem 0;}
 .details article h2 {padding: 2rem 0 0;}}
 
@@ -1256,7 +1257,7 @@ header.resume .contact ul,
 
 .billboard.single.enservio figure {padding: 2rem 0 0;}
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 .billboard.fixed.my-brand {background-image: url(../images/work-my-brand-01-2x.jpg);}
 .billboard.single.stretch figure {padding: 4rem 0 0;}
 .billboard.single figure {padding: 4rem 4rem 0;}
@@ -1317,7 +1318,7 @@ body.error {
   background-color: $white;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46.75rem) {
 body.error {background-image: url(../images/banner-error-2x.jpg);}
 .error-message {padding: 4rem;}}
 
