@@ -180,14 +180,20 @@
           <li data-aos="fade-up">
             <span class="icon"><i class="la la-coffee"></i></span>
             <p>I’ve had</p>
-            <span id="coffee" class="number coffee"></span>
+            <span id="coffee" class="counter coffee"></span>
             <p>cups of coffee</p>
           </li>
           <li data-aos="fade-up">
             <span class="icon"><i class="la la-music"></i></span>
             <p>There are</p>
-            <span class="number">57,554</span>
+            <span class="counter">57,554</span>
             <p>songs in my&nbsp;<span style="text-transform: lowercase;">i</span>Tunes</p>
+          </li>
+          <li data-aos="fade-up">
+            <span class="icon"><i class="la la-anchor"></i></span>
+            <p>Maine has</p>
+            <span class="counter">3,478</span>
+            <p>miles of coastline</p>
           </li>
         </ul>
       </section>
@@ -212,6 +218,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="../assets/scripts/jquery.counterup.min.js"></script>
+    <script>
+      $('.counter').counterUp({
+          time: 1250
+      });
+    </script>
     <script>
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);

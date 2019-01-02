@@ -740,6 +740,9 @@ figcaption {
   margin: 0;
   padding: 0; }
 
+.trivialities ul li:last-child {
+  display: none; }
+
 .trivialities ul li span.icon {
   font-size: 2.441rem;
   line-height: 1; }
@@ -749,6 +752,7 @@ figcaption {
   top: 0.25rem;
   left: -0.25rem; }
 
+.trivialities ul li span.days,
 .trivialities ul li span.number,
 .trivialities ul li span.counter,
 .trivialities ul li span.numscroller,
