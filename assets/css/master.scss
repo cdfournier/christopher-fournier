@@ -786,7 +786,7 @@ figcaption {
 .trivialities ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
