@@ -1,0 +1,57 @@
+// TYPOGRAPHY
+h1, h2, h3 {
+  margin: 0;
+  padding: 0 0 0.75rem;
+  font-weight: inherit;
+}
+
+h1 {
+  width: 100%;
+  font-family: $font-medium;
+  font-size: 2.5rem;
+  column-span: all;
+}
+
+h2, h3 {
+  font-family: $font-medium;
+  font-size: 1.75rem;
+  text-transform: capitalize;
+  column-span: all;
+}
+
+h3 {font-size: 1.5rem;}
+
+p {
+  margin: 0;
+  padding: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p:last-of-type {padding: 0;}
+
+p a, li a {
+  font-family: $font-bold;
+  color: $green;
+}
+
+p a:hover, p a:focus, li a:hover, li a:focus {color: $orange;}
+
+strong {
+  display: block;
+  font-family: $font-bold;
+  font-weight: normal;
+}
+
+small {font-size: 0.75rem;}
+
+
+// SPECIAL STYLES
+.eyebrow {
+  display: block;
+  font-family: $font-regular;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  line-height: 2;
+  text-transform: uppercase;
+}

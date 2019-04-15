@@ -1,0 +1,50 @@
+// FIGURES
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 0;
+}
+
+
+// GALLERIES
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.gallery figure {padding: 2rem 2rem 0;}
+
+@media (min-width: 46rem) {
+.gallery article.one, .gallery article.two, .gallery article.three {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.gallery article.two figure:first-of-type {padding: 2rem 1rem 0 2rem;}
+.gallery article.two figure:last-of-type {padding: 2rem 2rem 0 1rem;}
+.gallery article.three {padding: 0 1rem;}
+.gallery article.three figure {padding: 2rem 1rem 0;}}

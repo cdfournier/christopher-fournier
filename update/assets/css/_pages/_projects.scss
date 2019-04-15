@@ -1,0 +1,171 @@
+// PROJECTS
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.projects article {width: 100%;}
+
+.projects article:first-of-type {z-index: 15;}
+
+.projects figure {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.projects figure img {
+  width: 40%;
+  max-width: 32rem;
+}
+
+.projects figcaption {
+  max-width: 28rem;
+  padding: 2rem 0 0;
+}
+
+.projects h1 {display: none;}
+
+@media (orientation: landscape) and (max-width: 46rem) {
+.projects figure {flex-direction: row;}
+.projects figure img {width: 20%;}
+.projects figcaption {padding: 0 0 0 2rem;}}
+
+@media (min-width: 46rem) {
+.projects article {min-height: 0;}
+.projects figure {
+  flex-direction: row;
+  min-height: 50vh;
+}
+.projects figure img {width: 20%;}
+.projects figcaption {padding: 0 0 0 2rem;}
+.projects figure.reverse {flex-direction: row-reverse;}
+.projects figure.reverse figcaption {padding: 0 2rem 0 0;}}
+
+
+// CUSTOM PROJECTS STYLES
+.projects .east-wind figure img {
+  width: auto;
+  height: 16rem;
+}
+
+.projects .east-wind, footer.east-wind {background-color: $east-wind-bg;}
+.projects .enservio-portal, footer.enservio-portal {background-color: $enservio-portal-bg;}
+.projects .my-stuff, footer.my-stuff {background-color: $mystuff-bg;}
+.projects .panera, footer.panera {background-color: $panera-bg;}
+.projects .transferx, footer.transferx {background-color: $transferx-bg;}
+
+.projects .east-wind .button:hover, .projects .east-wind .button:focus {background-color: $east-wind-bg;}
+.projects .enservio-portal .button:hover, .projects .enservio-portal .button:focus {background-color: $enservio-portal-bg;}
+.projects .my-stuff .button:hover, .projects .my-stuff .button:focus {background-color: $mystuff-bg;}
+.projects .panera .button:hover, .projects .panera .button:focus {background-color: $panera-bg;}
+.projects .transferx .button:hover, .projects .transferx .button:focus {background-color: $transferx-bg;}
+
+@media (min-width: 46rem) {
+.projects .east-wind figure img {
+  width: 15%;
+  height: auto;
+}}
+
+
+// INTRO
+.intro {
+  display: block;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-attachment: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-touch .intro {background-attachment: fixed;}
+
+.intro article {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  color: $white;
+  background: rgba(0,0,0,0.25);
+  background: linear-gradient(0deg, black 0%, transparent 50%);
+  h1 {
+    padding: 0;
+    font-family: $font-serif;
+    span.eyebrow {
+      line-height: 1;
+    }
+  }
+}
+
+
+// EAST WIND INTRO
+.intro.east-wind {
+  background-image: url(../images/work-east-wind-01-1x.jpg);
+  background-position: 55% center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.intro.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}}
+
+
+// ENSERVIO DESIGN SYSTEM INTRO
+.intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-1x.jpg);}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-2x.jpg);}}
+
+
+// MY STUFF INTRO
+.intro.my-stuff {background-image: url(../images/work-my-stuff-01-1x.jpg);}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.intro.my-stuff {background-image: url(../images/work-my-stuff-01-2x.jpg);}}
+
+
+// PANERA BREAD INTRO
+.intro.panera {background-image: url(../images/work-panera-01-1x.jpg);}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.intro.panera {background-image: url(../images/work-panera-01-2x.jpg);}}
+
+
+// TRANSFERX INTRO
+.intro.transferx {
+  background-image: url(../images/work-transferx-01-1x.jpg);
+  background-position: 35% center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.intro.transferx {background-image: url(../images/work-transferx-01-2x.jpg);}}
+
+
+// DETAILS
+.details article {
+  margin: 0 auto;
+  .text {
+    padding: 2rem 2rem 0;
+    h2 {
+      width: fit-content;
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 41.6875rem) {
+.details article .text h2 {
+  margin-bottom: -1.5rem;
+  font-family: "metropolis-bold", sans-serif;
+  font-size: 3rem;
+  color: $cream;
+}}
+
+@media (min-width: 46rem) {.details article .text {padding: 4rem 4rem 2rem;}}

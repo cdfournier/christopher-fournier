@@ -1,0 +1,55 @@
+// NAVIGATION
+nav {
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: inherit;
+    margin: auto;
+    padding: 0 0 0.75rem;
+    list-style-type: none;
+  }
+  ul li, ul li a {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.75rem 0 0;
+    font-family: $font-bold;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    color: $orange;
+    @include transition (all, 0.25s, ease);
+  }
+  ul li:last-of-type, ul li a:last-of-type {padding: 0;}
+  ul li a {
+    font-family: $font-bold;
+    color: $green;
+  }
+  ul li a:hover, ul li a:focus {color: $orange;}
+}
+
+@media (min-width: 30rem) {
+nav ul li, nav ul li a {
+  padding: 0 0.875rem 0 0;
+  font-size: 0.875rem;
+}}
+
+
+// HEADER NAVIGATION
+header.navigation {
+  position: fixed;
+  z-index: 10;
+  margin: auto;
+  padding: 1rem 2rem;
+  background-color: $white;
+}
+
+@media (min-width: 46rem) {header.navigation {padding: 1rem 2rem;}}
+
+header nav ul {
+  justify-content: flex-start;
+  padding: 0;
+}
