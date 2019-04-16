@@ -64,6 +64,38 @@ header.navigation { position: fixed; z-index: 10; margin: auto; padding: 1rem 2r
 
 header nav ul { justify-content: flex-start; padding: 0; }
 
+.projects-list { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: #f9fbfd; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; -webkit-transform: translateY(-100rem); -moz-transform: translateY(-100rem); -ms-transform: translateY(-100rem); -o-transform: translateY(-100rem); transform: translateY(-100rem); }
+
+.projects-list nav { width: 100%; height: 100%; }
+
+.projects-list nav ul { display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; width: 100%; height: 100%; margin: 0; padding: 0; list-style-type: none; }
+
+.projects-list nav ul li { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; width: 100%; height: calc(100% / 6); margin: 0; padding: 0 2rem; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1.5; text-align: left; text-transform: uppercase; }
+
+.projects-list nav ul li a { display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100%; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1.5; text-align: left; text-transform: uppercase; }
+
+.projects-list nav ul li a:hover, .projects-list nav ul li a:focus { color: #ffffff; }
+
+.projects-list.show { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
+
+.projects-list nav ul li.close { justify-content: flex-end; position: absolute; top: 0; right: 2rem; z-index: 50; width: auto; padding: 0; }
+
+.projects-list nav ul li.close a:hover, .projects-list nav ul li.close a:focus { color: #e85c45; }
+
+.projects-list nav ul li.east-wind:hover, .projects-list nav ul li.east-wind:focus { background-color: #552a80; }
+
+.projects-list nav ul li.enservio-notes:hover, .projects-list nav ul li.enservio-notes:focus { background-color: #ea7200; }
+
+.projects-list nav ul li.enservio-portal:hover, .projects-list nav ul li.enservio-portal:focus { background-color: #2e84ed; }
+
+.projects-list nav ul li.my-stuff:hover, .projects-list nav ul li.my-stuff:focus { background-color: #cd2183; }
+
+.projects-list nav ul li.panera:hover, .projects-list nav ul li.panera:focus { background-color: #4c753f; }
+
+.projects-list nav ul li.transferx:hover, .projects-list nav ul li.transferx:focus { background-color: #0d1e27; }
+
+.projects-list nav ul li.east-wind:hover a, .projects-list nav ul li.east-wind:focus a, .projects-list nav ul li.enservio-notes:hover a, .projects-list nav ul li.enservio-notes:focus a, .projects-list nav ul li.enservio-portal:hover a, .projects-list nav ul li.enservio-portal:focus a, .projects-list nav ul li.my-stuff:hover a, .projects-list nav ul li.my-stuff:focus a, .projects-list nav ul li.panera:hover a, .projects-list nav ul li.panera:focus a, .projects-list nav ul li.transferx:hover a, .projects-list nav ul li.transferx:focus a { color: #ffffff; }
+
 header { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin: 0; }
 
 .header--fixed { position: fixed; z-index: 10; right: 0; left: 0; top: 0; }
