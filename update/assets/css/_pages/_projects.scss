@@ -52,13 +52,13 @@
 
 .projects .east-wind, footer.east-wind {background-color: $east-wind-bg;}
 .projects .enservio-portal, footer.enservio-portal {background-color: $enservio-portal-bg;}
-.projects .my-stuff, footer.my-stuff {background-color: $mystuff-bg;}
+.projects .my-stuff, footer.my-stuff {background-color: $my-stuff-bg;}
 .projects .panera, footer.panera {background-color: $panera-bg;}
 .projects .transferx, footer.transferx {background-color: $transferx-bg;}
 
 .projects .east-wind .button:hover, .projects .east-wind .button:focus {background-color: $east-wind-bg;}
 .projects .enservio-portal .button:hover, .projects .enservio-portal .button:focus {background-color: $enservio-portal-bg;}
-.projects .my-stuff .button:hover, .projects .my-stuff .button:focus {background-color: $mystuff-bg;}
+.projects .my-stuff .button:hover, .projects .my-stuff .button:focus {background-color: $my-stuff-bg;}
 .projects .panera .button:hover, .projects .panera .button:focus {background-color: $panera-bg;}
 .projects .transferx .button:hover, .projects .transferx .button:focus {background-color: $transferx-bg;}
 
@@ -155,17 +155,73 @@
     padding: 2rem 2rem 0;
     h2 {
       width: fit-content;
-      padding: 0;
+      padding: 1rem 0 0;
     }
+    h2:first-of-type {padding: 0;}
+    p {padding: 0 0 1rem;}
+    p:last-of-type {padding: 0;}
   }
+  figure {padding: 2rem 2rem 0;}
 }
 
-@media (min-width: 41.6875rem) {
-.details article .text h2 {
-  margin-bottom: -1.5rem;
-  font-family: "metropolis-bold", sans-serif;
-  font-size: 3rem;
-  color: $cream;
+@media (min-width: 46rem) {
+.details article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  .text {
+    width: 50%;
+    h2 span.eyebrow {font-family: "metropolis-regular", sans-serif;}
+    p {font-size: 0.875rem;}
+  }
+  figure {
+    width: 50%;
+    padding: 2rem 2rem 0;
+  }
+  .text:nth-of-type(even), figure:nth-of-type(odd) {padding: 2rem 2rem 0 1rem;}
+  .text:nth-of-type(odd), figure:nth-of-type(even) {padding: 2rem 1rem 0 2rem;}
+  figure:nth-of-type(3n) {
+    width: 100%;
+    padding: 2rem 2rem 0;
+  }
 }}
 
-@media (min-width: 46rem) {.details article .text {padding: 4rem 4rem 2rem;}}
+
+// ENSERVIO PORTAL DETAILS
+@media (min-width: 46rem) {
+.details.enservio-portal article figure:nth-of-type(5n) {padding: 2rem 1rem 0 2rem;}
+.details.enservio-portal article figure:nth-of-type(6n) {
+  width: 50%;
+  padding: 2rem 2rem 0 1rem;
+}
+.details.enservio-portal article figure:nth-of-type(7n) {
+  width: 100%;
+  padding: 2rem 2rem 0;
+}}
+
+
+// MY STUFF DETAILS
+@media (min-width: 46rem) {
+.details.my-stuff article figure:nth-of-type(3n) {
+  width: 50%;
+  padding: 2rem 2rem 0 1rem;
+}
+.details.my-stuff article figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+.details.my-stuff article figure:nth-of-type(8n) {
+  width: 100%;
+  padding: 2rem 2rem 0;
+}
+.details.my-stuff article figure:nth-of-type(6n),
+.details.my-stuff article figure:nth-of-type(9n) {padding: 2rem 1rem 0 2rem;}
+.details.my-stuff article figure:nth-of-type(10n) {padding: 2rem 2rem 0 1rem;}}
+
+
+// PANERA DETAILS
+@media (min-width: 46rem) {
+.details.panera article figure:nth-of-type(6n) {
+  width: 100%;
+  padding: 2rem 2rem 0;
+}
+.details.panera article figure:nth-of-type(7n) {padding: 2rem 1rem 0 2rem;}
+.details.panera article figure:nth-of-type(8n) {padding: 2rem 2rem 0 1rem;}}

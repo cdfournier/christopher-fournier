@@ -1,7 +1,10 @@
 // WELCOME
 .welcome figure {min-height: 100vh;}
 
-.welcome h1 {font-family: $font-serif;}
+.welcome h1 {
+  max-width: 40rem;
+  font-family: $font-serif;
+}
 
 .welcome figure img {
   width: 100%;
@@ -29,53 +32,49 @@
 
 @media (min-width: 46rem) {
 .welcome figure {flex-direction: row-reverse;}
-.welcome figure img {width: 48%;}
+.welcome figure img {
+  width: 48%;
+  margin: 0;
+}
 .welcome figcaption {padding: 0;}}
 
 
 // GLOBAL HOME STYLES
 .home figure {min-height: 100vh;}
 
-.home figure img {
-  width: 40%;
-  max-width: 32rem;
+.home figure:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 1px;
+  margin: 0 auto 2rem;
+  background-color: $warm-gray;
+  content: "";
 }
 
-.home figcaption {
+.home figure img {
+  width: 30%;
   max-width: 32rem;
-  padding: 2rem 0 0;
 }
 
 @media (orientation: landscape) and (max-width: 46rem) {
-.home figure {
-  align-items: flex-start;
-  background-position: 105% 50%;
-  background-repeat: no-repeat;
-  background-size: 22%;
-}
-.home figure img {display: none;}
-.home figcaption {
-  width: 80%;
-  padding: 0 2rem 0 0;
-}}
+.home figure {flex-direction: row;}
+.home figure img {width: 15%;}
+.home figcaption {padding: 0 0 0 2rem;}}
 
 @media (min-width: 46rem) {
 .home figure {
   flex-direction: row;
-  min-height: 0;
+  min-height: 50vh;
 }
-.home figure img {max-width: 10rem;}
-.home figcaption {
-  width: 60%;
-  padding: 0 0 0 2rem;
-}
+.home figure:before {display: none;}
+.home figure img {width: 20%;}
+.home figcaption {padding: 0 0 0 2rem;}
 .home figure.reverse {flex-direction: row-reverse;}
 .home figure.reverse figcaption {padding: 0 2rem 0 0;}}
 
-@media (min-width: 62rem) {
-.home figcaption {padding: 0 0 0 4rem;}
-.home figure.reverse figcaption {padding: 0 4rem 0 0;}}
-
+@media (min-width: 88rem) {.home figure img {width: 15%;}}
 
 // CUSTOM HOME STYLES
 .home.east-wind figure img {
@@ -91,25 +90,4 @@
   height: auto;
 }}
 
-
-// HOME RESPONSIVE IMAGES
-@media (orientation: landscape) and (max-width: 46rem) {
-  .home.east-wind figure {
-    background-image: url(../images/home-east-wind-1x.png);
-  }
-  .home.enservio figure {
-    background-image: url(../images/home-enservio-1x.png);
-  }
-  .home.my-stuff figure {
-    background-image: url(../images/home-my-stuff-1x.png);
-  }
-  .home.panera figure {
-    background-image: url(../images/home-panera-1x.png);
-  }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .home.east-wind figure {background-image: url(../images/home-east-wind-2x.png);}
-    .home.enservio figure {background-image: url(../images/home-enservio-2x.png);}
-    .home.my-stuff figure {background-image: url(../images/home-my-stuff-2x.png);}
-    .home.panera figure {background-image: url(../images/home-panera-2x.png);}
-  }
-}
+@media (min-width: 88rem) {.home.east-wind figure img {width: 10%;}}
