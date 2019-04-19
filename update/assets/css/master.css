@@ -38,7 +38,7 @@ strong { display: block; font-family: "metropolis-bold", sans-serif; font-weight
 
 small { font-size: 0.75rem; }
 
-.eyebrow { display: block; font-family: "metropolis-bold", sans-serif; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
+.eyebrow { display: block; font-family: "metropolis-regular", sans-serif; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
 
 .button { display: inline-flex; align-items: center; width: auto; max-width: 100%; overflow: hidden; margin: 1.5rem auto 0 0; padding: 0.5rem 1.25rem; border: 1px solid #384332; font-family: "metropolis-bold", sans-serif; font-size: 0.75rem; font-weight: normal; letter-spacing: 0.5px; text-align: center; text-decoration: none; text-overflow: ellipsis; text-transform: uppercase; color: #ffffff; background-color: #384332; white-space: nowrap; cursor: pointer; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
 
@@ -64,21 +64,21 @@ header.navigation { position: fixed; z-index: 10; margin: auto; padding: 1rem 2r
 
 header nav ul { justify-content: flex-start; padding: 0; }
 
-.projects-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background-color: #f9fbfd; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; -webkit-transform: translateY(-100rem); -moz-transform: translateY(-100rem); -ms-transform: translateY(-100rem); -o-transform: translateY(-100rem); transform: translateY(-100rem); }
+.projects-list { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; max-height: 0; background-color: #f9fbfd; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; -webkit-transform: translateY(-25vh); -moz-transform: translateY(-25vh); -ms-transform: translateY(-25vh); -o-transform: translateY(-25vh); transform: translateY(-25vh); }
 
 .projects-list nav { width: 100%; height: 100%; }
 
 .projects-list nav ul { display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; width: 100%; height: 100%; margin: 0; padding: 0; list-style-type: none; }
 
-.projects-list nav ul li { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; width: 100%; height: calc(100% / 6); margin: 0; padding: 0 2rem; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1.5; text-align: left; text-transform: uppercase; color: #384332; }
+.projects-list nav ul li { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; width: 100%; height: calc(100% / 6); margin: 0; padding: 0 2rem; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1; text-align: left; text-transform: uppercase; color: #384332; }
 
-.projects-list nav ul li a { display: flex; flex-direction: column; justify-content: center; width: auto; height: 100%; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1.5; text-align: left; text-transform: uppercase; cursor: pointer; }
+.projects-list nav ul li a { display: flex; flex-direction: column; justify-content: center; width: auto; height: 100%; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1; text-align: left; text-transform: uppercase; cursor: pointer; }
 
 .projects-list nav ul li a:hover, .projects-list nav ul li a:focus { color: #ffffff; }
 
-.projects-list nav ul li span { padding: 0 0 0 1rem; font-family: "metropolis-regular", sans-serif; font-size: 0.75rem; }
+.projects-list nav ul li span { width: 50%; padding: 0 0 0 1rem; font-family: "metropolis-regular", sans-serif; font-size: 0.75rem; }
 
-.projects-list.show { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
+.projects-list.show { max-height: 100vh; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
 
 .projects-list nav ul li.close { justify-content: flex-end; position: absolute; top: 0; right: 2rem; z-index: 50; width: auto; padding: 0; }
 
@@ -195,7 +195,9 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .no-touch .about { background-attachment: fixed; }
 
-.about figure { align-items: flex-start; justify-content: flex-end; padding: 2rem; }
+.about figure { align-items: flex-start; justify-content: flex-end; padding: 2rem 2rem 6rem; }
+
+.no-touch .about figure { padding: 2rem; }
 
 .about figure .logo { width: calc(100% - 70vw); min-width: 12rem; margin: 0; padding: 0; }
 
@@ -222,7 +224,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .do h1:after, .principles h1:after, .trivialities h1:after { display: block; width: 35%; height: 1px; margin: 0.5rem auto; background-color: #384332; content: ""; }
 
-.do ul li h2, .principles ul li h2 { padding: 0; font-family: "metropolis-bold", sans-serif; }
+.do ul li h2, .principles ul li h2 { padding: 0; font-family: "metropolis-bold", sans-serif; line-height: 1; }
 
 @media (min-width: 41.6875rem) { .do h1, .principles h1, .trivialities h1 { padding: 0; font-size: 4rem; line-height: 1; text-align: left; color: #eef1e8; }
   .do h1:after, .principles h1:after, .trivialities h1:after { display: none; }
@@ -358,11 +360,13 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .no-touch .intro { background-attachment: fixed; }
 
-.intro article { display: flex; align-items: flex-end; position: absolute; bottom: 0; width: 100%; height: 100%; padding: 2rem; color: #ffffff; background: rgba(0, 0, 0, 0.25); background: linear-gradient(0deg, black 0%, transparent 50%); }
+.intro article { display: flex; align-items: flex-end; position: absolute; bottom: 0; width: 100%; height: 100%; padding: 2rem 2rem 6rem; color: #ffffff; background: rgba(0, 0, 0, 0.25); background: linear-gradient(0deg, black 0%, transparent 50%); }
 
 .intro article h1 { padding: 0; font-family: "Merriweather", serif; }
 
 .intro article h1 span.eyebrow { line-height: 1; }
+
+.no-touch .intro article { padding: 2rem; }
 
 .intro.east-wind { background-image: url(../images/work-east-wind-01-1x.jpg); background-position: 55% center; }
 
@@ -400,7 +404,6 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 @media (min-width: 46rem) { .details article { display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
   .details article .text { width: 50%; }
-  .details article .text h2 span.eyebrow { font-family: "metropolis-regular", sans-serif; }
   .details article .text p { font-size: 0.875rem; }
   .details article figure { width: 50%; padding: 2rem 2rem 0; }
   .details article .text:nth-of-type(even), .details article figure:nth-of-type(odd) { padding: 2rem 2rem 0 1rem; }

@@ -27,8 +27,10 @@
 .about figure {
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 2rem 2rem 6rem;
 }
+
+.no-touch .about figure {padding: 2rem;}
 
 .about figure .logo {
   width: calc(100% - 70vw);
@@ -88,6 +90,7 @@
 .do ul li h2, .principles ul li h2 {
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
+  line-height: 1;
 }
 
 @media (min-width: 41.6875rem) {
