@@ -1,4 +1,30 @@
-// GLOBAL RESUME STYLES
+/*
+RESUME SECTIONS
+  .logo
+  .contact-me
+  .about-me
+  .experience
+  .skills
+  .contact-me-again
+*/
+
+
+// GLOBAL RESUME LAYOUT STYLES
+main.resume {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 2rem 0;
+}
+
+
+// GLOBAL RESUME TYPE STYLES
 .resume h1 {
   display: block;
   width: 100%;
@@ -20,9 +46,8 @@
 
 .resume h1 span {
   display: inline-block;
-  position: relative;
-  left: 0.25rem;
   margin: 0;
+  padding: 0 0 0 0.5rem;
   font-family: $font-bold;
   text-transform: uppercase;
 }
@@ -35,211 +60,228 @@
   content: "";
 }
 
-.resume p {font-size: 0.875rem;}
+.resume p {
+  font-size: 0.875rem;
+  padding: 0 0 0.875rem;
+}
+
+.resume p:last-of-type {padding: 0;}
+
+
+// LOGO SECTION
+.resume .logo {
+  width: 40%;
+  min-width: 12rem;
+  height: 45vh;
+  margin: 0 auto;
+}
+
+
+// CONTACT SECTION
+.resume .contact-me {
+  align-items: center;
+  justify-content: flex-start;
+  height: 55vh;
+  ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0 0 0.875rem;
+      font-size: 0.875rem;
+    }
+    li:last-of-type {padding: 0;}
+    li span {
+      display: block;
+      width: 100%;
+      font-family: $font-bold;
+      text-transform: uppercase;
+      color: $green;
+    }
+    li a {
+      font-family: $font-medium;
+      font-size: 0.875rem;
+      color: $orange;
+    }
+    li a:hover, li a:focus {color: $green;}
+  }
+}
+
+.resume .contact-me:last-of-type {height: auto;}
+
+
+// HISTORY SECTION
+.resume article.history section {
+  height: auto;
+  max-height: none;
+  min-height: inherit;
+  padding: 0 0 1rem;
+  h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: $font-bold;
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $orange;
+    a {color: $orange;}
+    a:hover, a:focus {color: $green;}
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0 0 0 0.75rem;
+      font-family: $font-bold;
+      font-size: 75%;
+      color: $green;
+      list-style-type: none;
+      li:first-of-type:after {
+        display: inline-block;
+        margin: 0 0.25rem;
+        font-family: $font-regular;
+        content: "\2013";
+      }
+    }
+  }
+  h2 + p {
+    padding: 0.25rem 0 0.75rem 0;
+    font-family: $font-bold;
+  }
+  p:last-of-type {
+    margin: 0;
+    padding: 0 0 0.875rem;
+    border-bottom: 1px solid $cream;
+  }
+}
+
+.resume article.history section:last-of-type {
+  padding: 0;
+  p:last-of-type {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+
+// MEDIA QUERIES BY SCREEN
+@media (orientation: landscape) {
+main.resume {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+}
+
+
+@media (min-width: 32rem) {
+main.resume {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+.resume section {width: 90%;}
+.resume section article.history section {width: 100%;}
+}
+
 
 @media (min-width: 42rem) {
-.resume h1 span {left: 2rem;}
-.resume p {padding: 0 0 0 3.25rem;}}
-
-@media (min-width: 46rem) {.resume p {padding: 0 0 0 3.5rem;}}
-
-
-// RESUME HEADER
-header.resume {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 2rem 0;
-}
-
-header.resume .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  min-width: 12rem;
-  margin: 0 auto;
-  padding: 0 0 1rem;
-}
-
-header.resume .logo svg {width: 75%;}
-
-header.resume section {width: 100%;}
-
-header.resume ul {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-header.resume ul li {
-  padding: 0 0 1rem;
-  font-size: 1rem;
-}
-
-header.resume ul li:last-of-type {padding: 0;}
-
-header.resume ul li span {
-  display: block;
-  width: 100%;
-  font-family: $font-bold;
-  text-transform: uppercase;
-  color: $green;
-}
-
-header.resume ul li a {
-  font-family: $font-medium;
-  font-size: 0.875rem;
-  color: $orange;
-}
-
-header.resume ul li a:hover, header.resume ul li a:focus {color: $green;}
-
-@media (orientation: landscape) {
-header.resume section {
+main.resume {
+  justify-content: center;
   width: 80%;
-  margin: 0 auto 0 0;
-}}
-
-@media (orientation: landscape) and (min-width: 36rem) {
-header.resume {
-  flex-direction: row;
-  justify-content: center;
+  margin: auto;
+  h1 span {padding: 0 0 0 1.5rem;}
+  .logo {
+    width: 30%;
+    margin: 0;
+    padding: 0 2rem 0;
+  }
+  .contact-me {
+    justify-content: center;
+    width: 60%;
+    height: 100vh;
+    max-height: none;
+    padding: 0 2rem 0;
+    ul {padding: 0 0 0 3.125rem;}
+  }
+  .contact-me:last-of-type {
+    width: 90%;
+    height: auto;
+    padding: 2rem 2rem 0;
+    ul {padding: 0 0 0 3.125rem;}
+  }
+  .about-me p {padding: 0 0 0 3.125rem;}
+  .history section {
+    padding: 0 0 1rem 3.125rem;
+    h2 {justify-content: flex-start;}
+  }
+  .history section:last-of-type {padding: 0 0 0 3.125rem;}
 }
-header.resume .logo {
-  width: 40%;
-  max-width: 14rem;
-  padding: 0;
-}
-header.resume section {
-  width: 60%;
-  padding: 0 0 0 2rem;
-}
-header.resume ul {padding: 0 0 0 1.575rem;}}
-
-@media (min-width: 46rem) {
-header.resume {
-  flex-direction: row;
-  justify-content: center;
-  max-width: 38rem;
-}
-header.resume .logo {
-  width: 40%;
-  max-width: 14rem;
-  padding: 0;
-}
-header.resume section {
-  width: 60%;
-  max-width: 24rem;
-  padding: 0 0 0 2rem;
-}
-header.resume ul {padding: 0 0 0 3.25rem;}}
-
-
-// RESUME ABOUT ME
-.resume section.about-me {padding: 2rem 2rem 0;}
-
-.resume section.about-me p {font-size: 1rem;}
-
-@media (orientation: landscape) and (min-width: 36rem) {
-.resume section.about-me p {padding: 0 0 0 1.75rem;}}
-
-@media (min-width: 46rem) {
-.resume section.about-me {
-  max-width: 38rem;
-  margin: 0 auto;
-}
-.resume section.about-me p {padding: 0 0 0 3.5rem;}}
-
-
-// RESUME EXPERIENCE
-.resume section.experience {
-  width: 100%;
-  padding: 2rem 2rem 0;
 }
 
-.resume section.experience article {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 1rem;
+
+@media (min-width: 88rem) {
+main.resume {
+  section {width: 100%;}
+  .logo {
+    max-width: 18rem;
+    height: inherit;
+    padding: 2rem;
+  }
+  .contact-me {
+    width: 45%;
+    height: inherit;
+    padding: 2rem;
+  }
+  .about-me, .contact-me:last-of-type {width: 70%;}
+  .experience {
+    .history {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      section {
+        width: 50%;
+        p:last-of-type {border-bottom: none;}
+      }
+    }
+  }
+}
 }
 
-.resume section.experience article:after {
-  display: block;
-  width: 100%;
-  height: 1px;
-  margin: 1rem auto 0;
-  background-color: $warm-gray;
-  content: "";
+
+@media (orientation: landscape) and (max-width: 42rem) {
+main.resume {
+  .logo {
+    width: 30%;
+    margin: 0;
+    padding: 0 2rem 0;
+  }
+  .contact-me {
+    justify-content: center;
+    width: 60%;
+    height: 100vh;
+    max-height: none;
+    padding: 0 2rem 0;
+  }
+  .contact-me:last-of-type {
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 2rem 2rem 0;
+  }
+  .history section {
+    h2 {justify-content: flex-start;}
+  }
 }
-
-.resume section.experience article:last-of-type:after {display: none;}
-
-.resume section.experience article .dates {display: none;}
-
-.resume section.experience article .jobs h2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  font-family: $font-bold;
-  font-size: 1rem;
-  line-height: 1;
-  text-transform: uppercase;
-  color: $orange;
 }
-
-.resume section.experience article .jobs h2 a {color: $orange;}
-
-.resume section.experience article .jobs h2 a:hover,
-.resume section.experience article .jobs h2 a:focus {color: $green;}
-
-.resume section.experience article .jobs h2 span {
-  font-family: $font-bold;
-  font-size: 75%;
-  color: $green;
-}
-
-.resume section.experience article .jobs p:last-of-type {padding: 0;}
-
-.resume .experience h2 + p {
-  padding: 0.25rem 0 0.75rem 0;
-  font-family: $font-bold;
-}
-
-@media (orientation: landscape) and (min-width: 36rem) {
-.resume section.experience article .jobs h2 {justify-content: flex-start;}
-.resume section.experience article .jobs h2 span {padding: 0 0 0 1rem;}
-.resume section .history {padding: 0 0 0 1.75rem;}}
-
-@media (min-width: 46rem) {
-.resume section.experience {
-  max-width: 38rem;
-  margin: 0 auto;
-}
-.resume section.experience .history {padding: 0 0 0 3.5rem;}
-.resume section.experience article {
-  flex-direction: row;
-  padding: 0 0 2rem;
-}
-.resume section.experience article:after {display: none;}
-.resume section.experience article .dates {
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-  padding: 0 1rem 0 0;
-}
-.resume section.experience article .dates, .resume section.experience article .dates span {
-  font-family: $font-bold;
-  font-size: 0.75rem;
-  text-align: left;
-  text-transform: uppercase;
-  color: $green;
-}
-.resume section.experience article .jobs p {padding: 0 0 0.75rem;}
-.resume section.experience article .jobs h2 span {display: none;}}
