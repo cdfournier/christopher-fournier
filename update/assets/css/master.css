@@ -197,17 +197,13 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .about figure { align-items: flex-start; justify-content: flex-end; padding: 2rem 2rem 6rem; }
 
-.no-touch .about figure { padding: 2rem; }
-
 .about figure .logo { width: calc(100% - 70vw); min-width: 12rem; margin: 0; padding: 0; }
 
-@media (min-width: 46rem) { .about figure { padding: 4rem; } }
-
-@media (orientation: portrait) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 40vw); } }
+@media (orientation: portrait) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 50vw); } }
 
 @media (orientation: landscape) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 55vw); } }
 
-@media (min-width: 62rem) { .about figure .logo { width: calc(100% - 60vw); } }
+@media (min-width: 62rem) { .about figure .logo { width: calc(100% - 65vw); } }
 
 .bio figure { margin: 2rem 0; background-attachment: initial; background-image: url(../images/born-in-maine.png); background-position: center; background-repeat: no-repeat; background-size: contain; }
 
@@ -487,9 +483,9 @@ main.resume { display: flex; flex-direction: column; }
 
 .resume .skills ul li span { display: block; width: 100%; overflow: hidden; font-family: "metropolis-bold", sans-serif; font-size: 0.875rem; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; color: #384332; }
 
-.resume .skills ul li div { display: block; width: 100%; height: 0.5rem; margin: 0.125rem auto 0; background-color: #eef1e8; background-color: #f9fbfd; }
+.resume .skills ul li div { display: block; width: 100%; height: 0.5rem; margin: 0.125rem auto 0; background-color: #384332; background-color: #f9fbfd; background-color: #eef1e8; }
 
-.resume .skills ul li div > span { display: block; height: inherit; background-color: #e85c45; background-color: #eef1e8; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
+.resume .skills ul li div > span { display: block; width: 0; height: inherit; background-color: #e85c45; background-color: #eef1e8; background-color: #384332; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -ms-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; }
 
 .resume .skills ul li:last-of-type { padding: 0; }
 
