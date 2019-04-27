@@ -489,13 +489,21 @@ main.resume { display: flex; flex-direction: column; }
 
 .resume .skills ul li:last-of-type { padding: 0; }
 
-.resume .skills ul li.adobe div > span { width: 95%; }
+.resume .skills ul li.adobe div > span[data-aos="loaded"] { width: 0%; transition-property: width; }
 
-.resume .skills ul li.code div > span { width: 85%; }
+.resume .skills ul li.adobe div > span[data-aos="loaded"].aos-animate { width: 95%; }
 
-.resume .skills ul li.sketch div > span { width: 75%; }
+.resume .skills ul li.code div > span[data-aos="loaded"] { width: 0%; transition-property: width; }
 
-.resume .skills ul li.analytics div > span { width: 65%; }
+.resume .skills ul li.code div > span[data-aos="loaded"].aos-animate { width: 85%; }
+
+.resume .skills ul li.sketch div > span[data-aos="loaded"] { width: 0%; transition-property: width; }
+
+.resume .skills ul li.sketch div > span[data-aos="loaded"].aos-animate { width: 75%; }
+
+.resume .skills ul li.analytics div > span[data-aos="loaded"] { width: 0%; transition-property: width; }
+
+.resume .skills ul li.analytics div > span[data-aos="loaded"].aos-animate { width: 65%; }
 
 @media (orientation: landscape) { main.resume { flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: flex-start; width: 100%; } }
 
