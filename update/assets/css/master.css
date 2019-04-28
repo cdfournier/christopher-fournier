@@ -40,9 +40,9 @@ small { font-size: 0.75rem; }
 
 .eyebrow { display: block; font-family: "metropolis-regular", sans-serif; font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; }
 
-.button { display: inline-flex; align-items: center; width: auto; max-width: 100%; overflow: hidden; margin: 1.5rem auto 0 0; padding: 0.5rem 1.25rem; border: 1px solid #384332; font-family: "metropolis-bold", sans-serif; font-size: 0.75rem; font-weight: normal; letter-spacing: 0.5px; text-align: center; text-decoration: none; text-overflow: ellipsis; text-transform: uppercase; color: #ffffff; background-color: #384332; white-space: nowrap; cursor: pointer; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
+.button { display: inline-flex; align-items: center; width: auto; max-width: 100%; overflow: hidden; margin: 1.5rem auto 0 0; padding: 0.5rem 1.25rem; border: 1px solid #384332; font-family: "metropolis-bold", sans-serif; font-size: 0.75rem; font-weight: normal; letter-spacing: 0.5px; text-align: center; text-decoration: none; text-overflow: ellipsis; text-transform: uppercase; color: #384332; background-color: #ffffff; white-space: nowrap; cursor: pointer; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
 
-.button:hover, .button:focus { color: #384332; background-color: #ffffff; }
+.button:hover, .button:focus { color: #ffffff; background-color: #384332; }
 
 nav { width: 100%; }
 
@@ -272,7 +272,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .contact article h2 { font-family: "metropolis-bold", sans-serif; }
 
-.contact article .button { border-color: #ffffff; color: #ffffff; }
+.contact article .button { border-color: #ffffff; color: #ffffff; background-color: #384332; }
 
 .contact article .button:hover, .contact article .button:focus { color: #384332; background-color: #ffffff; }
 

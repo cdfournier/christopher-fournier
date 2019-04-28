@@ -16,14 +16,14 @@
   text-decoration: none;
   text-overflow: ellipsis;
   text-transform: uppercase;
-  color: $white;
-  background-color: $green;
+  color: $green;
+  background-color: $white;
   white-space: nowrap;
   cursor: pointer;
   @include transition(all, 0.25s, ease);
 }
 
 .button:hover, .button:focus {
-  color: $green;
-  background-color: $white;
+  color: $white;
+  background-color: $green;
 }
