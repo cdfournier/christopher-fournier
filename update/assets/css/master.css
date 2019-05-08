@@ -22,7 +22,7 @@ h1, h2, h3 { margin: 0; font-weight: inherit; }
 
 h1 { width: 100%; padding: 0 0 1rem; font-family: "metropolis-bold", sans-serif; font-size: 2rem; }
 
-h2, h3 { padding: 0 0 0.75rem; font-family: "metropolis-bold", sans-serif; font-size: 1.75rem; letter-spacing: -0.5px; }
+h2, h3 { padding: 0 0 0.75rem; font-size: 1.75rem; letter-spacing: -0.5px; }
 
 h3 { font-size: 1.5rem; }
 
@@ -68,7 +68,7 @@ header nav ul { justify-content: flex-start; padding: 0; }
 
 .projects-list nav { width: 100%; height: 100%; }
 
-.projects-list nav ul { display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; justify-content: space-between; width: 100%; height: 100%; margin: 0; padding: 0; list-style-type: none; }
+.projects-list nav ul { display: flex; flex-direction: column; align-items: flex-start; flex-wrap: nowrap; justify-content: center; width: 100%; height: 100%; margin: 0; padding: 0; list-style-type: none; }
 
 .projects-list nav ul li { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; width: 100%; height: calc(100% / 6); margin: 0; padding: 0 2rem; font-family: "metropolis-bold", sans-serif; font-size: 1.25rem; line-height: 1; text-align: left; text-transform: uppercase; color: #384332; }
 
@@ -220,7 +220,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .do h1:after, .principles h1:after, .trivialities h1:after { display: block; width: 35%; height: 1px; margin: 0.5rem auto; background-color: #384332; content: ""; }
 
-.do ul li h2, .principles ul li h2 { padding: 0; font-family: "metropolis-bold", sans-serif; line-height: 1; }
+.do ul li h2, .principles ul li h2 { padding: 0; line-height: 1; }
 
 @media (min-width: 41.6875rem) { .do h1, .principles h1, .trivialities h1 { padding: 0; font-size: 4rem; line-height: 1; text-align: left; color: #eef1e8; }
   .do h1:after, .principles h1:after, .trivialities h1:after { display: none; }
@@ -240,7 +240,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .do ul li:last-child { margin: 0; }
 
-.do ul li span { font-size: 2.441rem; line-height: 0.875; }
+.do ul li span { display: block; width: 100%; margin-bottom: -1.5rem; font-size: 3rem; line-height: 1; color: #eef1e8; }
 
 @media (min-width: 41.6875rem) { .do { flex-direction: row; align-items: flex-start; justify-content: center; }
   .do ul { padding: 0 0 0 2rem; } }
@@ -356,13 +356,15 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .no-touch .intro { background-attachment: fixed; }
 
-.intro article { display: flex; align-items: flex-end; position: absolute; bottom: 0; width: 100%; height: 100%; padding: 2rem 2rem 6rem; color: #ffffff; background: rgba(0, 0, 0, 0.25); background: linear-gradient(0deg, black 0%, transparent 50%); }
+.intro article { display: flex; align-items: flex-start; position: absolute; bottom: 0; width: 100%; height: 100%; padding: 2rem 2rem 6rem; color: #ffffff; background: rgba(0, 0, 0, 0.25); background: linear-gradient(180deg, black 0%, transparent 50%); }
 
 .intro article h1 { padding: 0; font-family: "Merriweather", serif; }
 
 .intro article h1 span.eyebrow { line-height: 1; }
 
 .no-touch .intro article { padding: 2rem; }
+
+@media (min-width: 46rem) { .intro article h1 { font-size: 3.5rem; } }
 
 .intro.east-wind { background-image: url(../images/work-east-wind-01-1x.jpg); background-position: 55% center; }
 
@@ -388,7 +390,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .details article .text { padding: 2rem 2rem 0; }
 
-.details article .text h2 { width: fit-content; padding: 1rem 0 0; }
+.details article .text h2 { width: fit-content; padding: 1rem 0 0; font-family: "metropolis-regular", sans-serif; }
 
 .details article .text h2:first-of-type { padding: 0; }
 
@@ -401,11 +403,12 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 @media (min-width: 46rem) { .details article { display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; }
   .details article .text { width: 50%; }
   .details article .text p { font-size: 0.875rem; }
-  .details article .text.wide { width: 100%; text-align: center; }
-  .details article .text.wide p { margin: 0 auto; }
+  .details article .text.wide { width: 100%; margin: 2rem 0 0; text-align: center; background-color: #eef1e8; }
+  .details article .text.wide p { max-width: 64rem; margin: 0 auto; padding: 0 2rem; font-size: 1.25rem; line-height: 2; }
   .details article figure { width: 50%; padding: 2rem 2rem 0; }
   .details article .text:nth-of-type(even), .details article figure:nth-of-type(odd) { padding: 2rem 2rem 0 1rem; }
   .details article .text:nth-of-type(odd), .details article figure:nth-of-type(even) { padding: 2rem 1rem 0 2rem; }
+  .details article .text.wide { padding: 2rem; }
   .details article figure:nth-of-type(3n) { width: 100%; padding: 2rem 2rem 0; } }
 
 @media (min-width: 46rem) { .details.enservio-portal article figure:nth-of-type(5n) { padding: 2rem 1rem 0 2rem; }
@@ -518,7 +521,7 @@ main.resume { display: flex; flex-direction: column; }
   main.resume .contact-me ul { padding: 0 0 0 3.125rem; }
   main.resume .contact-me:last-of-type { width: 90%; height: auto; padding: 2rem 2rem 0; }
   main.resume .contact-me:last-of-type ul { padding: 0 0 0 3.125rem; }
-  main.resume .about-me p { padding: 0 0 0 3.125rem; }
+  main.resume .about-me p { padding: 0 0 0 3.125rem; font-size: 1rem; }
   main.resume .history section { padding: 0 0 1rem 3.125rem; }
   main.resume .history section h2 { justify-content: flex-start; }
   main.resume .history section:last-of-type { padding: 0 0 0 3.125rem; }
@@ -527,10 +530,11 @@ main.resume { display: flex; flex-direction: column; }
 @media (min-width: 62rem) { main.resume .skills { width: 55%; padding: 2rem 0 0 2rem; }
   main.resume .contact-me:last-of-type { width: 45%; } }
 
-@media (min-width: 88rem) { main.resume section { width: 100%; }
+@media (min-width: 80rem) { main.resume section { width: 100%; }
   main.resume .logo { max-width: 18rem; height: inherit; padding: 4rem 2rem 2rem; }
   main.resume .contact-me { width: 45%; height: inherit; padding: 4rem 2rem 2rem; }
-  main.resume .about-me { width: 70%; }
+  main.resume .about-me { width: auto; min-width: 50%; margin: 0 auto 0 0; }
+  main.resume .about-me p { padding: 0 2rem 0 3.125rem; }
   main.resume .experience .history { display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
   main.resume .experience .history section { width: 50%; padding: 0 0 2rem 3.125rem; }
   main.resume .experience .history section p:last-of-type { padding: 0; border-bottom: none; }

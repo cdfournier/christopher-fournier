@@ -1,0 +1,54 @@
+// THEON COLORS
+$iron-dk: #535659;
+$iron-md: #a9aaac;
+$iron-lt: #d4d5d5;
+$sea-green: #86a1a5;
+
+
+// BE YAO LAYOUT
+.theon {
+  background-color: $iron-dk;
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    svg {
+      max-width: 10rem;
+      height: 50vh;
+      margin: 0 auto;
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    figure {padding: 0;}
+    figure.wide {width: 100%;}
+    figure img.not-mobile {display: none;}
+  }
+  footer {
+    .logo svg {fill: $iron-lt;}
+    nav ul li a {color: $iron-lt;}
+    nav ul li a:hover, nav ul li a:focus {color: $white;}
+    small {color: $iron-lt;}
+  }
+}
+
+
+@media (min-width: 46rem) {
+.theon {
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    figure {width: 50%;}
+    figure img.mobile {display: none;}
+    figure img.not-mobile {display: block;}
+  }
+}}

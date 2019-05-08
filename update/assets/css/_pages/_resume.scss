@@ -240,8 +240,6 @@ main.resume {
   &.aos-animate {width: 65%;}
 }
 
-
-// MEDIA QUERIES BY SCREEN
 @media (orientation: landscape) {
 main.resume {
   flex-direction: row;
@@ -288,7 +286,10 @@ main.resume {
     padding: 2rem 2rem 0;
     ul {padding: 0 0 0 3.125rem;}
   }
-  .about-me p {padding: 0 0 0 3.125rem;}
+  .about-me p {
+    padding: 0 0 0 3.125rem;
+    font-size: 1rem;
+  }
   .history section {
     padding: 0 0 1rem 3.125rem;
     h2 {justify-content: flex-start;}
@@ -310,7 +311,7 @@ main.resume {
   .contact-me:last-of-type {width: 45%;}
 }}
 
-@media (min-width: 88rem) {
+@media (min-width: 80rem) {
 main.resume {
   section {width: 100%;}
   .logo {
@@ -323,7 +324,12 @@ main.resume {
     height: inherit;
     padding: 4rem 2rem 2rem;
   }
-  .about-me {width: 70%;}
+  .about-me {
+    width: auto;
+    min-width: 50%;
+    margin: 0 auto 0 0;
+    p {padding: 0 2rem 0 3.125rem;}
+  }
   .experience {
     .history {
       display: flex;

@@ -86,7 +86,6 @@
 
 .do ul li h2, .principles ul li h2 {
   padding: 0;
-  font-family: "metropolis-bold", sans-serif;
   line-height: 1;
 }
 
@@ -148,8 +147,12 @@
 .do ul li:last-child {margin: 0;}
 
 .do ul li span {
-  font-size: 2.441rem;
-  line-height: 0.875;
+  display: block;
+  width: 100%;
+  margin-bottom: -1.5rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: $cream;
 }
 
 @media (min-width: 41.6875rem) {

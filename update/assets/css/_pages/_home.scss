@@ -13,22 +13,21 @@
 }
 
 @media (orientation: landscape) and (max-width: 46rem) {
-  .welcome figure {
-    align-items: flex-start;
-    background-image: url(../images/home-welcome-1x.png);
-    background-position: 120% center;
-    background-repeat: no-repeat;
-    background-size: 65%;
-  }
-  .welcome figure img {display: none;}
-  .welcome figcaption {
-    width: 80%;
-    padding: 0;
-  }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .welcome figure {background-image: url(../images/home-welcome-2x.png);}
-  }
+.welcome figure {
+  align-items: flex-start;
+  background-image: url(../images/home-welcome-1x.png);
+  background-position: 120% center;
+  background-repeat: no-repeat;
+  background-size: 65%;
 }
+.welcome figure img {display: none;}
+.welcome figcaption {
+  width: 80%;
+  padding: 0;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .welcome figure {background-image: url(../images/home-welcome-2x.png);}
+}}
 
 @media (min-width: 46rem) {
 .welcome figure {flex-direction: row-reverse;}
@@ -75,6 +74,7 @@
 .home figure.reverse figcaption {padding: 0 2rem 0 0;}}
 
 @media (min-width: 88rem) {.home figure img {width: 15%;}}
+
 
 // CUSTOM HOME STYLES
 .home.east-wind figure img {
