@@ -82,37 +82,47 @@ header nav ul { justify-content: flex-start; padding: 0; }
 
 .projects-list nav ul li.close { justify-content: flex-end; position: absolute; top: 0; right: 2rem; z-index: 50; width: auto; padding: 0; }
 
-.no-touch .projects-list nav ul li.close a:hover, .projects-list nav ul li.close a:focus { color: #e85c45; }
+.projects-list nav ul li.all-projects a { align-items: center; flex-direction: row; }
 
-.no-touch .projects-list nav ul li.east-wind:hover, .projects-list nav ul li.east-wind:focus { background-color: #552a80; }
+.projects-list nav ul li.all-projects a .la-arrow-right { padding: 0 0 0 0.5rem; -webkit-transition: padding 0.25s ease 0s; -moz-transition: padding 0.25s ease 0s; -ms-transition: padding 0.25s ease 0s; -o-transition: padding 0.25s ease 0s; transition: padding 0.25s ease 0s; }
 
-.no-touch .projects-list nav ul li.enservio-notes:hover, .projects-list nav ul li.enservio-notes:focus { background-color: #ea7200; }
+.no-touch .projects-list nav ul li.close a:hover, .no-touch .projects-list nav ul li.close a:focus { color: #e85c45; }
 
-.no-touch .projects-list nav ul li.enservio-notes:hover, .projects-list nav ul li.enservio-notes:focus { color: #ffffff; }
+.no-touch .projects-list nav ul li.east-wind:hover, .no-touch .projects-list nav ul li.east-wind:focus { background-color: #552a80; }
 
-.no-touch .projects-list nav ul li.enservio-portal:hover, .projects-list nav ul li.enservio-portal:focus { background-color: #2e84ed; }
+.no-touch .projects-list nav ul li.enservio-notes:hover, .no-touch .projects-list nav ul li.enservio-notes:focus { background-color: #ea7200; }
 
-.no-touch .projects-list nav ul li.my-stuff:hover, .projects-list nav ul li.my-stuff:focus { background-color: #cd2183; }
+.no-touch .projects-list nav ul li.enservio-notes:hover, .no-touch .projects-list nav ul li.enservio-notes:focus { color: #ffffff; }
 
-.no-touch .projects-list nav ul li.panera:hover, .projects-list nav ul li.panera:focus { background-color: #4c753f; }
+.no-touch .projects-list nav ul li.enservio-portal:hover, .no-touch .projects-list nav ul li.enservio-portal:focus { background-color: #2e84ed; }
 
-.no-touch .projects-list nav ul li.transferx:hover, .projects-list nav ul li.transferx:focus { background-color: #0d1e27; }
+.no-touch .projects-list nav ul li.my-stuff:hover, .no-touch .projects-list nav ul li.my-stuff:focus { background-color: #cd2183; }
 
-.no-touch .projects-list nav ul li.east-wind:hover a, .projects-list nav ul li.east-wind:focus a { color: #eeeaf2; }
+.no-touch .projects-list nav ul li.panera:hover, .no-touch .projects-list nav ul li.panera:focus { background-color: #4c753f; }
 
-.no-touch .projects-list nav ul li.enservio-notes:hover a, .projects-list nav ul li.enservio-notes:focus a { color: #fef2e8; }
+.no-touch .projects-list nav ul li.transferx:hover, .no-touch .projects-list nav ul li.transferx:focus { background-color: #0d1e27; }
 
-.no-touch .projects-list nav ul li.enservio-portal:hover a, .projects-list nav ul li.enservio-portal:focus a { color: #eaf3fd; }
+.no-touch .projects-list nav ul li.east-wind:hover a, .no-touch .projects-list nav ul li.east-wind:focus a { color: #eeeaf2; }
 
-.no-touch .projects-list nav ul li.my-stuff:hover a, .projects-list nav ul li.my-stuff:focus a { color: #fae9f3; }
+.no-touch .projects-list nav ul li.enservio-notes:hover a, .no-touch .projects-list nav ul li.enservio-notes:focus a { color: #fef2e8; }
 
-.no-touch .projects-list nav ul li.panera:hover a, .projects-list nav ul li.panera:focus a { color: #e9f0e5; }
+.no-touch .projects-list nav ul li.enservio-portal:hover a, .no-touch .projects-list nav ul li.enservio-portal:focus a { color: #eaf3fd; }
 
-.no-touch .projects-list nav ul li.transferx:hover a, .projects-list nav ul li.transferx:focus a { color: #f0f5f8; }
+.no-touch .projects-list nav ul li.my-stuff:hover a, .no-touch .projects-list nav ul li.my-stuff:focus a { color: #fae9f3; }
 
-.no-touch .projects-list nav ul li:hover a, .projects-list nav ul li:focus a { opacity: 0.5; }
+.no-touch .projects-list nav ul li.panera:hover a, .no-touch .projects-list nav ul li.panera:focus a { color: #e9f0e5; }
 
-.no-touch .projects-list nav ul li.east-wind:hover a:hover, .projects-list nav ul li.east-wind:focus a:hover, .no-touch .projects-list nav ul li.east-wind:hover a:focus, .projects-list nav ul li.east-wind:focus a:focus, .no-touch .projects-list nav ul li.enservio-notes:hover a:hover, .projects-list nav ul li.enservio-notes:focus a:hover, .no-touch .projects-list nav ul li.enservio-notes:hover a:focus, .projects-list nav ul li.enservio-notes:focus a:focus, .no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .projects-list nav ul li.enservio-portal:focus a:hover, .no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .projects-list nav ul li.enservio-portal:focus a:focus, .no-touch .projects-list nav ul li.my-stuff:hover a:hover, .projects-list nav ul li.my-stuff:focus a:hover, .no-touch .projects-list nav ul li.my-stuff:hover a:hover, .projects-list nav ul li.my-stuff:focus a:hover, .no-touch .projects-list nav ul li.panera:hover a:hover, .projects-list nav ul li.panera:focus a:hover, .no-touch .projects-list nav ul li.panera:hover a:focus, .projects-list nav ul li.panera:focus a:focus, .no-touch .projects-list nav ul li.transferx:hover a:hover, .projects-list nav ul li.transferx:focus a:hover, .no-touch .projects-list nav ul li.transferx:hover a:focus, .projects-list nav ul li.transferx:focus a:focus { color: #ffffff; opacity: 1; }
+.no-touch .projects-list nav ul li.transferx:hover a, .no-touch .projects-list nav ul li.transferx:focus a { color: #f0f5f8; }
+
+.no-touch .projects-list nav ul li:hover a, .no-touch .projects-list nav ul li:focus a { opacity: 0.5; }
+
+.no-touch .projects-list nav ul li.all-projects:hover a, .no-touch .projects-list nav ul li.all-projects:focus a { opacity: 1; }
+
+.no-touch .projects-list nav ul li.east-wind:hover a:hover, .no-touch .projects-list nav ul li.east-wind:focus a:hover, .no-touch .projects-list nav ul li.east-wind:hover a:focus, .no-touch .projects-list nav ul li.east-wind:focus a:focus, .no-touch .projects-list nav ul li.enservio-notes:hover a:hover, .no-touch .projects-list nav ul li.enservio-notes:focus a:hover, .no-touch .projects-list nav ul li.enservio-notes:hover a:focus, .no-touch .projects-list nav ul li.enservio-notes:focus a:focus, .no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .no-touch .projects-list nav ul li.enservio-portal:focus a:hover, .no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .no-touch .projects-list nav ul li.enservio-portal:focus a:focus, .no-touch .projects-list nav ul li.my-stuff:hover a:hover, .no-touch .projects-list nav ul li.my-stuff:focus a:hover, .no-touch .projects-list nav ul li.my-stuff:hover a:hover, .no-touch .projects-list nav ul li.my-stuff:focus a:hover, .no-touch .projects-list nav ul li.panera:hover a:hover, .no-touch .projects-list nav ul li.panera:focus a:hover, .no-touch .projects-list nav ul li.panera:hover a:focus, .no-touch .projects-list nav ul li.panera:focus a:focus, .no-touch .projects-list nav ul li.transferx:hover a:hover, .no-touch .projects-list nav ul li.transferx:focus a:hover, .no-touch .projects-list nav ul li.transferx:hover a:focus, .no-touch .projects-list nav ul li.transferx:focus a:focus { color: #ffffff; opacity: 1; }
+
+.no-touch .projects-list nav ul li.all-projects a:hover, .no-touch .projects-list nav ul li.all-projects a:focus { color: #e85c45; opacity: 1; }
+
+.no-touch .projects-list nav ul li.all-projects a:hover .la-arrow-right, .no-touch .projects-list nav ul li.all-projects a:focus .la-arrow-right { padding: 0 0 0 1rem; }
 
 header { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin: 0; }
 
@@ -143,6 +153,32 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
   .gallery article.two figure:last-of-type { padding: 2rem 2rem 0 1rem; }
   .gallery article.three { padding: 0 1rem; }
   .gallery article.three figure { padding: 2rem 1rem 0; } }
+
+.cards { display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; }
+
+.cards article { width: 100%; padding: 2rem 2rem 0; }
+
+.cards article h1 { font-family: "metropolis-regular", sans-serif; }
+
+.cards figure.card { display: block; padding: 2rem 2rem 0; }
+
+.cards figure.card img { display: grid; border-radius: 0.125rem; }
+
+.cards figure.card figcaption { align-items: center; position: absolute; top: 2rem; right: 2rem; bottom: 0; left: 2rem; padding: 1rem; border-radius: 0.25rem; font-size: 1.5rem; text-align: center; color: #ffffff; background-color: rgba(0, 0, 0, 0.325); }
+
+@media (min-width: 46rem) { .cards { padding: 2rem; }
+  .cards figure.card { width: 50%; padding: 2rem; }
+  .cards figure.card figcaption { bottom: 2rem; } }
+
+@media (min-width: 62rem) { .cards figure.card figcaption { font-size: 2rem; } }
+
+.no-touch figure.card img { -webkit-transition: transform 0.325s ease 0s; -moz-transition: transform 0.325s ease 0s; -ms-transition: transform 0.325s ease 0s; -o-transition: transform 0.325s ease 0s; transition: transform 0.325s ease 0s; }
+
+.no-touch figure.card a figcaption { opacity: 0; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; }
+
+.no-touch figure.card a:hover img, .no-touch figure.card a:focus img, .no-touch figure.card a:hover figcaption, .no-touch figure.card a:focus figcaption { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); }
+
+.no-touch figure.card a:hover figcaption, .no-touch figure.card a:focus figcaption { opacity: 1; background-color: rgba(0, 0, 0, 0.5); }
 
 .welcome figure { min-height: 100vh; }
 
@@ -199,11 +235,11 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .about figure .logo { width: calc(100% - 70vw); min-width: 12rem; margin: 0; padding: 0; }
 
-@media (orientation: portrait) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 50vw); } }
+@media (orientation: portrait) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 55vw); } }
 
 @media (orientation: landscape) and (min-width: 46rem) { .about figure .logo { width: calc(100% - 55vw); } }
 
-@media (min-width: 62rem) { .about figure .logo { width: calc(100% - 65vw); } }
+@media (min-width: 62rem) { .about figure .logo { width: calc(100% - 68.5vw); } }
 
 .bio figure { margin: 2rem 0; background-attachment: initial; background-image: url(../images/born-in-maine.png); background-position: center; background-repeat: no-repeat; background-size: contain; }
 

@@ -37,9 +37,9 @@
   padding: 0;
 }
 
-@media (orientation: portrait) and (min-width: 46rem) {.about figure .logo {width: calc(100% - 50vw);}}
+@media (orientation: portrait) and (min-width: 46rem) {.about figure .logo {width: calc(100% - 55vw);}}
 @media (orientation: landscape) and (min-width: 46rem) {.about figure .logo {width: calc(100% - 55vw);}}
-@media (min-width: 62rem) {.about figure .logo {width: calc(100% - 65vw);}}
+@media (min-width: 62rem) {.about figure .logo {width: calc(100% - 68.5vw);}}
 
 
 // BIOGRAPHY

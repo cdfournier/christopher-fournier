@@ -48,3 +48,67 @@ figcaption {
 .gallery article.two figure:last-of-type {padding: 2rem 2rem 0 1rem;}
 .gallery article.three {padding: 0 1rem;}
 .gallery article.three figure {padding: 2rem 1rem 0;}}
+
+
+// CARDS
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  article {
+    width: 100%;
+    padding: 2rem 2rem 0;
+    h1 {font-family: $font-regular;}
+  }
+  figure.card {
+    display: block;
+    padding: 2rem 2rem 0;
+    img {
+      display: grid;
+      border-radius: 0.125rem;
+    }
+    figcaption {
+      align-items: center;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      bottom: 0;
+      left: 2rem;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: $white;
+      background-color: rgba(0,0,0,0.325);
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+.cards {
+  padding: 2rem;
+  figure.card {
+    width: 50%;
+    padding: 2rem;
+    figcaption {bottom: 2rem;}
+  }
+}}
+
+@media (min-width: 62rem) {.cards figure.card figcaption {font-size: 2rem;}}
+
+
+// NON-MOBILE CARD STYLES
+.no-touch figure.card {
+  img {@include transition (transform, 0.325s, ease);}
+  a figcaption {
+    opacity: 0;
+    @include transition (all, 0.325s, ease);
+  }
+  a:hover img, a:focus img, a:hover figcaption, a:focus figcaption {@include transform(scale(1.05));}
+  a:hover figcaption, a:focus figcaption {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+  }
+}
