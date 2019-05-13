@@ -20,6 +20,14 @@ html {
   color: $green;
 }
 
+
+@media (min-width: 80rem) {
+html {
+  font-size: 18px;
+  line-height: 1.5;
+}
+}
+
 body, .body {
   width: 100%;
   height: auto;
