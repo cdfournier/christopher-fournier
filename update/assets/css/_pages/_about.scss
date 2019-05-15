@@ -11,8 +11,9 @@
   margin: 0 auto;
   padding: 0;
   background-attachment: initial;
+  background-color: $green;
   background-image: url(../images/banner-about-1x.jpg);
-  background-position: 86% bottom;
+  background-position: 90% center;
   background-repeat: no-repeat;
   background-size: cover;
   @include transition (all, 0.25s, ease);
