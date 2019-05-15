@@ -37,20 +37,9 @@
   padding: 0;
 }
 
-@media (orientation: portrait) and (min-width: 46rem) {.about figure .logo {width: calc(100% - 55vw);}}
-@media (orientation: landscape) and (min-width: 46rem) {.about figure .logo {width: calc(100% - 55vw);}}
-@media (min-width: 62rem) {.about figure .logo {width: calc(100% - 68.5vw);}}
-
 
 // BIOGRAPHY
-.bio figure {
-  margin: 2rem 0;
-  background-attachment: initial;
-  background-image: url(../images/born-in-maine.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+.bio figure {margin: 2rem 0;}
 
 .bio figcaption {
   padding: 0;
@@ -64,9 +53,7 @@
   line-height: 2;
 }
 
-@media (min-width: 46rem) {
-.bio figure {margin: 4rem 0;}
-.bio figcaption {max-width: 40rem;}}
+@media (min-width: 46rem) {.bio figure {margin: 4rem 0;}}
 
 
 // ABOUT PAGE CUSTOM TYPESTYLES
