@@ -138,6 +138,8 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .gallery { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 100%; margin: 0; }
 
+.gallery h1, .gallery h2 { display: none; }
+
 .gallery figure { padding: 2rem 2rem 0; }
 
 @media (min-width: 46rem) { .gallery article.one, .gallery article.two, .gallery article.three { display: flex; flex-direction: row; width: 100%; }

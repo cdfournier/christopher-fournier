@@ -34,9 +34,9 @@ figcaption {
   overflow: hidden;
   width: 100%;
   margin: 0;
+  h1, h2 {display: none;}
+  figure {padding: 2rem 2rem 0;}
 }
-
-.gallery figure {padding: 2rem 2rem 0;}
 
 @media (min-width: 46rem) {
 .gallery article.one, .gallery article.two, .gallery article.three {

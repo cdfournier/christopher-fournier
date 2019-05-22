@@ -148,6 +148,8 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .gallery { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 100%; margin: 0; }
 
+.gallery h1, .gallery h2 { display: none; }
+
 .gallery figure { padding: 2rem 2rem 0; }
 
 @media (min-width: 46rem) { .gallery article.one, .gallery article.two, .gallery article.three { display: flex; flex-direction: row; width: 100%; }
@@ -475,6 +477,8 @@ main.resume { display: flex; flex-direction: column; }
 
 .resume .logo { width: 40%; min-width: 12rem; height: 45vh; margin: 0 auto; }
 
+.resume .logo h1 { display: none; }
+
 .resume .contact-me { align-items: center; justify-content: flex-start; height: 55vh; }
 
 .resume .contact-me ul { display: block; width: 100%; margin: 0; padding: 0; list-style: none; }
@@ -493,23 +497,23 @@ main.resume { display: flex; flex-direction: column; }
 
 .resume article.history section { height: auto; max-height: none; min-height: inherit; padding: 0 0 1rem; }
 
-.resume article.history section h2 { display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0; font-family: "metropolis-bold", sans-serif; font-size: 1rem; line-height: 1; text-transform: uppercase; color: #e85c45; }
+.resume article.history section h3 { display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0; font-family: "metropolis-bold", sans-serif; font-size: 1rem; line-height: 1; text-transform: uppercase; color: #e85c45; }
 
-.resume article.history section h2 a { color: #e85c45; }
+.resume article.history section h3 a { color: #e85c45; }
 
-.resume article.history section h2 a:hover, .resume article.history section h2 a:focus { color: #384332; }
+.resume article.history section h3 a:hover, .resume article.history section h3 a:focus { color: #384332; }
 
-.resume article.history section h2 ul { display: flex; flex-direction: row; margin: 0; padding: 0 0 0 0.75rem; font-family: "metropolis-bold", sans-serif; font-size: 75%; color: #384332; list-style-type: none; }
+.resume article.history section h3 span { display: flex; flex-direction: row; margin: 0; padding: 0 0 0 0.75rem; font-family: "metropolis-bold", sans-serif; font-size: 75%; color: #384332; }
 
-.resume article.history section h2 ul li:first-of-type:after { display: inline-block; margin: 0 0.25rem; font-family: "metropolis-regular", sans-serif; content: "\2013"; }
-
-.resume article.history section h2 + p { padding: 0.25rem 0 0.75rem 0; font-family: "metropolis-bold", sans-serif; }
+.resume article.history section h3 + p { padding: 0.25rem 0 0.75rem 0; font-family: "metropolis-bold", sans-serif; }
 
 .resume article.history section p:last-of-type { margin: 0; padding: 0 0 0.875rem; border-bottom: 1px solid #eef1e8; }
 
 .resume article.history section:last-of-type { padding: 0; }
 
 .resume article.history section:last-of-type p:last-of-type { padding: 0; border-bottom: none; }
+
+.resume article h2 { display: none; }
 
 .resume .skills ul { display: block; width: 100%; margin: 0; padding: 0; list-style: none; }
 
@@ -554,7 +558,7 @@ main.resume { display: flex; flex-direction: column; }
   main.resume .contact-me:last-of-type ul { padding: 0 0 0 3.125rem; }
   main.resume .about-me p { padding: 0 0 0 3.125rem; font-size: 1rem; }
   main.resume .history section { padding: 0 0 1rem 3.125rem; }
-  main.resume .history section h2 { justify-content: flex-start; }
+  main.resume .history section h3 { justify-content: flex-start; }
   main.resume .history section:last-of-type { padding: 0 0 0 3.125rem; }
   main.resume .skills ul { padding: 0 0 0 3.125rem; } }
 
@@ -574,7 +578,7 @@ main.resume { display: flex; flex-direction: column; }
 @media (orientation: landscape) and (max-width: 42rem) { main.resume .logo { width: 30%; height: 100vh; margin: 0 auto; padding: 0 2rem 0; }
   main.resume .contact-me { justify-content: center; width: 55%; height: 100vh; max-height: none; padding: 0 2rem 0; }
   main.resume .contact-me:last-of-type { width: 90%; height: auto; margin: 0; padding: 2rem 2rem 0; }
-  main.resume .history section h2 { justify-content: flex-start; } }
+  main.resume .history section h3 { justify-content: flex-start; } }
 
 body.error { display: flex; flex-direction: column; justify-content: flex-end; background-color: #000000; background-image: url(../images/banner-error-1x.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; }
 

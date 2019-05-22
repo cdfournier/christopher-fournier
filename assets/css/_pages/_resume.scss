@@ -74,6 +74,7 @@ main.resume {
   min-width: 12rem;
   height: 45vh;
   margin: 0 auto;
+  h1 {display: none;}
 }
 
 
@@ -118,7 +119,7 @@ main.resume {
   max-height: none;
   min-height: inherit;
   padding: 0 0 1rem;
-  h2 {
+  h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,7 +132,7 @@ main.resume {
     color: $orange;
     a {color: $orange;}
     a:hover, a:focus {color: $green;}
-    ul {
+    span {
       display: flex;
       flex-direction: row;
       margin: 0;
@@ -139,16 +140,9 @@ main.resume {
       font-family: $font-bold;
       font-size: 75%;
       color: $green;
-      list-style-type: none;
-      li:first-of-type:after {
-        display: inline-block;
-        margin: 0 0.25rem;
-        font-family: $font-regular;
-        content: "\2013";
-      }
     }
   }
-  h2 + p {
+  h3 + p {
     padding: 0.25rem 0 0.75rem 0;
     font-family: $font-bold;
   }
@@ -166,6 +160,8 @@ main.resume {
     border-bottom: none;
   }
 }
+
+.resume article h2 {display: none;}
 
 
 // MY FAVORITE SKILLS
@@ -292,7 +288,7 @@ main.resume {
   }
   .history section {
     padding: 0 0 1rem 3.125rem;
-    h2 {justify-content: flex-start;}
+    h3 {justify-content: flex-start;}
   }
   .history section:last-of-type {padding: 0 0 0 3.125rem;}
   .skills {
@@ -373,6 +369,6 @@ main.resume {
     padding: 2rem 2rem 0;
   }
   .history section {
-    h2 {justify-content: flex-start;}
+    h3 {justify-content: flex-start;}
   }
 }}
