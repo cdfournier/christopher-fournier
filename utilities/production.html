@@ -98,6 +98,19 @@
     </script>
   </head>
 
+    <header class="navigation">
+      <nav>
+        <ul>
+          <li><a href="https://chris.blackcoffeeshoppe.com/index.html">Home</a></li>
+          <li><a class="open--projects">Projects</a></li>
+          <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html">Resume</a></li>
+          <li><a href="https://chris.blackcoffeeshoppe.com/about/index.html">About</a></li>
+          <li><a href="https://tinyurl.com/ybf843cc" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://tinyurl.com/ycwzknf9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <aside class="projects-list">
       <nav>
         <ul>
@@ -133,6 +146,11 @@
     <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/main.js"></script>
     <script>
       AOS.init({duration: 600});
+    </script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
     </script>
   </body>
 </html>

@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="../assets/css/master.css">
   </head>
 
+    <header class="navigation">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="open--projects">Projects</a></li>
+          <li><a href="../resume/index.html">Resume</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="https://tinyurl.com/ybf843cc" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://tinyurl.com/ycwzknf9" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <aside class="projects-list">
       <nav>
         <ul>
@@ -44,6 +57,11 @@
     <script src="../assets/scripts/main.js"></script>
     <script>
       AOS.init({duration: 600});
+    </script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
     </script>
   </body>
 </html>
