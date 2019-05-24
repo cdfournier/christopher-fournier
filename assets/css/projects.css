@@ -148,9 +148,9 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .cards { display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; justify-content: center; }
 
-.cards article { width: 100%; padding: 2rem 2rem 0; }
+.cards h1 { width: 100%; padding: 5rem 2rem 0; font-family: "metropolis-regular", sans-serif; }
 
-.cards article h1 { font-family: "metropolis-regular", sans-serif; }
+.cards p { min-width: 100%; padding: 0 2rem; }
 
 .cards figure.card { display: block; padding: 2rem 2rem 0; }
 
@@ -158,19 +158,20 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .cards figure.card figcaption { align-items: center; position: absolute; top: 2rem; right: 2rem; bottom: 0; left: 2rem; padding: 1rem; border-radius: 0.25rem; font-size: 1.5rem; text-align: center; color: #ffffff; background-color: rgba(0, 0, 0, 0.325); }
 
+.cards figure.card figcaption a { color: #ffffff; }
+
 @media (min-width: 46rem) { .cards { padding: 2rem; }
+  .cards h1 { padding: 2rem 2rem 0; }
   .cards figure.card { width: 50%; padding: 2rem; }
   .cards figure.card figcaption { bottom: 2rem; } }
 
 @media (min-width: 62rem) { .cards figure.card figcaption { font-size: 2rem; } }
 
-.no-touch figure.card img { -webkit-transition: transform 0.325s ease 0s; -moz-transition: transform 0.325s ease 0s; -ms-transition: transform 0.325s ease 0s; -o-transition: transform 0.325s ease 0s; transition: transform 0.325s ease 0s; }
+.no-touch figure.card { overflow: hidden; cursor: pointer; }
 
-.no-touch figure.card a figcaption { opacity: 0; -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; }
+.no-touch figure.card figcaption { background-color: rgba(0, 0, 0, 0.25); -webkit-transition: all 0.325s ease 0s; -moz-transition: all 0.325s ease 0s; -ms-transition: all 0.325s ease 0s; -o-transition: all 0.325s ease 0s; transition: all 0.325s ease 0s; }
 
-.no-touch figure.card a:hover img, .no-touch figure.card a:focus img, .no-touch figure.card a:hover figcaption, .no-touch figure.card a:focus figcaption { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); }
-
-.no-touch figure.card a:hover figcaption, .no-touch figure.card a:focus figcaption { opacity: 1; background-color: rgba(0, 0, 0, 0.5); }
+.no-touch figure.card figcaption:hover, .no-touch figure.card figcaption:focus { background-color: rgba(0, 0, 0, 0.5); }
 
 .be-yao { background-color: #a3402d; }
 
