@@ -133,6 +133,11 @@ header nav ul {
 
 
 // CUSTOM PROJECTS LIST NAVIGATION STYLES
+.projects-list nav ul li.close {
+  height: auto;
+  padding: 0 2rem 1rem;
+}
+
 .projects-list nav ul li.all-projects a {
   align-items: center;
   flex-direction: row;

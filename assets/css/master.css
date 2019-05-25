@@ -82,6 +82,8 @@ header nav ul { justify-content: flex-start; padding: 0; }
 
 .projects-list.show { max-height: 100vh; -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); }
 
+.projects-list nav ul li.close { height: auto; padding: 0 2rem 1rem; }
+
 .projects-list nav ul li.all-projects a { align-items: center; flex-direction: row; }
 
 .projects-list nav ul li.all-projects a .la-arrow-right { padding: 0 0 0 0.5rem; -webkit-transition: padding 0.25s ease 0s; -moz-transition: padding 0.25s ease 0s; -ms-transition: padding 0.25s ease 0s; -o-transition: padding 0.25s ease 0s; transition: padding 0.25s ease 0s; }
