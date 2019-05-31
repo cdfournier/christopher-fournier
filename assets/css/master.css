@@ -246,7 +246,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .bio h1 { display: none; }
 
-.bio p { font-family: "metropolis-medium", sans-serif; line-height: 2; }
+.bio p { font-family: "metropolis-medium", sans-serif; font-size: 1.125rem; line-height: 2; }
 
 @media (min-width: 46rem) { .bio figure { margin: 4rem 0; } }
 
