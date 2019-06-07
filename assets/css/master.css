@@ -555,7 +555,7 @@ main.resume { display: flex; flex-direction: column; }
   .resume section article.history section { width: 100%; } }
 
 @media (min-width: 42rem) { main.resume { justify-content: center; width: 80%; margin: auto; }
-  main.resume h1 span { padding: 0 0 0 1.5rem; }
+  main.resume h1 span { padding: 0 0 0 1rem; }
   main.resume .logo { width: 30%; height: 100vh; margin: 0 auto; padding: 0 2rem 0; }
   main.resume .contact-me { justify-content: center; width: 55%; height: 100vh; max-height: none; padding: 0 2rem 0; }
   main.resume .contact-me ul { padding: 0 0 0 3.125rem; }
