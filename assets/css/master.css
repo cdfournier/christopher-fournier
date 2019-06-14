@@ -442,12 +442,14 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
   .details article .text { width: 50%; }
   .details article .text p { font-size: 0.875rem; }
   .details article .text.wide { width: 100%; margin: 2rem 0 0; text-align: center; background-color: #eef1e8; }
-  .details article .text.wide p { max-width: 64rem; margin: 0 auto; padding: 0 2rem; font-size: 1.25rem; line-height: 2; }
+  .details article .text.wide p { max-width: 48rem; margin: 0 auto; padding: 0 2rem; font-size: 1.25rem; line-height: 2; }
   .details article figure { width: 50%; padding: 2rem 2rem 0; }
   .details article .text:nth-of-type(even), .details article figure:nth-of-type(odd) { padding: 2rem 2rem 0 1rem; }
   .details article .text:nth-of-type(odd), .details article figure:nth-of-type(even) { padding: 2rem 1rem 0 2rem; }
   .details article .text.wide { padding: 2rem; }
   .details article figure:nth-of-type(3n) { width: 100%; padding: 2rem 2rem 0; } }
+
+@media (min-width: 62rem) { .details article .text.wide { padding: 4rem 2rem; } }
 
 @media (min-width: 46rem) { .details.enservio-portal article figure:nth-of-type(5n) { padding: 2rem 1rem 0 2rem; }
   .details.enservio-portal article figure:nth-of-type(6n) { width: 50%; padding: 2rem 2rem 0 1rem; }
