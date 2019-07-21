@@ -32,9 +32,9 @@ p { width: 100%; max-width: 32rem; margin: 0; padding: 0 0 1rem; font-size: 1rem
 
 p:last-of-type { padding: 0; }
 
-p a, li a { font-family: "metropolis-bold", sans-serif; color: #384332; }
+p a, li a, small a { font-family: "metropolis-bold", sans-serif; color: #384332; }
 
-p a:hover, p a:focus, li a:hover, li a:focus { color: #e85c45; }
+p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus { color: #e85c45; }
 
 strong { display: block; font-family: "metropolis-bold", sans-serif; font-weight: normal; }
 
@@ -453,7 +453,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 @media (min-width: 46rem) { .details.enservio-portal article figure:nth-of-type(5n) { padding: 2rem 1rem 0 2rem; }
   .details.enservio-portal article figure:nth-of-type(6n) { width: 50%; padding: 2rem 2rem 0 1rem; }
-  .details.enservio-portal article figure:nth-of-type(7n) { width: 100%; padding: 2rem 2rem 0; } }
+  .details.enservio-portal article figure:nth-of-type(7n) { width: 100%; padding: 2rem 0 0; } }
 
 @media (min-width: 46rem) { .details.my-stuff article figure:nth-of-type(3n) { width: 50%; padding: 2rem 2rem 0 1rem; }
   .details.my-stuff article figure:nth-of-type(4n) { padding: 2rem 2rem 0 1rem; }
