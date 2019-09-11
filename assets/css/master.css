@@ -228,7 +228,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 @media (min-width: 88rem) { .home.east-wind figure img { width: 10%; } }
 
-.about { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; position: relative; z-index: 15; width: 100%; height: 100vh; margin: 0 auto; padding: 0; background-attachment: initial; background-color: #384332; background-image: url(../images/banner-about-1x.jpg); background-position: 90% center; background-repeat: no-repeat; background-size: cover; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
+.about { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 15; width: 100%; height: 100vh; margin: 0 auto; padding: 0; background-attachment: initial; background-color: #384332; background-image: url(../images/banner-about-1x.jpg); background-position: 90% center; background-repeat: no-repeat; background-size: cover; -webkit-transition: all 0.25s ease 0s; -moz-transition: all 0.25s ease 0s; -ms-transition: all 0.25s ease 0s; -o-transition: all 0.25s ease 0s; transition: all 0.25s ease 0s; }
 
 .about h1 { display: none; }
 
@@ -236,7 +236,7 @@ figcaption { display: flex; flex-direction: column; align-items: flex-start; jus
 
 .no-touch .about { background-attachment: fixed; }
 
-.about figure { align-items: flex-start; justify-content: flex-end; padding: 2rem 2rem 6rem; }
+.about figure { align-items: flex-start; justify-content: flex-end; padding: 6rem 2rem 2rem; }
 
 .about figure .logo { width: calc(100% - 60vw); min-width: 12rem; margin: 0; padding: 0; }
 
