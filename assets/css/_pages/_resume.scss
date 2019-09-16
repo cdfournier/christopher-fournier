@@ -236,6 +236,12 @@ main.resume {
   &.aos-animate {width: 65%;}
 }
 
+.resume .skills ul li.git div > span[data-aos="loaded"] {
+  width: 0%;
+  transition-property: width;  
+  &.aos-animate {width: 45%;}
+}
+
 @media (orientation: landscape) {
 main.resume {
   flex-direction: row;
