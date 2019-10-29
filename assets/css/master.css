@@ -664,12 +664,7 @@ figcaption {
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  background-attachment: initial;
   background-color: #384332;
-  background-image: url(../images/banner-about-1x.jpg);
-  background-position: 90% center;
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
   -ms-transition: all 0.25s ease 0s;
@@ -678,17 +673,17 @@ figcaption {
   .about h1 {
     display: none; }
 
+/*
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .about {
-    background-image: url(../images/banner-about-2x.jpg); } }
-
+.about {background-image: url(../images/banner-about-2x.jpg);}}
+*/
 .no-touch .about {
   background-attachment: fixed; }
 
 .about figure {
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 6rem 2rem 2rem; }
+  padding: 2rem; }
 
 .about figure .logo {
   width: calc(100% - 60vw);
@@ -1483,6 +1478,7 @@ main.resume {
       main.resume .contact-me:last-of-type ul {
         padding: 0 0 0 3.125rem; }
     main.resume .about-me p {
+      max-width: 40rem;
       padding: 0 0 0 3.125rem;
       font-size: 1rem; }
     main.resume .history section {

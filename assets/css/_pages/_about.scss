@@ -10,25 +10,22 @@
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  background-attachment: initial;
   background-color: $green;
-  background-image: url(../images/banner-about-1x.jpg);
-  background-position: 90% center;
-  background-repeat: no-repeat;
-  background-size: cover;
   @include transition (all, 0.25s, ease);
   h1 {display: none;}
 }
 
+/*
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .about {background-image: url(../images/banner-about-2x.jpg);}}
+*/
 
 .no-touch .about {background-attachment: fixed;}
 
 .about figure {
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 6rem 2rem 2rem;
+  padding: 2rem;
 }
 
 .about figure .logo {
