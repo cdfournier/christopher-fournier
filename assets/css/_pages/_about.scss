@@ -35,9 +35,15 @@
   padding: 0;
 }
 
+@media (min-width: 46rem) {.about figure .logo {width: calc(100% - 72vw);}}
+
 
 // BIOGRAPHY
-.bio figure {margin: 2rem 0;}
+.bio figure {
+  margin: 0;
+  padding: 2rem;
+  background-color: $cream;
+}
 
 .bio figcaption {
   padding: 0;
@@ -47,19 +53,17 @@
 .bio h1 {display: none;}
 
 .bio p {
+  max-width: 48rem;
   font-family: $font-medium;
   font-size: 1.125rem;
   line-height: 2;
 }
 
-@media (min-width: 46rem) {.bio figure {margin: 4rem 0;}}
+@media (min-width: 46rem) {.bio figure {padding: 4rem;}}
 
 
 // ABOUT PAGE CUSTOM TYPESTYLES
-.do h1, .principles h1, .trivialities h1 {
-  font-family: "metropolis-bold", sans-serif;
-  text-align: center;
-}
+.do h1, .principles h1, .trivialities h1 {text-align: center;}
 
 .do h1:after, .principles h1:after, .trivialities h1:after {
   display: block;
@@ -71,7 +75,7 @@
 }
 
 .do ul li h2, .principles ul li h2 {
-  padding: 0;
+  padding: 0 0 0.25rem;
   line-height: 1;
 }
 
@@ -223,8 +227,6 @@
   padding: 2rem;
   color: $white;
 }
-
-.contact article h2 {font-family: "metropolis-bold", sans-serif;}
 
 .contact article .button {
   border-color: $white;

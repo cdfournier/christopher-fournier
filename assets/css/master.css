@@ -694,8 +694,14 @@ figcaption {
   margin: 0;
   padding: 0; }
 
+@media (min-width: 46rem) {
+  .about figure .logo {
+    width: calc(100% - 72vw); } }
+
 .bio figure {
-  margin: 2rem 0; }
+  margin: 0;
+  padding: 2rem;
+  background-color: #eef1e8; }
 
 .bio figcaption {
   padding: 0;
@@ -705,16 +711,16 @@ figcaption {
   display: none; }
 
 .bio p {
+  max-width: 48rem;
   font-family: "metropolis-medium", sans-serif;
   font-size: 1.125rem;
   line-height: 2; }
 
 @media (min-width: 46rem) {
   .bio figure {
-    margin: 4rem 0; } }
+    padding: 4rem; } }
 
 .do h1, .principles h1, .trivialities h1 {
-  font-family: "metropolis-bold", sans-serif;
   text-align: center; }
 
 .do h1:after, .principles h1:after, .trivialities h1:after {
@@ -726,7 +732,7 @@ figcaption {
   content: ""; }
 
 .do ul li h2, .principles ul li h2 {
-  padding: 0;
+  padding: 0 0 0.25rem;
   line-height: 1; }
 
 @media (min-width: 41.6875rem) {
@@ -870,9 +876,6 @@ figcaption {
   max-width: 42rem;
   padding: 2rem;
   color: #ffffff; }
-
-.contact article h2 {
-  font-family: "metropolis-bold", sans-serif; }
 
 .contact article .button {
   border-color: #ffffff;
