@@ -86,12 +86,12 @@ img {
 
 h1, h2, h3 {
   margin: 0;
+  font-family: "Merriweather", serif;
   font-weight: inherit; }
 
 h1 {
   width: 100%;
   padding: 0 0 1rem;
-  font-family: "metropolis-bold", sans-serif;
   font-size: 2rem; }
 
 h2, h3 {
@@ -263,7 +263,7 @@ header nav ul {
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        height: calc(100% / 6);
+        height: calc(100% / 7);
         margin: 0;
         padding: 0 2rem;
         font-family: "metropolis-bold", sans-serif;
@@ -320,14 +320,11 @@ header nav ul {
 .no-touch .projects-list nav ul li.close a:hover, .no-touch .projects-list nav ul li.close a:focus {
   color: #e85c45; }
 
+.no-touch .projects-list nav ul li.delta-design:hover, .no-touch .projects-list nav ul li.delta-design:focus {
+  background-color: #df3a32; }
+
 .no-touch .projects-list nav ul li.east-wind:hover, .no-touch .projects-list nav ul li.east-wind:focus {
   background-color: #552a80; }
-
-.no-touch .projects-list nav ul li.enservio-notes:hover, .no-touch .projects-list nav ul li.enservio-notes:focus {
-  background-color: #ea7200; }
-
-.no-touch .projects-list nav ul li.enservio-notes:hover, .no-touch .projects-list nav ul li.enservio-notes:focus {
-  color: #ffffff; }
 
 .no-touch .projects-list nav ul li.enservio-portal:hover, .no-touch .projects-list nav ul li.enservio-portal:focus {
   background-color: #2e84ed; }
@@ -341,11 +338,11 @@ header nav ul {
 .no-touch .projects-list nav ul li.transferx:hover, .no-touch .projects-list nav ul li.transferx:focus {
   background-color: #0d1e27; }
 
+.no-touch .projects-list nav ul li.delta-design:hover a, .no-touch .projects-list nav ul li.delta-design:focus a {
+  color: #eeeeee; }
+
 .no-touch .projects-list nav ul li.east-wind:hover a, .no-touch .projects-list nav ul li.east-wind:focus a {
   color: #eeeaf2; }
-
-.no-touch .projects-list nav ul li.enservio-notes:hover a, .no-touch .projects-list nav ul li.enservio-notes:focus a {
-  color: #fef2e8; }
 
 .no-touch .projects-list nav ul li.enservio-portal:hover a, .no-touch .projects-list nav ul li.enservio-portal:focus a {
   color: #eaf3fd; }
@@ -365,10 +362,10 @@ header nav ul {
 .no-touch .projects-list nav ul li.all-projects:hover a, .no-touch .projects-list nav ul li.all-projects:focus a {
   opacity: 1; }
 
+.no-touch .projects-list nav ul li.delta-design:hover a:hover, .no-touch .projects-list nav ul li.delta-design:focus a:hover,
+.no-touch .projects-list nav ul li.delta-design:hover a:focus, .no-touch .projects-list nav ul li.delta-design:focus a:focus,
 .no-touch .projects-list nav ul li.east-wind:hover a:hover, .no-touch .projects-list nav ul li.east-wind:focus a:hover,
 .no-touch .projects-list nav ul li.east-wind:hover a:focus, .no-touch .projects-list nav ul li.east-wind:focus a:focus,
-.no-touch .projects-list nav ul li.enservio-notes:hover a:hover, .no-touch .projects-list nav ul li.enservio-notes:focus a:hover,
-.no-touch .projects-list nav ul li.enservio-notes:hover a:focus, .no-touch .projects-list nav ul li.enservio-notes:focus a:focus,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .no-touch .projects-list nav ul li.enservio-portal:focus a:hover,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .no-touch .projects-list nav ul li.enservio-portal:focus a:focus,
 .no-touch .projects-list nav ul li.my-stuff:hover a:hover, .no-touch .projects-list nav ul li.my-stuff:focus a:hover,
@@ -497,24 +494,25 @@ figcaption {
   justify-content: center; }
   .cards h1 {
     width: 100%;
-    padding: 5rem 2rem 0;
-    font-family: "metropolis-regular", sans-serif; }
+    padding: 5rem 2rem 0; }
   .cards p {
     min-width: 100%;
     padding: 0 2rem; }
   .cards figure.card {
     display: block;
-    padding: 2rem 2rem 0; }
+    width: calc(100% - 4rem);
+    margin: 2rem 2rem 0;
+    padding: 0; }
     .cards figure.card img {
       display: grid;
       border-radius: 0.125rem; }
     .cards figure.card figcaption {
       align-items: center;
       position: absolute;
-      top: 2rem;
-      right: 2rem;
+      top: 0;
+      right: 0;
       bottom: 0;
-      left: 2rem;
+      left: 0;
       padding: 1rem;
       border-radius: 0.25rem;
       font-size: 1.5rem;
@@ -529,11 +527,16 @@ figcaption {
     padding: 2rem 0 0; }
     .cards h1 {
       padding: 2rem 2rem 0; }
-    .cards figure.card {
-      width: 50%;
-      padding: 2rem; }
-      .cards figure.card figcaption {
-        bottom: 2rem; } }
+    .cards a {
+      display: flex;
+      width: calc(50% - 3rem); }
+      .cards a figure.card {
+        width: 100%;
+        margin: 0; }
+    .cards a:nth-of-type(odd) {
+      margin: 2rem 1rem 0 2rem; }
+    .cards a:nth-of-type(even) {
+      margin: 2rem 2rem 0 1rem; } }
 
 @media (min-width: 62rem) {
   .cards figure.card figcaption {
@@ -606,7 +609,7 @@ figcaption {
   content: ""; }
 
 .home figure img {
-  width: 30%;
+  width: 40%;
   max-width: 32rem; }
 
 @media (orientation: landscape) and (max-width: 46rem) {
@@ -1057,23 +1060,31 @@ figcaption {
   background-size: cover; }
   .intro h1 {
     display: none; }
+  .intro .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5; }
   .intro article {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100%;
-    padding: 2rem 2rem 6rem;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.25);
-    background: linear-gradient(180deg, black 0%, transparent 50%); }
+    padding: 2rem 2rem 4rem;
+    color: #ffffff; }
     .intro article h2 {
       padding: 0;
       font-family: "Merriweather", serif;
       font-size: 2rem; }
       .intro article h2 span.eyebrow {
-        line-height: 1; }
+        line-height: 2; }
 
 .no-touch .intro {
   background-attachment: fixed; }
@@ -1084,6 +1095,13 @@ figcaption {
 @media (min-width: 46rem) {
   .intro article h2 {
     font-size: 3.5rem; } }
+
+.intro.delta-design {
+  background-image: url(../images/work-delta-design-01-1x.jpg); }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .intro.east-wind {
+    background-image: url(../images/work-delta-design-01-2x.jpg); } }
 
 .intro.east-wind {
   background-image: url(../images/work-east-wind-01-1x.jpg);
@@ -1132,7 +1150,7 @@ figcaption {
     .details article .text h2 {
       width: fit-content;
       padding: 1rem 0 0;
-      font-family: "metropolis-regular", sans-serif; }
+      font-family: "Merriweather", serif; }
     .details article .text h2:first-of-type {
       padding: 0; }
     .details article .text p {
@@ -1179,6 +1197,25 @@ figcaption {
 @media (min-width: 62rem) {
   .details article .text.wide {
     padding: 4rem 2rem; } }
+
+@media (min-width: 46rem) {
+  .details.delta-design article .text:nth-of-type(4n) {
+    padding: 2rem 1rem 0 2rem; }
+  .details.delta-design article figure:nth-of-type(3n) {
+    width: 50%;
+    padding: 2rem 1rem 0 2rem; }
+  .details.delta-design article figure:nth-of-type(4n) {
+    width: 50%;
+    padding: 2rem 2rem 0 1rem; }
+  .details.delta-design article figure:nth-of-type(6n) {
+    width: 100%;
+    padding: 2rem 2rem 0; }
+  .details.delta-design article figure:nth-of-type(7n) {
+    width: 50%;
+    padding: 2rem 1rem 0 2rem; }
+  .details.delta-design article figure:nth-of-type(9n) {
+    width: 100%;
+    padding: 2rem 2rem 0; } }
 
 @media (min-width: 46rem) {
   .details.enservio-portal article figure:nth-of-type(5n) {
