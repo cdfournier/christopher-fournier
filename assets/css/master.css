@@ -488,74 +488,79 @@ figcaption {
 
 .cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%; }
   .cards h1 {
-    width: 100%;
     padding: 5rem 2rem 0; }
   .cards p {
-    min-width: 100%;
+    max-width: none;
     padding: 0 2rem; }
-  .cards figure.card {
+  .cards .card {
     display: block;
+    position: relative;
     width: calc(100% - 4rem);
-    margin: 2rem 2rem 0;
-    padding: 0; }
-    .cards figure.card img {
-      display: grid;
-      border-radius: 0.125rem; }
-    .cards figure.card figcaption {
-      align-items: center;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding: 1rem;
-      border-radius: 0.25rem;
-      font-size: 1.5rem;
-      text-align: center;
-      color: #ffffff;
-      background-color: rgba(0, 0, 0, 0.325); }
-      .cards figure.card figcaption a {
-        color: #ffffff; }
+    margin: 2rem 2rem 0; }
+    .cards .card a {
+      display: grid; }
+      .cards .card a .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.25;
+        -webkit-transition: all 0.25s ease 0s;
+        -moz-transition: all 0.25s ease 0s;
+        -ms-transition: all 0.25s ease 0s;
+        -o-transition: all 0.25s ease 0s;
+        transition: all 0.25s ease 0s; }
+      .cards .card a .text {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        color: #ffffff;
+        text-align: center; }
+        .cards .card a .text p {
+          max-width: none;
+          padding: 0;
+          font-family: "metropolis-bold", sans-serif;
+          font-size: 1.5rem;
+          line-height: 1.25; }
+    .cards .card a:hover .overlay, .cards .card a:focus .overlay {
+      opacity: 0.75; }
 
 @media (min-width: 46rem) {
   .cards {
-    padding: 2rem 0 0; }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
     .cards h1 {
-      padding: 2rem 2rem 0; }
-    .cards a {
-      display: flex;
+      padding: 3rem 2rem 0;
+      font-size: 3.5rem; }
+    .cards p {
+      font-size: 1.25rem; }
+    .cards .card {
       width: calc(50% - 3rem); }
-      .cards a figure.card {
-        width: 100%;
-        margin: 0; }
-    .cards a:nth-of-type(odd) {
+    .cards .card:nth-of-type(odd) {
       margin: 2rem 1rem 0 2rem; }
-    .cards a:nth-of-type(even) {
+    .cards .card:nth-of-type(even) {
       margin: 2rem 2rem 0 1rem; } }
 
-@media (min-width: 62rem) {
-  .cards figure.card figcaption {
+@media (min-width: 88rem) {
+  .cards .card a .text p {
     font-size: 2rem; } }
-
-.no-touch figure.card {
-  overflow: hidden;
-  cursor: pointer; }
-
-.no-touch figure.card figcaption {
-  background-color: rgba(0, 0, 0, 0.25);
-  -webkit-transition: all 0.325s ease 0s;
-  -moz-transition: all 0.325s ease 0s;
-  -ms-transition: all 0.325s ease 0s;
-  -o-transition: all 0.325s ease 0s;
-  transition: all 0.325s ease 0s; }
-
-.no-touch figure.card figcaption:hover, .no-touch figure.card figcaption:focus {
-  background-color: rgba(0, 0, 0, 0.5); }
 
 .welcome figure {
   min-height: 100vh; }
