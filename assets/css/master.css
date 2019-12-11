@@ -501,9 +501,16 @@ figcaption {
     display: block;
     position: relative;
     width: calc(100% - 4rem);
+    overflow: hidden;
     margin: 2rem 2rem 0; }
     .cards .card a {
       display: grid; }
+      .cards .card a img {
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -ms-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s; }
       .cards .card a .overlay {
         position: absolute;
         top: 0;
@@ -539,7 +546,7 @@ figcaption {
           font-size: 1.5rem;
           line-height: 1.25; }
     .cards .card a:hover .overlay, .cards .card a:focus .overlay {
-      opacity: 0.75; }
+      opacity: 0.5; }
 
 @media (min-width: 46rem) {
   .cards {
@@ -556,7 +563,10 @@ figcaption {
     .cards .card:nth-of-type(odd) {
       margin: 2rem 1rem 0 2rem; }
     .cards .card:nth-of-type(even) {
-      margin: 2rem 2rem 0 1rem; } }
+      margin: 2rem 2rem 0 1rem; }
+  .no-touch .cards .card a:hover img,
+  .no-touch .cards .card a:focus img {
+    transform: scale(1.05); } }
 
 @media (min-width: 88rem) {
   .cards .card a .text p {

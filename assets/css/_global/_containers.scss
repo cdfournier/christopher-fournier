@@ -66,9 +66,11 @@ figcaption {
     display: block;
     position: relative;
     width: calc(100% - 4rem);
+    overflow: hidden;
     margin: 2rem 2rem 0;
     a {
       display: grid;
+      img {@include transition(all, 0.5s, ease);}
       .overlay {
         position: absolute;
         top: 0;
@@ -104,7 +106,7 @@ figcaption {
       }
     }
     a:hover, a:focus {
-      .overlay {opacity: 0.75;}
+      .overlay {opacity: 0.5;}
     }
   }
 }
@@ -122,6 +124,8 @@ figcaption {
   .card {width: calc(50% - 3rem);}
   .card:nth-of-type(odd) {margin: 2rem 1rem 0 2rem;}
   .card:nth-of-type(even) {margin: 2rem 2rem 0 1rem;}
-}}
+}
+.no-touch .cards .card a:hover img,
+.no-touch .cards .card a:focus img {transform: scale(1.05);}}
 
 @media (min-width: 88rem) {.cards .card a .text p {font-size: 2rem;}}
