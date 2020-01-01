@@ -15,16 +15,9 @@
   h1 {display: none;}
 }
 
-/*
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.about {background-image: url(../images/banner-about-2x.jpg);}}
-*/
-
-.no-touch .about {background-attachment: fixed;}
-
 .about figure {
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 
@@ -35,31 +28,36 @@
   padding: 0;
 }
 
-@media (min-width: 46rem) {.about figure .logo {width: calc(100% - 72vw);}}
-
-
-// BIOGRAPHY
-.bio figure {
-  margin: 0;
-  padding: 2rem;
-  background-color: $cream;
-}
-
-.bio figcaption {
-  padding: 0;
+.about figure.bio {
+  padding: 0 2rem 2rem;
   text-align: center;
+  color: $white;
+  figcaption {padding: 0;}
 }
 
-.bio h1 {display: none;}
+@media (min-width: 46rem) {
+.about {
+  flex-direction: row;
+  figure {
+    width: 40%;
+    padding: 0 2rem 0 4rem;
+  }
+  figure .logo {
+    width: 100%;
+    min-width: inherit;
+  }
+  figure.bio {
+    width: 60%;
+    padding: 0 4rem 0 2rem;
+    text-align: left;
+  }
+}}
 
-.bio p {
-  max-width: 48rem;
-  font-family: $font-medium;
-  font-size: 1.125rem;
-  line-height: 2;
-}
-
-@media (min-width: 46rem) {.bio figure {padding: 4rem;}}
+@media (min-width: 62rem) {
+.about {
+  figure {width: 35%;}
+  figure.bio {width: auto;}
+}}
 
 
 // ABOUT PAGE CUSTOM TYPESTYLES

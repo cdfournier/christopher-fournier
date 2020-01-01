@@ -691,16 +691,9 @@ figcaption {
   .about h1 {
     display: none; }
 
-/*
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.about {background-image: url(../images/banner-about-2x.jpg);}}
-*/
-.no-touch .about {
-  background-attachment: fixed; }
-
 .about figure {
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   padding: 2rem; }
 
 .about figure .logo {
@@ -709,31 +702,32 @@ figcaption {
   margin: 0;
   padding: 0; }
 
-@media (min-width: 46rem) {
-  .about figure .logo {
-    width: calc(100% - 72vw); } }
-
-.bio figure {
-  margin: 0;
-  padding: 2rem;
-  background-color: #eef1e8; }
-
-.bio figcaption {
-  padding: 0;
-  text-align: center; }
-
-.bio h1 {
-  display: none; }
-
-.bio p {
-  max-width: 48rem;
-  font-family: "metropolis-medium", sans-serif;
-  font-size: 1.125rem;
-  line-height: 2; }
+.about figure.bio {
+  padding: 0 2rem 2rem;
+  text-align: center;
+  color: #ffffff; }
+  .about figure.bio figcaption {
+    padding: 0; }
 
 @media (min-width: 46rem) {
-  .bio figure {
-    padding: 4rem; } }
+  .about {
+    flex-direction: row; }
+    .about figure {
+      width: 40%;
+      padding: 0 2rem 0 4rem; }
+    .about figure .logo {
+      width: 100%;
+      min-width: inherit; }
+    .about figure.bio {
+      width: 60%;
+      padding: 0 4rem 0 2rem;
+      text-align: left; } }
+
+@media (min-width: 62rem) {
+  .about figure {
+    width: 35%; }
+  .about figure.bio {
+    width: auto; } }
 
 .do h1, .principles h1, .trivialities h1 {
   text-align: center; }
