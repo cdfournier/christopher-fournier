@@ -9,6 +9,7 @@ figure {
   width: 100%;
   margin: 0;
   padding: 2rem;
+  picture {display: grid;}
 }
 
 figcaption {
@@ -70,7 +71,10 @@ figcaption {
     margin: 2rem 2rem 0;
     a {
       display: grid;
-      img {@include transition(all, 0.5s, ease);}
+      picture {
+        display: grid;
+        img {@include transition(all, 0.5s, ease);}
+      }
       .overlay {
         position: absolute;
         top: 0;
@@ -115,7 +119,7 @@ figcaption {
 .cards {
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   h1 {
     padding: 3rem 2rem 0;
     font-size: 3.5rem;

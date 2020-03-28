@@ -52,13 +52,13 @@
 
 .projects .east-wind, footer.east-wind {background-color: $east-wind-bg;}
 .projects .enservio-portal, footer.enservio-portal {background-color: $enservio-portal-bg;}
-.projects .my-stuff, footer.my-stuff {background-color: $my-stuff-bg;}
+.projects .mystuff, footer.mystuff {background-color: $mystuff-bg;}
 .projects .panera, footer.panera {background-color: $panera-bg;}
 .projects .transferx, footer.transferx {background-color: $transferx-bg;}
 
 .projects .east-wind .button:hover, .projects .east-wind .button:focus {background-color: $east-wind-bg;}
 .projects .enservio-portal .button:hover, .projects .enservio-portal .button:focus {background-color: $enservio-portal-bg;}
-.projects .my-stuff .button:hover, .projects .my-stuff .button:focus {background-color: $my-stuff-bg;}
+.projects .mystuff .button:hover, .projects .mystuff .button:focus {background-color: $mystuff-bg;}
 .projects .panera .button:hover, .projects .panera .button:focus {background-color: $panera-bg;}
 .projects .transferx .button:hover, .projects .transferx .button:focus {background-color: $transferx-bg;}
 
@@ -122,51 +122,87 @@
 // DELTA DESIGN SYSTEM
 .intro.delta-design {
   background-image: url(../images/work-delta-design-01-1x.jpg);
+  background-image: url(../images/work-delta-design-01-2x.webp);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.east-wind {background-image: url(../images/work-delta-design-01-2x.jpg);}}
+  .intro.east-wind {
+    background-image: url(../images/work-delta-design-01-2x.jpg);
+    background-image: url(../images/work-delta-design-01-2x.webp);
+  }
+}
 
 
 // EAST WIND INTRO
 .intro.east-wind {
   background-image: url(../images/work-east-wind-01-1x.jpg);
+  background-image: url(../images/work-east-wind-01-2x.webp);
   background-position: 55% center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}}
+  .intro.east-wind {
+    background-image: url(../images/work-east-wind-01-2x.jpg);
+    background-image: url(../images/work-east-wind-01-2x.webp);
+  }
+}
 
 
 // ENSERVIO DESIGN SYSTEM INTRO
-.intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-1x.jpg);}
+.intro.enservio-portal {
+  background-image: url(../images/work-enservio-portal-01-1x.jpg);
+  background-image: url(../images/work-enservio-portal-01-2x.webp);
+}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-2x.jpg);}}
+  .intro.enservio-portal {
+    background-image: url(../images/work-enservio-portal-01-2x.jpg);
+    background-image: url(../images/work-enservio-portal-01-2x.webp);
+  }
+}
 
 
-// MY STUFF INTRO
-.intro.my-stuff {background-image: url(../images/work-my-stuff-01-1x.jpg);}
+// MYSTUFF INTRO
+.intro.mystuff {
+  background-image: url(../images/work-mystuff-01-1x.jpg);
+  background-image: url(../images/work-mystuff-01-2x.webp);
+}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.my-stuff {background-image: url(../images/work-my-stuff-01-2x.jpg);}}
+  .intro.mystuff {
+    background-image: url(../images/work-mystuff-01-2x.jpg);
+    background-image: url(../images/work-mystuff-01-2x.webp);
+  }
+}
 
 
 // PANERA BREAD INTRO
-.intro.panera {background-image: url(../images/work-panera-01-1x.jpg);}
+.intro.panera {
+  background-image: url(../images/work-panera-01-1x.jpg);
+  background-image: url(../images/work-panera-01-2x.webp);
+}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.panera {background-image: url(../images/work-panera-01-2x.jpg);}}
+  .intro.panera {
+    background-image: url(../images/work-panera-01-2x.jpg);
+    background-image: url(../images/work-panera-01-2x.webp);
+  }
+}
 
 
 // TRANSFERX INTRO
 .intro.transferx {
   background-image: url(../images/work-transferx-01-1x.jpg);
+  background-image: url(../images/work-transferx-01-2x.webp);
   background-position: 35% center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-.intro.transferx {background-image: url(../images/work-transferx-01-2x.jpg);}}
+  .intro.transferx {
+    background-image: url(../images/work-transferx-01-2x.jpg);
+    background-image: url(../images/work-transferx-01-2x.webp);
+  }
+}
 
 
 // DETAILS
@@ -174,6 +210,14 @@
   h1 {display: none;}
   article {
     margin: 0 auto;
+    .row {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      picture {width: 65%;}
+    }
     .text {
       padding: 2rem 2rem 0;
       h2 {
@@ -197,11 +241,33 @@
   flex-wrap: wrap;
   .text {
     width: 50%;
+    padding: 2rem 1rem 0 2rem;
     p {font-size: 0.875rem;}
+  }
+  figure {
+    width: 50%;
+    padding: 2rem 1rem 0 2rem;
+  }
+  figure + .text {padding: 2rem 2rem 0 1rem;}
+  .row {
+    flex-direction: row;
+    figure {
+      width: 33%;
+      picture {width: 100%;}
+    }
+    figure:nth-of-type(1n) {padding: 2rem 1rem 0 2rem;}
+    figure:nth-of-type(2n) {padding: 2rem 1rem 0 1rem;}
+    figure:nth-of-type(3n) {padding: 2rem 2rem 0 1rem;}
+  }
+  .text + figure {padding: 2rem 2rem 0 1rem;}
+  figure.wide {
+    width: 100%;
+    padding: 2rem 2rem 0;
   }
   .text.wide {
     width: 100%;
     margin: 2rem 0 0;
+    padding: 2rem;
     text-align: center;
     background-color: $cream;
     p {
@@ -212,17 +278,6 @@
       line-height: 2;
     }
   }
-  figure {
-    width: 50%;
-    padding: 2rem 2rem 0;
-  }
-  .text:nth-of-type(even), figure:nth-of-type(odd) {padding: 2rem 2rem 0 1rem;}
-  .text:nth-of-type(odd), figure:nth-of-type(even) {padding: 2rem 1rem 0 2rem;}
-  .text.wide {padding: 2rem;}
-  figure:nth-of-type(3n) {
-    width: 100%;
-    padding: 2rem 2rem 0;
-  }
 }}
 
 @media (min-width: 62rem) {.details article .text.wide {padding: 4rem 2rem;}}
@@ -230,65 +285,61 @@
 
 // DELTA DESIGN SYSTEM DETAILS
 @media (min-width: 46rem) {
-.details.delta-design article {
-  .text:nth-of-type(4n) {padding: 2rem 1rem 0 2rem;}
-  figure:nth-of-type(3n) {
-    width: 50%;
-    padding: 2rem 1rem 0 2rem;
+  .details.delta-design {
+    article {
+      .text:nth-of-type(4n), .text:nth-of-type(5n) {padding: 2rem 1rem 0 2rem;}
+      .text:nth-of-type(6n) {padding: 2rem 2rem 0 1rem;}
+      figure:nth-of-type(3n), figure:nth-of-type(7n) {padding: 2rem 1rem 0 2rem;}
+      figure:nth-of-type(4n), figure:nth-of-type(8n) {padding: 2rem 2rem 0 1rem;}
+      figure:nth-of-type(6n) {padding: 2rem 2rem 0;}
+      figure:nth-of-type(9n) {padding: 2rem 2rem 0;}
+    }
   }
-  figure:nth-of-type(4n) {
-    width: 50%;
-    padding: 2rem 2rem 0 1rem;
+}
+
+
+// EAST WIND DETAILS
+@media (min-width: 46rem) {
+  .details.east-wind {
+    article {
+      figure:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+      figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+      figure:nth-of-type(6n) {padding: 2rem 2rem 0 1rem;}
+    }
   }
-  figure:nth-of-type(6n) {
-    width: 100%;
-    padding: 2rem 2rem 0;
-  }
-  figure:nth-of-type(7n) {
-    width: 50%;
-    padding: 2rem 1rem 0 2rem;
-  }
-  figure:nth-of-type(9n) {
-    width: 100%;
-    padding: 2rem 2rem 0;
-  }
-}}
+}
 
 
 // ENSERVIO PORTAL DETAILS
 @media (min-width: 46rem) {
-.details.enservio-portal article figure:nth-of-type(5n) {padding: 2rem 1rem 0 2rem;}
-.details.enservio-portal article figure:nth-of-type(6n) {
-  width: 50%;
-  padding: 2rem 2rem 0 1rem;
+  .details.enservio-portal {
+    article {
+      figure:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+      figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+      .text:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+    }
+  }
 }
-.details.enservio-portal article figure:nth-of-type(7n) {
-  width: 100%;
-  padding: 2rem 0 0;
-}}
-
-
-// MY STUFF DETAILS
-@media (min-width: 46rem) {
-.details.my-stuff article figure:nth-of-type(3n) {
-  width: 50%;
-  padding: 2rem 2rem 0 1rem;
-}
-.details.my-stuff article figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
-.details.my-stuff article figure:nth-of-type(8n) {
-  width: 100%;
-  padding: 2rem 2rem 0;
-}
-.details.my-stuff article figure:nth-of-type(6n),
-.details.my-stuff article figure:nth-of-type(9n) {padding: 2rem 1rem 0 2rem;}
-.details.my-stuff article figure:nth-of-type(10n) {padding: 2rem 2rem 0 1rem;}}
 
 
 // PANERA DETAILS
 @media (min-width: 46rem) {
-.details.panera article figure:nth-of-type(6n) {
-  width: 100%;
-  padding: 2rem 2rem 0;
+  .details.panera {
+    article {
+      figure:nth-of-type(5n),
+      figure:nth-of-type(8n) {padding: 2rem 2rem 0 1rem;}
+    }
+  }
 }
-.details.panera article figure:nth-of-type(7n) {padding: 2rem 1rem 0 2rem;}
-.details.panera article figure:nth-of-type(8n) {padding: 2rem 2rem 0 1rem;}}
+
+
+// TRANSFERX DETAILS
+@media (min-width: 46rem) {
+  .details.transferx {
+    article {
+      figure:nth-of-type(5n),
+      .text:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+      .text:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+    }
+  }
+}

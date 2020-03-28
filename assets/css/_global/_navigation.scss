@@ -1,11 +1,11 @@
-  // NAVIGATION
+// NAVIGATION
 nav {
   width: 100%;
   ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: inherit;
     margin: auto;
     padding: 0 0 0.75rem;
@@ -52,6 +52,12 @@ header.navigation {
 header nav ul {
   justify-content: flex-start;
   padding: 0;
+}
+
+
+// FOOTER NAVIGATION
+@media (min-width: 46rem) {
+  footer nav ul {justify-content: center;}
 }
 
 
@@ -152,14 +158,14 @@ header nav ul {
 .no-touch .projects-list nav ul li.delta-design:hover, .no-touch .projects-list nav ul li.delta-design:focus {background-color: $delta-design;}
 .no-touch .projects-list nav ul li.east-wind:hover, .no-touch .projects-list nav ul li.east-wind:focus {background-color: $east-wind;}
 .no-touch .projects-list nav ul li.enservio-portal:hover, .no-touch .projects-list nav ul li.enservio-portal:focus {background-color: $enservio-portal;}
-.no-touch .projects-list nav ul li.my-stuff:hover, .no-touch .projects-list nav ul li.my-stuff:focus {background-color: $my-stuff;}
+.no-touch .projects-list nav ul li.mystuff:hover, .no-touch .projects-list nav ul li.mystuff:focus {background-color: $mystuff;}
 .no-touch .projects-list nav ul li.panera:hover, .no-touch .projects-list nav ul li.panera:focus {background-color: $panera;}
 .no-touch .projects-list nav ul li.transferx:hover, .no-touch .projects-list nav ul li.transferx:focus {background-color: $transferx;}
 
 .no-touch .projects-list nav ul li.delta-design:hover a, .no-touch .projects-list nav ul li.delta-design:focus a {color: $delta-design-bg;}
 .no-touch .projects-list nav ul li.east-wind:hover a, .no-touch .projects-list nav ul li.east-wind:focus a {color: $east-wind-bg;}
 .no-touch .projects-list nav ul li.enservio-portal:hover a, .no-touch .projects-list nav ul li.enservio-portal:focus a {color: $enservio-portal-bg;}
-.no-touch .projects-list nav ul li.my-stuff:hover a, .no-touch .projects-list nav ul li.my-stuff:focus a {color: $my-stuff-bg;}
+.no-touch .projects-list nav ul li.mystuff:hover a, .no-touch .projects-list nav ul li.mystuff:focus a {color: $mystuff-bg;}
 .no-touch .projects-list nav ul li.panera:hover a, .no-touch .projects-list nav ul li.panera:focus a {color: $panera-bg;}
 .no-touch .projects-list nav ul li.transferx:hover a, .no-touch .projects-list nav ul li.transferx:focus a {color: $transferx-bg;}
 
@@ -172,8 +178,8 @@ header nav ul {
 .no-touch .projects-list nav ul li.east-wind:hover a:focus, .no-touch .projects-list nav ul li.east-wind:focus a:focus,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .no-touch .projects-list nav ul li.enservio-portal:focus a:hover,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .no-touch .projects-list nav ul li.enservio-portal:focus a:focus,
-.no-touch .projects-list nav ul li.my-stuff:hover a:hover, .no-touch .projects-list nav ul li.my-stuff:focus a:hover,
-.no-touch .projects-list nav ul li.my-stuff:hover a:hover, .no-touch .projects-list nav ul li.my-stuff:focus a:hover,
+.no-touch .projects-list nav ul li.mystuff:hover a:hover, .no-touch .projects-list nav ul li.mystuff:focus a:hover,
+.no-touch .projects-list nav ul li.mystuff:hover a:hover, .no-touch .projects-list nav ul li.mystuff:focus a:hover,
 .no-touch .projects-list nav ul li.panera:hover a:hover, .no-touch .projects-list nav ul li.panera:focus a:hover,
 .no-touch .projects-list nav ul li.panera:hover a:focus, .no-touch .projects-list nav ul li.panera:focus a:focus,
 .no-touch .projects-list nav ul li.transferx:hover a:hover, .no-touch .projects-list nav ul li.transferx:focus a:hover,

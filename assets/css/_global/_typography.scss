@@ -49,8 +49,9 @@ small {font-size: 0.75rem;}
 // SPECIAL STYLES
 .eyebrow {
   display: block;
-  font-family: $font-regular;
+  font-family: $font-bold;
   font-size: 0.75rem;
   letter-spacing: 0.5px;
+  line-height: 2;
   text-transform: uppercase;
 }
