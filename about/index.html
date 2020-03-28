@@ -125,16 +125,6 @@
           </figcaption>
         </figure>
       </section>
-<!--
-      <section class="bio">
-        <figure data-aos="fade-up">
-          <figcaption>
-          <h1>A Brief Biography</h1>
-          <p>I was born and raised in Maine and currently live outside of Boston. I love black coffee, hazy New England IPAs, and pizza. I also have an eye for design and an appreciation of the principles and the beauty behind great code.</p>
-          </figcaption>
-        </figure>
-      </section>
--->
       <section class="do">
         <h1 data-aos="fade-up">The Things I Do</h1>
         <ul>
@@ -159,20 +149,32 @@
         <h1>Gallery</h1>
         <article class="one">
           <h2>My brand photos</h2>
-          <figure data-aos="fade-up">
-            <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-2x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-2x.jpg 2x" alt="My branded tin coffee cup">
+          <figure class="wide" data-aos="fade-up">
+            <picture>
+              <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-2x.webp" type="image/webp">
+              <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-01-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-2x.jpg 2x" alt="My branded tin coffee cup">
+            </picture>
           </figure>
         </article>
         <article class="three">
           <h2>My brand photos</h2>
           <figure data-aos="fade-up">
-            <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-2x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-2x.jpg 2x" alt="My branded t-shirts">
+            <picture>
+              <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-2x.webp" type="image/webp">
+              <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-02-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-02-2x.jpg 2x" alt="My branded t-shirts">
+            </picture>
           </figure>
           <figure data-aos="fade-up">
-            <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-03-2x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-03-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-03-2x.jpg 2x" alt="My branded tags">
+            <picture>
+              <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-03-2x.webp" type="image/webp">
+              <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-02-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-01-2x.jpg 2x" alt="My branded tags">
+            </picture>
           </figure>
           <figure data-aos="fade-up">
-            <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-2x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-2x.jpg 2x" alt="Walking by a wall painted with my logo">
+            <picture>
+              <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-2x.webp" type="image/webp">
+              <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-04-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-my-brand-04-2x.jpg 2x" alt="Walking by a wall painted with my logo">
+            </picture>
           </figure>
         </article>
       </section>
@@ -184,31 +186,6 @@
           <a href="https://tinyurl.com/yb8nushc" role="button" class="button">Contact Me</a>
       </article>
       </section>
-<!--
-      <section class="trivialities" data-aos="fade-up">
-        <h1>Trivialities</h1>
-        <ul data-aos="fade-up">
-          <li data-aos="fade-up">
-            <span class="icon"><i class="la la-coffee"></i></span>
-            <p>I’ve had</p>
-            <span id="coffee" class="counter coffee" data-aos="fade"></span>
-            <p>cups of coffee</p>
-          </li>
-          <li data-aos="fade-up">
-            <span class="icon"><i class="la la-music"></i></span>
-            <p>There are</p>
-            <span class="counter" data-aos="fade">57,740</span>
-            <p>songs in my&nbsp;<span style="text-transform: lowercase;">i</span>Tunes Library</p>
-          </li>
-          <li data-aos="fade-up">
-            <span class="icon"><i class="la la-anchor"></i></span>
-            <p>Maine has</p>
-            <span class="counter" data-aos="fade">3,478</span>
-            <p>miles of coastline</p>
-          </li>
-        </ul>
-      </section>
--->
     </main>
     <aside class="projects-list">
       <nav>
@@ -253,24 +230,5 @@
       var headroom  = new Headroom(myElement);
       headroom.init(); 
     </script>
-<!--
-    <script>
-      var n = 40880;
-
-      var start = new Date("12/25/2018");
-      var today = new Date();
-      var timeDiff = Math.abs(today.getTime() - start.getTime());
-      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      var coffee = n + (diffDays * 4);
-
-      function coffeeCommas(coffee) {
-          var parts = coffee.toString().split(".");
-          parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          return parts.join(".");
-      }
-
-      $('.coffee').text(coffeeCommas(coffee));
-    </script>
--->
   </body>
 </html>
