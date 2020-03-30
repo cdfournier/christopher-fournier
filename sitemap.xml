@@ -9,57 +9,52 @@
 
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/</loc>
-  <lastmod>2019-12-06T23:42:20+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://chris.blackcoffeeshoppe.com/about/index.html</loc>
-  <lastmod>2019-12-06T23:09:51+00:00</lastmod>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/panera/index.html</loc>
+  <lastmod>2020-03-30T23:21:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/transferx/index.html</loc>
+  <lastmod>2020-03-30T23:21:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/projects/delta-design-system/index.html</loc>
-  <lastmod>2019-12-06T23:09:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://chris.blackcoffeeshoppe.com/projects/panera/index.html</loc>
-  <lastmod>2019-12-06T23:09:56+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/projects/mystuff/index.html</loc>
-  <lastmod>2019-12-06T23:09:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://chris.blackcoffeeshoppe.com/projects/east-wind/index.html</loc>
-  <lastmod>2019-12-06T23:09:55+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:41+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/projects/index.html</loc>
-  <lastmod>2019-12-07T00:50:09+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/projects/enservio-customer-portal/index.html</loc>
-  <lastmod>2019-12-06T23:09:55+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/resume/index.html</loc>
-  <lastmod>2019-12-06T23:09:56+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://chris.blackcoffeeshoppe.com/index.html</loc>
-  <lastmod>2019-12-06T23:42:20+00:00</lastmod>
+  <lastmod>2020-03-30T23:21:36+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://chris.blackcoffeeshoppe.com/projects/transferx/index.html</loc>
-  <lastmod>2019-12-06T23:09:56+00:00</lastmod>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/east-wind/index.html</loc>
+  <lastmod>2020-03-30T23:21:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
