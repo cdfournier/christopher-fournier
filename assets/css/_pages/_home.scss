@@ -1,36 +1,52 @@
 // WELCOME
-.welcome {
-  figure {
-    min-height: 100vh;
-    picture {
-      display: grid;
-      width: 100%;
-      max-width: 32rem;
-      margin: 0 0 1rem;
-      source {width: 100%;}
-      img {width: 100%;}
-    }
-    figcaption {
-      h1 {
-        max-width: 40rem;
-        font-family: $font-serif;
-      }
-    }
+header.welcome {
+  justify-content: center;
+  height: 100vh;
+  .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    color: $white;
+    background-color: $green;
+    @include transition (all, 0.25s, ease);
+    h1, p {max-width: 32rem;}
   }
 }
 
 @media (min-width: 46rem) {
-  .welcome {
-    figure {
-      flex-direction: row-reverse;
-      picture {
-        width: 48%;
-        margin: 0;
-      }
-      figcaption {
-        width: 52%;
-        padding: 0;
-      }
+  header.welcome {
+    .bio {
+      padding: 6rem 2rem;
+      background-blend-mode: luminosity;
+      background-image: url(../images/profile-1x.png);
+      background-image: url(../images/profile-2x.webp);      
+      background-position: right 2rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: 62rem) {
+  header.welcome {
+    .bio {
+      align-items: center;
+      h1 {font-size: 2.5rem;}
+      p {font-size: 1.25rem;}
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 46rem) {
+  header.welcome {
+    .bio {
+      background-image: url(../images/profile-2x.png);
+      background-image: url(../images/profile-2x.webp);      
     }
   }
 }
@@ -63,6 +79,25 @@
 }
 
 @media (min-width: 46rem) {
+  .home {
+    figure {
+      flex-direction: row;
+      min-height: 50vh;
+      picture {
+        width: 20%;
+        margin: 0;
+      }
+      figcaption {padding: 0 0 0 2rem;}
+    }
+    figure.reverse {
+      flex-direction: row-reverse;
+      figcaption {padding: 0 2rem 0 0;}
+    }
+    figure:before {display: none;}
+  }
+}
+
+@media (orientation: landscape) {
   .home {
     figure {
       flex-direction: row;
