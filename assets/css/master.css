@@ -451,7 +451,8 @@ figure {
   margin: 0;
   padding: 2rem; }
   figure picture {
-    display: grid; }
+    display: grid;
+    width: 100%; }
 
 figcaption {
   display: flex;
