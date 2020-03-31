@@ -607,7 +607,6 @@ header.welcome {
     padding: 6rem 2rem;
     background-blend-mode: luminosity;
     background-image: url(../images/profile-1x.png);
-    background-image: url(../images/profile-2x.webp);
     background-position: right 2rem;
     background-repeat: no-repeat;
     background-size: contain; } }
@@ -622,8 +621,7 @@ header.welcome {
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 46rem) {
   header.welcome .bio {
-    background-image: url(../images/profile-2x.png);
-    background-image: url(../images/profile-2x.webp); } }
+    background-image: url(../images/profile-2x.png); } }
 
 .home figure {
   min-height: 100vh; }
@@ -840,60 +838,48 @@ header.welcome {
     font-size: 3.5rem; } }
 
 .intro.delta-design {
-  background-image: url(../images/work-delta-design-01-1x.jpg);
-  background-image: url(../images/work-delta-design-01-2x.webp); }
+  background-image: url(../images/work-delta-design-01-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.east-wind {
-    background-image: url(../images/work-delta-design-01-2x.jpg);
-    background-image: url(../images/work-delta-design-01-2x.webp); } }
+    background-image: url(../images/work-delta-design-01-2x.jpg); } }
 
 .intro.east-wind {
   background-image: url(../images/work-east-wind-01-1x.jpg);
-  background-image: url(../images/work-east-wind-01-2x.webp);
   background-position: 55% center; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.east-wind {
-    background-image: url(../images/work-east-wind-01-2x.jpg);
-    background-image: url(../images/work-east-wind-01-2x.webp); } }
+    background-image: url(../images/work-east-wind-01-2x.jpg); } }
 
 .intro.enservio-portal {
-  background-image: url(../images/work-enservio-portal-01-1x.jpg);
-  background-image: url(../images/work-enservio-portal-01-2x.webp); }
+  background-image: url(../images/work-enservio-portal-01-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.enservio-portal {
-    background-image: url(../images/work-enservio-portal-01-2x.jpg);
-    background-image: url(../images/work-enservio-portal-01-2x.webp); } }
+    background-image: url(../images/work-enservio-portal-01-2x.jpg); } }
 
 .intro.mystuff {
-  background-image: url(../images/work-mystuff-01-1x.jpg);
-  background-image: url(../images/work-mystuff-01-2x.webp); }
+  background-image: url(../images/work-mystuff-01-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.mystuff {
-    background-image: url(../images/work-mystuff-01-2x.jpg);
-    background-image: url(../images/work-mystuff-01-2x.webp); } }
+    background-image: url(../images/work-mystuff-01-2x.jpg); } }
 
 .intro.panera {
-  background-image: url(../images/work-panera-01-1x.jpg);
-  background-image: url(../images/work-panera-01-2x.webp); }
+  background-image: url(../images/work-panera-01-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.panera {
-    background-image: url(../images/work-panera-01-2x.jpg);
-    background-image: url(../images/work-panera-01-2x.webp); } }
+    background-image: url(../images/work-panera-01-2x.jpg); } }
 
 .intro.transferx {
   background-image: url(../images/work-transferx-01-1x.jpg);
-  background-image: url(../images/work-transferx-01-2x.webp);
   background-position: 35% center; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.transferx {
-    background-image: url(../images/work-transferx-01-2x.jpg);
-    background-image: url(../images/work-transferx-01-2x.webp); } }
+    background-image: url(../images/work-transferx-01-2x.jpg); } }
 
 .details h1 {
   display: none; }
@@ -1357,7 +1343,6 @@ body.error {
   justify-content: flex-end;
   background-color: #000000;
   background-image: url(../images/banner-error-1x.jpg);
-  background-image: url(../images/banner-error-2x.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1383,5 +1368,4 @@ body.error {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body.error {
-    background-image: url(../images/banner-error-2x.jpg);
-    background-image: url(../images/banner-error-2x.webp); } }
+    background-image: url(../images/banner-error-2x.jpg); } }

@@ -28,20 +28,22 @@
 .projects h1 {display: none;}
 
 @media (orientation: landscape) and (max-width: 46rem) {
-.projects figure {flex-direction: row;}
-.projects figure img {width: 20%;}
-.projects figcaption {padding: 0 0 0 2rem;}}
+  .projects figure {flex-direction: row;}
+  .projects figure img {width: 20%;}
+  .projects figcaption {padding: 0 0 0 2rem;}
+}
 
 @media (min-width: 46rem) {
-.projects article {min-height: 0;}
-.projects figure {
-  flex-direction: row;
-  min-height: 50vh;
+  .projects article {min-height: 0;}
+  .projects figure {
+    flex-direction: row;
+    min-height: 50vh;
+  }
+  .projects figure img {width: 20%;}
+  .projects figcaption {padding: 0 0 0 2rem;}
+  .projects figure.reverse {flex-direction: row-reverse;}
+  .projects figure.reverse figcaption {padding: 0 2rem 0 0;}
 }
-.projects figure img {width: 20%;}
-.projects figcaption {padding: 0 0 0 2rem;}
-.projects figure.reverse {flex-direction: row-reverse;}
-.projects figure.reverse figcaption {padding: 0 2rem 0 0;}}
 
 
 // CUSTOM PROJECTS STYLES
@@ -63,10 +65,11 @@
 .projects .transferx .button:hover, .projects .transferx .button:focus {background-color: $transferx-bg;}
 
 @media (min-width: 46rem) {
-.projects .east-wind figure img {
-  width: 15%;
-  height: auto;
-}}
+  .projects .east-wind figure img {
+    width: 15%;
+    height: auto;
+  }
+}
 
 
 // INTRO
@@ -120,88 +123,56 @@
 
 
 // DELTA DESIGN SYSTEM
-.intro.delta-design {
-  background-image: url(../images/work-delta-design-01-1x.jpg);
-  background-image: url(../images/work-delta-design-01-2x.webp);
-}
+.intro.delta-design {background-image: url(../images/work-delta-design-01-1x.jpg);}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.east-wind {
-    background-image: url(../images/work-delta-design-01-2x.jpg);
-    background-image: url(../images/work-delta-design-01-2x.webp);
-  }
+  .intro.east-wind {background-image: url(../images/work-delta-design-01-2x.jpg);}
 }
 
 
 // EAST WIND INTRO
 .intro.east-wind {
   background-image: url(../images/work-east-wind-01-1x.jpg);
-  background-image: url(../images/work-east-wind-01-2x.webp);
   background-position: 55% center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.east-wind {
-    background-image: url(../images/work-east-wind-01-2x.jpg);
-    background-image: url(../images/work-east-wind-01-2x.webp);
-  }
+  .intro.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}
 }
 
 
 // ENSERVIO DESIGN SYSTEM INTRO
-.intro.enservio-portal {
-  background-image: url(../images/work-enservio-portal-01-1x.jpg);
-  background-image: url(../images/work-enservio-portal-01-2x.webp);
-}
+.intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-1x.jpg);}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.enservio-portal {
-    background-image: url(../images/work-enservio-portal-01-2x.jpg);
-    background-image: url(../images/work-enservio-portal-01-2x.webp);
-  }
+  .intro.enservio-portal {background-image: url(../images/work-enservio-portal-01-2x.jpg);}
 }
 
 
 // MYSTUFF INTRO
-.intro.mystuff {
-  background-image: url(../images/work-mystuff-01-1x.jpg);
-  background-image: url(../images/work-mystuff-01-2x.webp);
-}
+.intro.mystuff {background-image: url(../images/work-mystuff-01-1x.jpg);}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.mystuff {
-    background-image: url(../images/work-mystuff-01-2x.jpg);
-    background-image: url(../images/work-mystuff-01-2x.webp);
-  }
+  .intro.mystuff {background-image: url(../images/work-mystuff-01-2x.jpg);}
 }
 
 
 // PANERA BREAD INTRO
-.intro.panera {
-  background-image: url(../images/work-panera-01-1x.jpg);
-  background-image: url(../images/work-panera-01-2x.webp);
-}
+.intro.panera {background-image: url(../images/work-panera-01-1x.jpg);}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.panera {
-    background-image: url(../images/work-panera-01-2x.jpg);
-    background-image: url(../images/work-panera-01-2x.webp);
-  }
+  .intro.panera {background-image: url(../images/work-panera-01-2x.jpg);}
 }
 
 
 // TRANSFERX INTRO
 .intro.transferx {
   background-image: url(../images/work-transferx-01-1x.jpg);
-  background-image: url(../images/work-transferx-01-2x.webp);
   background-position: 35% center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.transferx {
-    background-image: url(../images/work-transferx-01-2x.jpg);
-    background-image: url(../images/work-transferx-01-2x.webp);
-  }
+  .intro.transferx {background-image: url(../images/work-transferx-01-2x.jpg);}
 }
 
 

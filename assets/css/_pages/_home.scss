@@ -24,7 +24,6 @@ header.welcome {
       padding: 6rem 2rem;
       background-blend-mode: luminosity;
       background-image: url(../images/profile-1x.png);
-      background-image: url(../images/profile-2x.webp);      
       background-position: right 2rem;
       background-repeat: no-repeat;
       background-size: contain;
@@ -44,10 +43,7 @@ header.welcome {
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 46rem) {
   header.welcome {
-    .bio {
-      background-image: url(../images/profile-2x.png);
-      background-image: url(../images/profile-2x.webp);      
-    }
+    .bio {background-image: url(../images/profile-2x.png);}
   }
 }
 
@@ -128,9 +124,10 @@ header.welcome {
 @media (orientation: landscape) and (max-width: 46rem) {.home.east-wind figure {background-size: 12%;}}
 
 @media (min-width: 46rem) {
-.home.east-wind figure img {
-  width: 15%;
-  height: auto;
-}}
+  .home.east-wind figure img {
+    width: 15%;
+    height: auto;
+  }
+}
 
 @media (min-width: 88rem) {.home.east-wind figure img {width: 10%;}}
