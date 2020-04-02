@@ -11,6 +11,13 @@ footer {
 footer .logo {
   width: 10rem;
   margin: 0 auto 1rem;
+  svg {fill: $green;}
 }
 
 footer small {text-align: center;}
+
+footer.error {
+  .logo {
+    svg {fill: $white;}
+  }
+}

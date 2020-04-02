@@ -1,120 +1,230 @@
 /*
 RESUME SECTIONS
-  .logo
-  .contact-me
-  .about-me
-  .experience
-  .skills
-  .contact-me-again
+  header
+  logo
+  contact-me
+  about-me
+  experience
+  skills
+  contact-me-again
 */
 
 
-// GLOBAL RESUME LAYOUT STYLES
-main.resume {
+// RESUME HEADER
+header.resume {
   display: flex;
   flex-direction: column;
-}
-
-.resume section {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 2rem 2rem 0;
-}
-
-
-// GLOBAL RESUME TYPE STYLES
-.resume h1 {
-  display: block;
-  width: 100%;
-  padding: 0 0 1rem;
-  font-family: $font-regular;
-  font-size: 1rem;
-  letter-spacing: 0;
-}
-
-.resume h1:after {
-  display: block;
-  position: relative;
-  top: -2px;
-  width: 100%;
-  height: 1px;
-  background-color: $green;
-  content: "";
-}
-
-.resume h1 span {
-  display: inline-block;
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-  font-family: $font-bold;
-  text-transform: uppercase;
-}
-
-.resume h1 span:after {
-  display: block;
-  width: inherit;
-  height: 3px;
-  background-color: $green;
-  content: "";
-}
-
-.resume p {
-  font-size: 0.875rem;
-  padding: 0 0 0.875rem;
-}
-
-.resume p:last-of-type {padding: 0;}
-
-
-// LOGO SECTION
-.resume .logo {
-  width: 40%;
-  min-width: 14rem;
-  height: 45vh;
+  min-height: 100vh;
   margin: 0 auto;
-  h1 {display: none;}
-}
-
-
-// CONTACT SECTION
-.resume .contact-me {
-  align-items: center;
-  justify-content: flex-start;
-  height: 55vh;
-  ul {
+  padding: 2rem;
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  h1 {
     display: block;
     width: 100%;
+    padding: 0 0 1rem;
+    font-family: $font-regular;
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: $green;
+    content: "";
+  }
+  h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    font-family: $font-bold;
+    text-transform: uppercase;
+  }
+  h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: $green;
+    content: "";
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 10rem;
+    min-width: 10rem;
     margin: 0;
     padding: 0;
-    list-style: none;
-    li {
-      padding: 0 0 0.875rem;
-      font-size: 0.875rem;
+    h1 {display: none;}
+    svg {
+      display: grid;
+      width: 100%;
+      fill: $green;
     }
-    li:last-of-type {padding: 0;}
-    li span {
+  }
+  .contact-me {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0;
+    ul {
       display: block;
       width: 100%;
-      font-family: $font-bold;
-      text-transform: uppercase;
-      color: $green;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 0 0 0.875rem;
+        font-size: 0.875rem;
+      }
+      li:last-of-type {padding: 0;}
+      li span {
+        display: block;
+        width: 100%;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        color: $green;
+      }
+      li a {
+        font-family: $font-medium;
+        font-size: 0.875rem;
+        color: $orange;
+      }
+      li a:hover, li a:focus {color: $green;}
     }
-    li a {
-      font-family: $font-medium;
-      font-size: 0.875rem;
-      color: $orange;
-    }
-    li a:hover, li a:focus {color: $green;}
   }
 }
 
-.resume .contact-me:last-of-type {height: auto;}
+@media (orientation: landscape) {
+  header.resume {
+    flex-direction: row;
+    width: 80%;
+    .logo {
+      width: auto;
+      padding: 0 2rem 0 0;
+    }
+    .contact-me {
+      padding: 0;
+      ul {padding: 0 0 0 2rem;}
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  header.resume {
+    flex-direction: row;
+    width: 70%;
+    .logo {
+      width: auto;
+      padding: 0 2rem 0 0;
+    }
+    .contact-me {
+      padding: 0;
+      ul {padding: 0 0 0 2rem;}
+    }
+  }
+}
+
+@media (min-width: 62rem) {
+  header.resume {width: 50%;}
+}
 
 
-// HISTORY SECTION
-.resume article.history section {
+// RESUME CONTENT
+main.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 2rem 0;
+  }
+  h1 {
+    display: block;
+    width: 100%;
+    padding: 0 0 1rem;
+    font-family: $font-regular;
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: $green;
+    content: "";
+  }
+  h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    font-family: $font-bold;
+    text-transform: uppercase;
+  }
+  h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: $green;
+    content: "";
+  }
+  p {
+    font-size: 0.875rem;
+    padding: 0 0 0.875rem;
+  }
+  p:last-of-type {padding: 0;}
+}
+
+@media (min-width: 35.5rem) {
+  main.resume {
+    section {
+      width: 90%;
+    }
+    section.about-me p {padding: 0 0 0 2rem;}
+  }
+}
+
+@media (min-width: 46rem) {
+  main.resume {
+    section {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 62rem) {
+  main.resume {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    section {
+      width: 100%;
+    }
+    section.about-me {width: 55%;}
+  }
+}
+
+/* EXPERIENCE */
+main.resume article.history section {
   height: auto;
   max-height: none;
   min-height: inherit;
@@ -163,9 +273,33 @@ main.resume {
 
 .resume article h2 {display: none;}
 
+@media (min-width: 35.5rem) {
+  main.resume article.history section {
+    width: 100%;
+    padding: 0 0 1rem 2rem;
+  }
+  main.resume article.history section:last-of-type {padding: 0 0 0 2rem;}
+}
 
-// MY FAVORITE SKILLS
-.resume .skills {
+@media (min-width: 62rem) {
+  main.resume article.history {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    section {
+      width: 48%;
+      padding: 0 0 1rem 2rem;
+      p:last-of-type {border: none;}
+    }
+  }
+}
+
+
+/* SKILLS */
+main.resume section.skills {
   ul {
     display: block;
     width: 100%;
@@ -209,173 +343,88 @@ main.resume {
       }
     }
     li:last-of-type {padding: 0;}
-  }
-}
-
-.resume .skills ul li.adobe div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width;  
-  &.aos-animate {width: 95%;}
-}
-
-.resume .skills ul li.code div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width;  
-  &.aos-animate {width: 85%;}
-}
-
-.resume .skills ul li.sketch div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width;  
-  &.aos-animate {width: 75%;}
-}
-
-.resume .skills ul li.analytics div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width;  
-  &.aos-animate {width: 65%;}
-}
-
-.resume .skills ul li.git div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width;  
-  &.aos-animate {width: 45%;}
-}
-
-@media (orientation: landscape) {
-main.resume {
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-}}
-
-@media (min-width: 32rem) {
-main.resume {
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-}
-.resume section {width: 90%;}
-.resume section article.history section {width: 100%;}}
-
-@media (min-width: 42rem) {
-main.resume {
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-  h1 span {padding: 0 0 0 1rem;}
-  .logo {
-    width: 30%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0 2rem 0;
-  }
-  .contact-me {
-    justify-content: center;
-    width: 55%;
-    height: 100vh;
-    max-height: none;
-    padding: 0 2rem 0;
-    ul {padding: 0 0 0 3.125rem;}
-  }
-  .contact-me:last-of-type {
-    width: 90%;
-    height: auto;
-    padding: 2rem 2rem 0;
-    ul {padding: 0 0 0 3.125rem;}
-  }
-  .about-me p {
-    max-width: 40rem;
-    padding: 0 0 0 3.125rem;
-    font-size: 1rem;
-  }
-  .history section {
-    padding: 0 0 1rem 3.125rem;
-    h3 {justify-content: flex-start;}
-  }
-  .history section:last-of-type {padding: 0 0 0 3.125rem;}
-  .skills {
-    ul {
-      padding: 0 0 0 3.125rem;
+    li.adobe div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 95%;}
+    }
+    li.code div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 85%;}
+    }
+    li.sketch div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 75%;}
+    }
+    li.analytics div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 65%;}
+    }
+    li.git div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 45%;}
     }
   }
-}}
+}
+
+@media (min-width: 35.5rem) {
+  main.resume section.skills {
+    ul {padding: 0 0 0 2rem;}
+  }
+}
 
 @media (min-width: 62rem) {
-main.resume {
-  .skills {
-    width: 55%;
-    padding: 2rem 0 0 2rem;
+  main.resume section.skills {
+    width: 48%;
+    padding: 0 0 0 2rem;
   }
-  .contact-me:last-of-type {width: 45%;}
-}}
+}
 
-@media (min-width: 80rem) {
-main.resume {
-  section {width: 100%;}
-  .logo {
-    max-width: 18rem;
-    height: inherit;
-    padding: 4rem 2rem 2rem;
-  }
-  .contact-me {
-    width: 45%;
-    height: inherit;
-    padding: 4rem 2rem 2rem;
-  }
-  .about-me {
-    width: auto;
-    min-width: 50%;
-    margin: 0 auto 0 0;
-    p {padding: 0 2rem 0 3.125rem;}
-  }
-  .experience {
-    .history {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      width: 100%;
-      section {
-        width: 50%;
-        padding: 0 0 2rem 3.125rem;
-        p:last-of-type {
-          padding: 0;
-          border-bottom: none;
-        }
-      }
-    }
-    .contact-me:last-of-type {width: 50%;}
-  }
-}}
 
-@media (orientation: landscape) and (max-width: 42rem) {
-main.resume {
-  .logo {
-    width: 30%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0 2rem 0;
-  }
-  .contact-me {
-    justify-content: center;
-    width: 55%;
-    height: 100vh;
-    max-height: none;
-    padding: 0 2rem 0;
-  }
-  .contact-me:last-of-type {
-    width: 90%;
-    height: auto;
+/* CONTACT ME AGAIN */
+main.resume section.contact-me {
+  align-items: center;
+  justify-content: flex-start;
+  ul {
+    display: block;
+    width: 100%;
     margin: 0;
-    padding: 2rem 2rem 0;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0 0 0.875rem;
+      font-size: 0.875rem;
+    }
+    li:last-of-type {padding: 0;}
+    li span {
+      display: block;
+      width: 100%;
+      font-family: $font-bold;
+      text-transform: uppercase;
+      color: $green;
+    }
+    li a {
+      font-family: $font-medium;
+      font-size: 0.875rem;
+      color: $orange;
+    }
+    li a:hover, li a:focus {color: $green;}
+  }  
+}
+
+@media (min-width: 35.5rem) {
+  main.resume section.contact-me {
+    ul {padding: 0 0 0 2rem;}
   }
-  .history section {
-    h3 {justify-content: flex-start;}
+}
+
+@media (min-width: 62rem) {
+  main.resume section.contact-me {
+    width: 48%;
+    padding: 0 0 0 2rem;
   }
-}}
+}

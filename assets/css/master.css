@@ -436,9 +436,14 @@ footer {
 footer .logo {
   width: 10rem;
   margin: 0 auto 1rem; }
+  footer .logo svg {
+    fill: #384332; }
 
 footer small {
   text-align: center; }
+
+footer.error .logo svg {
+  fill: #ffffff; }
 
 figure {
   display: flex;
@@ -602,25 +607,68 @@ header.welcome {
     transition: all 0.25s ease 0s; }
     header.welcome .bio h1, header.welcome .bio p {
       max-width: 32rem; }
+    header.welcome .bio .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+      header.welcome .bio .logo svg {
+        width: 100%;
+        max-width: 12rem;
+        fill: #ffffff; }
+    header.welcome .bio .text {
+      padding: 2rem 0 0; }
+
+@media (orientation: landscape) {
+  header.welcome .bio {
+    flex-direction: row;
+    align-items: center; }
+    header.welcome .bio .logo {
+      width: 30%;
+      padding: 0 2rem 0 0; }
+    header.welcome .bio .text {
+      width: 70%;
+      padding: 0; } }
 
 @media (min-width: 46rem) {
+  header.welcome .bio {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4rem 2rem; }
+    header.welcome .bio .logo {
+      width: 30%;
+      max-width: 32rem;
+      padding: 0 2rem 0 0; }
+    header.welcome .bio .text {
+      padding: 0; } }
+
+@media (min-width: 62rem) {
   header.welcome .bio {
     padding: 6rem 2rem;
     background-blend-mode: luminosity;
     background-image: url(../images/profile-1x.png);
     background-position: right 2rem;
     background-repeat: no-repeat;
-    background-size: contain; } }
-
-@media (min-width: 62rem) {
-  header.welcome .bio {
-    align-items: center; }
+    background-size: contain; }
     header.welcome .bio h1 {
       font-size: 2.5rem; }
     header.welcome .bio p {
       font-size: 1.25rem; } }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 46rem) {
+/*
+@media (min-width: 62rem) {
+  header.welcome {
+    .bio {
+      align-items: center;
+      justify-content: flex-start;
+      h1 {font-size: 2.5rem;}
+      p {font-size: 1.25rem;}
+    }
+  }
+}
+*/
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62rem) {
   header.welcome .bio {
     background-image: url(../images/profile-2x.png); } }
 
@@ -1004,107 +1052,200 @@ header.welcome {
 
 /*
 RESUME SECTIONS
-  .logo
-  .contact-me
-  .about-me
-  .experience
-  .skills
-  .contact-me-again
+  header
+  logo
+  contact-me
+  about-me
+  experience
+  skills
+  contact-me-again
 */
-main.resume {
-  display: flex;
-  flex-direction: column; }
-
-.resume section {
+header.resume {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 2rem 2rem 0; }
-
-.resume h1 {
-  display: block;
-  width: 100%;
-  padding: 0 0 1rem;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0; }
-
-.resume h1:after {
-  display: block;
-  position: relative;
-  top: -2px;
-  width: 100%;
-  height: 1px;
-  background-color: #384332;
-  content: ""; }
-
-.resume h1 span {
-  display: inline-block;
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-  font-family: "metropolis-bold", sans-serif;
-  text-transform: uppercase; }
-
-.resume h1 span:after {
-  display: block;
-  width: inherit;
-  height: 3px;
-  background-color: #384332;
-  content: ""; }
-
-.resume p {
-  font-size: 0.875rem;
-  padding: 0 0 0.875rem; }
-
-.resume p:last-of-type {
-  padding: 0; }
-
-.resume .logo {
-  width: 40%;
-  min-width: 14rem;
-  height: 45vh;
-  margin: 0 auto; }
-  .resume .logo h1 {
-    display: none; }
-
-.resume .contact-me {
-  align-items: center;
-  justify-content: flex-start;
-  height: 55vh; }
-  .resume .contact-me ul {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem; }
+  header.resume section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+  header.resume h1 {
     display: block;
     width: 100%;
+    padding: 0 0 1rem;
+    font-family: "metropolis-regular", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0; }
+  header.resume h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #384332;
+    content: ""; }
+  header.resume h1 span {
+    display: inline-block;
     margin: 0;
-    padding: 0;
-    list-style: none; }
-    .resume .contact-me ul li {
-      padding: 0 0 0.875rem;
-      font-size: 0.875rem; }
-    .resume .contact-me ul li:last-of-type {
-      padding: 0; }
-    .resume .contact-me ul li span {
+    padding: 0 0 0 0.5rem;
+    font-family: "metropolis-bold", sans-serif;
+    text-transform: uppercase; }
+  header.resume h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: #384332;
+    content: ""; }
+  header.resume .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 10rem;
+    min-width: 10rem;
+    margin: 0;
+    padding: 0; }
+    header.resume .logo h1 {
+      display: none; }
+    header.resume .logo svg {
+      display: grid;
+      width: 100%;
+      fill: #384332; }
+  header.resume .contact-me {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0; }
+    header.resume .contact-me ul {
       display: block;
       width: 100%;
-      font-family: "metropolis-bold", sans-serif;
-      text-transform: uppercase;
-      color: #384332; }
-    .resume .contact-me ul li a {
-      font-family: "metropolis-medium", sans-serif;
-      font-size: 0.875rem;
-      color: #e85c45; }
-    .resume .contact-me ul li a:hover, .resume .contact-me ul li a:focus {
-      color: #384332; }
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      header.resume .contact-me ul li {
+        padding: 0 0 0.875rem;
+        font-size: 0.875rem; }
+      header.resume .contact-me ul li:last-of-type {
+        padding: 0; }
+      header.resume .contact-me ul li span {
+        display: block;
+        width: 100%;
+        font-family: "metropolis-bold", sans-serif;
+        text-transform: uppercase;
+        color: #384332; }
+      header.resume .contact-me ul li a {
+        font-family: "metropolis-medium", sans-serif;
+        font-size: 0.875rem;
+        color: #e85c45; }
+      header.resume .contact-me ul li a:hover, header.resume .contact-me ul li a:focus {
+        color: #384332; }
 
-.resume .contact-me:last-of-type {
-  height: auto; }
+@media (orientation: landscape) {
+  header.resume {
+    flex-direction: row;
+    width: 80%; }
+    header.resume .logo {
+      width: auto;
+      padding: 0 2rem 0 0; }
+    header.resume .contact-me {
+      padding: 0; }
+      header.resume .contact-me ul {
+        padding: 0 0 0 2rem; } }
 
-.resume article.history section {
+@media (min-width: 46rem) {
+  header.resume {
+    flex-direction: row;
+    width: 70%; }
+    header.resume .logo {
+      width: auto;
+      padding: 0 2rem 0 0; }
+    header.resume .contact-me {
+      padding: 0; }
+      header.resume .contact-me ul {
+        padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  header.resume {
+    width: 50%; } }
+
+main.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; }
+  main.resume section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 2rem 0; }
+  main.resume h1 {
+    display: block;
+    width: 100%;
+    padding: 0 0 1rem;
+    font-family: "metropolis-regular", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0; }
+  main.resume h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #384332;
+    content: ""; }
+  main.resume h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    font-family: "metropolis-bold", sans-serif;
+    text-transform: uppercase; }
+  main.resume h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: #384332;
+    content: ""; }
+  main.resume p {
+    font-size: 0.875rem;
+    padding: 0 0 0.875rem; }
+  main.resume p:last-of-type {
+    padding: 0; }
+
+@media (min-width: 35.5rem) {
+  main.resume section {
+    width: 90%; }
+  main.resume section.about-me p {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 46rem) {
+  main.resume section {
+    width: 70%; } }
+
+@media (min-width: 62rem) {
+  main.resume {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%; }
+    main.resume section {
+      width: 100%; }
+    main.resume section.about-me {
+      width: 55%; } }
+
+/* EXPERIENCE */
+main.resume article.history section {
   height: auto;
   max-height: none;
   min-height: inherit;
   padding: 0 0 1rem; }
-  .resume article.history section h3 {
+  main.resume article.history section h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1115,11 +1256,11 @@ main.resume {
     line-height: 1;
     text-transform: uppercase;
     color: #e85c45; }
-    .resume article.history section h3 a {
+    main.resume article.history section h3 a {
       color: #e85c45; }
-    .resume article.history section h3 a:hover, .resume article.history section h3 a:focus {
+    main.resume article.history section h3 a:hover, main.resume article.history section h3 a:focus {
       color: #384332; }
-    .resume article.history section h3 span {
+    main.resume article.history section h3 span {
       display: flex;
       flex-direction: row;
       margin: 0;
@@ -1127,10 +1268,10 @@ main.resume {
       font-family: "metropolis-bold", sans-serif;
       font-size: 75%;
       color: #384332; }
-  .resume article.history section h3 + p {
+  main.resume article.history section h3 + p {
     padding: 0.25rem 0 0.75rem 0;
     font-family: "metropolis-bold", sans-serif; }
-  .resume article.history section p:last-of-type {
+  main.resume article.history section p:last-of-type {
     margin: 0;
     padding: 0 0 0.875rem;
     border-bottom: 1px solid #eef1e8; }
@@ -1144,19 +1285,41 @@ main.resume {
 .resume article h2 {
   display: none; }
 
-.resume .skills ul {
+@media (min-width: 35.5rem) {
+  main.resume article.history section {
+    width: 100%;
+    padding: 0 0 1rem 2rem; }
+  main.resume article.history section:last-of-type {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  main.resume article.history {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; }
+    main.resume article.history section {
+      width: 48%;
+      padding: 0 0 1rem 2rem; }
+      main.resume article.history section p:last-of-type {
+        border: none; } }
+
+/* SKILLS */
+main.resume section.skills ul {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none; }
-  .resume .skills ul li {
+  main.resume section.skills ul li {
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
     padding: 0 0 0.875rem; }
-    .resume .skills ul li span {
+    main.resume section.skills ul li span {
       display: block;
       width: 100%;
       overflow: hidden;
@@ -1166,7 +1329,7 @@ main.resume {
       text-transform: uppercase;
       white-space: nowrap;
       color: #384332; }
-    .resume .skills ul li div {
+    main.resume section.skills ul li div {
       display: block;
       width: 100%;
       height: 0.5rem;
@@ -1174,7 +1337,7 @@ main.resume {
       background-color: #384332;
       background-color: #f9fbfd;
       background-color: #eef1e8; }
-    .resume .skills ul li div > span {
+    main.resume section.skills ul li div > span {
       display: block;
       width: 0;
       height: inherit;
@@ -1186,157 +1349,79 @@ main.resume {
       -ms-transition: all 0.5s ease 0s;
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s; }
-  .resume .skills ul li:last-of-type {
+  main.resume section.skills ul li:last-of-type {
     padding: 0; }
+  main.resume section.skills ul li.adobe div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.adobe div > span[data-aos="loaded"].aos-animate {
+      width: 95%; }
+  main.resume section.skills ul li.code div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.code div > span[data-aos="loaded"].aos-animate {
+      width: 85%; }
+  main.resume section.skills ul li.sketch div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.sketch div > span[data-aos="loaded"].aos-animate {
+      width: 75%; }
+  main.resume section.skills ul li.analytics div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.analytics div > span[data-aos="loaded"].aos-animate {
+      width: 65%; }
+  main.resume section.skills ul li.git div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.git div > span[data-aos="loaded"].aos-animate {
+      width: 45%; }
 
-.resume .skills ul li.adobe div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width; }
-  .resume .skills ul li.adobe div > span[data-aos="loaded"].aos-animate {
-    width: 95%; }
-
-.resume .skills ul li.code div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width; }
-  .resume .skills ul li.code div > span[data-aos="loaded"].aos-animate {
-    width: 85%; }
-
-.resume .skills ul li.sketch div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width; }
-  .resume .skills ul li.sketch div > span[data-aos="loaded"].aos-animate {
-    width: 75%; }
-
-.resume .skills ul li.analytics div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width; }
-  .resume .skills ul li.analytics div > span[data-aos="loaded"].aos-animate {
-    width: 65%; }
-
-.resume .skills ul li.git div > span[data-aos="loaded"] {
-  width: 0%;
-  transition-property: width; }
-  .resume .skills ul li.git div > span[data-aos="loaded"].aos-animate {
-    width: 45%; }
-
-@media (orientation: landscape) {
-  main.resume {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%; } }
-
-@media (min-width: 32rem) {
-  main.resume {
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%; }
-  .resume section {
-    width: 90%; }
-  .resume section article.history section {
-    width: 100%; } }
-
-@media (min-width: 42rem) {
-  main.resume {
-    justify-content: center;
-    width: 80%;
-    margin: auto; }
-    main.resume h1 span {
-      padding: 0 0 0 1rem; }
-    main.resume .logo {
-      width: 30%;
-      height: 100vh;
-      margin: 0 auto;
-      padding: 0 2rem 0; }
-    main.resume .contact-me {
-      justify-content: center;
-      width: 55%;
-      height: 100vh;
-      max-height: none;
-      padding: 0 2rem 0; }
-      main.resume .contact-me ul {
-        padding: 0 0 0 3.125rem; }
-    main.resume .contact-me:last-of-type {
-      width: 90%;
-      height: auto;
-      padding: 2rem 2rem 0; }
-      main.resume .contact-me:last-of-type ul {
-        padding: 0 0 0 3.125rem; }
-    main.resume .about-me p {
-      max-width: 40rem;
-      padding: 0 0 0 3.125rem;
-      font-size: 1rem; }
-    main.resume .history section {
-      padding: 0 0 1rem 3.125rem; }
-      main.resume .history section h3 {
-        justify-content: flex-start; }
-    main.resume .history section:last-of-type {
-      padding: 0 0 0 3.125rem; }
-    main.resume .skills ul {
-      padding: 0 0 0 3.125rem; } }
+@media (min-width: 35.5rem) {
+  main.resume section.skills ul {
+    padding: 0 0 0 2rem; } }
 
 @media (min-width: 62rem) {
-  main.resume .skills {
-    width: 55%;
-    padding: 2rem 0 0 2rem; }
-  main.resume .contact-me:last-of-type {
-    width: 45%; } }
+  main.resume section.skills {
+    width: 48%;
+    padding: 0 0 0 2rem; } }
 
-@media (min-width: 80rem) {
-  main.resume section {
-    width: 100%; }
-  main.resume .logo {
-    max-width: 18rem;
-    height: inherit;
-    padding: 4rem 2rem 2rem; }
-  main.resume .contact-me {
-    width: 45%;
-    height: inherit;
-    padding: 4rem 2rem 2rem; }
-  main.resume .about-me {
-    width: auto;
-    min-width: 50%;
-    margin: 0 auto 0 0; }
-    main.resume .about-me p {
-      padding: 0 2rem 0 3.125rem; }
-  main.resume .experience .history {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 100%; }
-    main.resume .experience .history section {
-      width: 50%;
-      padding: 0 0 2rem 3.125rem; }
-      main.resume .experience .history section p:last-of-type {
-        padding: 0;
-        border-bottom: none; }
-  main.resume .experience .contact-me:last-of-type {
-    width: 50%; } }
-
-@media (orientation: landscape) and (max-width: 42rem) {
-  main.resume .logo {
-    width: 30%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0 2rem 0; }
-  main.resume .contact-me {
-    justify-content: center;
-    width: 55%;
-    height: 100vh;
-    max-height: none;
-    padding: 0 2rem 0; }
-  main.resume .contact-me:last-of-type {
-    width: 90%;
-    height: auto;
+/* CONTACT ME AGAIN */
+main.resume section.contact-me {
+  align-items: center;
+  justify-content: flex-start; }
+  main.resume section.contact-me ul {
+    display: block;
+    width: 100%;
     margin: 0;
-    padding: 2rem 2rem 0; }
-  main.resume .history section h3 {
-    justify-content: flex-start; } }
+    padding: 0;
+    list-style: none; }
+    main.resume section.contact-me ul li {
+      padding: 0 0 0.875rem;
+      font-size: 0.875rem; }
+    main.resume section.contact-me ul li:last-of-type {
+      padding: 0; }
+    main.resume section.contact-me ul li span {
+      display: block;
+      width: 100%;
+      font-family: "metropolis-bold", sans-serif;
+      text-transform: uppercase;
+      color: #384332; }
+    main.resume section.contact-me ul li a {
+      font-family: "metropolis-medium", sans-serif;
+      font-size: 0.875rem;
+      color: #e85c45; }
+    main.resume section.contact-me ul li a:hover, main.resume section.contact-me ul li a:focus {
+      color: #384332; }
+
+@media (min-width: 35.5rem) {
+  main.resume section.contact-me ul {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  main.resume section.contact-me {
+    width: 48%;
+    padding: 0 0 0 2rem; } }
 
 body.error {
   display: flex;

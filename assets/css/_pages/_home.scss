@@ -15,10 +15,60 @@ header.welcome {
     background-color: $green;
     @include transition (all, 0.25s, ease);
     h1, p {max-width: 32rem;}
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      svg {
+        width: 100%;
+        max-width: 12rem;
+        fill: $white;
+      }
+    }
+    .text {
+      padding: 2rem 0 0;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  header.welcome {
+    .bio {
+      flex-direction: row;
+      align-items: center;
+      .logo {
+        width: 30%;
+        padding: 0 2rem 0 0;
+      }
+      .text {
+        width: 70%;
+        padding: 0;
+      }
+    }
   }
 }
 
 @media (min-width: 46rem) {
+  header.welcome {
+    .bio {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4rem 2rem;
+      .logo {
+        width: 30%;
+        max-width: 32rem;
+        padding: 0 2rem 0 0;
+      }
+      .text {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 62rem) {
   header.welcome {
     .bio {
       padding: 6rem 2rem;
@@ -27,21 +77,26 @@ header.welcome {
       background-position: right 2rem;
       background-repeat: no-repeat;
       background-size: contain;
-    }
-  }
-}
-
-@media (min-width: 62rem) {
-  header.welcome {
-    .bio {
-      align-items: center;
       h1 {font-size: 2.5rem;}
       p {font-size: 1.25rem;}
     }
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 46rem) {
+/*
+@media (min-width: 62rem) {
+  header.welcome {
+    .bio {
+      align-items: center;
+      justify-content: flex-start;
+      h1 {font-size: 2.5rem;}
+      p {font-size: 1.25rem;}
+    }
+  }
+}
+*/
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62rem) {
   header.welcome {
     .bio {background-image: url(../images/profile-2x.png);}
   }
