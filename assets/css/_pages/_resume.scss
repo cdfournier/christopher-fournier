@@ -356,14 +356,19 @@ main.resume section.skills {
     li.sketch div > span[data-aos="loaded"] {
       width: 0%;
       transition-property: width;  
-      &.aos-animate {width: 75%;}
+      &.aos-animate {width: 83%;}
     }
     li.analytics div > span[data-aos="loaded"] {
       width: 0%;
       transition-property: width;  
-      &.aos-animate {width: 65%;}
+      &.aos-animate {width: 75%;}
     }
     li.git div > span[data-aos="loaded"] {
+      width: 0%;
+      transition-property: width;  
+      &.aos-animate {width: 58%;}
+    }
+    li.accessibility div > span[data-aos="loaded"] {
       width: 0%;
       transition-property: width;  
       &.aos-animate {width: 45%;}

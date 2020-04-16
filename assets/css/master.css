@@ -1365,16 +1365,21 @@ main.resume section.skills ul {
     width: 0%;
     transition-property: width; }
     main.resume section.skills ul li.sketch div > span[data-aos="loaded"].aos-animate {
-      width: 75%; }
+      width: 83%; }
   main.resume section.skills ul li.analytics div > span[data-aos="loaded"] {
     width: 0%;
     transition-property: width; }
     main.resume section.skills ul li.analytics div > span[data-aos="loaded"].aos-animate {
-      width: 65%; }
+      width: 75%; }
   main.resume section.skills ul li.git div > span[data-aos="loaded"] {
     width: 0%;
     transition-property: width; }
     main.resume section.skills ul li.git div > span[data-aos="loaded"].aos-animate {
+      width: 58%; }
+  main.resume section.skills ul li.accessibility div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.accessibility div > span[data-aos="loaded"].aos-animate {
       width: 45%; }
 
 @media (min-width: 35.5rem) {
