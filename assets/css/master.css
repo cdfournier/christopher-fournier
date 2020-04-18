@@ -267,7 +267,7 @@ footer nav ul {
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        height: calc(100% / 7);
+        height: calc(100% / 8);
         margin: 0;
         padding: 0 2rem;
         font-family: "metropolis-bold", sans-serif;
@@ -330,6 +330,9 @@ footer nav ul {
 .no-touch .projects-list nav ul li.east-wind:hover, .no-touch .projects-list nav ul li.east-wind:focus {
   background-color: #552a80; }
 
+.no-touch .projects-list nav ul li.eberhardt-design:hover, .no-touch .projects-list nav ul li.eberhardt-design:focus {
+  background-color: #ffe151; }
+
 .no-touch .projects-list nav ul li.enservio-portal:hover, .no-touch .projects-list nav ul li.enservio-portal:focus {
   background-color: #2e84ed; }
 
@@ -347,6 +350,9 @@ footer nav ul {
 
 .no-touch .projects-list nav ul li.east-wind:hover a, .no-touch .projects-list nav ul li.east-wind:focus a {
   color: #eeeaf2; }
+
+.no-touch .projects-list nav ul li.eberhardt-design:hover a, .no-touch .projects-list nav ul li.eberhardt-design:focus a {
+  color: #665a20; }
 
 .no-touch .projects-list nav ul li.enservio-portal:hover a, .no-touch .projects-list nav ul li.enservio-portal:focus a {
   color: #eaf3fd; }
@@ -370,6 +376,8 @@ footer nav ul {
 .no-touch .projects-list nav ul li.delta-design:hover a:focus, .no-touch .projects-list nav ul li.delta-design:focus a:focus,
 .no-touch .projects-list nav ul li.east-wind:hover a:hover, .no-touch .projects-list nav ul li.east-wind:focus a:hover,
 .no-touch .projects-list nav ul li.east-wind:hover a:focus, .no-touch .projects-list nav ul li.east-wind:focus a:focus,
+.no-touch .projects-list nav ul li.eberhardt-design:hover a:hover, .no-touch .projects-list nav ul li.eberhardt-design:focus a:hover,
+.no-touch .projects-list nav ul li.eberhardt-design:hover a:focus, .no-touch .projects-list nav ul li.eberhardt-design:focus a:focus,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .no-touch .projects-list nav ul li.enservio-portal:focus a:hover,
 .no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .no-touch .projects-list nav ul li.enservio-portal:focus a:focus,
 .no-touch .projects-list nav ul li.mystuff:hover a:hover, .no-touch .projects-list nav ul li.mystuff:focus a:hover,
@@ -470,121 +478,104 @@ figcaption {
   margin: 0;
   padding: 2rem 0 0; }
 
-.gallery {
+.favorite-projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
   width: 100%;
-  margin: 0; }
-  .gallery h1, .gallery h2 {
-    display: none; }
-  .gallery figure {
-    padding: 2rem 2rem 0; }
-
-@media (min-width: 46rem) {
-  .gallery article.one, .gallery article.two, .gallery article.three {
+  padding: 4rem 2rem 0; }
+  .favorite-projects p {
+    max-width: none; }
+  .favorite-projects ul {
     display: flex;
-    flex-direction: row;
-    width: 100%; }
-  .gallery article.two figure:first-of-type {
-    padding: 2rem 1rem 0 2rem; }
-  .gallery article.two figure:last-of-type {
-    padding: 2rem 2rem 0 1rem; }
-  .gallery article.three {
-    padding: 0 1rem; }
-  .gallery article.three figure {
-    padding: 2rem 1rem 0; } }
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%; }
-  .cards h1 {
-    padding: 5rem 2rem 0; }
-  .cards p {
-    max-width: none;
-    padding: 0 2rem; }
-  .cards .card {
-    display: block;
-    position: relative;
-    width: calc(100% - 4rem);
-    overflow: hidden;
-    margin: 2rem 2rem 0; }
-    .cards .card a {
-      display: grid; }
-      .cards .card a picture {
-        display: grid; }
-        .cards .card a picture img {
-          -webkit-transition: all 0.5s ease 0s;
-          -moz-transition: all 0.5s ease 0s;
-          -ms-transition: all 0.5s ease 0s;
-          -o-transition: all 0.5s ease 0s;
-          transition: all 0.5s ease 0s; }
-      .cards .card a .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 0;
+    list-style: none; }
+    .favorite-projects ul li {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 2rem 0 0; }
+      .favorite-projects ul li figure {
+        display: block;
         width: 100%;
-        height: 100%;
-        background-color: #000000;
-        opacity: 0.25;
-        -webkit-transition: all 0.25s ease 0s;
-        -moz-transition: all 0.25s ease 0s;
-        -ms-transition: all 0.25s ease 0s;
-        -o-transition: all 0.25s ease 0s;
-        transition: all 0.25s ease 0s; }
-      .cards .card a .text {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1rem;
-        color: #ffffff;
-        text-align: center; }
-        .cards .card a .text p {
-          max-width: none;
-          padding: 0;
-          font-family: "metropolis-bold", sans-serif;
-          font-size: 1.5rem;
-          line-height: 1.25; }
-    .cards .card a:hover .overlay, .cards .card a:focus .overlay {
-      opacity: 0.5; }
+        overflow: hidden;
+        margin: 0;
+        padding: 0; }
+        .favorite-projects ul li figure a picture {
+          overflow: hidden;
+          border-radius: 0.25rem; }
+          .favorite-projects ul li figure a picture source, .favorite-projects ul li figure a picture img {
+            -webkit-transition: all 2.5s ease 0s;
+            -moz-transition: all 2.5s ease 0s;
+            -ms-transition: all 2.5s ease 0s;
+            -o-transition: all 2.5s ease 0s;
+            transition: all 2.5s ease 0s;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1); }
+        .favorite-projects ul li figure a:hover picture source, .favorite-projects ul li figure a:hover picture img, .favorite-projects ul li figure a:focus picture source, .favorite-projects ul li figure a:focus picture img {
+          -webkit-transform: scale(1.25);
+          -moz-transform: scale(1.25);
+          -ms-transform: scale(1.25);
+          -o-transform: scale(1.25);
+          transform: scale(1.25); }
+        .favorite-projects ul li figure figcaption {
+          display: block;
+          margin: 0;
+          padding: 0; }
+          .favorite-projects ul li figure figcaption a {
+            font-family: "Merriweather", serif;
+            font-size: 1.333rem;
+            line-height: 1.5;
+            -webkit-transition: all 0.25s ease 0s;
+            -moz-transition: all 0.25s ease 0s;
+            -ms-transition: all 0.25s ease 0s;
+            -o-transition: all 0.25s ease 0s;
+            transition: all 0.25s ease 0s; }
+            .favorite-projects ul li figure figcaption a span {
+              display: block;
+              width: 100%;
+              margin: 1rem 0;
+              font-family: "metropolis-bold", sans-serif;
+              font-size: 0.8rem;
+              text-transform: uppercase; }
+        .favorite-projects ul li figure figcaption a:hover, .favorite-projects ul li figure figcaption a:focus {
+          color: #e85c45; }
+    .favorite-projects ul li::after {
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 1.5rem 0 0;
+      background: #eef1e8;
+      content: ""; }
+    .favorite-projects ul li:first-of-type {
+      padding: 1rem 0 0; }
+    .favorite-projects ul li:last-of-type::after {
+      display: none; }
 
 @media (min-width: 46rem) {
-  .cards {
+  .favorite-projects ul {
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start; }
-    .cards h1 {
-      padding: 3rem 2rem 0;
-      font-size: 3.5rem; }
-    .cards p {
-      font-size: 1.25rem; }
-    .cards .card {
-      width: calc(50% - 3rem); }
-    .cards .card:nth-of-type(odd) {
-      margin: 2rem 1rem 0 2rem; }
-    .cards .card:nth-of-type(even) {
-      margin: 2rem 2rem 0 1rem; }
-  .no-touch .cards .card a:hover img,
-  .no-touch .cards .card a:focus img {
-    transform: scale(1.05); } }
+    justify-content: space-between; }
+    .favorite-projects ul li, .favorite-projects ul li:first-of-type {
+      width: calc(50% - 1rem);
+      padding: 1rem 0 2rem; }
+    .favorite-projects ul li:after {
+      display: none; } }
 
 @media (min-width: 88rem) {
-  .cards .card a .text p {
-    font-size: 2rem; } }
+  .favorite-projects ul {
+    justify-content: space-between; }
+    .favorite-projects ul li, .favorite-projects ul li:nth-of-type(even), .favorite-projects ul li:nth-of-type(odd) {
+      width: calc(34% - 2rem); } }
 
 header.welcome {
   justify-content: center;
@@ -890,7 +881,7 @@ header.welcome {
   background-image: url(../images/work-delta-design-01-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.east-wind {
+  .intro.delta-design {
     background-image: url(../images/work-delta-design-01-2x.jpg); } }
 
 .intro.east-wind {
@@ -900,6 +891,13 @@ header.welcome {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.east-wind {
     background-image: url(../images/work-east-wind-01-2x.jpg); } }
+
+.intro.eberhardt-design {
+  background-image: url(../images/work-eberhardt-design-01-1x.jpg); }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .intro.eberhardt-design {
+    background-image: url(../images/work-eberhardt-design-01-2x.jpg); } }
 
 .intro.enservio-portal {
   background-image: url(../images/work-enservio-portal-01-1x.jpg); }
@@ -1028,6 +1026,22 @@ header.welcome {
   .details.east-wind article figure:nth-of-type(4n) {
     padding: 2rem 2rem 0 1rem; }
   .details.east-wind article figure:nth-of-type(6n) {
+    padding: 2rem 2rem 0 1rem; } }
+
+@media (min-width: 46rem) {
+  .details.eberhardt-design article .text:nth-of-type(3n) {
+    padding: 2rem 1rem 0 2rem; }
+  .details.eberhardt-design article .text:nth-of-type(4n) {
+    padding: 2rem 2rem 0 1rem; }
+  .details.eberhardt-design article figure:nth-of-type(3n) {
+    padding: 2rem 1rem 0 2rem; }
+  .details.eberhardt-design article figure:nth-of-type(4n) {
+    padding: 2rem 2rem 0 1rem; }
+  .details.eberhardt-design article figure:nth-of-type(6n) {
+    padding: 2rem 2rem 0; }
+  .details.eberhardt-design article figure:nth-of-type(9n) {
+    padding: 2rem 2rem 0; }
+  .details.eberhardt-design article figure:nth-of-type(11n) {
     padding: 2rem 2rem 0 1rem; } }
 
 @media (min-width: 46rem) {

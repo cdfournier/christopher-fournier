@@ -126,7 +126,7 @@
 .intro.delta-design {background-image: url(../images/work-delta-design-01-1x.jpg);}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .intro.east-wind {background-image: url(../images/work-delta-design-01-2x.jpg);}
+  .intro.delta-design {background-image: url(../images/work-delta-design-01-2x.jpg);}
 }
 
 
@@ -138,6 +138,14 @@
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}
+}
+
+
+// EBERHARDT DESIGN
+.intro.eberhardt-design {background-image: url(../images/work-eberhardt-design-01-1x.jpg);}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .intro.eberhardt-design {background-image: url(../images/work-eberhardt-design-01-2x.jpg);}
 }
 
 
@@ -276,6 +284,22 @@
       figure:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
       figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
       figure:nth-of-type(6n) {padding: 2rem 2rem 0 1rem;}
+    }
+  }
+}
+
+
+// EBERHARDT DESIGN DETAILS
+@media (min-width: 46rem) {
+  .details.eberhardt-design {
+    article {
+      .text:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+      .text:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+      figure:nth-of-type(3n) {padding: 2rem 1rem 0 2rem;}
+      figure:nth-of-type(4n) {padding: 2rem 2rem 0 1rem;}
+      figure:nth-of-type(6n) {padding: 2rem 2rem 0;}
+      figure:nth-of-type(9n) {padding: 2rem 2rem 0;}
+      figure:nth-of-type(11n) {padding: 2rem 2rem 0 1rem;}
     }
   }
 }
