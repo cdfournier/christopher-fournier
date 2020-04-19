@@ -93,8 +93,7 @@ h1, h2, h3, h4, p {
 
 h1, h2, h3, h4 {
   font-family: "Merriweather", serif;
-  font-weight: normal;
-  line-height: 1.1; }
+  font-weight: normal; }
 
 h1 {
   font-size: 3.157rem; }
@@ -659,8 +658,6 @@ header.welcome {
     background-position: right 2rem;
     background-repeat: no-repeat;
     background-size: contain; }
-    header.welcome .bio h1 {
-      font-size: 2.5rem; }
     header.welcome .bio p {
       font-size: 1.25rem; } }
 
