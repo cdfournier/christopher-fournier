@@ -600,13 +600,17 @@ header.welcome {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     padding: 2rem;
-    color: #ffffff;
-    background-color: #384332;
+    text-align: center;
+    color: #384332;
+    background-image: url(../images/profile-1x.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 45vh;
     -webkit-transition: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
     -ms-transition: all 0.25s ease 0s;
@@ -621,15 +625,17 @@ header.welcome {
       width: 100%; }
       header.welcome .bio .logo svg {
         width: 100%;
-        max-width: 12rem;
-        fill: #ffffff; }
+        max-width: 10rem;
+        fill: #384332; }
     header.welcome .bio .text {
       padding: 2rem 0 0; }
 
 @media (orientation: landscape) {
   header.welcome .bio {
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    text-align: left;
+    background-image: none; }
     header.welcome .bio .logo {
       width: 30%;
       padding: 0 2rem 0 0; }
@@ -642,7 +648,9 @@ header.welcome {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 4rem 2rem; }
+    padding: 4rem 2rem;
+    text-align: left;
+    background-size: 40vh; }
     header.welcome .bio .logo {
       width: 30%;
       max-width: 32rem;
@@ -652,27 +660,10 @@ header.welcome {
 
 @media (min-width: 62rem) {
   header.welcome .bio {
-    padding: 6rem 2rem;
-    background-blend-mode: luminosity;
-    background-image: url(../images/profile-1x.png);
-    background-position: right 2rem;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    padding: 6rem 2rem; }
     header.welcome .bio p {
       font-size: 1.25rem; } }
 
-/*
-@media (min-width: 62rem) {
-  header.welcome {
-    .bio {
-      align-items: center;
-      justify-content: flex-start;
-      h1 {font-size: 2.5rem;}
-      p {font-size: 1.25rem;}
-    }
-  }
-}
-*/
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62rem) {
   header.welcome .bio {
     background-image: url(../images/profile-2x.png); } }
