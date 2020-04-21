@@ -45,11 +45,6 @@ html {
   line-height: 1.25;
   color: #384332; }
 
-@media (min-width: 78rem) {
-  html {
-    font-size: 18px;
-    line-height: 1.5; } }
-
 body, .body {
   width: 100%;
   height: auto;
