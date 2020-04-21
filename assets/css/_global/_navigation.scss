@@ -190,6 +190,8 @@ footer nav ul {justify-content: center;}
   opacity: 1;
 }
 
+.no-touch .projects-list nav ul li.close:hover a, .no-touch .projects-list nav ul li.close:focus a {opacity: 1;}
+
 .no-touch .projects-list nav ul li.all-projects a:hover, .no-touch .projects-list nav ul li.all-projects a:focus {
   color: $orange;
   opacity: 1;

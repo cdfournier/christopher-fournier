@@ -16,7 +16,7 @@
       <nav aria-labelledby="header-navigation">
         <ul>
           <li><a href="https://chris.blackcoffeeshoppe.com/index.html">Home</a></li>
-          <li><a class="open--projects">Projects</a></li>
+          <li><a class="open--projects" aria-expanded="false" aria-controls="project-navigation">Projects</a></li>
           <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html">Resume</a></li>
           <li><a href="https://github.com/cdfournier" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/christopher-fournier/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -95,8 +95,8 @@
       </section>
     </main>
     <aside class="projects-list">
-      <nav aria-label="Project Menu">
-        <ul>
+      <nav aria-label="Project Menu" aria-labelledby="project-navigation">
+        <ul aria-hidden="true">
           <li class="close"><a class="close--projects"><i class="la la-close"></i></a></li>
           <li class="all-projects"><a href="https://chris.blackcoffeeshoppe.com/projects/index.html">All Projects<i class="la la-arrow-right"></i></a></li>
           <li class="panera"><a href="https://chris.blackcoffeeshoppe.com/projects/panera/index.html">Panera Bread</a></li>
@@ -115,7 +115,7 @@
       <nav aria-labelledby="footer-navigation">
         <ul>
           <li><a href="https://chris.blackcoffeeshoppe.com/index.html">Home</a></li>
-          <li><a class="open--projects">Projects</a></li>
+          <li><a class="open--projects" aria-expanded="false" aria-controls="project-navigation">Projects</a></li>
           <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html">Resume</a></li>
           <li><a href="https://github.com/cdfournier" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/christopher-fournier/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -128,7 +128,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/main.js"></script>
+    <script src="../assets/scripts/main.js"></script>
     <script>
       AOS.init({duration: 600});
     </script>
