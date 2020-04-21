@@ -1174,8 +1174,12 @@ header.resume {
         text-transform: uppercase;
         color: #384332; }
       header.resume .contact-me ul li a {
+        display: block;
+        overflow: hidden;
         font-family: "metropolis-medium", sans-serif;
         font-size: 0.875rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         color: #e85c45; }
       header.resume .contact-me ul li a:hover, header.resume .contact-me ul li a:focus {
         color: #384332; }
@@ -1206,7 +1210,7 @@ header.resume {
 
 @media (min-width: 62rem) {
   header.resume {
-    width: 50%; } }
+    width: 60%; } }
 
 main.resume {
   display: flex;
@@ -1359,10 +1363,9 @@ main.resume section.skills ul {
       display: block;
       width: 100%;
       overflow: hidden;
-      font-family: "metropolis-bold", sans-serif;
+      font-family: "metropolis-medium", sans-serif;
       font-size: 0.875rem;
       text-overflow: ellipsis;
-      text-transform: uppercase;
       white-space: nowrap;
       color: #384332; }
     main.resume section.skills ul li div {
@@ -1449,8 +1452,12 @@ main.resume section.contact-me {
       text-transform: uppercase;
       color: #384332; }
     main.resume section.contact-me ul li a {
+      display: block;
+      overflow: hidden;
       font-family: "metropolis-medium", sans-serif;
       font-size: 0.875rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       color: #e85c45; }
     main.resume section.contact-me ul li a:hover, main.resume section.contact-me ul li a:focus {
       color: #384332; }

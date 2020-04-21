@@ -96,8 +96,12 @@ header.resume {
         color: $green;
       }
       li a {
+        display: block;
+        overflow: hidden;
         font-family: $font-medium;
         font-size: 0.875rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         color: $orange;
       }
       li a:hover, li a:focus {color: $green;}
@@ -136,7 +140,7 @@ header.resume {
 }
 
 @media (min-width: 62rem) {
-  header.resume {width: 50%;}
+  header.resume {width: 60%;}
 }
 
 
@@ -316,10 +320,9 @@ main.resume section.skills {
         display: block;
         width: 100%;
         overflow: hidden;
-        font-family: $font-bold;
+        font-family: $font-medium;
         font-size: 0.875rem;
         text-overflow: ellipsis;
-        text-transform: uppercase;
         white-space: nowrap;
         color: $green;
       }
@@ -413,8 +416,12 @@ main.resume section.contact-me {
       color: $green;
     }
     li a {
+      display: block;
+      overflow: hidden;
       font-family: $font-medium;
       font-size: 0.875rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       color: $orange;
     }
     li a:hover, li a:focus {color: $green;}
