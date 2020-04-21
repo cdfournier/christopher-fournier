@@ -92,6 +92,25 @@ header.welcome {
 }
 
 
+/* CONTACT */
+.home.contact {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: right;
+  color: $green;
+  background: $cream;
+  p a.button {background-color: $cream;}
+  p a.button:hover, p a.button:focus {
+    color: $cream;
+    background-color: $green;
+  }
+}
+
+
 // GLOBAL HOME STYLES
 .home {
   figure {

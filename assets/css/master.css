@@ -668,6 +668,23 @@ header.welcome {
   header.welcome .bio {
     background-image: url(../images/profile-2x.png); } }
 
+/* CONTACT */
+.home.contact {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: right;
+  color: #384332;
+  background: #eef1e8; }
+  .home.contact p a.button {
+    background-color: #eef1e8; }
+  .home.contact p a.button:hover, .home.contact p a.button:focus {
+    color: #eef1e8;
+    background-color: #384332; }
+
 .home figure {
   min-height: 100vh; }
   .home figure picture {
