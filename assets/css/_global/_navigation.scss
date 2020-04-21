@@ -140,16 +140,29 @@ footer nav ul {justify-content: center;}
 .projects-list nav ul li.close {
   height: auto;
   padding: 0 2rem 1rem;
+  a.close--projects {
+    @include transition (padding, 0.25s, ease);
+    svg {
+      display: grid;
+      width: auto;
+      height: 1.5rem;
+      fill: $green;
+      @include transition (all, 0.25s, ease);
+    }
+  }
 }
 
 .projects-list nav ul li.all-projects a {
   align-items: center;
   flex-direction: row;
-}
-
-.projects-list nav ul li.all-projects a .la-arrow-right {
-  padding: 0 0 0 0.5rem;
-  @include transition (padding, 0.25s, ease);
+  svg {
+    display: grid;
+    width: auto;
+    height: 1.25rem;
+    padding: 0 0 0 0.5rem;
+    fill: $green;
+    @include transition (padding, 0.25s, ease);
+  }
 }
 
 .no-touch .projects-list nav ul li.close a:hover, .no-touch .projects-list nav ul li.close a:focus {color: $orange;}
@@ -192,10 +205,16 @@ footer nav ul {justify-content: center;}
 
 .no-touch .projects-list nav ul li.close:hover a, .no-touch .projects-list nav ul li.close:focus a {opacity: 1;}
 
+.no-touch .projects-list nav ul li.close a.close--projects:hover,
+.no-touch .projects-list nav ul li.close a.close--projects:focus {
+  svg {fill: $orange;}
+}
+
 .no-touch .projects-list nav ul li.all-projects a:hover, .no-touch .projects-list nav ul li.all-projects a:focus {
   color: $orange;
   opacity: 1;
+  svg {
+    padding: 0 0 0 1rem;
+    fill: $orange;
+  }
 }
-
-.no-touch .projects-list nav ul li.all-projects a:hover .la-arrow-right,
-.no-touch .projects-list nav ul li.all-projects a:focus .la-arrow-right {padding: 0 0 0 1rem;}
