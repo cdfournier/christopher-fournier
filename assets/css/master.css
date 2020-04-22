@@ -628,6 +628,7 @@ header.welcome {
     text-align: center;
     color: #384332;
     background-image: url(../images/profile-1x.png);
+    background-image: url(../images/profile-2x.webp);
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 45vh;
@@ -686,7 +687,8 @@ header.welcome {
 
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62rem) {
   header.welcome .bio {
-    background-image: url(../images/profile-2x.png); } }
+    background-image: url(../images/profile-2x.png);
+    background-image: url(../images/profile-2x.webp); } }
 
 /* CONTACT */
 .home.contact {
@@ -920,55 +922,69 @@ header.welcome {
     font-size: 3.5rem; } }
 
 .intro.delta-design {
-  background-image: url(../images/work-delta-design-01-1x.jpg); }
+  background-image: url(../images/work-delta-design-01-1x.jpg);
+  background-image: url(../images/work-delta-design-01-2x.webp); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.delta-design {
-    background-image: url(../images/work-delta-design-01-2x.jpg); } }
+    background-image: url(../images/work-delta-design-01-2x.jpg);
+    background-image: url(../images/work-delta-design-01-2x.webp); } }
 
 .intro.east-wind {
   background-image: url(../images/work-east-wind-01-1x.jpg);
+  background-image: url(../images/work-east-wind-01-2x.webp);
   background-position: 55% center; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.east-wind {
-    background-image: url(../images/work-east-wind-01-2x.jpg); } }
+    background-image: url(../images/work-east-wind-01-2x.jpg);
+    background-image: url(../images/work-east-wind-01-2x.webp); } }
 
 .intro.eberhardt-design {
-  background-image: url(../images/work-eberhardt-design-01-1x.jpg); }
+  background-image: url(../images/work-eberhardt-design-01-1x.jpg);
+  background-image: url(../images/work-eberhardt-design-01-2x.webp); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.eberhardt-design {
-    background-image: url(../images/work-eberhardt-design-01-2x.jpg); } }
+    background-image: url(../images/work-eberhardt-design-01-2x.jpg);
+    background-image: url(../images/work-eberhardt-design-01-2x.webp); } }
 
 .intro.enservio-portal {
-  background-image: url(../images/work-enservio-portal-01-1x.jpg); }
+  background-image: url(../images/work-enservio-portal-01-1x.jpg);
+  background-image: url(../images/work-enservio-portal-01-2x.webp); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.enservio-portal {
-    background-image: url(../images/work-enservio-portal-01-2x.jpg); } }
+    background-image: url(../images/work-enservio-portal-01-2x.jpg);
+    background-image: url(../images/work-enservio-portal-01-2x.webp); } }
 
 .intro.mystuff {
-  background-image: url(../images/work-mystuff-01-1x.jpg); }
+  background-image: url(../images/work-mystuff-01-1x.jpg);
+  background-image: url(../images/work-mystuff-01-2x.webp); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.mystuff {
-    background-image: url(../images/work-mystuff-01-2x.jpg); } }
+    background-image: url(../images/work-mystuff-01-2x.jpg);
+    background-image: url(../images/work-mystuff-01-2x.webp); } }
 
 .intro.panera {
-  background-image: url(../images/work-panera-01-1x.jpg); }
+  background-image: url(../images/work-panera-01-1x.jpg);
+  background-image: url(../images/work-panera-01-2x.webp); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.panera {
-    background-image: url(../images/work-panera-01-2x.jpg); } }
+    background-image: url(../images/work-panera-01-2x.jpg);
+    background-image: url(../images/work-panera-01-2x.webp); } }
 
 .intro.transferx {
   background-image: url(../images/work-transferx-01-1x.jpg);
+  background-image: url(../images/work-transferx-01-2x.webp);
   background-position: 35% center; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .intro.transferx {
-    background-image: url(../images/work-transferx-01-2x.jpg); } }
+    background-image: url(../images/work-transferx-01-2x.jpg);
+    background-image: url(../images/work-transferx-01-2x.webp); } }
 
 .details h1 {
   display: none; }
