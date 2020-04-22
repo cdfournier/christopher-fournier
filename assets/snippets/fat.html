@@ -1,5 +1,4 @@
 <!-- UPDATE CANONICAL LINKS ON EACH PAGE -->
-
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44441011-2"></script>
@@ -78,6 +77,27 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+
+<!-- SCRIPT BLOCK WITH HEADROOM -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/modernizr.min.js" async></script>
+    <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/headroom.js"></script>
+    <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/aos.js"></script>
+    <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/main.js"></script>
+    <script>
+      AOS.init({duration: 600});
+    </script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
+    </script>
+  </body>
+</html>
+
+
+<!-- SCRIPT BLOCK WITHOUT HEADROOM -->
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://chris.blackcoffeeshoppe.com/assets/scripts/modernizr.min.js" async></script>

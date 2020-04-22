@@ -10,6 +10,27 @@
   </head>
   <body data-aos="fade">
 
+
+<!-- SCRIPT BLOCK WITH HEADROOM -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../assets/scripts/modernizr.min.js" async></script>
+    <script src="../assets/scripts/headroom.js"></script>
+    <script src="../assets/scripts/aos.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <script>
+      AOS.init({duration: 600});
+    </script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
+    </script>
+  </body>
+</html>
+
+
+<!-- SCRIPT BLOCK WITHOUT HEADROOM -->
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/scripts/modernizr.min.js" async></script>
