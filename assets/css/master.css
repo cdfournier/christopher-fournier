@@ -1103,12 +1103,14 @@ header.welcome {
     padding: 2rem 2rem 0 1rem; } }
 
 @media (min-width: 46rem) {
+  .details.enservio-portal article .text:nth-of-type(3n) {
+    padding: 2rem 1rem 0 2rem; }
   .details.enservio-portal article figure:nth-of-type(3n) {
     padding: 2rem 1rem 0 2rem; }
   .details.enservio-portal article figure:nth-of-type(4n) {
     padding: 2rem 2rem 0 1rem; }
-  .details.enservio-portal article .text:nth-of-type(3n) {
-    padding: 2rem 1rem 0 2rem; } }
+  .details.enservio-portal article figure:nth-of-type(7n) {
+    padding: 2rem 2rem 0 1rem; } }
 
 @media (min-width: 46rem) {
   .details.panera article figure:nth-of-type(5n),
