@@ -345,16 +345,16 @@ figcaption {
       flex-direction: column;
       width: 100%;
       padding: 2rem 0 0; }
-      .favorite-projects ul li figure {
+      .favorite-projects ul li a figure {
         display: block;
         width: 100%;
         overflow: hidden;
         margin: 0;
         padding: 0; }
-        .favorite-projects ul li figure a picture {
+        .favorite-projects ul li a figure picture {
           overflow: hidden;
           border-radius: 0.25rem; }
-          .favorite-projects ul li figure a picture source, .favorite-projects ul li figure a picture img {
+          .favorite-projects ul li a figure picture source, .favorite-projects ul li a figure picture img {
             -webkit-transition: all 2.5s ease 0s;
             -moz-transition: all 2.5s ease 0s;
             -ms-transition: all 2.5s ease 0s;
@@ -365,33 +365,32 @@ figcaption {
             -ms-transform: scale(1);
             -o-transform: scale(1);
             transform: scale(1); }
-        .favorite-projects ul li figure a:hover picture source, .favorite-projects ul li figure a:hover picture img, .favorite-projects ul li figure a:focus picture source, .favorite-projects ul li figure a:focus picture img {
+        .favorite-projects ul li a figure picture:hover source, .favorite-projects ul li a figure picture:hover img, .favorite-projects ul li a figure picture:focus source, .favorite-projects ul li a figure picture:focus img {
           -webkit-transform: scale(1.25);
           -moz-transform: scale(1.25);
           -ms-transform: scale(1.25);
           -o-transform: scale(1.25);
           transform: scale(1.25); }
-        .favorite-projects ul li figure figcaption {
+        .favorite-projects ul li a figure figcaption {
           display: block;
           margin: 0;
-          padding: 0; }
-          .favorite-projects ul li figure figcaption a {
-            font-family: "Merriweather", serif;
-            font-size: 1.333rem;
-            line-height: 1.5;
-            -webkit-transition: all 0.25s ease 0s;
-            -moz-transition: all 0.25s ease 0s;
-            -ms-transition: all 0.25s ease 0s;
-            -o-transition: all 0.25s ease 0s;
-            transition: all 0.25s ease 0s; }
-            .favorite-projects ul li figure figcaption a span {
-              display: block;
-              width: 100%;
-              margin: 1rem 0;
-              font-family: "metropolis-bold", sans-serif;
-              font-size: 0.8rem;
-              text-transform: uppercase; }
-        .favorite-projects ul li figure figcaption a:hover, .favorite-projects ul li figure figcaption a:focus {
+          padding: 0;
+          font-family: "Merriweather", serif;
+          font-size: 1.333rem;
+          line-height: 1.5;
+          -webkit-transition: all 0.25s ease 0s;
+          -moz-transition: all 0.25s ease 0s;
+          -ms-transition: all 0.25s ease 0s;
+          -o-transition: all 0.25s ease 0s;
+          transition: all 0.25s ease 0s; }
+          .favorite-projects ul li a figure figcaption span {
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+            font-family: "metropolis-bold", sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase; }
+        .favorite-projects ul li a figure figcaption:hover, .favorite-projects ul li a figure figcaption:focus {
           color: #e85c45; }
     .favorite-projects ul li::after {
       display: block;

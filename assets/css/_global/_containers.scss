@@ -49,13 +49,13 @@ figcaption {
       flex-direction: column;
       width: 100%;
       padding: 2rem 0 0;
-      figure {
+      a figure {
         display: block;
         width: 100%;
         overflow: hidden;
         margin: 0;
         padding: 0;
-        a picture {
+        picture {
           overflow: hidden;
           border-radius: 0.25rem;
           source, img {
@@ -63,7 +63,7 @@ figcaption {
             @include transform(scale(1));
           }
         }
-        a:hover picture, a:focus picture {
+        picture:hover, picture:focus {
           source, img {
             @include transform(scale(1.25));
           }
@@ -72,22 +72,20 @@ figcaption {
           display: block;
           margin: 0;
           padding: 0;
-          a{
-            font-family: $font-serif;
-            font-size: 1.333rem;
-            line-height: 1.5;
-            @include transition(all, 0.25s, ease, 0s);
-            span {
-              display: block;
-              width: 100%;
-              margin: 1rem 0;
-              font-family: $font-bold;
-              font-size: 0.8rem;
-              text-transform: uppercase;
-            }
+          font-family: $font-serif;
+          font-size: 1.333rem;
+          line-height: 1.5;
+          @include transition(all, 0.25s, ease, 0s);
+          span {
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+            font-family: $font-bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
           }
         }
-        figcaption a:hover, figcaption a:focus {color: $orange;}
+        figcaption:hover, figcaption:focus {color: $orange;}
       }
     }
     li::after {
