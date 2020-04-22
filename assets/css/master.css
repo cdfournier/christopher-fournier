@@ -43,7 +43,12 @@ html {
   font-style: normal;
   font-weight: 300;
   line-height: 1.25;
-  color: #384332; }
+  color: #384332;
+  scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
 
 body, .body {
   width: 100%;
@@ -147,6 +152,9 @@ small {
   line-height: 2;
   text-transform: uppercase; }
 
+.visuallyhidden {
+  display: none; }
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -234,204 +242,6 @@ header nav ul {
 
 footer nav ul {
   justify-content: center; }
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  max-height: 0;
-  background-color: #f9fbfd;
-  -webkit-transition: all 0.25s ease 0s;
-  -moz-transition: all 0.25s ease 0s;
-  -ms-transition: all 0.25s ease 0s;
-  -o-transition: all 0.25s ease 0s;
-  transition: all 0.25s ease 0s;
-  -webkit-transform: translateY(-25vh);
-  -moz-transform: translateY(-25vh);
-  -ms-transform: translateY(-25vh);
-  -o-transform: translateY(-25vh);
-  transform: translateY(-25vh); }
-  .projects-list nav {
-    width: 100%;
-    height: 100%; }
-    .projects-list nav ul {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      flex-wrap: nowrap;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      list-style-type: none; }
-      .projects-list nav ul li {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        height: calc(100% / 8);
-        margin: 0;
-        padding: 0 2rem;
-        font-family: "metropolis-bold", sans-serif;
-        font-size: 1.25rem;
-        line-height: 1;
-        text-align: left;
-        text-transform: uppercase;
-        color: #384332; }
-        .projects-list nav ul li a {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: auto;
-          height: 100%;
-          font-family: "metropolis-bold", sans-serif;
-          font-size: 1.25rem;
-          line-height: 1;
-          text-align: left;
-          text-transform: uppercase;
-          cursor: pointer; }
-        .projects-list nav ul li a:hover, .projects-list nav ul li a:focus {
-          color: #ffffff; }
-        .projects-list nav ul li span {
-          width: 40%;
-          padding: 0 0 0 1rem;
-          font-family: "metropolis-regular", sans-serif;
-          font-size: 0.75rem;
-          text-align: left; }
-
-.projects-list.show {
-  max-height: 100vh;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0); }
-
-.projects-list nav ul li.close {
-  height: auto;
-  padding: 0 2rem 1rem; }
-  .projects-list nav ul li.close a.close--projects {
-    -webkit-transition: padding 0.25s ease 0s;
-    -moz-transition: padding 0.25s ease 0s;
-    -ms-transition: padding 0.25s ease 0s;
-    -o-transition: padding 0.25s ease 0s;
-    transition: padding 0.25s ease 0s; }
-    .projects-list nav ul li.close a.close--projects svg {
-      display: grid;
-      width: auto;
-      height: 1.5rem;
-      fill: #384332;
-      -webkit-transition: all 0.25s ease 0s;
-      -moz-transition: all 0.25s ease 0s;
-      -ms-transition: all 0.25s ease 0s;
-      -o-transition: all 0.25s ease 0s;
-      transition: all 0.25s ease 0s; }
-
-.projects-list nav ul li.all-projects a {
-  align-items: center;
-  flex-direction: row; }
-  .projects-list nav ul li.all-projects a svg {
-    display: grid;
-    width: auto;
-    height: 1.25rem;
-    padding: 0 0 0 0.5rem;
-    fill: #384332;
-    -webkit-transition: padding 0.25s ease 0s;
-    -moz-transition: padding 0.25s ease 0s;
-    -ms-transition: padding 0.25s ease 0s;
-    -o-transition: padding 0.25s ease 0s;
-    transition: padding 0.25s ease 0s; }
-
-.no-touch .projects-list nav ul li.close a:hover, .no-touch .projects-list nav ul li.close a:focus {
-  color: #e85c45; }
-
-.no-touch .projects-list nav ul li.delta-design:hover, .no-touch .projects-list nav ul li.delta-design:focus {
-  background-color: #df3a32; }
-
-.no-touch .projects-list nav ul li.east-wind:hover, .no-touch .projects-list nav ul li.east-wind:focus {
-  background-color: #552a80; }
-
-.no-touch .projects-list nav ul li.eberhardt-design:hover, .no-touch .projects-list nav ul li.eberhardt-design:focus {
-  background-color: #ffe151; }
-
-.no-touch .projects-list nav ul li.enservio-portal:hover, .no-touch .projects-list nav ul li.enservio-portal:focus {
-  background-color: #2e84ed; }
-
-.no-touch .projects-list nav ul li.mystuff:hover, .no-touch .projects-list nav ul li.mystuff:focus {
-  background-color: #cd2183; }
-
-.no-touch .projects-list nav ul li.panera:hover, .no-touch .projects-list nav ul li.panera:focus {
-  background-color: #4c753f; }
-
-.no-touch .projects-list nav ul li.transferx:hover, .no-touch .projects-list nav ul li.transferx:focus {
-  background-color: #0d1e27; }
-
-.no-touch .projects-list nav ul li.delta-design:hover a, .no-touch .projects-list nav ul li.delta-design:focus a {
-  color: #eeeeee; }
-
-.no-touch .projects-list nav ul li.east-wind:hover a, .no-touch .projects-list nav ul li.east-wind:focus a {
-  color: #eeeaf2; }
-
-.no-touch .projects-list nav ul li.eberhardt-design:hover a, .no-touch .projects-list nav ul li.eberhardt-design:focus a {
-  color: #665a20; }
-
-.no-touch .projects-list nav ul li.enservio-portal:hover a, .no-touch .projects-list nav ul li.enservio-portal:focus a {
-  color: #eaf3fd; }
-
-.no-touch .projects-list nav ul li.mystuff:hover a, .no-touch .projects-list nav ul li.mystuff:focus a {
-  color: #fae9f3; }
-
-.no-touch .projects-list nav ul li.panera:hover a, .no-touch .projects-list nav ul li.panera:focus a {
-  color: #e9f0e5; }
-
-.no-touch .projects-list nav ul li.transferx:hover a, .no-touch .projects-list nav ul li.transferx:focus a {
-  color: #f0f5f8; }
-
-.no-touch .projects-list nav ul li:hover a, .no-touch .projects-list nav ul li:focus a {
-  opacity: 0.5; }
-
-.no-touch .projects-list nav ul li.all-projects:hover a, .no-touch .projects-list nav ul li.all-projects:focus a {
-  opacity: 1; }
-
-.no-touch .projects-list nav ul li.delta-design:hover a:hover, .no-touch .projects-list nav ul li.delta-design:focus a:hover,
-.no-touch .projects-list nav ul li.delta-design:hover a:focus, .no-touch .projects-list nav ul li.delta-design:focus a:focus,
-.no-touch .projects-list nav ul li.east-wind:hover a:hover, .no-touch .projects-list nav ul li.east-wind:focus a:hover,
-.no-touch .projects-list nav ul li.east-wind:hover a:focus, .no-touch .projects-list nav ul li.east-wind:focus a:focus,
-.no-touch .projects-list nav ul li.eberhardt-design:hover a:hover, .no-touch .projects-list nav ul li.eberhardt-design:focus a:hover,
-.no-touch .projects-list nav ul li.eberhardt-design:hover a:focus, .no-touch .projects-list nav ul li.eberhardt-design:focus a:focus,
-.no-touch .projects-list nav ul li.enservio-portal:hover a:hover, .no-touch .projects-list nav ul li.enservio-portal:focus a:hover,
-.no-touch .projects-list nav ul li.enservio-portal:hover a:focus, .no-touch .projects-list nav ul li.enservio-portal:focus a:focus,
-.no-touch .projects-list nav ul li.mystuff:hover a:hover, .no-touch .projects-list nav ul li.mystuff:focus a:hover,
-.no-touch .projects-list nav ul li.mystuff:hover a:hover, .no-touch .projects-list nav ul li.mystuff:focus a:hover,
-.no-touch .projects-list nav ul li.panera:hover a:hover, .no-touch .projects-list nav ul li.panera:focus a:hover,
-.no-touch .projects-list nav ul li.panera:hover a:focus, .no-touch .projects-list nav ul li.panera:focus a:focus,
-.no-touch .projects-list nav ul li.transferx:hover a:hover, .no-touch .projects-list nav ul li.transferx:focus a:hover,
-.no-touch .projects-list nav ul li.transferx:hover a:focus, .no-touch .projects-list nav ul li.transferx:focus a:focus {
-  color: #ffffff;
-  opacity: 1; }
-
-.no-touch .projects-list nav ul li.close:hover a, .no-touch .projects-list nav ul li.close:focus a {
-  opacity: 1; }
-
-.no-touch .projects-list nav ul li.close a.close--projects:hover svg,
-.no-touch .projects-list nav ul li.close a.close--projects:focus svg {
-  fill: #e85c45; }
-
-.no-touch .projects-list nav ul li.all-projects a:hover, .no-touch .projects-list nav ul li.all-projects a:focus {
-  color: #e85c45;
-  opacity: 1; }
-  .no-touch .projects-list nav ul li.all-projects a:hover svg, .no-touch .projects-list nav ul li.all-projects a:focus svg {
-    padding: 0 0 0 1rem;
-    fill: #e85c45; }
 
 header {
   display: flex;
@@ -612,6 +422,36 @@ figcaption {
     justify-content: space-between; }
     .favorite-projects ul li, .favorite-projects ul li:nth-of-type(even), .favorite-projects ul li:nth-of-type(odd) {
       width: calc(34% - 2rem); } }
+
+.skip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; }
+  .skip a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    opacity: 0;
+    font-family: "metropolis-bold", sans-serif;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s; }
+  .skip a:focus {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    opacity: 1;
+    color: #384332; }
 
 header.welcome {
   justify-content: center;

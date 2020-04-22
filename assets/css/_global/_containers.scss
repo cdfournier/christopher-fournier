@@ -129,3 +129,34 @@ figcaption {
     }
   }
 }
+
+
+// SKIP LINKS
+.skip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $white;
+    opacity: 0;
+    font-family: $font-bold;
+    @include transition(all, 0.25s, ease);
+  }
+  a:focus {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    opacity: 1;
+    color: $green;
+  }
+}
