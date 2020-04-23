@@ -14,7 +14,7 @@ header.welcome {
     text-align: center;
     color: $green;
     background-image: url(../images/profile-1x.png);
-    background-position: bottom right;
+    background-position: bottom left;
     background-repeat: no-repeat;
     background-size: 45vh;
     @include transition (all, 0.25s, ease);
@@ -60,10 +60,10 @@ header.welcome {
     .bio {
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       padding: 4rem 2rem;
       text-align: left;
-      background-size: 40vh;
+      background-size: 45vw;
       .logo {
         padding: 0 2rem 0 0;
       }
@@ -91,22 +91,35 @@ header.welcome {
   }
 }
 
+@media (min-width: 90rem) {
+  header.welcome {
+    .bio {
+      justify-content: center;
+      background-size: 40vw;
+    }
+  }
+}
+
 
 /* CONTACT */
 .home.contact {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: right;
-  color: $green;
-  background: $cream;
-  p a.button {background-color: $cream;}
-  p a.button:hover, p a.button:focus {
-    color: $cream;
+  text-align: left;
+  color: $white;
+  background: $green;
+  p a.button {
+    border-color: $white;
+    color: $white;
     background-color: $green;
+  }
+  p a.button:hover, p a.button:focus {
+    color: $green;
+    background-color: $white;
   }
 }
 
