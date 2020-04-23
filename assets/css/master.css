@@ -134,7 +134,7 @@ p a, li a, small a {
   color: #384332; }
 
 p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
-  color: #e85c45; }
+  color: #af4433; }
 
 strong {
   display: block;
@@ -206,7 +206,7 @@ nav {
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
-    color: #e85c45;
+    color: #af4433;
     -webkit-transition: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
     -ms-transition: all 0.25s ease 0s;
@@ -218,7 +218,7 @@ nav {
     font-family: "metropolis-bold", sans-serif;
     color: #384332; }
   nav ul li a:hover, nav ul li a:focus {
-    color: #e85c45; }
+    color: #af4433; }
 
 @media (min-width: 30rem) {
   nav ul li, nav ul li a {
@@ -391,7 +391,7 @@ figcaption {
             font-size: 0.8rem;
             text-transform: uppercase; }
         .favorite-projects ul li a figure figcaption:hover, .favorite-projects ul li a figure figcaption:focus {
-          color: #e85c45; }
+          color: #af4433; }
     .favorite-projects ul li::after {
       display: block;
       width: 100%;
@@ -574,7 +574,7 @@ header.welcome {
         transition: padding 0.25s ease 0s; }
   .home figure figcaption p a:hover span svg, .home figure figcaption p a:focus span svg {
     padding: 0 0 0 0.5rem;
-    fill: #e85c45; }
+    fill: #af4433; }
 
 .home figure:before {
   display: block;
@@ -1059,7 +1059,7 @@ header.resume {
         font-size: 0.875rem;
         text-overflow: ellipsis;
         white-space: nowrap;
-        color: #e85c45; }
+        color: #af4433; }
       header.resume .contact-me ul li a:hover, header.resume .contact-me ul li a:focus {
         color: #384332; }
 
@@ -1174,9 +1174,9 @@ main.resume article.history section {
     font-size: 1rem;
     line-height: 1;
     text-transform: uppercase;
-    color: #e85c45; }
+    color: #af4433; }
     main.resume article.history section h3 a {
-      color: #e85c45; }
+      color: #af4433; }
     main.resume article.history section h3 a:hover, main.resume article.history section h3 a:focus {
       color: #384332; }
     main.resume article.history section h3 span {
@@ -1259,7 +1259,7 @@ main.resume section.skills ul {
       display: block;
       width: 0;
       height: inherit;
-      background-color: #e85c45;
+      background-color: #af4433;
       background-color: #eef1e8;
       background-color: #384332;
       -webkit-transition: all 0.5s ease 0s;
@@ -1337,7 +1337,7 @@ main.resume section.contact-me {
       font-size: 0.875rem;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #e85c45; }
+      color: #af4433; }
     main.resume section.contact-me ul li a:hover, main.resume section.contact-me ul li a:focus {
       color: #384332; }
 
@@ -1374,7 +1374,7 @@ body.error {
     body.error footer nav ul li a {
       color: #ffffff; }
     body.error footer nav ul li a:hover, body.error footer nav ul li a:focus {
-      color: #e85c45; }
+      color: #af4433; }
 
 .no-touch body.error {
   background-attachment: fixed; }
