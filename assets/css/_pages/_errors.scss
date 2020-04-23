@@ -4,7 +4,7 @@ body.error {
   flex-direction: column;
   justify-content: flex-end;
   background-color: $black;
-  background-image: url(https://chris.blackcoffeeshoppe.com/images/banner-error-1x.jpg);
+  background-image: url(../images/banner-error-1x.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,5 +31,5 @@ body.error {
 .no-touch body.error {background-attachment: fixed;}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  body.error {background-image: url(https://chris.blackcoffeeshoppe.com/images/banner-error-2x.jpg);}
+  body.error {background-image: url(../images/banner-error-2x.jpg);}
 }
