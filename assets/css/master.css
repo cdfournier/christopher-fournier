@@ -525,7 +525,7 @@ header.welcome {
   header.welcome .bio {
     background-image: url(../images/profile-2x.png); } }
 
-@media (min-width: 90rem) {
+@media (min-width: 88rem) {
   header.welcome .bio {
     justify-content: center;
     background-size: 40vw; } }
@@ -541,6 +541,9 @@ header.welcome {
   text-align: left;
   color: #ffffff;
   background: #384332; }
+  .home.contact p:first-of-type {
+    max-width: 32rem;
+    font-family: "Merriweather", serif; }
   .home.contact p a.button {
     border-color: #ffffff;
     color: #ffffff;
@@ -548,6 +551,14 @@ header.welcome {
   .home.contact p a.button:hover, .home.contact p a.button:focus {
     color: #384332;
     background-color: #ffffff; }
+
+@media (min-width: 46rem) {
+  .home.contact p:first-of-type {
+    font-size: 1.25rem; } }
+
+@media (min-width: 88rem) {
+  .home.contact p:first-of-type {
+    max-width: 44rem; } }
 
 .home figure {
   min-height: 100vh; }

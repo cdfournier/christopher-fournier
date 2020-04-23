@@ -91,7 +91,7 @@ header.welcome {
   }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 88rem) {
   header.welcome {
     .bio {
       justify-content: center;
@@ -112,6 +112,10 @@ header.welcome {
   text-align: left;
   color: $white;
   background: $green;
+  p:first-of-type {
+    max-width: 32rem;
+    font-family: $font-serif;
+  }
   p a.button {
     border-color: $white;
     color: $white;
@@ -120,6 +124,18 @@ header.welcome {
   p a.button:hover, p a.button:focus {
     color: $green;
     background-color: $white;
+  }
+}
+
+@media (min-width: 46rem) {
+  .home.contact {
+    p:first-of-type {font-size: 1.25rem;}
+  }
+}
+
+@media (min-width: 88rem) {
+  .home.contact {
+    p:first-of-type {max-width: 44rem;}
   }
 }
 
