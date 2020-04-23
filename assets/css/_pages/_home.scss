@@ -14,7 +14,6 @@ header.welcome {
     text-align: center;
     color: $green;
     background-image: url(../images/profile-1x.png);
-    background-image: url(../images/profile-2x.webp);
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 45vh;
@@ -88,7 +87,6 @@ header.welcome {
   header.welcome {
     .bio {
       background-image: url(../images/profile-2x.png);
-      background-image: url(../images/profile-2x.webp);
     }
   }
 }
@@ -124,6 +122,30 @@ header.welcome {
       margin: 0 auto 1rem;
       source {width: 100%;}
       img {width: 100%;}
+    }
+    figcaption {
+      p a {
+        display: inline-block;
+        margin: 1rem 0 0;
+        span {
+          display: inline-block;
+          margin-bottom: -0.425rem;
+          height: 1.5rem;
+          white-space: nowrap;
+          svg {
+            display: grid;
+            width: auto;
+            height: 100%;
+            padding: 0;
+            fill: $green;
+            @include transition (padding, 0.25s, ease);
+          }
+        }
+      }
+      p a:hover span svg, p a:focus span svg {
+        padding: 0 0 0 0.5rem;
+        fill: $orange;
+      }
     }
   }
 }
