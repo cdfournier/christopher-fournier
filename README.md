@@ -2,7 +2,6 @@
   <img src="https://chris.blackcoffeeshoppe.com/assets/images/logo.png">
 </p>
 
-#Pages
 - [Home](https://chris.blackcoffeeshoppe.com/index.html)
 - [Resume](https://chris.blackcoffeeshoppe.com/resume/index.html)
 - [Projects](https://chris.blackcoffeeshoppe.com/projects/index.html)
