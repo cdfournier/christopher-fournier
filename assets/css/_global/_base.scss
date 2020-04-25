@@ -13,7 +13,7 @@ html {
   font-family: $font-regular;
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-  font-size: 16px;
+  font-size: 100%;
   font-style: normal;
   font-weight: 300;
   line-height: 1.25;
@@ -25,6 +25,18 @@ html {
 	html {
 		scroll-behavior: auto;
 	}
+}
+
+@media (min-width: 46rem) {
+  html {
+    font-size: 110%;
+  }
+}
+
+@media (min-width: 88rem) {
+  html {
+    font-size: 125%;
+  }
 }
 
 body, .body {

@@ -39,7 +39,7 @@ html {
   font-family: "metropolis-regular", sans-serif;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 16px;
+  font-size: 100%;
   font-style: normal;
   font-weight: 300;
   line-height: 1.25;
@@ -49,6 +49,14 @@ html {
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto; } }
+
+@media (min-width: 46rem) {
+  html {
+    font-size: 110%; } }
+
+@media (min-width: 88rem) {
+  html {
+    font-size: 125%; } }
 
 body, .body {
   width: 100%;
@@ -147,7 +155,7 @@ small {
 .eyebrow {
   display: block;
   font-family: "metropolis-bold", sans-serif;
-  font-size: 0.75rem;
+  font-size: 25%;
   letter-spacing: 0.5px;
   line-height: 2;
   text-transform: uppercase; }
@@ -572,12 +580,11 @@ header.welcome {
     .home figure picture img {
       width: 100%; }
   .home figure figcaption p a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     margin: 1rem 0 0; }
     .home figure figcaption p a span {
       display: inline-block;
-      display: none;
-      margin-bottom: -0.425rem;
       height: 1.5rem;
       white-space: nowrap; }
       .home figure figcaption p a span svg {
@@ -795,7 +802,7 @@ header.welcome {
 
 @media (min-width: 46rem) {
   .intro article h2 {
-    font-size: 3.5rem; } }
+    font-size: 4rem; } }
 
 .intro.delta-design {
   background-image: url(../images/work-delta-design-01-1x.jpg); }
