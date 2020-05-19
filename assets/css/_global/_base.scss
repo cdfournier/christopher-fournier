@@ -1,0 +1,109 @@
+@import "mixins";
+@import "colors";
+
+
+// FONTS
+@font-face {
+  font-family: "metropolis-regular";
+  font-display: swap;
+    src: url("../fonts/metropolis/metropolis-regular.eot");
+    src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-medium";
+  font-display: swap;
+    src: url("../fonts/metropolis/metropolis-medium.eot");
+    src: url("../fonts/metropolis/metropolis-medium.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-medium.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-medium.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "metropolis-bold";
+  font-display: swap;
+    src: url("../fonts/metropolis/metropolis-bold.eot");
+    src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
+         url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"),
+         url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-rg {font-family: "metropolis-regular", sans-serif;}
+
+@mixin font-md {font-family: "metropolis-medium", sans-serif;}
+
+@mixin font-bo {font-family: "metropolis-bold", sans-serif;}
+
+
+
+// BASE
+html {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @include font-rg;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+  font-size: 90%;
+  line-height: 1.1;
+  color: $green;
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {scroll-behavior: auto;}
+}
+
+@media (min-width: 23.4375rem) {
+  html {font-size: 100%;}
+}
+
+@media (min-width: 46rem) {
+  html {font-size: 110%;}
+}
+
+@media (min-width: 88rem) {
+  html {font-size: 140%;}
+}
+
+body, .body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}

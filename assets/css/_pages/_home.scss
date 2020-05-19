@@ -1,0 +1,177 @@
+// WELCOME
+.welcome {
+  background-image: url(../images/profile-1x.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 45vh;
+  figure {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 2rem 2rem 0;
+    border: none;
+    picture {
+      width: 8rem;
+      margin: 0 auto;
+      svg {fill: $green;}
+    }
+    figcaption {text-align: center;}
+  }
+}
+
+@media (orientation: landscape) {
+  .welcome {
+    align-items: flex-end;
+    justify-content: center;
+    background-size: 40vw;
+    figure {
+      width: 74vw;
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  .welcome {
+    align-items: center;
+    justify-content: center;
+    background-size: 55vh;
+    figure {
+      width: 65vw;
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media (min-width: 46rem) and (orientation: landscape) {
+  .welcome {
+    background-size: 65vh;
+    figure {
+      padding: 2rem 2rem 0;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62rem) {
+  .welcome {
+    background-image: url(../images/profile-2x.png);
+  }
+}
+
+
+// CONTACT ME
+.home.contact {
+  .text {
+    padding: 2rem;
+    @include font-md;
+    text-align: center;
+    color: white;
+    background: $green;
+    p {
+      padding: 0;
+      line-height: 1.75;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .home.contact {
+    .text {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  .home.contact {
+    .text {
+      text-align: left;
+      padding: 4rem;
+      p {font-size: 1.2rem;}
+    }
+  }
+}
+
+
+// PROJECT GRID
+.home.project-grid {
+  figure {
+    flex-direction: column-reverse;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-bottom: 1px solid $warm-gray;
+    picture {
+      width: 30%;
+      margin: 0 auto;
+    }
+    picture:hover, picture:focus {
+      source, img {
+        @include transform(scale(1));
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .home.project-grid {
+    figure {
+      flex-direction: row-reverse;
+      justify-content: center;
+      picture {
+        margin: 0;
+        padding: 0 2rem 0 0;
+      }
+      figcaption.lg + picture {width: calc(30% - 1rem);}
+    }
+    figure.reverse {
+      flex-direction: row;
+      picture {
+        margin: 0;
+        padding: 0 0 0 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  .home.project-grid {
+    figure {
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: center;
+      width: calc(100% - 8rem);
+      padding: 4rem 0;
+      picture {
+        margin: 0;
+      }
+      figcaption.lg {
+        width: calc(70% - 2rem);
+        margin: 0;
+        padding: 0 0 0 2rem;
+      }
+      figcaption.lg + picture {width: calc(30% - 2rem);}
+    }
+    figure.reverse {
+      flex-direction: row;
+      picture {
+        margin: 0;
+      }
+      figcaption.lg {
+        padding: 0 2rem 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 46rem) and (orientation: landscape) {
+  .home.project-grid {
+    figure {
+      picture {padding: 0;}
+      figcaption.lg {padding: 0 0 0 4rem;}
+    }
+    figure.reverse {
+      picture {padding: 0;}
+      figcaption.lg {padding: 0 4rem 0 0;}
+    }
+  }
+}

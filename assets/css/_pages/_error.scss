@@ -1,0 +1,35 @@
+// ERROR PAGE
+body.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $black;
+  background-image: url(../images/banner-error-1x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .error {
+    padding: 2rem;
+    color: $white;
+    .button {
+      border-color: $white;
+      color: $white;
+      background-color: transparent;
+    }
+    .button:hover, .button:focus {
+      color: $green;
+      background-color: $white;
+    }
+  }
+  footer {
+    color: $white;
+    nav ul li a {color: $white;}
+    nav ul li a:hover, nav ul li a:focus {color: $orange;}
+  }
+}
+
+.no-touch body.error {background-attachment: fixed;}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body.error {background-image: url(../images/banner-error-2x.jpg);}
+}
