@@ -1,0 +1,32 @@
+// HEADER
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  .logo {display: none;}
+}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  header {
+  }
+}
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0
+}
+
+.headroom {
+  @include transition (all, 0.25s, ease);
+  will-change: transform
+}
+
+.headroom--pinned {@include transform (translateY(0));}
+
+.headroom--unpinned {@include transform (translateY(-100%));}

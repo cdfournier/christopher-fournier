@@ -1,0 +1,280 @@
+::-moz-selection {
+  color: white;
+  background: #384332; }
+
+::selection {
+  color: white;
+  background: #384332; }
+
+@font-face {
+  font-family: "metropolis-regular";
+  font-display: swap;
+  src: url("../fonts/metropolis/metropolis-regular.eot");
+  src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-regular.woff") format("woff"), url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"), url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "metropolis-medium";
+  font-display: swap;
+  src: url("../fonts/metropolis/metropolis-medium.eot");
+  src: url("../fonts/metropolis/metropolis-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-medium.woff") format("woff"), url("../fonts/metropolis/metropolis-medium.woff2") format("woff2"), url("../fonts/metropolis/metropolis-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "metropolis-bold";
+  font-display: swap;
+  src: url("../fonts/metropolis/metropolis-bold.eot");
+  src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-bold.woff") format("woff"), url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"), url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 100%;
+  line-height: 1.65;
+  color: #384332;
+  scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
+
+body, .body {
+  width: 100%;
+  height: auto;
+  min-height: 101vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0; }
+
+/* 
+  NOTES:  
+  All typography is set to a 1.200 Minor-Third type-scale
+*/
+h1, h2, h3, h4, h5 p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "metropolis-regular", sans-serif; }
+  h1 span, h2 span, h3 span, h4 span, h5 span {
+    display: block;
+    font-family: "metropolis-bold", sans-serif;
+    font-size: 40%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+
+h1 {
+  font-size: 2.488rem; }
+
+h2 {
+  font-size: 2.074rem; }
+
+h3 {
+  font-size: 1.728rem; }
+
+h4 {
+  font-size: 1.44rem; }
+
+h5 {
+  font-size: 1.2rem; }
+
+p {
+  max-width: 40rem;
+  padding: 1rem 0 0;
+  font-size: 1rem; }
+
+p a, li a, small a {
+  font-family: "metropolis-bold", sans-serif;
+  color: #384332; }
+
+p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
+  color: #af4433; }
+
+strong {
+  display: block;
+  font-family: "metropolis-bold", sans-serif; }
+
+small {
+  font-size: 0.833rem; }
+
+.xsmall {
+  font-size: 0.694rem; }
+
+.xxsmall {
+  font-size: 0.579rem; }
+
+.visuallyhidden {
+  display: none; }
+
+h2 + h3,
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {
+  padding: 0.4rem 0 0; }
+
+p + h1, p + h2, p + h3, p + h4, p + h5,
+ul + h1, ul + h2, ul + h3, ul + h4, ul + h5,
+ol + h1, ol + h2, ol + h3, ol + h4, ol + h5,
+dl + h1, dl + h2, dl + h3, dl + h4, dl + h5 {
+  padding: 1rem 0 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 1rem; }
+  header .logo {
+    display: none; }
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0; }
+
+.headroom {
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+  will-change: transform; }
+
+.headroom--pinned {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); }
+
+.headroom--unpinned {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "metropolis-regular", sans-serif; }
+  footer nav ul {
+    flex-wrap: wrap; }
+    footer nav ul li {
+      padding: 0.833rem 0.833rem 0; }
+    footer nav ul li a {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      fill: #384332; }
+      footer nav ul li a svg {
+        width: 100%;
+        height: 100%; }
+
+footer .logo {
+  width: 6rem;
+  margin: 0 auto; }
+  footer .logo svg {
+    fill: #384332; }
+
+footer small {
+  padding: 1rem 0 0;
+  text-align: center; }
+
+footer.error .logo svg {
+  fill: white; }
+
+nav {
+  width: 100%; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: inherit;
+    margin: auto;
+    padding: 0;
+    list-style-type: none; }
+  nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.833rem;
+    font-family: "metropolis-bold", sans-serif;
+    font-size: 0.833rem;
+    text-align: center;
+    color: #af4433;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s; }
+  nav ul li a {
+    font-family: "metropolis-bold", sans-serif;
+    color: #384332; }
+  nav ul li a:hover, nav ul li a:focus {
+    color: #af4433; }
+
+.skip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; }
+  .skip a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    opacity: 0;
+    font-family: "metropolis-bold", sans-serif;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s; }
+  .skip a:focus {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    opacity: 1;
+    color: #384332; }
