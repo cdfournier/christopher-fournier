@@ -8,9 +8,7 @@ footer {
   @include font-rg;
   nav ul {
     flex-wrap: wrap;
-    li {
-      padding: 0.833rem 0.833rem 0;
-    }
+    padding: 1rem 0 0;
     li a {
       display: grid;
       width: 2rem;

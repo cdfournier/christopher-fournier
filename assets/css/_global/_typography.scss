@@ -1,7 +1,7 @@
 // TYPOGRAPHY
 /* 
   NOTES:  
-  All typography is set to a 1.200 Minor-Third type-scale
+  All typography is set to a 1.250 Major-Third type-scale
 */
 
 h1, h2, h3, h4, h5 p {
@@ -13,24 +13,27 @@ h1, h2, h3, h4, h5 p {
 }
 
 h1, h2, h3, h4, h5 {
-  @include font-rg;
+  @include font-th;
+  line-height: 1.25;
   span {
     display: block;
     @include font-bo;
-    font-size: 40%;
-    letter-spacing: 0.5px;
+    @include font-ex;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 }
 
-h1 {font-size: 2.488rem;}
-h2 {font-size: 2.074rem;}
-h3 {font-size: 1.728rem;}
-h4 {font-size: 1.44rem;}
-h5 {font-size: 1.2rem;}
+h1 {font-size: 3.502rem;}
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
 
 p {
   max-width: 40rem;
+  margin: 0;
   padding: 1rem 0 0;
   font-size: 1rem;
 }
@@ -59,7 +62,7 @@ small {font-size: 0.833rem;}
 
 // CUSTOM SPACING
 h2 + h3,
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {padding: 0.4rem 0 0;}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p {padding: 0.5rem 0 0;}
 
 p + h1, p + h2, p + h3, p + h4, p + h5,
 ul + h1, ul + h2, ul + h3, ul + h4, ul + h5,
