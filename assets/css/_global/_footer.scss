@@ -19,6 +19,9 @@ footer {
       }
       fill: $green;
     }
+    li a:hover, li a:focus {
+      fill: $orange;
+    }
   }
 }
 

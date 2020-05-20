@@ -14,13 +14,14 @@ h1, h2, h3, h4, h5 p {
 
 h1, h2, h3, h4, h5 {
   @include font-th;
-  line-height: 1.25;
+  line-height: 1.125;
   span {
     display: block;
     @include font-bo;
     @include font-ex;
     font-size: 0.75rem;
     letter-spacing: 1px;
+    line-height: 1.5;
     text-transform: uppercase;
   }
 }
