@@ -14,8 +14,9 @@ nav {
     display: inline-block;
     margin: 0;
     padding: 0 0.833rem;
+    padding: 0 1rem;
     @include font-bo;
-    font-size: 0.833rem;
+//     font-size: 0.833rem;
     text-align: center;
 //     text-transform: uppercase;
     color: $orange;

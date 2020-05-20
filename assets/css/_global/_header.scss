@@ -14,6 +14,41 @@ header {
 
 @media (orientation: landscape), (min-width: 46rem) {
   header {
+    flex-direction: row;
+    .logo {
+      a {display: block;}
+      display: grid;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 10rem;
+      margin: 0;
+      padding: 0;
+      @include transition(all, 0.25s, ease);
+      @include transform (translateY(0));
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $green;
+        @include transition(all, 0.25s, ease);
+      }
+      svg path.background {
+        opacity: 0.75;
+        fill: white;
+      }
+      a:hover, a:focus {
+        svg {fill: $orange;}
+      }
+    }
+    nav {
+      ul {justify-content: flex-start;}
+    }
+  }
+}
+
+@media (orientation: landscape), (min-width: 62rem) {
+  header {
+    .logo {width: 12rem;}
   }
 }
 
@@ -33,3 +68,7 @@ header {
 .headroom--pinned {@include transform (translateY(0));}
 
 .headroom--unpinned {@include transform (translateY(-100%));}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  .headroom--unpinned .logo {@include transform (translateY(-100%));}
+}

@@ -1,43 +1,77 @@
 // FOOTER
 footer {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
   @include font-rg;
-  nav ul {
-    flex-wrap: wrap;
-    padding: 1rem 0 0;
-    li a {
-      display: grid;
-      width: 2rem;
-      height: 2rem;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
+  .logo {
+    a {display: block;}
+    width: 8rem;
+    margin: 0;
+    svg {
       fill: $green;
-    }
-    li a:hover, li a:focus {
-      fill: $orange;
+      @include transition(all, 0.25s, ease);
     }
   }
-}
-
-footer .logo {
-  width: 6rem;
-  margin: 0 auto;
-  svg {fill: $green;}
-}
-
-footer small {
-  padding: 1rem 0 0;
-  text-align: center;
+  nav {
+    width: auto;
+    min-width: 50%;
+    ul {
+      align-items: flex-end;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      li {padding: 0 0 1rem;}
+      ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        li {padding: 0 0 0 1rem;}
+        li a {
+          display: grid;
+          width: 1.75rem;
+          height: 1.75rem;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+          fill: $green;
+        }
+        li a:hover, li a:focus {
+          fill: $orange;
+        }
+      }
+    }
+  }
+  small {
+    padding: 1rem 0 0;
+    text-align: center;
+  }
 }
 
 footer.error {
   .logo {
     svg {fill: white;}
+  }
+}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  footer {
+    .logo {
+      width: 10rem;
+      a:hover, a:focus {
+        svg {fill: $orange;}
+      }
+    }
+    small {
+      width: 100%;
+      text-align: right;
+    }
   }
 }
