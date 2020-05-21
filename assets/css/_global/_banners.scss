@@ -1,0 +1,46 @@
+// BANNERS
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+  background-attachment: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+  }
+  .text {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    color: white;
+  }
+}
+
+
+// CUSTOM BANNER BACKGROUNDS
+.banner.projects-page {
+  background-image: url(../images/work-delta-design-08-1x.jpg);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner.projects-page {
+    background-image: url(../images/work-delta-design-08-2x.jpg);
+  }
+}

@@ -33,7 +33,7 @@ header {
         @include transition(all, 0.25s, ease);
       }
       svg path.background {
-        opacity: 0.75;
+//         opacity: 0.75;
         fill: white;
       }
       a:hover, a:focus {
