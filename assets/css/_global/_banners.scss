@@ -34,13 +34,36 @@
 }
 
 
-// CUSTOM BANNER BACKGROUNDS
+// CUSTOM BANNERS
+.banner.home-page {
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 0;
+  background-color: white;
+  background-image: url(../images/profile-1x.png);
+  background-position: left bottom;
+  background-size: calc(100vh / 2.75);
+  .logo {
+    width: 8rem;
+    margin: 2rem 0 0;
+    fill: $green;
+  }
+  .text {
+    position: relative;
+    padding: 1rem 2rem 0;
+    text-align: center;
+    color: $green;
+    p {padding: 0;}
+  }
+}
+
 .banner.projects-page {
   background-image: url(../images/work-delta-design-08-1x.jpg);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .banner.projects-page {
-    background-image: url(../images/work-delta-design-08-2x.jpg);
-  }
+  .banner.home-page {background-image: url(../images/profile-2x.png);}
+  .banner.projects-page {background-image: url(../images/work-delta-design-08-2x.jpg);}
 }

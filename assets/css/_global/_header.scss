@@ -16,8 +16,7 @@ header {
   header {
     flex-direction: row;
     .logo {
-      a {display: block;}
-      display: grid;
+      display: flex;
       position: absolute;
       top: 2rem;
       right: 2rem;
@@ -33,7 +32,6 @@ header {
         @include transition(all, 0.25s, ease);
       }
       svg path.background {
-//         opacity: 0.75;
         fill: white;
       }
       a:hover, a:focus {
