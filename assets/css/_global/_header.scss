@@ -15,6 +15,14 @@ header {
 @media (orientation: landscape), (min-width: 46rem) {
   header {
     flex-direction: row;
+    nav {
+      ul {justify-content: flex-start;}
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  header {
     .logo {
       display: flex;
       position: absolute;
@@ -37,9 +45,6 @@ header {
       a:hover, a:focus {
         svg {fill: $orange;}
       }
-    }
-    nav {
-      ul {justify-content: flex-start;}
     }
   }
 }

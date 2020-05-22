@@ -9,6 +9,18 @@
   padding: 2rem 2rem 0;
 }
 
+.xxl {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+}
+
+.xxl.start {align-items: flex-start;}
+
 @media (orientation: landscape), (min-width: 46rem) {
   .lg {width: calc(60% - 1rem);}
   .md {width: calc(50% - 1rem);}
@@ -18,7 +30,11 @@
     margin: 2rem 0 0;
     padding: 0;
   }
-  .no-touch .xl.hover, .no-touch .lg.hover, .no-touch .md.hover, .no-touch .sm.hover, .no-touch .xs.hover {
+  .xxl {
+    width: calc(100% + 8rem);
+    margin: 0 -2rem;
+  }
+  .no-touch .xxl.hover, .no-touch .xl.hover, .no-touch .lg.hover, .no-touch .md.hover, .no-touch .sm.hover, .no-touch .xs.hover {
     cursor: pointer;
     figure:hover, figure:focus {@include transform(translateY(-0.5rem));}
   }
@@ -42,7 +58,10 @@ section {
     padding: 0;
     color: $green;
     @include transition(all, 0.25s, ease, 0s);
-    figcaption {margin: 1rem 0 0;}
+    figcaption {
+      margin: 1rem 0 0;
+      @include transition(all, 0.25s, ease, 0s);
+    }
     picture {
       display: grid;
       overflow: hidden;
@@ -89,6 +108,12 @@ section {
       }
     }
   }
+}
+
+
+/* PROMOS */
+
+@media (orientation: landscape), (min-width: 4662rem) {
 }
 
 

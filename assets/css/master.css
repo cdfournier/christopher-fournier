@@ -245,39 +245,41 @@ header {
 @media (orientation: landscape), (min-width: 46rem) {
   header {
     flex-direction: row; }
-    header .logo {
-      display: flex;
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      width: 10rem;
-      margin: 0;
-      padding: 0;
+    header nav ul {
+      justify-content: flex-start; } }
+
+@media (min-width: 46rem) {
+  header .logo {
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 10rem;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+    header .logo svg {
+      width: 100%;
+      height: 100%;
+      fill: #384332;
       -webkit-transition: all 0.25s ease 0s;
       -moz-transition: all 0.25s ease 0s;
       -ms-transition: all 0.25s ease 0s;
       -o-transition: all 0.25s ease 0s;
-      transition: all 0.25s ease 0s;
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0); }
-      header .logo svg {
-        width: 100%;
-        height: 100%;
-        fill: #384332;
-        -webkit-transition: all 0.25s ease 0s;
-        -moz-transition: all 0.25s ease 0s;
-        -ms-transition: all 0.25s ease 0s;
-        -o-transition: all 0.25s ease 0s;
-        transition: all 0.25s ease 0s; }
-      header .logo svg path.background {
-        fill: white; }
-      header .logo a:hover svg, header .logo a:focus svg {
-        fill: #af4433; }
-    header nav ul {
-      justify-content: flex-start; } }
+      transition: all 0.25s ease 0s; }
+    header .logo svg path.background {
+      fill: white; }
+    header .logo a:hover svg, header .logo a:focus svg {
+      fill: #af4433; } }
 
 @media (orientation: landscape), (min-width: 62rem) {
   header .logo {
@@ -479,7 +481,7 @@ nav {
   position: relative;
   z-index: 15;
   width: 100%;
-  height: 50vh;
+  height: inherit;
   margin: 0;
   padding: 0;
   background-attachment: inherit;
@@ -503,34 +505,35 @@ nav {
     padding: 2rem;
     color: white; }
 
+.banner.tall {
+  min-height: 100vh; }
+
+.banner.short {
+  min-height: 50vh; }
+
 .banner.home-page {
-  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 100vh;
   padding: 0;
-  background-color: white;
-  background-image: url(../images/profile-1x.png);
-  background-position: left bottom;
-  background-size: calc(100vh / 2.75); }
+  background-color: white; }
   .banner.home-page .logo {
     width: 8rem;
-    margin: 2rem 0 0;
+    margin: 0 auto 1rem;
     fill: #384332; }
   .banner.home-page .text {
     position: relative;
-    padding: 1rem 2rem 0;
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
     color: #384332; }
     .banner.home-page .text p {
+      margin: 0 auto;
       padding: 0; }
 
 .banner.projects-page {
   background-image: url(../images/work-delta-design-08-1x.jpg); }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .banner.home-page {
-    background-image: url(../images/profile-2x.png); }
   .banner.projects-page {
     background-image: url(../images/work-delta-design-08-2x.jpg); } }
 
@@ -542,6 +545,18 @@ nav {
   width: 100%;
   margin: 0;
   padding: 2rem 2rem 0; }
+
+.xxl {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 2rem; }
+
+.xxl.start {
+  align-items: flex-start; }
 
 @media (orientation: landscape), (min-width: 46rem) {
   .lg {
@@ -555,9 +570,12 @@ nav {
   .xl, .lg, .md, .sm, .xs {
     margin: 2rem 0 0;
     padding: 0; }
-  .no-touch .xl.hover, .no-touch .lg.hover, .no-touch .md.hover, .no-touch .sm.hover, .no-touch .xs.hover {
+  .xxl {
+    width: calc(100% + 8rem);
+    margin: 0 -2rem; }
+  .no-touch .xxl.hover, .no-touch .xl.hover, .no-touch .lg.hover, .no-touch .md.hover, .no-touch .sm.hover, .no-touch .xs.hover {
     cursor: pointer; }
-    .no-touch .xl.hover figure:hover, .no-touch .xl.hover figure:focus, .no-touch .lg.hover figure:hover, .no-touch .lg.hover figure:focus, .no-touch .md.hover figure:hover, .no-touch .md.hover figure:focus, .no-touch .sm.hover figure:hover, .no-touch .sm.hover figure:focus, .no-touch .xs.hover figure:hover, .no-touch .xs.hover figure:focus {
+    .no-touch .xxl.hover figure:hover, .no-touch .xxl.hover figure:focus, .no-touch .xl.hover figure:hover, .no-touch .xl.hover figure:focus, .no-touch .lg.hover figure:hover, .no-touch .lg.hover figure:focus, .no-touch .md.hover figure:hover, .no-touch .md.hover figure:focus, .no-touch .sm.hover figure:hover, .no-touch .sm.hover figure:focus, .no-touch .xs.hover figure:hover, .no-touch .xs.hover figure:focus {
       -webkit-transform: translateY(-0.5rem);
       -moz-transform: translateY(-0.5rem);
       -ms-transform: translateY(-0.5rem);
@@ -585,7 +603,12 @@ section {
     -o-transition: all 0.25s ease 0s;
     transition: all 0.25s ease 0s; }
     section figure figcaption {
-      margin: 1rem 0 0; }
+      margin: 1rem 0 0;
+      -webkit-transition: all 0.25s ease 0s;
+      -moz-transition: all 0.25s ease 0s;
+      -ms-transition: all 0.25s ease 0s;
+      -o-transition: all 0.25s ease 0s;
+      transition: all 0.25s ease 0s; }
     section figure picture {
       display: grid;
       overflow: hidden;
@@ -633,6 +656,7 @@ section {
     section .xl.reverse figure {
       flex-direction: row; } }
 
+/* PROMOS */
 .border::after {
   display: block;
   width: 100%;
