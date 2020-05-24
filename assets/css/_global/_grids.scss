@@ -36,7 +36,9 @@
   }
   .no-touch .xxl.hover, .no-touch .xl.hover, .no-touch .lg.hover, .no-touch .md.hover, .no-touch .sm.hover, .no-touch .xs.hover {
     cursor: pointer;
-    figure:hover, figure:focus {@include transform(translateY(-0.5rem));}
+    figure:hover, figure:focus {
+      @include transform(translateY(-0.5rem));
+    }
   }
 }
 

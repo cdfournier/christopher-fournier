@@ -18,5 +18,11 @@
 @mixin appearance($appearance: none) {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;  
+  appearance: none;
+};
+
+@mixin box-shadow($horizontal: 0.25rem, $vertical: 0.25rem, $blur: 0, $spread: 0, $color: gray) {
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+  -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+  box-shadow: $horizontal $vertical $blur $spread $color;
 };
