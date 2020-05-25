@@ -131,6 +131,10 @@ html {
 	html {scroll-behavior: auto;}
 }
 
+@media (min-width: 46rem) {
+  html {font-size: 110%;}
+}
+
 body, .body {
   width: 100%;
   height: auto;
@@ -158,4 +162,12 @@ img {
   width: 100%;
   height: auto;
   margin: 0;
+}
+
+
+// MAIN
+main {
+  .content {
+    padding: 2rem 2rem 0;
+  }
 }

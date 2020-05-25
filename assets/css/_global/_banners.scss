@@ -1,14 +1,15 @@
 // BANNERS
 .banner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 15;
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,40 +32,54 @@
     padding: 2rem;
     color: white;
   }
+  .identity {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 1rem 0 0;
+  }
 }
 
 .banner.tall {min-height: 100vh;}
 .banner.short {min-height: 50vh;}
+.banner.home {
+  align-items: center;
+  p {text-align: center;}
+}
+
+@media (orientation: landscape), (min-width: 46rem) {
+}
 
 
-// CUSTOM BANNERS
-.banner.home-page {
-  flex-direction: column;
-  padding: 0;
-  background-color: white;
-  .logo {
-    width: 8rem;
-    margin: 0 auto 1rem;
-    fill: $green;
-  }
-  .text {
-    position: relative;
-    width: calc(100% - 4rem);
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    color: $green;
+// BANNER LOGO & FONT-SIZE
+@media (min-width: 46rem) {
+  .banner {
     p {
-      margin: 0 auto;
-      padding: 0;
+      max-width: 48rem;
+      font-size: calc(100vh * 0.025);
+    }
+  }
+  .banner.home {
+    background-blend-mode: multiply;
+    /* background-image: url(../images/profile-flip-1x.png); */
+    background-position: right bottom;
+    background-size: calc(100vh / 1.5);
+  }
+}
+
+@media (min-width: 62rem) {
+  .banner {
+    p {
+      max-width: 56rem;
+      font-size: calc(100vh * 0.0325);
     }
   }
 }
 
-.banner.projects-page {
-  background-image: url(../images/work-delta-design-08-1x.jpg);
-}
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .banner.projects-page {background-image: url(../images/work-delta-design-08-2x.jpg);}
+// BANNER LOGO & FONT-SIZE
+.banner.bg-green {
+  p {color: white;}
+  .signature {fill: white;}
 }

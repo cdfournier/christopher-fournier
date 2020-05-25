@@ -81,6 +81,10 @@ html {
   html {
     scroll-behavior: auto; } }
 
+@media (min-width: 46rem) {
+  html {
+    font-size: 110%; } }
+
 body, .body {
   width: 100%;
   height: auto;
@@ -109,6 +113,9 @@ img {
   width: 100%;
   height: auto;
   margin: 0; }
+
+main .content {
+  padding: 2rem 2rem 0; }
 
 /* 
   NOTES:  
@@ -207,36 +214,34 @@ ul, ol {
 a span.icon {
   display: none; }
 
+/*
 .no-touch a {
   display: inline-flex;
-  align-items: center; }
-  .no-touch a span.icon {
+  align-items: center;
+  span.icon {
     display: flex;
     display: none;
     width: 5%;
     min-width: 1.5rem;
     height: auto;
     margin: 0 0 0 0.25rem;
-    -webkit-transition: all 0.25s ease 0s;
-    -moz-transition: all 0.25s ease 0s;
-    -ms-transition: all 0.25s ease 0s;
-    -o-transition: all 0.25s ease 0s;
-    transition: all 0.25s ease 0s; }
-    .no-touch a span.icon svg {
+    @include transition(all, 0.25s, ease);
+    svg {
       width: 100%;
       height: 100%;
-      fill: #384332;
-      -webkit-transition: all 0.25s ease 0s;
-      -moz-transition: all 0.25s ease 0s;
-      -ms-transition: all 0.25s ease 0s;
-      -o-transition: all 0.25s ease 0s;
-      transition: all 0.25s ease 0s; }
+      fill: $green;
+      @include transition(all, 0.25s, ease);
+    }
+  }
+}
 
-.no-touch a:hover span.icon, .no-touch a:focus span.icon {
-  margin: 0 0 0 1rem; }
-  .no-touch a:hover span.icon svg, .no-touch a:focus span.icon svg {
-    fill: #af4433; }
-
+.no-touch a:hover, .no-touch a:focus {
+  span.icon {
+    margin: 0 0 0 1rem;
+    svg {fill: $orange;}
+  }
+}
+*/
 header {
   display: flex;
   flex-direction: column;
@@ -469,9 +474,6 @@ nav {
     opacity: 1;
     color: #384332; }
 
-main .content {
-  padding: 2rem 2rem 0; }
-
 .banner {
   display: flex;
   align-items: flex-start;
@@ -503,29 +505,12 @@ main .content {
     margin: 0;
     padding: 2rem;
     color: white; }
-  .banner .avatar {
-    display: none;
-    width: 100%; }
-    .banner .avatar figure {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: 0 0 1rem; }
-      .banner .avatar figure picture {
-        position: relative;
-        width: 50%;
-        overflow: hidden;
-        margin: 0 auto;
-        border: 0.5rem solid white;
-        border-radius: 100%; }
-        .banner .avatar figure picture source, .banner .avatar figure picture img {
-          position: relative;
-          bottom: -1rem; }
-  .banner .signature {
-    display: grid;
+  .banner .identity {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
-    margin: 2rem 0 0;
-    fill: #384332; }
+    margin: 1rem 0 0; }
 
 .banner.tall {
   min-height: 100vh; }
@@ -533,12 +518,11 @@ main .content {
 .banner.short {
   min-height: 50vh; }
 
-@media (orientation: landscape), (min-width: 46rem) {
-  .banner .signature {
-    width: calc(100% / 1.5);
-    max-width: 40%; } }
+.banner.home {
+  align-items: center; }
+  .banner.home p {
+    text-align: center; }
 
-/* BANNER LOGO & FONT-SIZE */
 @media (min-width: 46rem) {
   .banner p {
     max-width: 48rem;
@@ -547,21 +531,18 @@ main .content {
     background-blend-mode: multiply;
     /* background-image: url(../images/profile-flip-1x.png); */
     background-position: right bottom;
-    background-size: calc(100vh / 1.5); }
-    .banner.home .avatar {
-      display: none; } }
+    background-size: calc(100vh / 1.5); } }
 
 @media (min-width: 62rem) {
   .banner p {
     max-width: 56rem;
     font-size: calc(100vh * 0.0325); } }
 
-/* BANNER BACKGROUND & CONTENT COLOR */
-.banner.bg-green .signature {
-  fill: white; }
-
 .banner.bg-green p {
   color: white; }
+
+.banner.bg-green .signature {
+  fill: white; }
 
 .grid {
   display: flex;
@@ -648,21 +629,17 @@ main .content {
 .box.bg-cream::after, .box.bg-green::after, .box.bg-orange::after {
   display: none; }
 
-.no-touch .box.hover:hover, .no-touch .box.hover:focus {
-  cursor: pointer;
-  -webkit-transform: translateY(-0.5rem);
-  -moz-transform: translateY(-0.5rem);
-  -ms-transform: translateY(-0.5rem);
-  -o-transform: translateY(-0.5rem);
-  transform: translateY(-0.5rem); }
-
 @media (orientation: landscape) {
   .box {
-    width: 70%; } }
+    width: 70%; }
+    .box figure picture.phone source, .box figure picture.phone img {
+      margin: 0; } }
 
 @media (min-width: 46rem) {
   .box {
     width: calc(50% - 1rem); }
+    .box figure picture.phone source, .box figure picture.phone img {
+      margin: 0; }
   .box.xl {
     align-items: center;
     flex-direction: row;
@@ -676,35 +653,73 @@ main .content {
       width: calc(65% - 2rem); }
   .box.xl.reverse {
     flex-direction: row-reverse; }
-  a .box figure picture source, a .box figure picture img {
-    -webkit-transition: all 2.5s ease 0s;
-    -moz-transition: all 2.5s ease 0s;
-    -ms-transition: all 2.5s ease 0s;
-    -o-transition: all 2.5s ease 0s;
-    transition: all 2.5s ease 0s; }
-  a .box figure:hover picture source, a .box figure:hover picture img, a .box figure:focus picture source, a .box figure:focus picture img {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
-    transform: scale(2); }
-  a .box .text {
-    -webkit-transition: all 0.25s ease 0s;
-    -moz-transition: all 0.25s ease 0s;
-    -ms-transition: all 0.25s ease 0s;
-    -o-transition: all 0.25s ease 0s;
-    transition: all 0.25s ease 0s; }
-  a .box .text:hover, a .box .text:focus {
-    color: #af4433; } }
+  /*
+  a .box {
+    .text {@include transition(all, 0.25s, ease);}
+    .text:hover, .text:focus {color: $orange;}
+  }
+  .no-touch a .box:hover, .no-touch a .box:focus {
+    cursor: pointer;
+    @include transform(translateY(-0.5rem));
+  }
+*/ }
 
 @media (min-width: 89.875rem) {
   .box {
     width: calc(32.5% - 1rem); } }
 
-/* PROMOS */
 .promo {
   width: calc(100% + 4rem);
   margin: 1rem -2rem;
   padding: 4rem 2rem; }
   .promo h2 span {
     display: none; }
+
+.avatar {
+  display: flex;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden; }
+  .avatar figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    border: 0.25rem solid #eef1e8;
+    border: 0.25rem solid #f9fbfd;
+    border-radius: 100%; }
+    .avatar figure picture {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 0.25rem solid #eef1e8;
+      border-radius: 100%; }
+      .avatar figure picture source, .avatar figure picture img {
+        position: relative;
+        bottom: -1rem; }
+
+.signature {
+  display: inline-grid;
+  height: 6rem;
+  overflow: hidden;
+  margin: 1rem 0 0;
+  fill: #384332; }
+  .signature svg {
+    width: 100%;
+    height: 100%; }
+
+.peekaboo {
+  background-image: url(../images/peekaboo-1x.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: calc(100vw / 1.25);
+  background-blend-mode: multiply; }
+
+@media (min-width: 46rem) {
+  .peekaboo {
+    background-size: calc(100vw / 1.5); } }
