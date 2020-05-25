@@ -85,6 +85,14 @@ html {
   html {
     font-size: 110%; } }
 
+@media (min-width: 62rem) {
+  html {
+    font-size: 120%; } }
+
+@media (min-width: 88rem) {
+  html {
+    font-size: 130%; } }
+
 body, .body {
   width: 100%;
   height: auto;
@@ -526,12 +534,7 @@ nav {
 @media (min-width: 46rem) {
   .banner p {
     max-width: 48rem;
-    font-size: calc(100vh * 0.025); }
-  .banner.home {
-    background-blend-mode: multiply;
-    /* background-image: url(../images/profile-flip-1x.png); */
-    background-position: right bottom;
-    background-size: calc(100vh / 1.5); } }
+    font-size: calc(100vh * 0.025); } }
 
 @media (min-width: 62rem) {
   .banner p {
