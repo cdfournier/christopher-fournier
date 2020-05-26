@@ -9,7 +9,7 @@
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,6 +45,8 @@
 .banner.short {min-height: 50vh;}
 .banner.home {
   align-items: center;
+  z-index: 0;
+  padding: 0 2rem;
   p {text-align: center;}
 }
 
@@ -59,8 +61,6 @@
       max-width: 48rem;
       font-size: calc(100vh * 0.025);
     }
-  }
-  .banner.home {
   }
 }
 
@@ -79,3 +79,9 @@
   p {color: white;}
   .signature {fill: white;}
 }
+
+
+/* PROJECT BANNERS */
+.banner.mystuff {background-image: url(../images/work-mystuff-01-1x.jpg);}
+.banner.panera {background-image: url(../images/work-panera-01-1x.jpg);}
+.banner.transferx {background-image: url(../images/work-transferx-01-1x.jpg);}

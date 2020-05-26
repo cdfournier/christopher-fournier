@@ -26,6 +26,7 @@
       }
     }
     picture.phone {
+      display: none;
       source, img {
         width: 33.81275%;
         margin: 0 auto;
@@ -87,16 +88,6 @@
     .text {width: calc(65% - 2rem);}
   }
   .box.xl.reverse {flex-direction: row-reverse;}
-/*
-  a .box {
-    .text {@include transition(all, 0.25s, ease);}
-    .text:hover, .text:focus {color: $orange;}
-  }
-  .no-touch a .box:hover, .no-touch a .box:focus {
-    cursor: pointer;
-    @include transform(translateY(-0.5rem));
-  }
-*/
 }
 
 @media (min-width: 89.875rem) {

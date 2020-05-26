@@ -218,6 +218,12 @@ ul, ol {
   margin: 0;
   padding: 0;
   list-style: none; }
+  ul li, ol li {
+    margin: 1rem 0 0; }
+
+ul.bullets {
+  margin: 0 0 0 1rem;
+  list-style: disc; }
 
 a span.icon {
   display: none; }
@@ -492,7 +498,7 @@ nav {
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
@@ -527,7 +533,9 @@ nav {
   min-height: 50vh; }
 
 .banner.home {
-  align-items: center; }
+  align-items: center;
+  z-index: 0;
+  padding: 0 2rem; }
   .banner.home p {
     text-align: center; }
 
@@ -546,6 +554,16 @@ nav {
 
 .banner.bg-green .signature {
   fill: white; }
+
+/* PROJECT BANNERS */
+.banner.mystuff {
+  background-image: url(../images/work-mystuff-01-1x.jpg); }
+
+.banner.panera {
+  background-image: url(../images/work-panera-01-1x.jpg); }
+
+.banner.transferx {
+  background-image: url(../images/work-transferx-01-1x.jpg); }
 
 .grid {
   display: flex;
@@ -609,9 +627,11 @@ nav {
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1); }
-    .box figure picture.phone source, .box figure picture.phone img {
-      width: 33.81275%;
-      margin: 0 auto; }
+    .box figure picture.phone {
+      display: none; }
+      .box figure picture.phone source, .box figure picture.phone img {
+        width: 33.81275%;
+        margin: 0 auto; }
     .box figure picture.phone.left source, .box figure picture.phone.left img {
       margin: 0; }
     .box figure figcaption {
@@ -655,17 +675,7 @@ nav {
     .box.xl .text {
       width: calc(65% - 2rem); }
   .box.xl.reverse {
-    flex-direction: row-reverse; }
-  /*
-  a .box {
-    .text {@include transition(all, 0.25s, ease);}
-    .text:hover, .text:focus {color: $orange;}
-  }
-  .no-touch a .box:hover, .no-touch a .box:focus {
-    cursor: pointer;
-    @include transform(translateY(-0.5rem));
-  }
-*/ }
+    flex-direction: row-reverse; } }
 
 @media (min-width: 89.875rem) {
   .box {
@@ -692,15 +702,14 @@ nav {
     width: 100%;
     overflow: hidden;
     margin: 0;
-    border: 0.25rem solid #eef1e8;
-    border: 0.25rem solid #f9fbfd;
+    border: 0.325rem solid #eef1e8;
     border-radius: 100%; }
     .avatar figure picture {
       position: relative;
       width: 100%;
       overflow: hidden;
       margin: 0 auto;
-      border: 0.25rem solid #eef1e8;
+      border: 0.25rem solid white;
       border-radius: 100%; }
       .avatar figure picture source, .avatar figure picture img {
         position: relative;
