@@ -1,0 +1,95 @@
+// CARDS
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0;
+  color: $green;
+  @include transition(all, 0.25s, ease, 0s);
+  figure {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 1rem;
+    @include transition(all, 0.25s, ease, 0s);
+    picture {
+      display: grid;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 0.25rem;
+      source, img {
+        @include transition(all, 2.5s, ease, 0s);
+        @include transform(scale(1));
+      }
+    }
+    picture.phone {
+      display: none;
+      source, img {
+        width: 33.81275%;
+        margin: 0 auto;
+      }
+    }
+    picture.phone.left {
+      source, img {margin: 0;}
+    }
+    figcaption {
+      display: none;
+      margin: 0.5rem 0 0;
+      font-size: 0.833rem;
+      line-height: 1.2;
+    }
+  }
+}
+.card::after {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin: 2rem 0 0;
+  background: $cream;
+  content: "";
+}
+
+.card.bg-cream::after, .card.bg-green::after, .card.bg-orange::after {display: none;}
+
+@media (orientation: landscape) {
+  .card {
+    width: 70%;
+    figure {
+      picture.phone {
+        source, img {margin: 0;}
+      }
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  .card {
+    width: calc(50% - 1rem);
+    figure {
+      picture.phone {
+        source, img {margin: 0;}
+      }
+    }
+  }
+  .card.xl {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    figure {
+      width: 35%;
+      margin: 0;
+    }
+    .text {width: calc(65% - 2rem);}
+  }
+  .card.xl.reverse {flex-direction: row-reverse;}
+}
+
+@media (min-width: 89.875rem) {
+  .box {width: calc(32.5% - 1rem);}
+}
