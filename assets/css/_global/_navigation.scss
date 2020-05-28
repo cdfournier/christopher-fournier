@@ -16,9 +16,7 @@ nav {
     padding: 0 0.833rem;
     padding: 0 1rem;
     @include font-bo;
-//     font-size: 0.833rem;
     text-align: center;
-//     text-transform: uppercase;
     color: $orange;
     @include transition (all, 0.25s, ease);
   }

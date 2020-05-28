@@ -31,10 +31,6 @@
     margin: 0;
     padding: 2rem;
     color: white;
-    h2 {
-      @include font-serif-eczar;
-      @include font-serif-playfair;
-    }
     p {margin: 0 auto;}
   }
   .identity {
@@ -48,18 +44,9 @@
 
 .banner.tall {min-height: 100vh;}
 .banner.short {min-height: 50vh;}
-.banner.home {
-  align-items: center;
-  z-index: 0;
-  padding: 0 2rem;
-  p {text-align: center;}
-}
-
-@media (orientation: landscape), (min-width: 46rem) {
-}
 
 
-// BANNER LOGO & FONT-SIZE
+// BANNER FONT-SIZE
 @media (min-width: 46rem) {
   .banner {
     p {
@@ -76,13 +63,6 @@
       font-size: calc(100vh * 0.0325);
     }
   }
-}
-
-
-// BANNER LOGO & FONT-SIZE
-.banner.bg-green {
-  p {color: white;}
-  .signature {fill: white;}
 }
 
 

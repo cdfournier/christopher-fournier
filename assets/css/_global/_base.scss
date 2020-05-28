@@ -113,15 +113,14 @@
 
 
 // PLAYFAIR
-@mixin font-serif-playfair {
+@mixin font-serif-800 {
   font-family: "Playfair Display", serif;
+  font-weight: 800;
 }
 
-// ECZAR
-@mixin font-serif-eczar {
-  font-family: "Eczar", serif;
+@mixin font-serif-400 {
+  font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-weight: 800;
 }
 
 
@@ -135,7 +134,7 @@ html {
   @include font-rg;
   font-size: 100%;
   line-height: 1.65;
-  color: $green;
+  color: black;
   scroll-behavior: smooth;
 }
 
@@ -176,12 +175,4 @@ img {
   width: 100%;
   height: auto;
   margin: 0;
-}
-
-
-// MAIN
-main {
-  .content {
-    padding: 2rem 2rem 0;
-  }
 }

@@ -88,36 +88,3 @@ ul.bullets {
   margin: 0 0 0 1rem;
   list-style: disc;
 }
-
-
-// TYPOGRAPHY WITH ICONS
-a {span.icon {display: none;}}
-
-/*
-.no-touch a {
-  display: inline-flex;
-  align-items: center;
-  span.icon {
-    display: flex;
-    display: none;
-    width: 5%;
-    min-width: 1.5rem;
-    height: auto;
-    margin: 0 0 0 0.25rem;
-    @include transition(all, 0.25s, ease);
-    svg {
-      width: 100%;
-      height: 100%;
-      fill: $green;
-      @include transition(all, 0.25s, ease);
-    }
-  }
-}
-
-.no-touch a:hover, .no-touch a:focus {
-  span.icon {
-    margin: 0 0 0 1rem;
-    svg {fill: $orange;}
-  }
-}
-*/

@@ -3,6 +3,20 @@ $cream: #eef1e8;
 $green: #384332;
 $orange: #af4433;
 
+
+// GRAYS
+/*
+  NOTES: 
+  Specified shades of gray below are kept in a light to dark order
+*/
+$gray-white: #f2f2f2;
+$gray-bright: #eeeeee;
+$gray-platinum: #e5e5e5;
+$gray: #7e7e7e;
+$gray-granite: #616161;
+$gray-dark-charcoal: #333333;
+
+
 $cool-gray: #f9fbfd;
 $warm-gray: #ebebe8;
 
@@ -48,7 +62,14 @@ $transferx-bg: #f0f5f8;
 
 
 // BACKGROUND-COLORS
-.bg-cream {background: $cream;}
+.bg-cream {
+  background: $cream;
+  .text {
+    color: $green;
+    a {color: $green;}
+    a:hover, a:focus {color: $orange;}
+  }
+}
 .bg-green {background: $green;}
 .bg-orange {background: $orange;}
 .bg-mystuff {background: $mystuff;}
