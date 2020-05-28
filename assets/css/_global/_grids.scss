@@ -35,6 +35,10 @@
 
 
 // PROJECT DETAILS PAGE GRID
+.content {
+  h1 {color: black;}
+}
+
 .grid.details {
   display: flex;
   align-items: center;
@@ -59,7 +63,7 @@
       bottom: 0;
       width: 100%;
       height: 1px;
-      background: $cream;
+      background: $warm-gray;
       margin: 1rem auto;
       content: "";
     }

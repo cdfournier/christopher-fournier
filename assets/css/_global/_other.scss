@@ -3,7 +3,16 @@
   width: calc(100% + 4rem);
   margin: 1rem -2rem;
   padding: 4rem 2rem;
-  h2 span {display: none;}
+  h2 {
+    @include font-serif-playfair;
+    span {display: none;}
+  }
+}
+
+
+// PROMOS COLORS
+.promo.bg-cream {
+  h2 {color: $green;}
 }
 
 
@@ -68,3 +77,19 @@
     background-size: calc(100vw / 1.5);
   }
 }
+
+
+// HOME H1
+.home h1 {
+  margin: 0;
+  color: black;
+}
+
+/*
+@media (orientation: landscape), (min-width: 46rem) {
+  .home h1 {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+*/

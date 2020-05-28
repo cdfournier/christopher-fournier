@@ -140,7 +140,8 @@ h1, h2, h3, h4, h5 p {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-style: normal; }
+  font-style: normal;
+  color: inherit; }
 
 h1, h2, h3, h4, h5 {
   font-family: "metropolis-thin", sans-serif;
@@ -525,6 +526,13 @@ nav {
     margin: 0;
     padding: 2rem;
     color: white; }
+    .banner .text h2 {
+      font-family: "Eczar", serif;
+      font-weight: 400;
+      font-weight: 800;
+      font-family: "Playfair Display", serif; }
+    .banner .text p {
+      margin: 0 auto; }
   .banner .identity {
     display: flex;
     align-items: center;
@@ -599,6 +607,9 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between; } }
 
+.content h1 {
+  color: black; }
+
 .grid.details {
   display: flex;
   align-items: center;
@@ -625,7 +636,7 @@ nav {
       bottom: 0;
       width: 100%;
       height: 1px;
-      background: #eef1e8;
+      background: #ebebe8;
       margin: 1rem auto;
       content: ""; }
     .grid.details .text p + h2 {
@@ -657,7 +668,7 @@ nav {
   width: 100%;
   margin: 1rem 0;
   padding: 0;
-  color: #384332;
+  color: black;
   -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
   -ms-transition: all 0.25s ease 0s;
@@ -794,7 +805,7 @@ nav {
   width: 100%;
   height: 1px;
   margin: 2rem 0 0;
-  background: #eef1e8;
+  background: #f9fbfd;
   content: ""; }
 
 .box.bg-cream::after, .box.bg-green::after, .box.bg-orange::after {
@@ -843,8 +854,13 @@ nav {
   width: calc(100% + 4rem);
   margin: 1rem -2rem;
   padding: 4rem 2rem; }
-  .promo h2 span {
-    display: none; }
+  .promo h2 {
+    font-family: "Playfair Display", serif; }
+    .promo h2 span {
+      display: none; }
+
+.promo.bg-cream h2 {
+  color: #384332; }
 
 .avatar {
   display: flex;
@@ -893,3 +909,16 @@ nav {
 @media (min-width: 46rem) {
   .peekaboo {
     background-size: calc(100vw / 1.5); } }
+
+.home h1 {
+  margin: 0;
+  color: black; }
+
+/*
+@media (orientation: landscape), (min-width: 46rem) {
+  .home h1 {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+*/

@@ -31,6 +31,11 @@
     margin: 0;
     padding: 2rem;
     color: white;
+    h2 {
+      @include font-serif-eczar;
+      @include font-serif-playfair;
+    }
+    p {margin: 0 auto;}
   }
   .identity {
     display: flex;

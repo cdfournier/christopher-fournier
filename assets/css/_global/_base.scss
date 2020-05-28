@@ -112,6 +112,18 @@
 }
 
 
+// PLAYFAIR
+@mixin font-serif-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+// ECZAR
+@mixin font-serif-eczar {
+  font-family: "Eczar", serif;
+  font-weight: 400;
+  font-weight: 800;
+}
+
 
 // BASE
 html {
