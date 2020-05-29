@@ -286,11 +286,37 @@ ul, ol {
     margin: 1rem 0 0; }
 
 ol {
-  list-style: decimal; }
-
-ul.bullets {
-  margin: 0 0 0 1rem;
-  list-style: disc; }
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  counter-reset: count; }
+  ol li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0; }
+    ol li span {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 0.25rem;
+      line-height: 1.25; }
+    ol li span::before {
+      flex: 0 1 auto;
+      padding: 0;
+      font-family: "Playfair Display", serif;
+      font-weight: 800;
+      font-size: 1.953rem;
+      color: inherit;
+      counter-increment: count;
+      content: "0" counter(count); }
+    ol li span::after {
+      display: block;
+      width: 30%;
+      height: 1px;
+      background: #7e7e7e;
+      content: ""; }
 
 header {
   display: flex;
@@ -722,7 +748,7 @@ main.projects .content {
       padding: 2rem 0 0; }
     main.projects .content .text p:first-child {
       padding: 0; }
-    main.projects .content .text ul, main.projects .content .text ol {
+    main.projects .content .text ul {
       padding: 0 0 0 1rem; }
   main.projects .content .box {
     display: flex;

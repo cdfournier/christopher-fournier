@@ -88,9 +88,39 @@ ul, ol {
   }
 }
 
-ol {list-style: decimal;}
-
-ul.bullets {
-  margin: 0 0 0 1rem;
-  list-style: disc;
+ol {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  counter-reset: count;
+  li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    span {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 0.25rem;
+      line-height: 1.25;
+    }
+    span::before {
+      flex: 0 1 auto;
+      padding: 0;
+      @include font-serif;
+      font-size: 1.953rem;
+      color: inherit;
+      counter-increment: count;
+      content: "0" counter(count);
+    }
+    span::after {
+      display: block;
+      width: 30%;
+      height: 1px;
+      background: $gray;
+      content: "";
+    }
+  }
 }
