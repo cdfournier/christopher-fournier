@@ -43,19 +43,23 @@ p {
 p a, li a, small a {
   @include font-bo;
   color: $green;
+  color: $orange;
 }
 
-p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {color: $orange;}
+p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
+  color: $orange;
+  color: $green;
+}
 
 strong {
   display: block;
   @include font-bo;
 }
 
-small {font-size: 0.833rem;}
+small {font-size: 0.8rem;}
 
-.xsmall {font-size: 0.694rem;}
-.xxsmall {font-size: 0.579rem;}
+.xsmall {font-size: 0.64rem;}
+.xxsmall {font-size: 0.512rem;}
 
 
 // VISUALLY HIDDEN
@@ -83,6 +87,8 @@ ul, ol {
     margin: 1rem 0 0;
   }
 }
+
+ol {list-style: decimal;}
 
 ul.bullets {
   margin: 0 0 0 1rem;

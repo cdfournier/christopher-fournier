@@ -13,18 +13,19 @@ nav {
   ul li {
     display: inline-block;
     margin: 0;
-    padding: 0 0.833rem;
+    padding: 0 0.8rem;
     padding: 0 1rem;
     @include font-bo;
+    font-size: 0.8rem;
     text-align: center;
-    color: $orange;
+    color: $green;
     @include transition (all, 0.25s, ease);
   }
   ul li a {
     @include font-bo;
-    color: $green;
+    color: $orange;
   }
-  ul li a:hover, ul li a:focus {color: $orange;}
+  ul li a:hover, ul li a:focus {color: $green;}
 }
 
 

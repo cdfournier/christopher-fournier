@@ -113,14 +113,9 @@
 
 
 // PLAYFAIR
-@mixin font-serif-800 {
+@mixin font-serif {
   font-family: "Playfair Display", serif;
   font-weight: 800;
-}
-
-@mixin font-serif-400 {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
 }
 
 
@@ -132,15 +127,18 @@ html {
   margin: 0 auto;
   padding: 0;
   @include font-rg;
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.65;
   color: black;
   scroll-behavior: smooth;
+  @include transition(all, 0.25s, ease);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
 	html {scroll-behavior: auto;}
 }
+
+@media (min-width: 22.75rem) {html {font-size: 100%;}}
 
 @media (min-width: 46rem) {html {font-size: 110%;}}
 

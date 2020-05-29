@@ -1,0 +1,24 @@
+// WIDTH
+.xl, .lg, .md, .sm, .xs {
+  width: 100%;
+}
+
+.xl.always {width: 100%;}
+.lg.always {width: calc(70% - 1rem);}
+.md.always {width: calc(50% - 1rem);}
+.sm.always {width: calc(30% - 1rem);}
+.xs.always {width: calc(50% - 1rem);}
+
+@media (min-width: 46rem) {
+  .xl {width: 100%;}
+  .lg {width: calc(70% - 1rem);}
+  .md {width: calc(50% - 1rem);}
+  .sm {width: calc(30% - 1rem);}
+  .xs, .xs.always {width: calc(25% - 1rem);}
+  .xl.end, .lg.end, .md.end, .sm.end {align-self: flex-end;}
+}
+
+
+// HEIGHT
+.tall {min-height: 100vh;}
+.short {min-height: 50vh;}
