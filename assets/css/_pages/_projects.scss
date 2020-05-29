@@ -159,3 +159,43 @@ main.projects.panera {
 main.projects.transferx {
   .banner {background-image: url(../images/work-transferx-01-1x.jpg);}
 }
+
+
+// UP NEXT
+.up-next {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem 0;
+  .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem 0;
+    padding: 0;
+    @include transition(all, 0.25s, ease, 0s);
+    figure {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 1rem;
+      picture {
+        display: grid;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 0.25rem;
+      }
+      figcaption {display: none;}
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .up-next {
+  }
+}

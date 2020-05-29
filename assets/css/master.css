@@ -784,6 +784,40 @@ main.projects.panera .banner {
 main.projects.transferx .banner {
   background-image: url(../images/work-transferx-01-1x.jpg); }
 
+.up-next {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem 0; }
+  .up-next .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem 0;
+    padding: 0;
+    -webkit-transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -ms-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s; }
+    .up-next .card figure {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 1rem; }
+      .up-next .card figure picture {
+        display: grid;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 0.25rem; }
+      .up-next .card figure figcaption {
+        display: none; }
+
 .xl, .lg, .md, .sm, .xs {
   width: 100%; }
 
@@ -791,13 +825,13 @@ main.projects.transferx .banner {
   width: 100%; }
 
 .lg.always {
-  width: calc(70% - 1rem); }
+  width: calc(65% - 1rem); }
 
 .md.always {
   width: calc(50% - 1rem); }
 
 .sm.always {
-  width: calc(30% - 1rem); }
+  width: calc(35% - 1rem); }
 
 .xs.always {
   width: calc(50% - 1rem); }
@@ -806,11 +840,11 @@ main.projects.transferx .banner {
   .xl {
     width: 100%; }
   .lg {
-    width: calc(70% - 1rem); }
+    width: calc(65% - 1rem); }
   .md {
     width: calc(50% - 1rem); }
   .sm {
-    width: calc(30% - 1rem); }
+    width: calc(35% - 1rem); }
   .xs, .xs.always {
     width: calc(25% - 1rem); }
   .xl.end, .lg.end, .md.end, .sm.end {
