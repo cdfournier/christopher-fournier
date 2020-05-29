@@ -43,11 +43,12 @@ main.projects {
         letter-spacing: 1px;
         line-height: 1;
       }
+      p {padding: 2rem 0 0;}
     }
   }
   .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -114,6 +115,7 @@ main.projects {
       padding: 4rem 2rem;
       h2 {
         @include font-serif;
+        font-size: 3.441rem;
         span {display: none;}
       }
     }

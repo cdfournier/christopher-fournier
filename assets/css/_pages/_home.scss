@@ -69,7 +69,7 @@ main.home {
     margin: 0 auto;
     padding: 2rem 2rem 0;
     h1 {
-      max-width: 40rem;
+      max-width: 32rem;
       margin: 2rem auto;
       font-size: 4.502rem;
       text-align: center;
@@ -180,6 +180,9 @@ main.home {
 
 @media (min-width: 89.875rem) {
   main.home {
+    .banner {
+      .signature {height: 6rem;}
+    }
     .content {
       .card {width: calc(32.5% - 1rem);}
     }

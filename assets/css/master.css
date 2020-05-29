@@ -342,7 +342,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   margin: 1rem auto 0;
@@ -353,7 +353,8 @@ footer {
   text-align: center; }
   footer nav {
     width: 100%;
-    min-width: 50%; }
+    min-width: 50%;
+    margin: 0 auto 2rem; }
     footer nav ul {
       align-items: center;
       flex-direction: row;
@@ -365,15 +366,15 @@ footer {
       footer nav ul li:last-child {
         padding-bottom: 0; }
   footer .contact {
-    position: absolute;
-    top: 2rem;
     width: 100%;
-    margin: 0;
-    padding: 0 2rem;
+    margin: 0 0 2rem;
+    padding: 0;
     text-align: left; }
     footer .contact h2 span {
       display: none; }
   footer p.xsmall {
+    position: absolute;
+    bottom: 2rem;
     width: 100%;
     padding: 1rem 0 0;
     text-align: center; }
@@ -381,7 +382,7 @@ footer {
 footer.bg-green .contact {
   color: white; }
   footer.bg-green .contact a:hover, footer.bg-green .contact a:focus {
-    color: white; }
+    color: #af4433; }
 
 footer.bg-green nav ul li {
   color: white; }
@@ -542,7 +543,7 @@ main.home .content {
   margin: 0 auto;
   padding: 2rem 2rem 0; }
   main.home .content h1 {
-    max-width: 40rem;
+    max-width: 32rem;
     margin: 2rem auto;
     font-size: 4.502rem;
     text-align: center;
@@ -632,6 +633,8 @@ main.home .content {
     flex-direction: row-reverse; } }
 
 @media (min-width: 89.875rem) {
+  main.home .banner .signature {
+    height: 6rem; }
   main.home .content .card {
     width: calc(32.5% - 1rem); } }
 
@@ -676,10 +679,12 @@ main.projects .banner {
       font-size: 16vw;
       letter-spacing: 1px;
       line-height: 1; }
+    main.projects .banner .text p {
+      padding: 2rem 0 0; }
 
 main.projects .content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -749,7 +754,8 @@ main.projects .content {
     padding: 4rem 2rem; }
     main.projects .content .promo h2 {
       font-family: "Playfair Display", serif;
-      font-weight: 800; }
+      font-weight: 800;
+      font-size: 3.441rem; }
       main.projects .content .promo h2 span {
         display: none; }
 
