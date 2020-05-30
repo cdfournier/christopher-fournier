@@ -33,17 +33,18 @@ main.projects {
       padding: 2rem;
       text-align: center;
       color: white;
-      h2, p {
-        max-width: 40rem;
-        margin: 0 auto;
-      }
       h2 {
+        margin: 0 auto;
         @include font-serif;
         font-size: 16vw;
         letter-spacing: 1px;
         line-height: 1;
       }
-      p {padding: 2rem 0 0;}
+      p {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 0 0;
+      }
     }
   }
   .content {
@@ -107,6 +108,10 @@ main.projects {
           border-radius: 0.25rem;
         }
         figcaption {display: none;}
+      }
+      video {
+        width: 100%;
+        margin: 0 auto 1rem;
       }
     }
     .promo {

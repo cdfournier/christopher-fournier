@@ -127,7 +127,7 @@ html {
   margin: 0 auto;
   padding: 0;
   @include font-rg;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.65;
   color: black;
   scroll-behavior: smooth;
@@ -138,11 +138,13 @@ html {
 	html {scroll-behavior: auto;}
 }
 
+/*
 @media (min-width: 46rem) {html {font-size: 110%;}}
 
 @media (min-width: 62rem) {html {font-size: 120%;}}
 
 @media (min-width: 88rem) {html {font-size: 130%;}}
+*/
 
 body, .body {
   width: 100%;
