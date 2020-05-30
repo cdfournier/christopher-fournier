@@ -127,7 +127,7 @@ html {
   font-family: "metropolis-regular", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 90%;
+  font-size: 100%;
   line-height: 1.65;
   color: black;
   scroll-behavior: smooth;
@@ -140,10 +140,6 @@ html {
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto; } }
-
-@media (min-width: 22.75rem) {
-  html {
-    font-size: 100%; } }
 
 @media (min-width: 46rem) {
   html {
