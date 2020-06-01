@@ -1,7 +1,3 @@
-/*
-  NOTES: 
-  Specified shades of gray below are kept in a light to dark order
-*/
 ::-moz-selection {
   color: white;
   background: #384332; }
@@ -866,6 +862,455 @@ main.projects.transferx .banner {
         border-radius: 0.25rem; }
       .up-next .card figure figcaption {
         display: none; }
+
+/*
+RESUME SECTIONS
+  header
+  logo
+  contact-me
+  about-me
+  experience
+  skills
+  contact-me-again
+*/
+header.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem; }
+  header.resume section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+  header.resume h1 {
+    display: block;
+    width: 100%;
+    font-family: "metropolis-regular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0; }
+  header.resume h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #384332;
+    content: ""; }
+  header.resume h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0.8rem;
+    font-family: "metropolis-bold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #384332; }
+  header.resume h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: #384332;
+    content: ""; }
+  header.resume .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 10rem;
+    min-width: 10rem;
+    margin: 0;
+    padding: 0; }
+    header.resume .logo h1 {
+      display: none; }
+    header.resume .logo svg {
+      display: grid;
+      width: 100%;
+      fill: #384332; }
+  header.resume .contact-me {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0; }
+    header.resume .contact-me ul {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      header.resume .contact-me ul li {
+        font-size: 0.8rem; }
+      header.resume .contact-me ul li span {
+        display: block;
+        width: 100%;
+        font-family: "metropolis-bold", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-transform: uppercase;
+        color: #384332; }
+      header.resume .contact-me ul li a {
+        display: block;
+        overflow: hidden;
+        font-family: "metropolis-medium", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 0.8rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #af4433; }
+      header.resume .contact-me ul li a:hover, header.resume .contact-me ul li a:focus {
+        color: #384332; }
+
+@media (orientation: landscape) {
+  header.resume {
+    flex-direction: row;
+    width: 80%; }
+    header.resume .logo {
+      width: auto;
+      padding: 0 2rem 0 0; }
+    header.resume .contact-me {
+      padding: 0; }
+      header.resume .contact-me ul {
+        padding: 0 0 0 2rem; } }
+
+@media (min-width: 46rem) {
+  header.resume {
+    flex-direction: row;
+    width: 70%; }
+    header.resume .logo {
+      width: auto;
+      padding: 0 2rem 0 0; }
+    header.resume .contact-me {
+      padding: 0; }
+      header.resume .contact-me ul {
+        padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  header.resume {
+    width: 60%; } }
+
+main.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; }
+  main.resume section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 2rem 0; }
+  main.resume h1 {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem;
+    font-family: "metropolis-regular", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0; }
+  main.resume h1:after {
+    display: block;
+    position: relative;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #384332;
+    content: ""; }
+  main.resume h1 span {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0.8rem;
+    font-family: "metropolis-bold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #384332; }
+  main.resume h1 span:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    background-color: #384332;
+    content: ""; }
+  main.resume p {
+    font-size: 0.8rem;
+    padding: 0 0 0.8rem; }
+  main.resume p:last-of-type {
+    padding: 0; }
+
+@media (min-width: 35.5rem) {
+  main.resume section {
+    width: 90%; }
+  main.resume section.about-me p {
+    max-width: none;
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 46rem) {
+  main.resume section {
+    width: 70%; } }
+
+@media (min-width: 62rem) {
+  main.resume {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%; }
+    main.resume section {
+      width: 100%; } }
+
+/* EXPERIENCE */
+main.resume article.history section {
+  height: auto;
+  max-height: none;
+  min-height: inherit;
+  padding: 0 0 1rem; }
+  main.resume article.history section h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: "metropolis-bold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #af4433; }
+    main.resume article.history section h3 a {
+      color: #af4433; }
+    main.resume article.history section h3 a:hover, main.resume article.history section h3 a:focus {
+      color: #384332; }
+    main.resume article.history section h3 span {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      font-family: "metropolis-bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 75%;
+      letter-spacing: 0;
+      line-height: inherit;
+      color: #384332; }
+  main.resume article.history section h3 + p {
+    padding: 0.25rem 0 0.8rem 0;
+    font-family: "metropolis-bold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #384332; }
+  main.resume article.history section p:last-of-type {
+    margin: 0 0 1rem;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid #eef1e8; }
+
+.resume article.history section:last-of-type {
+  padding: 0; }
+  .resume article.history section:last-of-type p:last-of-type {
+    margin: 0;
+    padding: 0;
+    border-bottom: none; }
+
+.resume article h2 {
+  display: none; }
+
+@media (min-width: 35.5rem) {
+  main.resume article.history section {
+    width: 100%;
+    padding: 0 0 1rem 2rem; }
+  main.resume article.history section:last-of-type {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  main.resume article.history {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; }
+    main.resume article.history section {
+      width: 48%;
+      padding: 0 0 1rem 2rem; }
+      main.resume article.history section p:last-of-type {
+        border: none; } }
+
+/* SKILLS */
+main.resume section.skills ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  main.resume section.skills ul li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    padding: 0; }
+    main.resume section.skills ul li span {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      font-family: "metropolis-bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 0.8rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #384332; }
+    main.resume section.skills ul li div {
+      display: block;
+      width: 100%;
+      height: 0.5rem;
+      margin: 0.125rem auto 0;
+      background-color: #384332;
+      background-color: #e5e5e5;
+      background-color: #eef1e8; }
+    main.resume section.skills ul li div > span {
+      display: block;
+      width: 0;
+      height: inherit;
+      background-color: #af4433;
+      background-color: #eef1e8;
+      background-color: #384332;
+      -webkit-transition: all 0.5s ease 0s;
+      -moz-transition: all 0.5s ease 0s;
+      -ms-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s; }
+  main.resume section.skills ul li:first-of-type {
+    margin: 0; }
+  main.resume section.skills ul li.adobe div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.adobe div > span[data-aos="loaded"].aos-animate {
+      width: 95%; }
+  main.resume section.skills ul li.code div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.code div > span[data-aos="loaded"].aos-animate {
+      width: 85%; }
+  main.resume section.skills ul li.sketch div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.sketch div > span[data-aos="loaded"].aos-animate {
+      width: 83%; }
+  main.resume section.skills ul li.analytics div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.analytics div > span[data-aos="loaded"].aos-animate {
+      width: 75%; }
+  main.resume section.skills ul li.git div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.git div > span[data-aos="loaded"].aos-animate {
+      width: 58%; }
+  main.resume section.skills ul li.accessibility div > span[data-aos="loaded"] {
+    width: 0%;
+    transition-property: width; }
+    main.resume section.skills ul li.accessibility div > span[data-aos="loaded"].aos-animate {
+      width: 45%; }
+
+@media (min-width: 35.5rem) {
+  main.resume section.skills ul {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  main.resume section.skills {
+    width: 48%;
+    padding: 0 0 0 2rem; } }
+
+/* CONTACT ME AGAIN */
+main.resume section.contact-me {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4rem 2rem 0; }
+  main.resume section.contact-me ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    main.resume section.contact-me ul li {
+      margin: 0 0 1rem;
+      font-size: 0.8rem; }
+    main.resume section.contact-me ul li:last-of-type {
+      margin: 0; }
+    main.resume section.contact-me ul li span {
+      display: block;
+      width: 100%;
+      font-family: "metropolis-bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+      color: #384332; }
+    main.resume section.contact-me ul li a {
+      display: block;
+      overflow: hidden;
+      font-family: "metropolis-medium", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 0.8rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #af4433; }
+    main.resume section.contact-me ul li a:hover, main.resume section.contact-me ul li a:focus {
+      color: #384332; }
+
+@media (min-width: 35.5rem) {
+  main.resume section.contact-me ul {
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 62rem) {
+  main.resume section.contact-me {
+    width: 48%;
+    padding: 0 0 0 2rem; } }
+
+body.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: black;
+  background-image: url(../images/banner-error-1x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  body.error .error {
+    padding: 2rem;
+    color: white; }
+    body.error .error .button {
+      border-color: white;
+      color: white;
+      background-color: transparent; }
+    body.error .error .button:hover, body.error .error .button:focus {
+      color: #384332;
+      background-color: white; }
+  body.error footer {
+    color: white; }
+    body.error footer nav ul li a {
+      color: white; }
+    body.error footer nav ul li a:hover, body.error footer nav ul li a:focus {
+      color: #af4433; }
+
+.no-touch body.error {
+  background-attachment: fixed; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body.error {
+    background-image: url(../images/banner-error-2x.jpg); } }
 
 .xl, .lg, .md, .sm, .xs {
   width: 100%; }
