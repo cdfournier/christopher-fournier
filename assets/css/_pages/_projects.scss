@@ -10,7 +10,7 @@ main.projects {
     width: 100%;
     height: inherit;
     margin: 0;
-    padding: 0;
+    padding: 0 0 2rem;
     background-attachment: inherit;
     background-position: center;
     background-repeat: no-repeat;
@@ -128,9 +128,10 @@ main.projects {
         }
         p {
           max-width: 40rem;
-          @include font-bo;
+          @include font-md;
           font-size: 1.25rem;
         }
+        p a {@include font-ex;}
       }
     }
   }
@@ -140,6 +141,17 @@ main.projects {
   main.projects {
     .banner {
       .text h2 {font-size: 12vw;}
+    }
+  }
+}
+
+@media (min-width: 46rem) {
+  main.projects {
+    .banner {
+      .text h2 {font-size: 12vw;}
+    }
+    .text {
+      h2, h3, p, ul, ol {max-width: 40rem;}
     }
   }
 }

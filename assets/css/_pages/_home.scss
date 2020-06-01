@@ -168,12 +168,25 @@ main.home {
         flex-wrap: wrap;
         width: 100%;
         figure {
-          width: 45%;
+          width: calc(50% - 1rem);
           margin: 0;
         }
-        .text {width: calc(55% - 2rem);}
+        .text {width: calc(50% - 1rem);}
       }
       .card.xl.reverse {flex-direction: row-reverse;}
+    }
+  }
+}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  main.home {
+    .banner {
+      h1 {font-size: 6rem;}
+      p {
+        max-width: 48rem;
+        font-size: 1.25rem;
+      }
+      .signature {height: 6rem;}
     }
   }
 }

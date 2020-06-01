@@ -16,10 +16,6 @@
   background: #eef1e8; }
   .bg-cream .text {
     color: #384332; }
-    .bg-cream .text a {
-      color: #af4433; }
-    .bg-cream .text a:hover, .bg-cream .text a:focus {
-      color: #384332; }
 
 .bg-eberhardt {
   background: #ffe151; }
@@ -223,12 +219,12 @@ p a, li a, small a {
   font-family: "metropolis-bold", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #384332;
-  color: #af4433; }
-
-p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
   color: #af4433;
   color: #384332; }
+
+p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
+  color: #384332;
+  color: #af4433; }
 
 strong {
   display: block;
@@ -244,6 +240,24 @@ small {
 
 .xxsmall {
   font-size: 0.512rem; }
+
+@media (orientation: landscape), (min-width: 46rem) {
+  h2 {
+    font-size: 3.502rem; }
+  h3 {
+    font-size: 2.441rem; }
+  h4 {
+    font-size: 1.953rem; }
+  h5 {
+    font-size: 1.563rem; }
+  p {
+    font-size: 1.1rem; }
+  small {
+    font-size: 1rem; }
+  .xsmall, .xxsmall {
+    font-size: 0.8rem; }
+  h1 span, h2 span, h3 span, h4 span, h5 span {
+    font-size: 1rem; } }
 
 .visuallyhidden {
   display: none; }
@@ -451,19 +465,16 @@ nav {
     font-style: normal;
     font-size: 0.8rem;
     text-align: center;
-    color: #384332;
+    color: #af4433;
     -webkit-transition: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
     -ms-transition: all 0.25s ease 0s;
     -o-transition: all 0.25s ease 0s;
     transition: all 0.25s ease 0s; }
-  nav ul li a {
-    font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    color: #af4433; }
-  nav ul li a:hover, nav ul li a:focus {
-    color: #384332; }
+
+@media (orientation: landscape), (min-width: 46rem) {
+  nav ul li {
+    font-size: 1rem; } }
 
 .skip {
   display: flex;
@@ -643,12 +654,21 @@ main.home .content {
     flex-wrap: wrap;
     width: 100%; }
     main.home .content .card.xl figure {
-      width: 45%;
+      width: calc(50% - 1rem);
       margin: 0; }
     main.home .content .card.xl .text {
-      width: calc(55% - 2rem); }
+      width: calc(50% - 1rem); }
   main.home .content .card.xl.reverse {
     flex-direction: row-reverse; } }
+
+@media (orientation: landscape), (min-width: 46rem) {
+  main.home .banner h1 {
+    font-size: 6rem; }
+  main.home .banner p {
+    max-width: 48rem;
+    font-size: 1.25rem; }
+  main.home .banner .signature {
+    height: 6rem; } }
 
 @media (min-width: 89.875rem) {
   main.home .banner .signature {
@@ -666,7 +686,7 @@ main.projects .banner {
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0;
+  padding: 0 0 2rem;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
@@ -783,14 +803,24 @@ main.projects .content {
         display: none; }
     main.projects .content .promo .text p {
       max-width: 40rem;
-      font-family: "metropolis-bold", sans-serif;
+      font-family: "metropolis-medium", sans-serif;
       font-weight: normal;
       font-style: normal;
       font-size: 1.25rem; }
+    main.projects .content .promo .text p a {
+      font-family: "metropolis-extrabold", sans-serif;
+      font-weight: normal;
+      font-style: normal; }
 
 @media (orientation: landscape) {
   main.projects .banner .text h2 {
     font-size: 12vw; } }
+
+@media (min-width: 46rem) {
+  main.projects .banner .text h2 {
+    font-size: 12vw; }
+  main.projects .text h2, main.projects .text h3, main.projects .text p, main.projects .text ul, main.projects .text ol {
+    max-width: 40rem; } }
 
 main.projects.delta .banner {
   background-image: url(../images/work-delta-design-01-1x.jpg); }

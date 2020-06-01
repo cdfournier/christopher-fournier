@@ -18,14 +18,19 @@ nav {
     @include font-bo;
     font-size: 0.8rem;
     text-align: center;
-    color: $green;
+    color: $orange;
     @include transition (all, 0.25s, ease);
   }
-  ul li a {
-    @include font-bo;
-    color: $orange;
+}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  nav {
+    ul {
+      li {
+        font-size: 1rem;
+      }
+    }
   }
-  ul li a:hover, ul li a:focus {color: $green;}
 }
 
 

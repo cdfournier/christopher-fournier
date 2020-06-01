@@ -42,13 +42,13 @@ p {
 
 p a, li a, small a {
   @include font-bo;
-  color: $green;
   color: $orange;
+  color: $green;
 }
 
 p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
-  color: $orange;
   color: $green;
+  color: $orange;
 }
 
 strong {
@@ -60,6 +60,19 @@ small {font-size: 0.8rem;}
 
 .xsmall {font-size: 0.64rem;}
 .xxsmall {font-size: 0.512rem;}
+
+@media (orientation: landscape), (min-width: 46rem) {
+  h2 {font-size: 3.502rem;}
+  h3 {font-size: 2.441rem;}
+  h4 {font-size: 1.953rem;}
+  h5 {font-size: 1.563rem;}
+  p {font-size: 1.1rem;}
+  small {font-size: 1rem;}
+  .xsmall, .xxsmall {font-size: 0.8rem;}
+  h1, h2, h3, h4, h5 {
+    span {font-size: 1rem;}
+  }
+}
 
 
 // VISUALLY HIDDEN
