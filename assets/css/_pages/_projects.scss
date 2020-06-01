@@ -63,7 +63,7 @@ main.projects {
     .text {
       width: 100%;
       margin: 1rem auto;
-      h2, p, ul, ol {
+      h2, h3, p, ul, ol {
         max-width: 32rem;
         margin: 0 auto;
       }
@@ -119,10 +119,18 @@ main.projects {
       width: calc(100% + 4rem);
       margin: 1rem -2rem;
       padding: 4rem 2rem;
-      h2 {
-        @include font-serif;
-        font-size: 3.441rem;
-        span {display: none;}
+      .text {
+        h2 {
+          max-width: 40rem;
+          @include font-serif;
+          font-size: 3.441rem;
+          span {display: none;}
+        }
+        p {
+          max-width: 40rem;
+          @include font-bo;
+          font-size: 1.25rem;
+        }
       }
     }
   }
@@ -164,6 +172,16 @@ main.projects.panera {
 
 main.projects.transferx {
   .banner {background-image: url(../images/work-transferx-01-1x.jpg);}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 46rem) {
+  main.projects.delta {.banner {background-image: url(../images/work-delta-design-01-2x.jpg);}}
+  main.projects.east {.banner {background-image: url(../images/work-east-wind-01-2x.jpg);}}
+  main.projects.enservio {.banner {background-image: url(../images/work-enservio-01-2x.jpg);}}
+  main.projects.eberhardt {.banner {background-image: url(../images/work-eberhardt-design-01-2x.jpg);}}
+  main.projects.mystuff {.banner {background-image: url(../images/work-mystuff-01-2x.jpg);}}
+  main.projects.panera {.banner {background-image: url(../images/work-panera-01-2x.jpg);}}
+  main.projects.transferx {.banner {background-image: url(../images/work-transferx-01-2x.jpg);}}
 }
 
 
