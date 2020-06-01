@@ -143,9 +143,11 @@ html {
   html {
     scroll-behavior: auto; } }
 
-/*
-@media (min-width: 46rem) {html {font-size: 110%;}}
+@media (min-width: 46rem) {
+  html {
+    font-size: 18px; } }
 
+/*
 @media (min-width: 62rem) {html {font-size: 120%;}}
 
 @media (min-width: 88rem) {html {font-size: 130%;}}
@@ -183,7 +185,7 @@ img {
   NOTES:  
   All typography is set to a 1.250 Major-Third type-scale
 */
-h1, h2, h3, h4, h5 p {
+h1, h2, h3, h4, h5, p {
   display: block;
   width: 100%;
   margin: 0;
@@ -308,7 +310,7 @@ ol {
       font-family: "Playfair Display", serif;
       font-weight: 800;
       font-size: 3.502rem;
-      color: inherit;
+      color: #7e7e7e;
       counter-increment: count;
       content: "0" counter(count); }
     ol li span::after {
@@ -318,6 +320,8 @@ ol {
       margin: 0;
       background: #7e7e7e;
       content: ""; }
+  ol li:first-of-type {
+    margin: 0 0 1rem; }
 
 header {
   display: flex;
@@ -777,6 +781,7 @@ main.projects .content {
         display: none; }
     main.projects .content .box video {
       width: 100%;
+      max-width: 48rem;
       margin: 0 auto 1rem; }
   main.projects .content .promo {
     width: calc(100% + 4rem);

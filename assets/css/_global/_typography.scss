@@ -4,7 +4,7 @@
   All typography is set to a 1.250 Major-Third type-scale
 */
 
-h1, h2, h3, h4, h5 p {
+h1, h2, h3, h4, h5, p {
   display: block;
   width: 100%;
   margin: 0;
@@ -116,7 +116,7 @@ ol {
       padding: 0;
       @include font-serif;
       font-size: 3.502rem;
-      color: inherit;
+      color: $gray;
       counter-increment: count;
       content: "0" counter(count);
     }
@@ -129,4 +129,5 @@ ol {
       content: "";
     }
   }
+  li:first-of-type {margin: 0 0 1rem;}
 }
