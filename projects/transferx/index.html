@@ -10,7 +10,7 @@
     <link href="../../assets/css/aos.css" rel="stylesheet">
     <link href="../../assets/css/master.css" rel="stylesheet">
   </head>
-  <body>
+  <body data-aos="fade">
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
@@ -28,7 +28,7 @@
       <section class="banner tall">
         <h1 class="visuallyhidden">Introduction to TransferX</h1>
         <div class="overlay"></div>
-        <div class="text">
+        <div class="text" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500">
           <h2><span>Case Study</span>TransferX</h2>
           <p>TransferX is a blockchain-driven P2P money transfer platform.</p>
         </div>
@@ -211,7 +211,10 @@
     <script src="../../assets/scripts/headroom.js"></script>
     <script src="../../assets/scripts/aos.js"></script>
     <script>
-      AOS.init({duration: 600});
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+      });
     </script>
     <script>
       var myElement = document.querySelector('header');
