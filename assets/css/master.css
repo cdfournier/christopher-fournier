@@ -516,7 +516,7 @@ main.home .banner {
   position: relative;
   align-items: center;
   z-index: 15;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
   text-align: center;
   background: white; }
   main.home .banner h1 {
@@ -686,7 +686,7 @@ main.projects .banner {
   width: 100%;
   height: inherit;
   margin: 0;
-  padding: 0 0 2rem;
+  padding: 0 0 4rem;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
