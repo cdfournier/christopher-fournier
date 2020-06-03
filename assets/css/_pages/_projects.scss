@@ -34,6 +34,7 @@ main.projects {
       text-align: center;
       color: white;
       h2 {
+        max-width: none;
         margin: 0 auto;
         @include font-serif;
         font-size: 16vw;

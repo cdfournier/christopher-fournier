@@ -709,6 +709,7 @@ main.projects .banner {
     text-align: center;
     color: white; }
     main.projects .banner .text h2 {
+      max-width: none;
       margin: 0 auto;
       font-family: "Playfair Display", serif;
       font-weight: 800;
