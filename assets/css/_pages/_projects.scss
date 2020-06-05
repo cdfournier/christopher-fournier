@@ -141,7 +141,11 @@ main.projects {
 @media (orientation: landscape) {
   main.projects {
     .banner {
-      .text h2 {font-size: 12vw;}
+      padding: 0;
+      .text {
+        h2 {font-size: 12vw;}
+        p {font-size: 150%;}
+      }
     }
   }
 }
@@ -149,7 +153,11 @@ main.projects {
 @media (min-width: 46rem) {
   main.projects {
     .banner {
-      .text h2 {font-size: 12vw;}
+      padding: 0;
+      .text {
+        h2 {font-size: 12vw;}
+        p {font-size: 150%;}
+      }
     }
     .text {
       h2, h3, p, ul, ol {max-width: 40rem;}

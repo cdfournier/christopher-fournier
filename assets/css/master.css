@@ -526,6 +526,8 @@ main.home .banner {
     font-style: normal;
     font-size: 5.063rem;
     color: #384332; }
+  main.home .banner p {
+    font-size: 1.1rem; }
   main.home .banner .avatar {
     display: flex;
     position: relative;
@@ -814,12 +816,20 @@ main.projects .content {
       font-style: normal; }
 
 @media (orientation: landscape) {
-  main.projects .banner .text h2 {
-    font-size: 12vw; } }
+  main.projects .banner {
+    padding: 0; }
+    main.projects .banner .text h2 {
+      font-size: 12vw; }
+    main.projects .banner .text p {
+      font-size: 150%; } }
 
 @media (min-width: 46rem) {
-  main.projects .banner .text h2 {
-    font-size: 12vw; }
+  main.projects .banner {
+    padding: 0; }
+    main.projects .banner .text h2 {
+      font-size: 12vw; }
+    main.projects .banner .text p {
+      font-size: 150%; }
   main.projects .text h2, main.projects .text h3, main.projects .text p, main.projects .text ul, main.projects .text ol {
     max-width: 40rem; } }
 
