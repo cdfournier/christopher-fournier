@@ -167,33 +167,13 @@ main.projects {
 
 
 // PROJECT BANNER IMAGES
-main.projects.delta {
-  .banner {background-image: url(../images/work-delta-design-01-1x.jpg);}
-}
-
-main.projects.east {
-  .banner {background-image: url(../images/work-east-wind-01-1x.jpg);}
-}
-
-main.projects.enservio {
-  .banner {background-image: url(../images/work-enservio-01-1x.jpg);}
-}
-
-main.projects.eberhardt {
-  .banner {background-image: url(../images/work-eberhardt-design-01-1x.jpg);}
-}
-
-main.projects.mystuff {
-  .banner {background-image: url(../images/work-mystuff-01-1x.jpg);}
-}
-
-main.projects.panera {
-  .banner {background-image: url(../images/work-panera-01-1x.jpg);}
-}
-
-main.projects.transferx {
-  .banner {background-image: url(../images/work-transferx-01-1x.jpg);}
-}
+main.projects.delta {.banner {background-image: url(../images/work-delta-design-01-1x.jpg);}}
+main.projects.east {.banner {background-image: url(../images/work-east-wind-01-1x.jpg);}}
+main.projects.enservio {.banner {background-image: url(../images/work-enservio-01-1x.jpg);}}
+main.projects.eberhardt {.banner {background-image: url(../images/work-eberhardt-design-01-1x.jpg);}}
+main.projects.mystuff {.banner {background-image: url(../images/work-mystuff-01-1x.jpg);}}
+main.projects.panera {.banner {background-image: url(../images/work-panera-01-1x.jpg);}}
+main.projects.transferx {.banner {background-image: url(../images/work-transferx-01-1x.jpg);}}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 46rem) {
   main.projects.delta {.banner {background-image: url(../images/work-delta-design-01-2x.jpg);}}
