@@ -140,6 +140,10 @@ main.projects {
   }
 }
 
+.no-touch main.projects {
+  .banner {background-attachment: fixed;}
+}
+
 @media (orientation: landscape) {
   main.projects {
     .banner {

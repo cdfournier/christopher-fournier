@@ -836,6 +836,9 @@ main.projects .content {
       font-weight: normal;
       font-style: normal; }
 
+.no-touch main.projects .banner {
+  background-attachment: fixed; }
+
 @media (orientation: landscape) {
   main.projects .banner {
     padding: 0; }
