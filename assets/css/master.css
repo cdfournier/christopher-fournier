@@ -613,7 +613,18 @@ main.home .content {
         display: grid;
         overflow: hidden;
         width: 100%;
-        border-radius: 0.25rem; }
+        border-radius: 0.25rem;
+        will-change: transform;
+        -webkit-transition: all 0.325s ease 0s;
+        -moz-transition: all 0.325s ease 0s;
+        -ms-transition: all 0.325s ease 0s;
+        -o-transition: all 0.325s ease 0s;
+        transition: all 0.325s ease 0s;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0); }
       main.home .content .card figure picture.phone {
         display: none; }
         main.home .content .card figure picture.phone source, main.home .content .card figure picture.phone img {
@@ -639,6 +650,14 @@ main.home .content {
     padding: 4rem 2rem; }
     main.home .content .promo h2 span {
       display: none; }
+
+.no-touch main.home .content .card figure a:hover picture, .no-touch main.home .content .card figure a:focus picture {
+  box-shadow: 0.25rem 0.25rem 0.5rem #e5e5e5;
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem); }
 
 @media (orientation: landscape) {
   main.home .content .card {
@@ -902,9 +921,28 @@ main.projects.transferx .banner {
         display: grid;
         overflow: hidden;
         width: 100%;
-        border-radius: 0.25rem; }
+        border-radius: 0.25rem;
+        will-change: transform;
+        -webkit-transition: all 0.325s ease 0s;
+        -moz-transition: all 0.325s ease 0s;
+        -ms-transition: all 0.325s ease 0s;
+        -o-transition: all 0.325s ease 0s;
+        transition: all 0.325s ease 0s;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0); }
       .up-next .card figure figcaption {
         display: none; }
+
+.no-touch .up-next .card figure a:hover picture, .no-touch .up-next .card figure a:focus picture {
+  box-shadow: 0.25rem 0.25rem 0.5rem #e5e5e5;
+  -webkit-transform: translateY(-0.5rem);
+  -moz-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  -o-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem); }
 
 /*
 RESUME SECTIONS

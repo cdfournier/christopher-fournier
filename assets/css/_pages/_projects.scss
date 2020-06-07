@@ -216,8 +216,22 @@ main.projects.transferx {.banner {background-image: url(../images/work-transferx
         overflow: hidden;
         width: 100%;
         border-radius: 0.25rem;
+        will-change: transform;
+        @include transition(all, 0.325s, ease);
+        @include transform(translateY(0));
       }
       figcaption {display: none;}
+    }
+  }
+}
+
+.no-touch .up-next {
+  .card {
+    figure a:hover, figure a:focus {
+      picture {
+        box-shadow: 0.25rem 0.25rem 0.5rem $gray-platinum;
+        @include transform(translateY(-0.5rem));
+      }
     }
   }
 }
