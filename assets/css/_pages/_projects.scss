@@ -24,6 +24,8 @@ main.projects {
       height: 100%;
       background: black;
       opacity: 0.5;
+      -webkit-backdrop-filter: saturate(180%);
+      backdrop-filter: saturate(180%);
     }
     .text {
       display: block;
