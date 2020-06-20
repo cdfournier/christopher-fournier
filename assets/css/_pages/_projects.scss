@@ -123,6 +123,7 @@ main.projects {
       margin: 1rem -2rem;
       padding: 4rem 2rem;
       .text {
+        color: white;
         h2 {
           max-width: 40rem;
           @include font-serif;
@@ -134,7 +135,11 @@ main.projects {
           @include font-md;
           font-size: 1.25rem;
         }
-        p a {@include font-ex;}
+        p a {
+          @include font-ex;
+          color: white;
+        }
+        p a:hover, p a:focus {color: $gray;}
       }
     }
   }

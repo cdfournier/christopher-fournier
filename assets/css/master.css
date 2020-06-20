@@ -19,50 +19,28 @@
 
 .bg-eberhardt {
   background: #ffe151; }
-  .bg-eberhardt .text {
+  .bg-eberhardt .text h2, .bg-eberhardt p {
     color: black; }
-    .bg-eberhardt .text a {
+    .bg-eberhardt .text h2 a, .bg-eberhardt p a {
       color: black; }
-    .bg-eberhardt .text a:hover, .bg-eberhardt .text a:focus {
+    .bg-eberhardt .text h2 a:hover, .bg-eberhardt .text h2 a:focus, .bg-eberhardt p a:hover, .bg-eberhardt p a:focus {
       color: #7e7e7e; }
 
 .bg-enservio {
   background: #2e84ed; }
-  .bg-enservio .text {
-    color: white; }
-    .bg-enservio .text a {
-      color: #af4433; }
-    .bg-enservio .text a:hover, .bg-enservio .text a:focus {
-      color: #7e7e7e; }
 
 .bg-mystuff {
   background: #cd2183; }
-  .bg-mystuff .text {
-    color: white; }
-    .bg-mystuff .text a {
-      color: white; }
-    .bg-mystuff .text a:hover, .bg-mystuff .text a:focus {
-      color: #7e7e7e; }
 
 .bg-panera {
   background: #4c753f; }
   .bg-panera .text {
     color: white; }
-    .bg-panera .text a {
-      color: white; }
-    .bg-panera .text a:hover, .bg-panera .text a:focus {
-      color: #7e7e7e; }
     .bg-panera .text ol li span::after {
       background: white; }
 
 .bg-transferx {
   background: #0d1e27; }
-  .bg-transferx .text {
-    color: white; }
-    .bg-transferx .text a {
-      color: white; }
-    .bg-transferx .text a:hover, .bg-transferx .text a:focus {
-      color: #7e7e7e; }
 
 @font-face {
   font-family: "metropolis-thin";
@@ -193,6 +171,14 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
     line-height: 1.5;
     text-transform: uppercase; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  color: #af4433;
+  color: #384332; }
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover,
+h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus {
+  color: #af4433; }
 
 h1 {
   font-size: 3.502rem; }
@@ -818,23 +804,28 @@ main.projects .content {
     width: calc(100% + 4rem);
     margin: 1rem -2rem;
     padding: 4rem 2rem; }
-    main.projects .content .promo .text h2 {
-      max-width: 40rem;
-      font-family: "Playfair Display", serif;
-      font-weight: 800;
-      font-size: 3.441rem; }
-      main.projects .content .promo .text h2 span {
-        display: none; }
-    main.projects .content .promo .text p {
-      max-width: 40rem;
-      font-family: "metropolis-medium", sans-serif;
-      font-weight: normal;
-      font-style: normal;
-      font-size: 1.25rem; }
-    main.projects .content .promo .text p a {
-      font-family: "metropolis-extrabold", sans-serif;
-      font-weight: normal;
-      font-style: normal; }
+    main.projects .content .promo .text {
+      color: white; }
+      main.projects .content .promo .text h2 {
+        max-width: 40rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        font-size: 3.441rem; }
+        main.projects .content .promo .text h2 span {
+          display: none; }
+      main.projects .content .promo .text p {
+        max-width: 40rem;
+        font-family: "metropolis-medium", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.25rem; }
+      main.projects .content .promo .text p a {
+        font-family: "metropolis-extrabold", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        color: white; }
+      main.projects .content .promo .text p a:hover, main.projects .content .promo .text p a:focus {
+        color: #7e7e7e; }
 
 .no-touch main.projects .banner {
   background-attachment: fixed; }

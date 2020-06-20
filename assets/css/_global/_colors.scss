@@ -66,48 +66,25 @@ $transferx-bg: #f0f5f8;
 
 .bg-eberhardt {
   background: $eberhardt-design;
-  .text {
+  .text h2, p {
     color: black;
     a {color: black;}
     a:hover, a:focus {color: $gray;}
   }
 }
 
-.bg-enservio {
-  background: $enservio;
-  .text {
-    color: white;
-    a {color: $orange;}
-    a:hover, a:focus {color: $gray;}
-  }
-}
+.bg-enservio {background: $enservio;}
 
-.bg-mystuff {
-  background: $mystuff;
-  .text {
-    color: white;
-    a {color: white;}
-    a:hover, a:focus {color: $gray;}
-  }
-}
+.bg-mystuff {background: $mystuff;}
 
 .bg-panera {
   background: $panera;
   .text {
     color: white;
-    a {color: white;}
-    a:hover, a:focus {color: $gray;}
     ol li {
       span::after {background: white;}
     }
   }
 }
 
-.bg-transferx {
-  background: $transferx;
-  .text {
-    color: white;
-    a {color: white;}
-    a:hover, a:focus {color: $gray;}
-  }
-}
+.bg-transferx {background: $transferx;}
