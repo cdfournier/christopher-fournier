@@ -637,7 +637,7 @@ main.home .content {
     main.home .content .promo h2 span {
       display: none; }
 
-.no-touch main.home .content .card figure a:hover picture, .no-touch main.home .content .card figure a:focus picture {
+.no-touch main.home .content .card figure:hover picture, .no-touch main.home .content .card figure:focus picture {
   box-shadow: 0.25rem 0.25rem 0.5rem #e5e5e5;
   -webkit-transform: translateY(-0.5rem);
   -moz-transform: translateY(-0.5rem);
