@@ -12,7 +12,15 @@ body.error {
     padding: 2rem;
     color: white;
     .button {
-      border-color: white;
+      display: inline-block;
+      width: auto;
+      margin: 2rem 0 0;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+      @include font-bo;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       color: white;
       background-color: transparent;
     }
@@ -22,6 +30,7 @@ body.error {
     }
   }
   footer {
+    justify-content: flex-end;
     color: white;
     nav ul li a {color: white;}
     nav ul li a:hover, nav ul li a:focus {color: $orange;}

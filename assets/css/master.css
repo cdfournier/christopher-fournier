@@ -1367,13 +1367,24 @@ body.error {
     padding: 2rem;
     color: white; }
     body.error .error .button {
-      border-color: white;
+      display: inline-block;
+      width: auto;
+      margin: 2rem 0 0;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+      font-family: "metropolis-bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       color: white;
       background-color: transparent; }
     body.error .error .button:hover, body.error .error .button:focus {
       color: #384332;
       background-color: white; }
   body.error footer {
+    justify-content: flex-end;
     color: white; }
     body.error footer nav ul li a {
       color: white; }
