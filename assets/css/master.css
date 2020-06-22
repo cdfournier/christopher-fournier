@@ -950,7 +950,7 @@ main.projects.transferx .banner {
       .up-next .card figure figcaption {
         display: none; }
 
-.no-touch .up-next .card figure a:hover picture, .no-touch .up-next .card figure a:focus picture {
+.no-touch .up-next .card figure:hover picture {
   box-shadow: 0.25rem 0.25rem 0.5rem #e5e5e5;
   -webkit-transform: translateY(-0.5rem);
   -moz-transform: translateY(-0.5rem);

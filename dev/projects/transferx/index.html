@@ -206,6 +206,12 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../../assets/scripts/modernizr.min.js"></script>
+    <script src="../../../assets/scripts/headroom.js"></script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
+    </script>
     <script>
       $(document).ready(function() {
         $("#loading").css("opacity", 0);
