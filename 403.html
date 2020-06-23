@@ -71,16 +71,17 @@
       }
     </script>
   </head>
-  <body class="error" data-aos="fade">
+  <body class="error">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8D6FM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <section id="loading" class="loading tall"></section>
     <main>
       <section class="error">
 				<h1><span class="eyebrow">403: Forbidden</span>You Shall Not Pass</h1>
 				<p>My server server understood your request but refuses to authorize it.</p>
-        <a id="error-403" class="button" href="index.html">Go Home</a>
+        <a id="error-403" class="button" href="https://chris.blackcoffeeshoppe.com/index.html">Go Home</a>
   		</section>
     </main>
     <footer class="error short">
@@ -95,13 +96,12 @@
       <p class="xsmall">© 2020 Chris Fournier. American Made. Powered by Coffee.</p>
     </footer>
     <!-- scripts -->
+    <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-quad"
+      $(document).ready(function() {
+        $("#loading").css("opacity", 0);
       });
     </script>
   </body>

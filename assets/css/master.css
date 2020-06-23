@@ -410,6 +410,8 @@ footer {
     text-align: left; }
     footer .contact h2 span {
       display: none; }
+    footer .contact p {
+      max-width: none; }
   footer p.xsmall {
     position: absolute;
     bottom: 2rem;

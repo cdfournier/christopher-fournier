@@ -59,7 +59,6 @@
     <!-- css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://chris.blackcoffeeshoppe.com/assets/css/master.css" media="print" onload="this.media='all'">
     <script type="application/ld+json">
       {
@@ -76,11 +75,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8D6FM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  <body>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
     </section>
+    <section id="loading" class="loading tall"></section>
     <header>
       <nav id="header-navigation">
         <ul aria-labelledby="header-navigation">
@@ -202,7 +201,7 @@
       <section class="up-next">
         <h1>Up Next</h1>
         <div class="card md">
-          <figure><a href="https://chris.blackcoffeeshoppe.com/projects/mystuff/">
+          <figure><a href="https://chris.blackcoffeeshoppe.com/mystuff/">
             <picture>
               <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-01-2x.webp" type="image/webp">
               <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-01-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-mystuff-01-2x.jpg 2x" alt="Gentleman starting up the MyStuff app on his phone">
@@ -210,11 +209,11 @@
             <figcaption>MyStuff native web app</figcaption>
           </figure>
           <div class="text">
-            <h2><a href="https://chris.blackcoffeeshoppe.com/projects/mystuff/"><span>Functional Prototypes</span>MyStuff</a></h2>
+            <h2><a href="https://chris.blackcoffeeshoppe.com/mystuff/"><span>Functional Prototypes</span>MyStuff</a></h2>
           </div>
         </div>
         <div class="card md">
-          <figure><a href="https://chris.blackcoffeeshoppe.com/projects/east-wind/">
+          <figure><a href="https://chris.blackcoffeeshoppe.com/east-wind/">
             <picture>
               <source srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-east-wind-01-2x.webp" type="image/webp">
               <img src="https://chris.blackcoffeeshoppe.com/assets/images/work-east-wind-01-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-east-wind-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-east-wind-01-2x.jpg 2x" alt="East Wind branded phonograph">
@@ -222,7 +221,7 @@
             <figcaption>East Wind branded phonograph</figcaption>
           </figure>
           <div class="text">
-            <h2><a href="https://chris.blackcoffeeshoppe.com/projects/east-wind/"><span>Branding</span>East Wind</a></h2>
+            <h2><a href="https://chris.blackcoffeeshoppe.com/east-wind/"><span>Branding</span>East Wind</a></h2>
           </div>
         </div>
       </section>
@@ -248,17 +247,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-quad"
-      });
-    </script>
     <script>
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#loading").css("opacity", 0);
+      });
     </script>
   </body>
 </html>
