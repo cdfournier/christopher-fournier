@@ -76,6 +76,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8D6FM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <section id="loading" class="loading"></section>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
@@ -165,10 +166,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-quad"
+      $(document).ready(function() {
+        $("#loading").addClass("loaded");
       });
+    </script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
