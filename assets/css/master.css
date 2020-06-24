@@ -747,13 +747,15 @@ main.projects .banner {
       margin: 0 auto;
       font-family: "Playfair Display", serif;
       font-weight: 800;
-      font-size: 16vw;
+      font-size: 3rem;
+      font-size: calc(48px + 100 * ((100vw - 320px) / 680));
       letter-spacing: 1px;
       line-height: 1; }
     main.projects .banner .text p {
       max-width: 40rem;
       margin: 0 auto;
-      padding: 2rem 0 0; }
+      padding: 2rem 0 0;
+      font-size: calc(16px + 8 * ((100vw - 320px) / 680)); }
 
 main.projects .content {
   display: flex;
@@ -857,19 +859,11 @@ main.projects .content {
 
 @media (orientation: landscape) {
   main.projects .banner {
-    padding: 0; }
-    main.projects .banner .text h2 {
-      font-size: 12vw; }
-    main.projects .banner .text p {
-      font-size: 150%; } }
+    padding: 0; } }
 
 @media (min-width: 46rem) {
   main.projects .banner {
     padding: 0; }
-    main.projects .banner .text h2 {
-      font-size: 12vw; }
-    main.projects .banner .text p {
-      font-size: 150%; }
   main.projects .text h2, main.projects .text h3, main.projects .text p, main.projects .text ul, main.projects .text ol {
     max-width: 40rem; } }
 

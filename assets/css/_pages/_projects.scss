@@ -39,7 +39,8 @@ main.projects {
         max-width: none;
         margin: 0 auto;
         @include font-serif;
-        font-size: 16vw;
+        font-size: 3rem;
+        font-size: calc(48px + 100 * ((100vw - 320px) / 680));
         letter-spacing: 1px;
         line-height: 1;
       }
@@ -47,6 +48,7 @@ main.projects {
         max-width: 40rem;
         margin: 0 auto;
         padding: 2rem 0 0;
+        font-size: calc(16px + 8 * ((100vw - 320px) / 680));
       }
     }
   }
@@ -154,8 +156,6 @@ main.projects {
     .banner {
       padding: 0;
       .text {
-        h2 {font-size: 12vw;}
-        p {font-size: 150%;}
       }
     }
   }
@@ -166,8 +166,6 @@ main.projects {
     .banner {
       padding: 0;
       .text {
-        h2 {font-size: 12vw;}
-        p {font-size: 150%;}
       }
     }
     .text {
