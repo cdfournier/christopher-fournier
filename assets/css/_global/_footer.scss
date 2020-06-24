@@ -13,14 +13,14 @@ footer {
   nav {
     width: 100%;
     min-width: 50%;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     ul {
       align-items: center;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       width: 100%;
       padding: 0;
-      li {padding: 0 1rem;}
+      li {padding: 0;}
       li:last-child {padding-bottom: 0;}
     }
   }
@@ -33,9 +33,7 @@ footer {
     p {max-width: none;}
   }
   p.xsmall {
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
+    width: calc(100% - 1rem);
     padding: 1rem 0 0;
     text-align: center;
   }
