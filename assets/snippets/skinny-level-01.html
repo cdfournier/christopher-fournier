@@ -1,4 +1,4 @@
-<!-- SCRIPT BLOCK WITH HEADROOM -->
+<!-- UPDATE CANONICAL LINKS ON EACH PAGE -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chris Fournier. American Made. Powered by Coffee.</title>
     <!-- css -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
-    <link href="assets/css/normalize.min.css" rel="stylesheet">
-    <link href="assets/css/aos.css" rel="stylesheet">
-    <link href="assets/css/master.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/master.css">
   </head>
   <body>
+    <section id="loading" class="loading"></section>
+    <section class="skip">
+      <h1 class="visuallyhidden">Skip to Content</h1>
+      <a href="#content">Skip to Content</a>
+    </section>
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/scripts/modernizr.min.js" async></script>
+    <script src="assets/scripts/headroom.js"></script>
+    <script>
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init(); 
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#loading").addClass("loaded");
+      });
+    </script>
+  </body>
+</html>
+
+
+<!-- WITH AOS -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chris Fournier. American Made. Powered by Coffee.</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/master.css">
+  </head>
+  <body>
+    <section id="loading" class="loading"></section>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
@@ -25,42 +65,17 @@
     <script src="assets/scripts/headroom.js"></script>
     <script src="assets/scripts/aos.js"></script>
     <script>
-      AOS.init({duration: 600});
-    </script>
-    <script>
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
     </script>
-  </body>
-</html>
-
-<!-- SCRIPT BLOCK WITHOUT HEADROOM -->
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chris Fournier. American Made. Powered by Coffee.</title>
-    <!-- css -->
-    <link href="assets/css/normalize.min.css" rel="stylesheet">
-    <link href="assets/css/aos.css" rel="stylesheet">
-    <link href="assets/css/master.css" rel="stylesheet">
-  </head>
-  <body>
-    <section class="skip">
-      <h1 class="visuallyhidden">Skip to Content</h1>
-      <a href="#content">Skip to Content</a>
-    </section>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <!-- scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/scripts/modernizr.min.js" async></script>
-    <script src="assets/scripts/aos.js"></script>
     <script>
-      AOS.init({duration: 600});
+      $(document).ready(function() {
+        $("#loading").addClass("loaded");
+      });
+    </script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 <!-- UPDATE CANONICAL LINKS ON EACH PAGE -->
-<!-- SCRIPT BLOCK WITH HEADROOM -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,7 +60,6 @@
     <!-- css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://chris.blackcoffeeshoppe.com/assets/css/master.css" media="print" onload="this.media='all'">
     <script type="application/ld+json">
       {
@@ -78,28 +76,32 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8D6FM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <section id="loading" class="loading"></section>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
     </section>
+
     <header></header>
+
     <main></main>
+
     <footer></footer>
+
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-quad"
-      });
-    </script>
     <script>
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#loading').addClass("loaded");
+      });
     </script>
   </body>
 </html>
