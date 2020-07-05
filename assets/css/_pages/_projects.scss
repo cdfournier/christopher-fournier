@@ -40,7 +40,6 @@ main.projects {
         margin: 0 auto;
         @include font-serif;
         font-size: 3rem;
-        font-size: calc(48px + 100 * ((100vw - 320px) / 680));
         letter-spacing: 1px;
         line-height: 1;
       }
@@ -156,6 +155,7 @@ main.projects {
     .banner {
       padding: 0;
       .text {
+        h2 {font-size: 6rem;}
       }
     }
   }
@@ -166,6 +166,7 @@ main.projects {
     .banner {
       padding: 0;
       .text {
+        h2 {font-size: 6rem;}
       }
     }
     .text {
