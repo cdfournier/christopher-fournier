@@ -843,13 +843,25 @@ main.projects .content {
   main.projects .banner {
     padding: 0; }
     main.projects .banner .text h2 {
-      font-size: 6rem; } }
+      font-size: 6rem; }
+      main.projects .banner .text h2 span:nth-of-type(2), main.projects .banner .text h2 span:nth-of-type(3) {
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        font-size: 60%;
+        line-height: 1.25;
+        text-transform: none; } }
 
 @media (min-width: 46rem) {
   main.projects .banner {
     padding: 0; }
     main.projects .banner .text h2 {
       font-size: 6rem; }
+      main.projects .banner .text h2 span:nth-of-type(2), main.projects .banner .text h2 span:nth-of-type(3) {
+        font-family: "Playfair Display", serif;
+        font-weight: 800;
+        font-size: 60%;
+        line-height: 1.25;
+        text-transform: none; }
   main.projects .text h2, main.projects .text h3, main.projects .text p, main.projects .text ul, main.projects .text ol {
     max-width: 40rem; } }
 
