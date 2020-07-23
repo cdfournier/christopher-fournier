@@ -76,6 +76,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW8D6FM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <section class="loading" style="background: white;"></section>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <a href="#content">Skip to Content</a>
@@ -166,6 +167,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      $(document).ready(function() {
+        $(".loading").addClass("loaded");
+      });
     </script>
   </body>
 </html>
