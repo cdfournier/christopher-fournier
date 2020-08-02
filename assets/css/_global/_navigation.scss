@@ -5,6 +5,7 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
     margin: 0;
@@ -22,4 +23,36 @@ nav {
 
 @media (orientation: landscape), (min-width: 48rem) {
   nav ul li {font-size: 1rem;}
+}
+
+
+// ICON SETUP
+a .icon span {display: none;}
+
+.no-touch a {
+  .icon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    span {
+      display: grid;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0 0 0 0.5rem;
+      will-change: transform;
+      @include transition (all, 0.325s, ease);
+      @include transform (translateY(2rem));
+      svg {fill: $green;}
+    }
+  }
+  &:hover, &:focus {
+    .icon {
+      span {
+        @include transform (translateY(0));
+        svg {fill: $orange;}
+      }
+    }
+  }
 }

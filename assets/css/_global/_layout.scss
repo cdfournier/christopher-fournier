@@ -1,3 +1,8 @@
+/*
+Try to condense the cascade using & so that the stack or
+cascade does not need to repeat itself over mild variations
+*/
+
 // SKIP
 .skip {
   display: flex;
@@ -42,6 +47,7 @@
   z-index: 100;
   width: 100%;
   height: inherit;
+  min-height: 90vh;
   margin: 0;
   padding: 2rem;
   background-attachment: inherit;
@@ -91,7 +97,6 @@
 }
 
 .banner.home {
-  min-height: 90vh;
   color: $green;
   background: $cream;
   h1 {
@@ -111,6 +116,7 @@
 }
 
 .banner.home.green {
+  // DELETE IF NOT USED
   color: white;
   background: $green;
   .signature svg {fill: white;}
@@ -135,7 +141,8 @@
     background-size: 40%;
   }
   .banner.home.green {
-    background-blend-mode: overlay;
+    // DELETE IF NOT USED
+    background-blend-mode: soft-light;
     background-image: url(../images/profile-2x.png);
     background-position: right bottom;
     background-repeat: no-repeat;
