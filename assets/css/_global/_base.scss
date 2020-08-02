@@ -1,129 +1,13 @@
+@import "fonts";
 @import "mixins";
 @import "colors";
-
-
-// FONTS
-@font-face {
-  font-family: "metropolis-thin";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-thin.eot");
-    src: url("../fonts/metropolis/metropolis-thin.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-thin.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-thin.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-thin.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-light";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-light.eot");
-    src: url("../fonts/metropolis/metropolis-light.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-light.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-light.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-regular";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-regular.eot");
-    src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-medium";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-medium.eot");
-    src: url("../fonts/metropolis/metropolis-medium.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-medium.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-medium.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-medium.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-bold";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-bold.eot");
-    src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: "metropolis-extrabold";
-  font-display: swap;
-    src: url("../fonts/metropolis/metropolis-extrabold.eot");
-    src: url("../fonts/metropolis/metropolis-extrabold.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-extrabold.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-extrabold.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-extrabold.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@mixin font-th {
-  font-family: "metropolis-thin", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin font-lt {
-  font-family: "metropolis-light", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin font-rg {
-  font-family: "metropolis-regular", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin font-md {
-  font-family: "metropolis-medium", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin font-bo {
-  font-family: "metropolis-bold", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@mixin font-ex {
-  font-family: "metropolis-extrabold", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-// PLAYFAIR
-@mixin font-serif {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-}
 
 
 // BASE
 html {
   margin: 0 auto;
   padding: 0;
-  @include font-rg;
+  @include sans-light;
   font-size: 16px;
   line-height: 1.65;
   color: black;
@@ -136,9 +20,6 @@ html {
 
 body, .body {
   width: 100%;
-  height: auto;
-  min-height: 101vh;
-  overflow-x: hidden;
   margin: 0 auto;
   padding: 0;
 }
@@ -149,35 +30,8 @@ body, .body {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-  @include transition(all, 0.25s, ease);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
 img {
   width: 100%;
   height: auto;
   margin: 0;
-}
-
-
-// LOADING
-.loading {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  opacity: 1;
-  @include transition(all, 2.5s, ease);
-}
-
-.loading.loaded {
-  z-index: -10;
-  opacity: 0;
 }

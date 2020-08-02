@@ -1,38 +1,24 @@
 // HEADER
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
   position: fixed;
-  z-index: 10;
+  top: 0;
   width: 100%;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem;
   background: white;
 }
 
-.header--fixed {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0
-}
 
+// HEADROOM
 .headroom {
-  @include transition (all, 0.25s, ease);
+  @include transition (all, 0.325s, ease);
   will-change: transform
 }
 
-.headroom--pinned {@include transform (translateY(0));}
+.headroom--pinned {
+  z-index: 10;
+  @include transform (translateY(0));
+}
 
 .headroom--unpinned {@include transform (translateY(-100%));}
-
-@media (orientation: landscape), (min-width: 46rem) {
-  header {
-    flex-direction: row;
-    nav {
-      ul {justify-content: flex-start;}
-    }
-  }
-}

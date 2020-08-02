@@ -1,79 +1,28 @@
 // FOOTER
 footer {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
   width: 100%;
-  margin: 1rem auto 0;
+  margin: 2rem auto 0;
   padding: 2rem;
-  @include font-rg;
-  text-align: center;
-  nav {
-    width: 100%;
-    min-width: 50%;
-    margin: 0 auto 2.4rem;
-    ul {
-      align-items: center;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      padding: 0;
-      li {padding: 0 0.64rem;}
-      li:last-child {padding-bottom: 0;}
-    }
-  }
+  color: $green;
+  background: $cream;
   .contact {
+    display: block;
     width: 100%;
     margin: 0 0 2rem;
     padding: 0;
     text-align: left;
-    h2 span {display: none;}
-    p {max-width: none;}
+    p {
+      max-width: none;
+      font-size: inherit;
+    }
   }
-  p.xsmall {
-    position: absolute;
-    bottom: 2rem;
-    width: calc(100% - 2rem);
-    padding: 0;
-    text-align: center;
-  }
+  p {font-size: 0.64rem;}
 }
 
-@media (min-width: 23rem) {
+@media (min-width: 64rem) {
   footer {
-    nav {margin: 0 auto 2rem;}
-    p.xsmall {}
+    .contact {margin: 0 0 4rem;}
   }
-}
-
-footer.bg-green {
-  .contact {
-    color: white;
-    a:hover, a:focus {color: $orange;}
-  }
-  nav {
-    ul {
-      li {color: white;}
-      li a {color: $orange;}
-      li a:hover, li a:focus {color: white;}
-    }
-  }
-  p.xsmall {color: white;}
-}
-
-footer.error {
-  .contact {
-    color: white;
-    a:hover, a:focus {color: white;}
-  }
-  nav {
-    ul {
-      li {color: white;}
-      li a {color: $orange;}
-      li a:hover, li a:focus {color: white;}
-    }
-  }
-  p.xsmall {color: white;}
 }
