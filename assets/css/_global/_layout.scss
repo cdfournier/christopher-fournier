@@ -50,6 +50,7 @@ cascade does not need to repeat itself over mild variations
   min-height: 90vh;
   margin: 0;
   padding: 2rem;
+  color: white;
   background-attachment: inherit;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,33 +67,42 @@ cascade does not need to repeat itself over mild variations
     -webkit-backdrop-filter: saturate(180%);
     backdrop-filter: saturate(180%);
   }
-  .scroll {display: none;}
+  h1 {
+    position: relative;
+    @include serif-regular;
+  }
+  p {position: relative;}
+  .scroll {
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    transform-origin: left;
+    @include transform(rotate(-90deg));
+    div {
+      width: calc(100vh / 4);
+      height: 1px;
+      background: white;
+      opacity: 0.5;
+    }
+    p {
+      width: auto;
+      padding: 0 0 0 1rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      a {
+        color: white;
+        &:hover, &:focus {color: $orange;}
+      }
+    }
+  }
 }
 
 @media (min-width: 64rem) {
   .banner {
-    .scroll {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      position: absolute;
-      bottom: 1rem;
-      left: 2rem;
-      transform-origin: left;
-      @include transform(rotate(-90deg));
-      div {
-        width: calc(100vh / 4);
-        height: 1px;
-        background: $green;
-        opacity: 0.5;
-      }
-      p {
-        width: auto;
-        padding: 0 0 0 1rem;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-      }
-    }
+    .scroll {display: flex;}
   }
 }
 
@@ -113,17 +123,17 @@ cascade does not need to repeat itself over mild variations
       fill: $green;
     }
   }
-}
-
-.banner.home.green {
-  // DELETE IF NOT USED
-  color: white;
-  background: $green;
-  .signature svg {fill: white;}
+  .scroll {
+    div {background: $green;}
+    p a {
+      color: $green;
+      &:hover, &:focus {color: $orange;}
+    }
+  }
 }
 
 @media (min-width: 48rem) {
-  .banner.home {
+  .banner {
     width: calc(100% - 4rem);
     min-height: calc(100vh - 4rem);
     margin: 2rem auto 0;
@@ -132,31 +142,21 @@ cascade does not need to repeat itself over mild variations
 }
 
 @media (min-width: 64rem) {
-  .banner.home {
+  .banner {
     padding-left: 6rem;
+  }
+  .banner.home {
     background-blend-mode: multiply;
     background-image: url(../images/profile-2x.png);
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 40%;
   }
-  .banner.home.green {
-    // DELETE IF NOT USED
-    background-blend-mode: soft-light;
-    background-image: url(../images/profile-2x.png);
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    .scroll {
-      div {background: white;}
-      p a {
-        color: white;
-        opacity: 0.5;
-        &:hover, &:focus {opacity: 1;}
-      }
-    }
-  }
 }
+
+
+// PROJECT BANNERS
+.banner.delta-design {background-image: url(../images/work-delta-design-01-1x.jpg);}
 
 
 // CARDS
@@ -229,5 +229,104 @@ cascade does not need to repeat itself over mild variations
       flex-direction: row-reverse;
       .text {padding: 0 2rem 0 0;}
     }
+  }
+}
+
+
+// CONTENT
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+  h2.deliverables + p {
+    padding: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    &::after {
+      display: block;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      margin: 1rem auto 0;
+      background: $gray-platinum;
+      content: "";
+    }
+  }
+  figure {
+    display: grid;
+    width: 100%;
+    margin: 1rem 0;
+    picture {
+      display: grid;
+      width: 100%;
+      overflow: hidden;
+    }
+    figcaption {display: none;}
+  }
+  figure + h2 {margin: 1rem auto 0;}
+  p + figure {margin: 2rem 0 1rem;}
+}
+
+@media (min-width: 36.25rem) {
+  .content {
+    figure {width: calc(50% - 1rem);}
+    figure.wide {width: 100%;}
+    p + figure + figure {margin: 2rem 0 1rem;}
+  }
+}
+
+@media (min-width: 64rem) {
+  .content {
+    h2, p {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+// UP NEXT
+.up-next {
+  margin: 1rem auto 0;
+  h1 {
+    padding: 0 2rem;
+    color: $green;
+  }
+  &::before {
+    display: block;
+    top: 0;
+    width: calc(100% - 4rem);
+    height: 1px;
+    margin: 0 auto 2rem;
+    background: $gray-platinum;
+    content: "";
+  }
+}
+
+@media (min-width: 36.25rem) {
+  .cards.up-next {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2rem;
+    h1 {padding: 0;}
+    .card {
+      flex-direction: column;
+      width: calc(50% - 1rem);
+      margin: 2rem 0 0;
+      padding: 0;
+      &::before {display: none;}
+      figure {width: 100%;}
+      .text {
+        width: 100%;
+        margin: 1rem 0 0;
+        padding: 0;
+      }
+    }
+    &::before {width: 100%;}
   }
 }
