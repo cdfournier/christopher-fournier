@@ -53,10 +53,10 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p,
 h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul,
 h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol {padding: 0.5rem 0 0;}
 
-p + h1, p + h2, p + h3, p + h4, p + h5,
+p + h1, p + h2, p + h3, p + h4, p + h5, p + ol,
 ul + h1, ul + h2, ul + h3, ul + h4, ul + h5,
 ol + h1, ol + h2, ol + h3, ol + h4, ol + h5,
-dl + h1, dl + h2, dl + h3, dl + h4, dl + h5 {padding: 1rem 0 0;}
+dl + h1, dl + h2, dl + h3, dl + h4, dl + h5 {padding: 2rem 0 0;}
 
 
 // LISTS
@@ -72,6 +72,7 @@ ul, ol {
 ol {
   display: flex;
   flex-direction: column;
+  max-width: 40rem;
   padding: 0;
   counter-reset: count;
   li {
@@ -80,36 +81,39 @@ ol {
     flex-direction: column;
     width: 100%;
     margin: 1rem 0;
-    font-size: 1.25rem;
     span {
       display: flex;
       align-items: flex-start;
       flex-direction: column;
+      position: relative;
       width: auto;
       margin: 0;
       line-height: 1;
     }
     span::before {
+      display: flex;
+      align-items: center;
       flex: 0 1 auto;
-      width: 4rem;
-      height: 4rem;
-      padding: 0;
-      @include serif-bold;
-      font-size: 3.502rem;
-      color: $gray;
+      padding: 0 0 0.32rem;
+      @include sans-bold;
+      font-size: 150%;
+      color: $green;
       counter-increment: count;
       content: "0" counter(count);
     }
     span::after {
       display: block;
+      position: absolute;
+      bottom: 0;
       width: 100%;
       height: 1px;
       margin: 0;
-      background: $gray;
+      background: $gray-platinum;
       content: "";
     }
   }
-  li:first-of-type {margin: 0 0 1rem;}
+  li:first-of-type {margin: 0.32rem 0 1rem;}
+  li:last-of-type {margin: 1rem 0 0;}
 }
 
 

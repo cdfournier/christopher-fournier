@@ -73,9 +73,20 @@ $transferx-bg: #f0f5f8;
   }
 }
 
-.bg-enservio {background: $enservio;}
+.bg-enservio {
+  color: white;
+  a {color: white;}
+  background: $enservio;
+}
 
-.bg-mystuff {background: $mystuff;}
+.bg-mystuff {
+  color: white;
+  a {
+    color: white;
+    &:hover, &:focus {color: $gray-platinum;}
+  }
+  background: $mystuff;
+}
 
 .bg-panera {
   background: $panera;
@@ -87,4 +98,11 @@ $transferx-bg: #f0f5f8;
   }
 }
 
-.bg-transferx {background: $transferx;}
+.bg-transferx {
+  color: white;
+  a {
+    color: white;
+    &:hover, &:focus {color: $gray;}
+  }
+  background: $transferx;
+}

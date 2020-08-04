@@ -157,6 +157,12 @@ cascade does not need to repeat itself over mild variations
 
 // PROJECT BANNERS
 .banner.delta-design {background-image: url(../images/work-delta-design-01-1x.jpg);}
+.banner.east-wind {background-image: url(../images/work-east-wind-01-1x.jpg);}
+.banner.eberhardt-design {background-image: url(../images/work-eberhardt-design-01-1x.jpg);}
+.banner.enservio {background-image: url(../images/work-enservio-01-1x.jpg);}
+.banner.mystuff {background-image: url(../images/work-mystuff-01-1x.jpg);}
+.banner.panera {background-image: url(../images/work-panera-01-1x.jpg);}
+.banner.transferx {background-image: url(../images/work-transferx-01-1x.jpg);}
 
 
 // CARDS
@@ -174,12 +180,13 @@ cascade does not need to repeat itself over mild variations
     figure {
       display: grid;
       width: 100%;
+      overflow: hidden;
       margin: 0 auto;
       a, picture {
         display: grid;
         will-change: transform;
-        @include transition(all, 0.325s, ease);
-        @include transform(translateY(0));
+        @include transition(all, 5s, ease);
+        @include transform(scale(1));
       }
       figcaption {display: none;}
     }
@@ -203,8 +210,7 @@ cascade does not need to repeat itself over mild variations
   .card {
     figure:hover, figure:focus {
       picture {
-        box-shadow: 0.25rem 0.25rem 0.5rem $gray-platinum;
-        @include transform(translateY(-0.5rem));
+        @include transform(scale(2));
       }
     }
   }
@@ -242,20 +248,6 @@ cascade does not need to repeat itself over mild variations
   justify-content: space-between;
   margin: 0 auto;
   padding: 2rem 2rem 0;
-  h2.deliverables + p {
-    padding: 0;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    &::after {
-      display: block;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      margin: 1rem auto 0;
-      background: $gray-platinum;
-      content: "";
-    }
-  }
   figure {
     display: grid;
     width: 100%;
@@ -267,23 +259,60 @@ cascade does not need to repeat itself over mild variations
     }
     figcaption {display: none;}
   }
-  figure + h2 {margin: 1rem auto 0;}
-  p + figure {margin: 2rem 0 1rem;}
+  figure.small {
+    width: 50%;
+  }
+  .text {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    h2.deliverables + p {
+      padding: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      &::after {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        margin: 1rem auto 0;
+        background: $gray-platinum;
+        content: "";
+      }
+    }
+  }
+  .text > p:first-child {padding: 0;}
+  .highlight {
+    width: calc(100% + 4rem);
+    margin: 1rem -2rem;
+    padding: 4rem 2rem;
+    h2 {
+      @include serif-regular;
+      font-size: 3.441rem;
+    }
+  }
 }
 
 @media (min-width: 36.25rem) {
   .content {
     figure {width: calc(50% - 1rem);}
     figure.wide {width: 100%;}
-    p + figure + figure {margin: 2rem 0 1rem;}
+  }
+}
+
+@media (min-width: 48rem) {
+  .content {
+    figure.small {width: 25%;}
   }
 }
 
 @media (min-width: 64rem) {
   .content {
-    h2, p {
-      max-width: 40rem;
-      margin: 0 auto;
+    .text {
+      h2, h3, p, ul, ol {
+        max-width: 40rem;
+        margin: 0 auto;
+      }
     }
   }
 }
