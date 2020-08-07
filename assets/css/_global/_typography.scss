@@ -39,8 +39,8 @@ p {
   font-size: 1rem;
 }
 
-strong {
-  display: block;
+strong, em {
+  display: inline-block;
   @include sans-bold;
 }
 
@@ -75,11 +75,13 @@ ol {
   max-width: 40rem;
   padding: 0;
   counter-reset: count;
+  font-size: 110%;
   li {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
+    max-width: 32rem;
     margin: 1rem 0;
     span {
       display: flex;
@@ -114,6 +116,20 @@ ol {
   }
   li:first-of-type {margin: 0.32rem 0 1rem;}
   li:last-of-type {margin: 1rem 0 0;}
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-size: 110%;
+  dt {
+    margin: 1rem 0 0;
+    @include sans-bold;
+  }
+  dd {
+    margin: 0;
+  }
 }
 
 
