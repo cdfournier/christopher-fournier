@@ -496,6 +496,9 @@ Also try to re-write/re-stack the .content and .cards styles
         .banner .scroll p a:hover, .banner .scroll p a:focus {
           color: #af4433; }
 
+.no-touch .banner {
+  background-attachment: fixed; }
+
 @media (min-width: 64rem) {
   .banner .scroll {
     display: flex; } }

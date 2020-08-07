@@ -102,6 +102,8 @@ Also try to re-write/re-stack the .content and .cards styles
   }
 }
 
+.no-touch .banner {background-attachment: fixed;}
+
 @media (min-width: 64rem) {
   .banner {
     .scroll {display: flex;}
