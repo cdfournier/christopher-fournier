@@ -150,7 +150,7 @@ p {
   font-size: 1rem; }
 
 strong, em {
-  display: inline-block;
+  display: inline;
   font-family: "metropolis-bold", sans-serif;
   font-weight: normal;
   font-style: normal; }
@@ -182,12 +182,11 @@ ol {
   flex-direction: column;
   max-width: 40rem;
   padding: 0;
-  counter-reset: count;
-  font-size: 110%; }
+  counter-reset: count; }
   ol li {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
     max-width: 32rem;
     margin: 1rem 0; }
@@ -197,13 +196,14 @@ ol {
       flex-direction: column;
       position: relative;
       width: auto;
-      margin: 0;
-      line-height: 1; }
+      margin: 0; }
     ol li span::before {
       display: flex;
       align-items: center;
       flex: 0 1 auto;
-      padding: 0 0 0.32rem;
+      margin: 0 0.8rem 0 0;
+      padding: 0 0.32rem 0 0;
+      border-right: 1px solid #384332;
       font-family: "metropolis-bold", sans-serif;
       font-weight: normal;
       font-style: normal;
@@ -211,19 +211,14 @@ ol {
       color: #384332;
       counter-increment: count;
       content: "0" counter(count); }
-    ol li span::after {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      margin: 0;
-      background: #e5e5e5;
-      content: ""; }
   ol li:first-of-type {
     margin: 0.32rem 0 1rem; }
   ol li:last-of-type {
     margin: 1rem 0 0; }
+
+@media (min-width: 48rem) {
+  ol {
+    font-size: 110%; } }
 
 dl {
   display: flex;
@@ -399,12 +394,6 @@ footer.resume {
   footer .contact {
     margin: 0 0 4rem; } }
 
-/*
-Try to condense the cascade using & so that the stack or
-cascade does not need to repeat itself over mild variations
-
-Also try to re-write/re-stack the .content and .cards styles
-*/
 .skip {
   display: flex;
   align-items: center;
@@ -443,6 +432,7 @@ Also try to re-write/re-stack the .content and .cards styles
   width: 100%;
   height: inherit;
   min-height: 90vh;
+  overflow: hidden;
   margin: 0;
   padding: 2rem;
   color: white;
@@ -469,18 +459,10 @@ Also try to re-write/re-stack the .content and .cards styles
   .banner p {
     position: relative; }
   .banner .scroll {
-    display: none;
+    display: flex;
     align-items: center;
     flex-direction: row;
-    position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-    transform-origin: left;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg); }
+    margin: 2rem 0 0; }
     .banner .scroll div {
       width: calc(100vh / 4);
       height: 1px;
@@ -495,36 +477,37 @@ Also try to re-write/re-stack the .content and .cards styles
         color: white; }
         .banner .scroll p a:hover, .banner .scroll p a:focus {
           color: #af4433; }
+  .banner.home {
+    color: #384332;
+    background: #eef1e8;
+    background-blend-mode: multiply;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 40%; }
+    .banner.home h1 {
+      font-family: "metropolis-bold", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 500%; }
+    .banner.home .signature {
+      display: block;
+      height: 4.5rem;
+      overflow: hidden;
+      margin: 1rem 0 0; }
+      .banner.home .signature svg {
+        height: 100%;
+        fill: #384332; }
+    .banner.home .scroll {
+      margin: 2rem 0 0 auto; }
+      .banner.home .scroll div {
+        background: #384332; }
+      .banner.home .scroll p a {
+        color: #384332; }
+        .banner.home .scroll p a:hover, .banner.home .scroll p a:focus {
+          color: #af4433; }
 
 .no-touch .banner {
   background-attachment: fixed; }
-
-@media (min-width: 64rem) {
-  .banner .scroll {
-    display: flex; } }
-
-.banner.home {
-  color: #384332;
-  background: #eef1e8; }
-  .banner.home h1 {
-    font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 500%; }
-  .banner.home .signature {
-    display: block;
-    height: 4.5rem;
-    overflow: hidden;
-    margin: 1rem 0 0; }
-    .banner.home .signature svg {
-      height: 100%;
-      fill: #384332; }
-  .banner.home .scroll div {
-    background: #384332; }
-  .banner.home .scroll p a {
-    color: #384332; }
-    .banner.home .scroll p a:hover, .banner.home .scroll p a:focus {
-      color: #af4433; }
 
 @media (min-width: 48rem) {
   .banner {
@@ -536,12 +519,10 @@ Also try to re-write/re-stack the .content and .cards styles
 @media (min-width: 64rem) {
   .banner {
     padding-left: 6rem; }
-  .banner.home {
-    background-blend-mode: multiply;
-    background-image: url(../images/profile-2x.png);
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 40%; } }
+    .banner.home {
+      background-image: url(../images/profile-2x.png); }
+      .banner.home .scroll {
+        margin: 2rem 0 0; } }
 
 .banner.delta-design {
   background-image: url(../images/work-delta-design-01-1x.jpg); }
@@ -564,23 +545,43 @@ Also try to re-write/re-stack the .content and .cards styles
 .banner.transferx {
   background-image: url(../images/work-transferx-01-1x.jpg); }
 
-.cards {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
+  .banner.delta-design {
+    background-image: url(../images/work-delta-design-01-2x.jpg); }
+  .banner.east-wind {
+    background-image: url(../images/work-east-wind-01-2x.jpg); }
+  .banner.eberhardt-design {
+    background-image: url(../images/work-eberhardt-design-01-2x.jpg); }
+  .banner.enservio {
+    background-image: url(../images/work-enservio-01-2x.jpg); }
+  .banner.mystuff {
+    background-image: url(../images/work-mystuff-01-2x.jpg); }
+  .banner.panera {
+    background-image: url(../images/work-panera-01-2x.jpg); }
+  .banner.transferx {
+    background-image: url(../images/work-transferx-01-2x.jpg); } }
+
+.content, .up-next {
   display: flex;
-  flex-direction: column;
-  width: 100%; }
-  .cards .card {
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 2rem 0; }
+  .content .card, .up-next .card {
     display: flex;
     position: relative;
     flex-direction: column;
     width: 100%;
     margin: 0 auto 2rem;
     padding: 2rem 0 0; }
-    .cards .card figure {
+    .content .card figure, .up-next .card figure {
       display: grid;
       width: 100%;
       overflow: hidden;
       margin: 0 auto; }
-      .cards .card figure a, .cards .card figure picture {
+      .content .card figure a, .content .card figure picture, .up-next .card figure a, .up-next .card figure picture {
         display: grid;
         will-change: transform;
         -webkit-transition: all 10s ease 0s;
@@ -593,11 +594,11 @@ Also try to re-write/re-stack the .content and .cards styles
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1); }
-      .cards .card figure figcaption {
+      .content .card figure figcaption, .up-next .card figure figcaption {
         display: none; }
-    .cards .card .text {
+    .content .card .text, .up-next .card .text {
       margin: 1rem 0 0; }
-    .cards .card::before {
+    .content .card::before, .up-next .card::before {
       display: block;
       position: absolute;
       top: 0;
@@ -606,66 +607,35 @@ Also try to re-write/re-stack the .content and .cards styles
       margin: 0;
       background: #e5e5e5;
       content: ""; }
-    .cards .card:first-of-type {
+    .content .card:first-of-type, .up-next .card:first-of-type {
       padding: 0; }
-    .cards .card:first-of-type::before {
+    .content .card:first-of-type::before, .up-next .card:first-of-type::before {
       display: none; }
-
-.no-touch .cards .card figure:hover picture, .no-touch .cards .card figure:focus picture {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2); }
-
-@media (min-width: 48rem) {
-  .cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    .cards .card {
-      align-items: center;
-      flex-direction: row; }
-      .cards .card figure {
-        width: 45%; }
-      .cards .card .text {
-        width: 55%;
-        margin: 0;
-        padding: 0 0 0 2rem; }
-    .cards .card.reverse {
-      flex-direction: row-reverse; }
-      .cards .card.reverse .text {
-        padding: 0 2rem 0 0; } }
-
-.content {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 2rem 2rem 0; }
-  .content figure {
+  .content figure, .up-next figure {
     display: grid;
     width: 100%;
     margin: 1rem 0; }
-    .content figure picture {
+    .content figure picture, .up-next figure picture {
       display: grid;
       width: 100%;
       overflow: hidden; }
-    .content figure figcaption {
+    .content figure figcaption, .up-next figure figcaption {
       display: none; }
-  .content figure.small {
+  .content figure.small, .up-next figure.small {
     width: 50%; }
-  .content .text {
+  .content video, .up-next video {
+    display: grid;
+    width: 100%;
+    margin: 1rem auto; }
+  .content .text, .up-next .text {
     display: block;
     width: 100%;
     margin: 1rem 0; }
-    .content .text h2.deliverables + p {
+    .content .text h2.deliverables + p, .up-next .text h2.deliverables + p {
       padding: 0;
       font-size: 0.8rem;
       text-transform: uppercase; }
-      .content .text h2.deliverables + p::after {
+      .content .text h2.deliverables + p::after, .up-next .text h2.deliverables + p::after {
         display: block;
         bottom: 0;
         width: 100%;
@@ -673,20 +643,20 @@ Also try to re-write/re-stack the .content and .cards styles
         margin: 1rem auto 0;
         background: #e5e5e5;
         content: ""; }
-  .content .text > p:first-child {
+  .content .text > p:first-child, .up-next .text > p:first-child {
     padding: 0; }
-  .content .highlight {
+  .content .highlight, .up-next .highlight {
     width: calc(100% + 4rem);
     margin: 1rem -2rem;
     padding: 4rem 2rem; }
-    .content .highlight h2 {
+    .content .highlight h2, .up-next .highlight h2 {
       font-family: "Cardo", serif;
       font-weight: 400;
       font-style: normal;
       font-size: 3.441rem; }
-  .content .highlight + .card {
+  .content .highlight + .card, .up-next .highlight + .card {
     padding: 1rem 0 0; }
-    .content .highlight + .card::before {
+    .content .highlight + .card::before, .up-next .highlight + .card::before {
       display: none; }
 
 @media (min-width: 36.25rem) {
@@ -696,13 +666,28 @@ Also try to re-write/re-stack the .content and .cards styles
     width: 100%; } }
 
 @media (min-width: 48rem) {
+  .content .card {
+    align-items: center;
+    flex-direction: row; }
+    .content .card figure {
+      width: 45%; }
+    .content .card .text {
+      width: 55%;
+      margin: 0;
+      padding: 0 0 0 2rem; }
+  .content .card.reverse {
+    flex-direction: row-reverse; }
+    .content .card.reverse .text {
+      padding: 0 2rem 0 0; }
   .content figure.small {
     width: 25%; } }
 
 @media (min-width: 64rem) {
   .content .text h2, .content .text h3, .content .text p, .content .text ul, .content .text ol, .content .text dl {
     max-width: 40rem;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .content video {
+    width: 70%; } }
 
 .up-next {
   margin: 0;
@@ -720,24 +705,24 @@ Also try to re-write/re-stack the .content and .cards styles
     content: ""; }
 
 @media (min-width: 36.25rem) {
-  .cards.up-next {
+  .up-next {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .cards.up-next .card {
+    .up-next .card {
       flex-direction: column;
       width: calc(50% - 1rem);
       margin: 0 0 2rem;
       padding: 0; }
-      .cards.up-next .card::before {
+      .up-next .card::before {
         display: none; }
-      .cards.up-next .card figure {
+      .up-next .card figure {
         width: 100%; }
-      .cards.up-next .card .text {
+      .up-next .card .text {
         width: 100%;
         margin: 1rem 0 0;
         padding: 0; }
-    .cards.up-next::before {
+    .up-next::before {
       width: 100%; } }
 
 /*

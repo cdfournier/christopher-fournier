@@ -40,7 +40,7 @@ p {
 }
 
 strong, em {
-  display: inline-block;
+  display: inline;
   @include sans-bold;
 }
 
@@ -75,11 +75,10 @@ ol {
   max-width: 40rem;
   padding: 0;
   counter-reset: count;
-  font-size: 110%;
   li {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     width: 100%;
     max-width: 32rem;
     margin: 1rem 0;
@@ -90,32 +89,27 @@ ol {
       position: relative;
       width: auto;
       margin: 0;
-      line-height: 1;
     }
     span::before {
       display: flex;
       align-items: center;
       flex: 0 1 auto;
-      padding: 0 0 0.32rem;
+      margin: 0 0.8rem 0 0;
+      padding: 0 0.32rem 0 0;
+      border-right: 1px solid $green;
       @include sans-bold;
       font-size: 150%;
       color: $green;
       counter-increment: count;
       content: "0" counter(count);
     }
-    span::after {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      margin: 0;
-      background: $gray-platinum;
-      content: "";
-    }
   }
   li:first-of-type {margin: 0.32rem 0 1rem;}
   li:last-of-type {margin: 1rem 0 0;}
+}
+
+@media (min-width: 48rem) {
+  ol {font-size: 110%;}
 }
 
 dl {
