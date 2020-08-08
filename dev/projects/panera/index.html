@@ -26,11 +26,13 @@
     <main>
       <section class="banner panera">
         <div class="overlay"></div>
-        <h1><span>Case Study</span>Panera Bread</h1>
-        <p>Panera Bread is an American chain of fast casual restaurants in the United States and Canada.</p>
-        <div class="scroll">
-          <div></div>
-          <p><a href="#content">Scroll</a></p>
+        <div class="text">
+          <h1><span>Case Study</span>Panera Bread</h1>
+          <p>Panera Bread is an American chain of fast casual restaurants in the United States and Canada.</p>
+          <div class="scroll">
+            <div></div>
+            <p><a href="#content">Scroll</a></p>
+          </div>
         </div>
       </section>
       <section id="content" class="content">
@@ -285,6 +287,18 @@
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
+    </script>
+    <script>
+      const banner = document.querySelector('.banner .text');
+      const speed = 0.2;
+      banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
+         
+      function setScrollParallax() {
+          banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+          window.requestAnimationFrame( setScrollParallax );
+      }
+      
+      window.requestAnimationFrame( setScrollParallax );
     </script>
   </body>
 </html>

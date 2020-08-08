@@ -506,9 +506,6 @@ footer.resume {
         .banner.home .scroll p a:hover, .banner.home .scroll p a:focus {
           color: #af4433; }
 
-.no-touch .banner {
-  background-attachment: fixed; }
-
 @media (min-width: 48rem) {
   .banner {
     width: calc(100% - 4rem);
@@ -517,12 +514,10 @@ footer.resume {
     padding: 2rem; } }
 
 @media (min-width: 64rem) {
-  .banner {
-    padding-left: 6rem; }
-    .banner.home {
-      background-image: url(../images/profile-2x.png); }
-      .banner.home .scroll {
-        margin: 2rem 0 0; } }
+  .banner.home {
+    background-image: url(../images/profile-2x.png); }
+    .banner.home .scroll {
+      margin: 2rem 0 0; } }
 
 .banner.delta-design {
   background-image: url(../images/work-delta-design-01-1x.jpg); }

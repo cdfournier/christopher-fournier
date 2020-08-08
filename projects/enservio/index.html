@@ -27,11 +27,13 @@
     <main>
       <section class="banner enservio" data-aos="fade" data-aos-delay="500" data-aos-duration="2000">
         <div class="overlay"></div>
-        <h1 data-aos="fade-up" data-aos-delay="1200" data-aos-duration="2000"><span>Case Study</span>Enservio</h1>
-        <p data-aos="fade-up" data-aos-delay="1400" data-aos-duration="2000">Enservio provides software and services for insurance companies.</p>
-        <div class="scroll" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="2000">
-          <div></div>
-          <p><a href="#content">Scroll</a></p>
+        <div class="text">
+          <h1 data-aos="fade-up" data-aos-delay="1200" data-aos-duration="2000"><span>Case Study</span>Enservio</h1>
+          <p data-aos="fade-up" data-aos-delay="1400" data-aos-duration="2000">Enservio provides software and services for insurance companies.</p>
+          <div class="scroll" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="2000">
+            <div></div>
+            <p><a href="#content">Scroll</a></p>
+          </div>
         </div>
       </section>
       <section id="content" class="content">
@@ -107,8 +109,8 @@
         </figure>
       </section>
       <section class="up-next">
-        <h1 data-aos="fade-up">More Projects</h1>
-        <div class="card" data-aos="fade-up">
+        <h1 data-aos="fade">More Projects</h1>
+        <div class="card" data-aos="fade">
           <figure><a href="../transferx/index.html">
             <picture>
               <source srcset="../../assets/images/work-transferx-01-2x.webp" type="image/webp">
@@ -120,7 +122,7 @@
             <h2><a href="../transferx/index.html"><span>Case Study</span>TransferX</a></h2>
           </div>
         </div>
-        <div class="card" data-aos="fade-up">
+        <div class="card" data-aos="fade">
           <figure><a href="../delta-design-system/index.html">
             <picture>
               <source srcset="../../assets/images/work-delta-design-01-2x.webp" type="image/webp">
@@ -170,6 +172,18 @@
       AOS.init({
         duration: 1000,
       });
+    </script>
+    <script>
+      const banner = document.querySelector('.banner .text');
+      const speed = 0.2;
+      banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
+         
+      function setScrollParallax() {
+          banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+          window.requestAnimationFrame( setScrollParallax );
+      }
+      
+      window.requestAnimationFrame( setScrollParallax );
     </script>
   </body>
 </html>

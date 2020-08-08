@@ -122,8 +122,6 @@
   }
 }
 
-.no-touch .banner {background-attachment: fixed;}
-
 @media (min-width: 48rem) {
   .banner {
     width: calc(100% - 4rem);
@@ -135,7 +133,6 @@
 
 @media (min-width: 64rem) {
   .banner {
-    padding-left: 6rem;
     &.home {
       background-image: url(../images/profile-2x.png);
       .scroll {margin: 2rem 0 0;}
