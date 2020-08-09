@@ -65,9 +65,13 @@
   }
   h1 {
     position: relative;
+    max-width: 32rem;
     @include serif-regular;
   }
-  p {position: relative;}
+  p {
+    position: relative;
+    max-width: 32rem;
+  }
   .scroll {
     display: flex;
     align-items: center;
@@ -279,6 +283,7 @@
       flex-direction: row-reverse;
       .text {padding: 0 2rem 0 0;}
     }
+    .highlight p {font-size: 110%;}
     figure.small {width: 25%;}
   }
 }

@@ -7,6 +7,14 @@
   font-style: normal; }
 
 @font-face {
+  font-family: "metropolis-regular";
+  font-display: swap;
+  src: url("../fonts/metropolis/metropolis-regular.eot");
+  src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-regular.woff") format("woff"), url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"), url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: "metropolis-bold";
   font-display: swap;
   src: url("../fonts/metropolis/metropolis-bold.eot");
@@ -74,7 +82,7 @@
 html {
   margin: 0 auto;
   padding: 0;
-  font-family: "metropolis-light", sans-serif;
+  font-family: "metropolis-regular", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -189,7 +197,8 @@ ol {
     flex-direction: row;
     width: 100%;
     max-width: 32rem;
-    margin: 1rem 0; }
+    margin: 1rem 0;
+    line-height: 1.5; }
     ol li span {
       display: flex;
       align-items: flex-start;
@@ -453,11 +462,13 @@ footer.resume {
     backdrop-filter: saturate(180%); }
   .banner h1 {
     position: relative;
+    max-width: 32rem;
     font-family: "Cardo", serif;
     font-weight: 400;
     font-style: normal; }
   .banner p {
-    position: relative; }
+    position: relative;
+    max-width: 32rem; }
   .banner .scroll {
     display: flex;
     align-items: center;
@@ -674,6 +685,8 @@ footer.resume {
     flex-direction: row-reverse; }
     .content .card.reverse .text {
       padding: 0 2rem 0 0; }
+  .content .highlight p {
+    font-size: 110%; }
   .content figure.small {
     width: 25%; } }
 
@@ -874,7 +887,9 @@ header.resume {
     header.resume .contact-me {
       padding: 0; }
       header.resume .contact-me ul {
-        padding: 0 0 0 2rem; } }
+        padding: 0 0 0 2rem; }
+        header.resume .contact-me ul li, header.resume .contact-me ul li a {
+          font-size: 1rem; } }
 
 @media (min-width: 64rem) {
   header.resume .scroll {
@@ -941,7 +956,9 @@ main.resume {
 
 @media (min-width: 48rem) {
   main.resume section {
-    width: 70%; } }
+    width: 70%; }
+    main.resume section p {
+      font-size: 1rem; } }
 
 @media (min-width: 64rem) {
   main.resume {
@@ -1111,6 +1128,10 @@ main.resume section.skills ul {
   main.resume section.skills ul {
     padding: 0 0 0 2rem; } }
 
+@media (min-width: 48rem) {
+  main.resume section.skills ul li span {
+    font-size: 1rem; } }
+
 @media (min-width: 64rem) {
   main.resume section.skills {
     width: 48%;
@@ -1156,6 +1177,10 @@ main.resume section.contact-me {
 @media (min-width: 35.5rem) {
   main.resume section.contact-me ul {
     padding: 0 0 0 2rem; } }
+
+@media (min-width: 48rem) {
+  main.resume section.contact-me ul li, main.resume section.contact-me ul li a {
+    font-size: 1rem; } }
 
 @media (min-width: 64rem) {
   main.resume section.contact-me {
