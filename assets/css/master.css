@@ -232,7 +232,7 @@ ol {
 dl {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 0;
   font-size: 110%; }
@@ -244,6 +244,14 @@ dl {
     font-size: 110%; }
   dl dd {
     margin: 0; }
+
+@media (min-width: 64rem) {
+  dl {
+    width: 65%; } }
+
+@media (min-width: 90rem) {
+  dl {
+    width: 45%; } }
 
 a {
   text-decoration: none;
@@ -328,6 +336,23 @@ a .icon span {
     .no-touch a .icon span svg {
       fill: #384332; }
 
+.no-touch a .overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.15;
+  -webkit-backdrop-filter: saturate(180%);
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  backdrop-filter: saturate(180%); }
+
 .no-touch a:hover .icon span, .no-touch a:focus .icon span {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -336,6 +361,9 @@ a .icon span {
   transform: translateY(0); }
   .no-touch a:hover .icon span svg, .no-touch a:focus .icon span svg {
     fill: #af4433; }
+
+.no-touch a:hover .overlay, .no-touch a:focus .overlay {
+  opacity: 0; }
 
 header {
   display: grid;
@@ -593,24 +621,6 @@ footer.resume {
         display: none; }
       .content .card figure a, .up-next .card figure a {
         position: relative; }
-        .content .card figure a .overlay, .up-next .card figure a .overlay {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: black;
-          opacity: 0.1;
-          -webkit-backdrop-filter: saturate(180%);
-          -webkit-transition: all 0.5s ease 0s;
-          -moz-transition: all 0.5s ease 0s;
-          -ms-transition: all 0.5s ease 0s;
-          -o-transition: all 0.5s ease 0s;
-          transition: all 0.5s ease 0s;
-          backdrop-filter: saturate(180%); }
-          .content .card figure a .overlay:hover, .content .card figure a .overlay:focus, .up-next .card figure a .overlay:hover, .up-next .card figure a .overlay:focus {
-            opacity: 0; }
     .content .card .text, .up-next .card .text {
       margin: 1rem 0 0; }
     .content .card::before, .up-next .card::before {

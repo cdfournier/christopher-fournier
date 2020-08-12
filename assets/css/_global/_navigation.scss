@@ -26,7 +26,7 @@ nav {
 }
 
 
-// ICON SETUP
+// ICON & OVERLAY HOVER & FOCUS SETUP
 a .icon span {display: none;}
 
 .no-touch a {
@@ -47,6 +47,19 @@ a .icon span {display: none;}
       svg {fill: $green;}
     }
   }
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.15;
+    -webkit-backdrop-filter: saturate(180%);
+    @include transition(all, 0.5s, ease);
+    backdrop-filter: saturate(180%);
+  }
   &:hover, &:focus {
     .icon {
       span {
@@ -54,5 +67,6 @@ a .icon span {display: none;}
         svg {fill: $orange;}
       }
     }
+    .overlay {opacity: 0;}
   }
 }

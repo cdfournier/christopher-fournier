@@ -116,7 +116,7 @@ ol {
 dl {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 0;
   font-size: 110%;
@@ -129,6 +129,10 @@ dl {
     margin: 0;
   }
 }
+
+@media (min-width: 64rem) {dl {width: 65%;}}
+
+@media (min-width: 90rem) {dl {width: 45%;}}
 
 
 // LINKS
