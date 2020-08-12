@@ -122,9 +122,17 @@ dl {
   dt {
     margin: 1rem 0 0;
     @include sans-bold;
+    font-size: 110%;
   }
   dd {
     margin: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  dl {
+    max-width: 38rem;
+    margin: 0 auto;
   }
 }
 

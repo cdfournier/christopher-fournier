@@ -239,9 +239,15 @@ dl {
     margin: 1rem 0 0;
     font-family: "metropolis-bold", sans-serif;
     font-weight: normal;
-    font-style: normal; }
+    font-style: normal;
+    font-size: 110%; }
   dl dd {
     margin: 0; }
+
+@media (min-width: 64rem) {
+  dl {
+    max-width: 38rem;
+    margin: 0 auto; } }
 
 a {
   text-decoration: none;
@@ -698,7 +704,7 @@ footer.resume {
     width: 25%; } }
 
 @media (min-width: 64rem) {
-  .content .text h2, .content .text h3, .content .text p, .content .text ul, .content .text ol, .content .text dl {
+  .content .text h2, .content .text h3, .content .text p, .content .text ul, .content .text ol {
     max-width: 40rem;
     margin: 0 auto; }
   .content video {
