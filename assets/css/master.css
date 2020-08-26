@@ -550,7 +550,7 @@ footer.resume {
 @media (min-width: 48rem) {
   .banner {
     width: calc(100% - 4rem);
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 6rem);
     margin: 2rem auto 0;
     padding: 2rem; } }
 
@@ -716,7 +716,7 @@ footer.resume {
     .content .card.reverse .text {
       padding: 0 2rem 0 0; }
   .content .highlight p {
-    font-size: 110%; }
+    font-size: 150%; }
   .content figure.small {
     width: 25%; } }
 
@@ -728,6 +728,8 @@ footer.resume {
       margin: 0 auto; }
   .content .text + .text {
     margin: 0 0 2rem; }
+  .content .highlight p {
+    max-width: 56rem; }
   .content video {
     width: 70%; } }
 

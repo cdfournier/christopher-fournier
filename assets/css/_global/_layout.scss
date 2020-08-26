@@ -129,7 +129,7 @@
 @media (min-width: 48rem) {
   .banner {
     width: calc(100% - 4rem);
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - 6rem);
     margin: 2rem auto 0;
     padding: 2rem;
   }
@@ -292,7 +292,7 @@
       flex-direction: row-reverse;
       .text {padding: 0 2rem 0 0;}
     }
-    .highlight p {font-size: 110%;}
+    .highlight p {font-size: 150%;}
     figure.small {width: 25%;}
   }
 }
@@ -307,6 +307,7 @@
       }
     }
     .text + .text {margin: 0 0 2rem;}
+    .highlight p {max-width: 56rem;}
     video {width: 70%;}
   }
 }
