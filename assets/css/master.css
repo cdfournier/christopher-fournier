@@ -728,7 +728,7 @@ footer.resume {
       margin: 0 auto; }
   .content .text + .text {
     margin: 0 0 2rem; }
-  .content .highlight p {
+  .content .highlight h2, .content .highlight p {
     max-width: 56rem; }
   .content video {
     width: 70%; } }
