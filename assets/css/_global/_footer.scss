@@ -35,6 +35,12 @@ footer.resume {
   }
 }
 
+footer.error {
+  position: absolute;
+  bottom: 0;
+  background: none;
+}
+
 @media (min-width: 48rem) {
   footer {
     .contact {margin: 0 0 4rem;}
