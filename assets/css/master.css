@@ -245,14 +245,6 @@ dl {
   dl dd {
     margin: 0; }
 
-@media (min-width: 64rem) {
-  dl {
-    width: 65%; } }
-
-@media (min-width: 90rem) {
-  dl {
-    width: 45%; } }
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -728,7 +720,7 @@ footer.resume {
       margin: 0 auto; }
   .content .text + .text {
     margin: 0 0 2rem; }
-  .content .highlight h2, .content .highlight p {
+  .content .highlight h2, .content .highlight p, .content .highlight dl {
     max-width: 56rem; }
   .content video {
     width: 70%; } }
