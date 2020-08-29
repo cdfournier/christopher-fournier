@@ -22,7 +22,10 @@ nav {
 }
 
 @media (orientation: landscape), (min-width: 48rem) {
-  nav ul li {font-size: 1rem;}
+  nav ul li {
+    font-size: 1rem;
+    padding: 0 1.5rem 0 0;
+  }
 }
 
 

@@ -232,8 +232,8 @@ ol {
 dl {
   display: flex;
   flex-direction: column;
-  width: 95%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0;
   font-size: 110%; }
   dl dt {
@@ -244,6 +244,10 @@ dl {
     font-size: 110%; }
   dl dd {
     margin: 0; }
+
+@media (min-width: 48rem) {
+  dl {
+    width: 95%; } }
 
 a {
   text-decoration: none;
@@ -298,7 +302,8 @@ nav {
 
 @media (orientation: landscape), (min-width: 48rem) {
   nav ul li {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    padding: 0 1.5rem 0 0; } }
 
 a .icon span {
   display: none; }
@@ -553,7 +558,7 @@ footer.error {
 
 @media (min-width: 64rem) {
   .banner.home {
-    background-image: url(../images/profile-2x.png); }
+    background-image: url(../images/mug-2x.png); }
     .banner.home .scroll {
       margin: 2rem 0 0; } }
 
