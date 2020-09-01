@@ -334,6 +334,7 @@
 
 @media (min-width: 36.25rem) {
   .up-next {
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
