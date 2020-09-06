@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chris Fournier. American Made. Powered by Coffee.</title>
+    <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I use my background in marketing and user experience design to solve problems and deliver intuitive user experiences.">
     <!-- css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap">
     <link rel="stylesheet" href="../assets/css/normalize.min.css">
@@ -191,25 +192,25 @@
     <script>
       AOS.init({
         duration: 1000,
-        offset: 50,
+        offset: 35,
       });
     </script>
     <script src="../assets/scripts/lazysizes.min.js"></script>
     <script>
-        if ("loading" in HTMLImageElement.prototype) {
-            var images = document.querySelectorAll('img[loading="lazy"]');
-            var sources = document.querySelectorAll("source[data-srcset]");
-            sources.forEach(function (source) {
-                source.srcset = source.dataset.srcset;
-            });
-            images.forEach(function (img) {
-                img.src = img.dataset.src;
-            });
-        } else {
-            var script = document.createElement("script");
-            script.src = "../assets/scripts/lazysizes.min.js";
-            document.body.appendChild(script);
-        }
+      if ("loading" in HTMLImageElement.prototype) {
+          var images = document.querySelectorAll('img[loading="lazy"]');
+          var sources = document.querySelectorAll("source[data-srcset]");
+          sources.forEach(function (source) {
+              source.srcset = source.dataset.srcset;
+          });
+          images.forEach(function (img) {
+              img.src = img.dataset.src;
+          });
+      } else {
+          var script = document.createElement("script");
+          script.src = "../assets/scripts/lazysizes.min.js";
+          document.body.appendChild(script);
+      }
     </script>
   </body>
 </html>
