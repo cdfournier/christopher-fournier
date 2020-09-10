@@ -250,6 +250,12 @@
       font-size: 3.441rem;
     }
   }
+  .highlight.home {
+    h2 {
+      @include sans-bold;
+      font-size: 3.441rem;
+    }
+  }
   .highlight + .card {
     padding: 1rem 0 0;
     &::before {display: none;}

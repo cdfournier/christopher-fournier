@@ -682,6 +682,11 @@ footer.error {
       font-weight: 400;
       font-style: normal;
       font-size: 3.441rem; }
+  .content .highlight.home h2, .up-next .highlight.home h2 {
+    font-family: "metropolis-bold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3.441rem; }
   .content .highlight + .card, .up-next .highlight + .card {
     padding: 1rem 0 0; }
     .content .highlight + .card::before, .up-next .highlight + .card::before {
