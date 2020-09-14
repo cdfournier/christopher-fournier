@@ -13,9 +13,9 @@
     <title>Chris Fournier | TransferX Case Study</title>
     <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I use my background in marketing and user experience design to solve problems and deliver intuitive user experiences.">
     <!-- css -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap">
-    <link rel="stylesheet" href="../../../assets/css/normalize.min.css">
-    <link rel="stylesheet" href="../../../assets/css/aos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../../../assets/css/master.css">
     <style>
       .banner {
@@ -294,33 +294,21 @@
     </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../../../assets/scripts/modernizr.min.js"></script>
-    <script src="../../../assets/scripts/headroom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
     </script>
     <script>
-      const banner = document.querySelector('.banner .text');
-      const speed = 0.2;
-      banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
-         
-      function setScrollParallax() {
-          banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
-          window.requestAnimationFrame( setScrollParallax );
-      }
-      
-      window.requestAnimationFrame( setScrollParallax );
-    </script>
-    <script src="../../../assets/scripts/aos.js"></script>
-    <script>
       AOS.init({
         duration: 1000,
         offset: 35,
       });
     </script>
-    <script src="../../../assets/scripts/lazysizes.min.js"></script>
     <script>
       if ("loading" in HTMLImageElement.prototype) {
           var images = document.querySelectorAll('img[loading="lazy"]');
@@ -333,7 +321,7 @@
           });
       } else {
           var script = document.createElement("script");
-          script.src = "../../../assets/scripts/lazysizes.min.js";
+          script.src = "https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js";
           document.body.appendChild(script);
       }
     </script>
