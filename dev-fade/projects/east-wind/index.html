@@ -250,9 +250,11 @@
       headroom.init(); 
     </script>
     <script>
-        offset: 20,
+      AOS.init({
+        offset: 50,
         duration: 1000,
         easing: "ease-in-out-quart",
+      });
     </script>
     <script>
       if ("loading" in HTMLImageElement.prototype) {
