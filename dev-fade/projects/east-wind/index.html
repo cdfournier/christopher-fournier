@@ -250,10 +250,7 @@
       headroom.init(); 
     </script>
     <script>
-      AOS.init({
-        duration: 1000,
-        offset: 35,
-      });
+      AOS.init();
     </script>
     <script>
       if ("loading" in HTMLImageElement.prototype) {
@@ -270,6 +267,18 @@
           script.src = "https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js";
           document.body.appendChild(script);
       }
+    </script>
+    <script>
+      const banner = document.querySelector('.banner .text');
+      const speed = 0.2;
+      banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
+         
+      function setScrollParallax() {
+          banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+          window.requestAnimationFrame( setScrollParallax );
+      }
+      
+      window.requestAnimationFrame( setScrollParallax );
     </script>
   </body>
 </html>
