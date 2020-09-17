@@ -251,6 +251,8 @@
     }
   }
   .highlight.home {
+    background: $cream;
+    color: $green;
     h2 {
       @include sans-bold;
       font-size: 3.441rem;
