@@ -67,6 +67,7 @@
     position: relative;
     max-width: 32rem;
     @include serif-regular;
+    @include sans-bold;
   }
   p {
     position: relative;
@@ -187,7 +188,10 @@
       overflow: hidden;
       margin: 0 auto;
       figcaption {display: none;}
-      a {position: relative;}
+      a {
+        display: grid;
+        position: relative;
+      }
     }
     .text {margin: 1rem 0 0;}
     &::before {
@@ -247,6 +251,7 @@
     padding: 4rem 2rem;
     h2 {
       @include serif-regular;
+      @include sans-bold;
       font-size: 3.441rem;
     }
   }

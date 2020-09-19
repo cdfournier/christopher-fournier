@@ -16,6 +16,10 @@ html {
 
 @media screen and (prefers-reduced-motion: reduce) {
 	html {scroll-behavior: auto;}
+	* {
+  	animation: none !important;
+  	transition: none !important;
+	}
 }
 
 body, .body {
