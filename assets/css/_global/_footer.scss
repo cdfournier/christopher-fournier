@@ -27,7 +27,28 @@ footer.resume {
   background: white;
   nav ul {
     justify-content: center;
-    li {padding: 0 0.8rem;}
+    li {
+      padding: 0 0.8rem;
+      color: $green;
+      a {
+        color: $orange;
+        &:hover, &:focus {color: $green;}
+      }
+      a {
+        .icon {
+          span {
+            svg {fill: $orange;}
+          }
+        }
+        &:hover, &:focus {
+          .icon {
+            span {
+              svg {fill: $green;}
+            }
+          }
+        }
+      }
+    }
   }
   p {
     margin: 0 auto;
