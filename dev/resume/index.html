@@ -11,11 +11,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chris Fournier | My Resume</title>
-    <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I use my background in marketing and user experience design to solve problems and deliver intuitive user experiences.">
+    <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I use my background in marketing and user experience design design to solve problems and deliver intuitive user experiences.">
     <!-- css -->
     <link rel="stylesheet" href="../../assets/css/normalize.min.css">
     <link rel="stylesheet" href="../../assets/css/aos.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
+    <style>
+      .loader {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -124,6 +138,10 @@
     <script src="../../assets/scripts/modernizr.min.js"></script>
     <script src="../../assets/scripts/aos.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".loader").fadeOut(2049);
+      });
+
       AOS.init({
         duration: 1000,
         offset: 24,
