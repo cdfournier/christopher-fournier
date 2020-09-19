@@ -13,11 +13,22 @@
     <title>Chris Fournier | TransferX Case Study</title>
     <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I use my background in marketing and user experience design to solve problems and deliver intuitive user experiences.">
     <!-- css -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap">
     <link rel="stylesheet" href="../../../assets/css/normalize.min.css">
     <link rel="stylesheet" href="../../../assets/css/aos.css">
     <link rel="stylesheet" href="../../../assets/css/master.css">
     <style>
+      .loader {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
       .banner {
         display: flex;
         align-items: flex-start;
@@ -89,20 +100,21 @@
       }
     </style>
   </head>
-  <body data-aos="fade" data-aos-duration="4000" data-aos-delay="100">
+  <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8JF863"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="loader"></div>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <p><a href="#content" class="tag--skip">Skip to Content</a></p>
     </section>
     <header>
-      <nav id="header-navigation">
-        <ul aria-labelledby="header-navigation" data-aos="fade" data-aos-delay="2000" data-aos-once="true">
-          <li><a href="../../index.html" class="tag--header-home">Home</a></li>
-          <li><a href="../../resume/index.html" class="tag--header-resume">Resume</a></li>
+      <nav id="header-navigation" data-aos="fade" data-aos-delay="2000" data-aos-once="true">
+        <ul aria-labelledby="header-navigation">
+          <li>Home</li>
+          <li><a href="resume/index.html" class="tag--header-resume">Resume</a></li>
           <li><a href="#contact" class="tag--header-contact">Contact</a></li>
         </ul>
       </nav>
@@ -132,27 +144,15 @@
           <p>Design intuitively modern and sophisticated native app screens for a simple user experience that feels as familiar as fiat payment apps.</p>
         </div>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-02-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-02-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-02-1x.jpg 1x, ../../../assets/images/work-transferx-02-2x.jpg 2x" alt="Woman using the TransferX app to transfer funds reads her receipt">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-02-1x.jpg" srcset="../../../assets/images/work-transferx-02-1x.jpg 1x, ../../../assets/images/work-transferx-02-2x.jpg 2x" alt="Woman using the TransferX app to transfer funds reads her receipt">
           <figcaption>Woman using the TransferX app to transfer funds reads her receipt</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-03-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-03-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-03-1x.jpg 1x, ../../../assets/images/work-transferx-03-2x.jpg 2x" alt="User flips through the help screens on the TransferX app">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-03-1x.jpg" srcset="../../../assets/images/work-transferx-03-1x.jpg 1x, ../../../assets/images/work-transferx-03-2x.jpg 2x" alt="User flips through the help screens on the TransferX app">
           <figcaption>User flips through the help screens on the TransferX app</figcaption>
         </figure>
         <figure class="wide" data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-04-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-04-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-04-1x.jpg 1x, ../../../assets/images/work-transferx-04-2x.jpg 2x" alt="Woman checks her recent transfers on the TransferX app">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-04-1x.jpg" srcset="../../../assets/images/work-transferx-04-1x.jpg 1x, ../../../assets/images/work-transferx-04-2x.jpg 2x" alt="Woman checks her recent transfers on the TransferX app">
           <figcaption>Woman checks her recent transfers on the TransferX app</figcaption>
         </figure>
         <div class="text" data-aos="fade-up">
@@ -164,27 +164,15 @@
           <p>To get started on the branding I first created a mood board with images of people, places, and things in locations such as Kenya, Ethiopia, and Tanzania. The color palette emerged with vibrant reds, yellows, greens, and blues. Next I designed some patterns inspired by the arts and traditions of various African communities in order to provide some subtle texture. The founders had stated that they did not want the brand to feel &ldquo;sterile&rdquo;.</p>
         </div>
         <figure style="width: calc(33% - 1rem);" data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-08-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-08-2x.png">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-08-1x.png 1x, ../../../assets/images/work-transferx-08-2x.png 2x" alt="One of the brand patterns I designed for TransferX">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-07-1x.jpg" srcset="../../../assets/images/work-transferx-08-1x.png 1x, ../../../assets/images/work-transferx-08-2x.png 2x" alt="One of the brand patterns I designed for TransferX">
           <figcaption>One of the brand patterns I designed for TransferX</figcaption>
         </figure>
         <figure style="width: calc(33% - 1rem);" data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-09-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-09-2x.png">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-09-1x.png 1x, ../../../assets/images/work-transferx-09-2x.png 2x" alt="Another brand pattern I designed for TransferX">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-09-1x.png" srcset="../../../assets/images/work-transferx-09-1x.png 1x, ../../../assets/images/work-transferx-09-2x.png 2x" alt="Another brand pattern I designed for TransferX">
           <figcaption>Another brand pattern I designed for TransferX</figcaption>
         </figure>
         <figure style="width: calc(33% - 1rem);" data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-10-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-10-2x.png">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-10-1x.png 1x, ../../../assets/images/work-transferx-10-2x.png 2x" alt="And another brand pattern I designed for TransferX">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-10-1x.png" srcset="../../../assets/images/work-transferx-10-1x.png 1x, ../../../assets/images/work-transferx-10-2x.png 2x" alt="And another brand pattern I designed for TransferX">
           <figcaption>And another brand pattern I designed for TransferX</figcaption>
         </figure>
         <div class="text" data-aos="fade-up">
@@ -207,19 +195,11 @@
           </ol>
         </div>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-05-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-05-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-05-1x.jpg 1x, ../../../assets/images/work-transferx-05-2x.jpg 2x" alt="TransferX contact list screen on a phone near a notebook">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-05-1x.jpg" srcset="../../../assets/images/work-transferx-05-1x.jpg 1x, ../../../assets/images/work-transferx-05-2x.jpg 2x" alt="TransferX contact list screen on a phone near a notebook">
           <figcaption>TransferX contact list screen on a phone near a notebook</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-06-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-06-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-06-1x.jpg 1x, ../../../assets/images/work-transferx-06-2x.jpg 2x" alt="TransferX loading screen on a phone">
-          </picture>
+          <img loading="lazy" src="../../../assets/images/work-transferx-06-1x.jpg" srcset="../../../assets/images/work-transferx-06-1x.jpg 1x, ../../../assets/images/work-transferx-06-2x.jpg 2x" alt="TransferX loading screen on a phone">
           <figcaption>TransferX loading screen on a phone</figcaption>
         </figure>
         <div class="highlight bg-transferx" data-aos="fade-up">
@@ -230,41 +210,30 @@
           </div>
         </div>
         <figure class="wide" data-aos="fade-up">
-          <picture>
-            <source data-srcset="../../../assets/images/work-transferx-07-2x.webp" type="image/webp">
-            <source data-srcset="../../../assets/images/work-transferx-07-2x.jpg">
-            <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-transferx-07-1x.jpg 1x, ../../../assets/images/work-transferx-07-2x.jpg 2x" alt="TransferX recent transfers screen on a phone near an espresso">
+          <img loading="lazy" src="../../../assets/images/work-transferx-07-1x.jpg" srcset="../../../assets/images/work-transferx-07-1x.jpg 1x, ../../../assets/images/work-transferx-07-2x.jpg 2x" alt="TransferX recent transfers screen on a phone near an espresso">
           </picture>
           <figcaption>TransferX recent transfers screen on a phone near an espresso</figcaption>
         </figure>
       </section>
       <section class="up-next">
         <h1 data-aos="fade">More Projects</h1>
-        <div class="card" data-aos="fade">
-          <figure><a href="../delta-design-system/index.html" class="tag--next-delta-figure">
+        <div class="card">
+          <figure data-aos="fade"><a href="../delta-design-system/index.html" class="tag--next-delta-figure">
             <div class="overlay"></div>
-            <picture>
-              <source data-srcset="../../../assets/images/work-delta-design-01-2x.webp" type="image/webp">
-              <source data-srcset="../../../assets/images/work-delta-design-01-2x.jpg">
-              <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-delta-design-01-1x.jpg 1x, ../../../assets/images/work-delta-design-01-2x.jpg 2x" alt="The Delta Design System on a phone">
-            </picture></a>
+            <img loading="lazy" src="../../../assets/images/work-delta-design-01-1x.jpg" srcset="../../../assets/images/work-delta-design-01-1x.jpg 1x, ../../../assets/images/work-delta-design-01-2x.jpg 2x" alt="The Delta Design System on a phone"></a>
             <figcaption>The Delta Design System</figcaption>
           </figure>
-          <div class="text">
+          <div class="text" data-aos="fade">
             <h2><a href="../delta-design-system/index.html" class="tag--next-delta-text"><span>Design Systems</span>The Delta Design System</a></h2>
           </div>
         </div>
-        <div class="card" data-aos="fade">
-          <figure><a href="../mystuff/index.html" class="tag--next-mystuff-figure">
+        <div class="card">
+          <figure data-aos="fade"><a href="../mystuff/index.html" class="tag--next-mystuff-figure">
             <div class="overlay"></div>
-            <picture>
-              <source data-srcset="../../../assets/images/work-mystuff-01-2x.webp" type="image/webp">
-              <source data-srcset="../../../assets/images/work-mystuff-01-2x.jpg">
-              <img loading="lazy" class="lazyload" src="../../../assets/images/placeholder.png" data-src="../../../assets/images/work-mystuff-01-1x.jpg 1x, ../../../assets/images/work-mystuff-01-2x.jpg 2x" alt="Gentleman starting up the MyStuff app on his phone">
-            </picture></a>
+            <img loading="lazy" src="../../../assets/images/work-mystuff-01-1x.jpg" srcset="../../../assets/images/work-mystuff-01-1x.jpg 1x, ../../../assets/images/work-mystuff-01-2x.jpg 2x" alt="Gentleman starting up the MyStuff app on his phone"></a>
             <figcaption>MyStuff native web app</figcaption>
           </figure>
-          <div class="text">
+          <div class="text" data-aos="fade">
             <h2><a href="../mystuff/index.html" class="tag--next-mystuff-text"><span>Functional Prototypes</span>MyStuff</a></h2>
           </div>
         </div>
@@ -274,7 +243,7 @@
       <div id="contact" class="contact">
         <div class="text">
           <h1>Contact Me</h1>
-          <p>Let&rsquo;s build something together. <a href="mailto:chris.d.fournier@gmail.com?subject=Let's%20talk%20about%20work%2C%20coffee%2C%20or%20beer" class="tag--contact-transferx">Get in touch for work or chat</a>. Coffee or beer.</p>
+          <p>Let&rsquo;s build something together. <a href="mailto:chris.d.fournier@gmail.com?subject=Let's%20talk%20about%20work%2C%20coffee%2C%20or%20beer" class="tag--contact-eberhardt">Get in touch for work or chat</a>. Coffee or beer.</p>
         </div>
       </div>
       <nav id="footer-navigation">
@@ -296,46 +265,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../../assets/scripts/modernizr.min.js"></script>
     <script src="../../../assets/scripts/headroom.js"></script>
+    <script src="../../../assets/scripts/aos.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".loader").fadeOut(2049);
+      });
+
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
-    </script>
-    <script>
+
       const banner = document.querySelector('.banner .text');
       const speed = 0.2;
       banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
-         
       function setScrollParallax() {
           banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
           window.requestAnimationFrame( setScrollParallax );
-      }
-      
+      }      
       window.requestAnimationFrame( setScrollParallax );
-    </script>
-    <script src="../../../assets/scripts/aos.js"></script>
-    <script>
+
       AOS.init({
         duration: 1000,
-        offset: 35,
       });
-    </script>
-    <script src="../../../assets/scripts/lazysizes.min.js"></script>
-    <script>
-      if ("loading" in HTMLImageElement.prototype) {
-          var images = document.querySelectorAll('img[loading="lazy"]');
-          var sources = document.querySelectorAll("source[data-srcset]");
-          sources.forEach(function (source) {
-              source.srcset = source.dataset.srcset;
-          });
-          images.forEach(function (img) {
-              img.src = img.dataset.src;
-          });
-      } else {
-          var script = document.createElement("script");
-          script.src = "../../../assets/scripts/lazysizes.min.js";
-          document.body.appendChild(script);
-      }
     </script>
   </body>
 </html>
