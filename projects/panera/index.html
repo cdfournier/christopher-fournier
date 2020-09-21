@@ -48,23 +48,22 @@
     <meta name="msapplication-config" content="https://chris.blackcoffeeshoppe.com/assets/icons/browserconfig.xml">
     <meta name="wot-verification" content="61faca744d98b4807cee"/>
     <!-- css -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
-<!--
     <link rel="stylesheet" href="https://chris.blackcoffeeshoppe.com/assets/css/master.css" media="print" onload="this.media='all'">
--->
-    <link rel="stylesheet" href="../../assets/css/master.css">
-    <script type="application/ld+json">
-      {
-        "@context": "http://www.schema.org",
-        "@type": "person",
-        "name": "Chris Fournier",
-        "description" : "User Experience Designer",
-        "url": "https://chris.blackcoffeeshoppe.com/"
-      }
-    </script>
     <style>
+      .loader {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
       .banner {
         display: flex;
         align-items: flex-start;
@@ -97,8 +96,8 @@
       .banner h1 {
         position: relative;
         max-width: 32rem;
-        font-family: "Cardo", serif;
-        font-weight: 400;
+        font-family: "metropolis-bold", sans-serif;
+        font-weight: normal;
         font-style: normal; }
       .banner p {
         position: relative;
@@ -135,19 +134,29 @@
           background-image: url(https://chris.blackcoffeeshoppe.com/assets/images/work-panera-01-2x.jpg); }
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://www.schema.org",
+        "@type": "person",
+        "name": "Chris Fournier",
+        "description" : "User Experience Designer",
+        "url": "https://chris.blackcoffeeshoppe.com/"
+      }
+    </script>
   </head>
-  <body data-aos="fade" data-aos-duration="4000" data-aos-delay="100">
+  <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8JF863"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="loader"></div>
     <section class="skip">
       <h1 class="visuallyhidden">Skip to Content</h1>
       <p><a href="#content" class="tag--skip">Skip to Content</a></p>
     </section>
     <header>
-      <nav id="header-navigation">
-        <ul aria-labelledby="header-navigation" data-aos="fade" data-aos-delay="2000" data-aos-once="true">
+      <nav id="header-navigation" data-aos="fade" data-aos-delay="2000" data-aos-once="true">
+        <ul aria-labelledby="header-navigation">
           <li><a href="https://chris.blackcoffeeshoppe.com/index.html" class="tag--header-home">Home</a></li>
           <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html" class="tag--header-resume">Resume</a></li>
           <li><a href="#contact" class="tag--header-contact">Contact</a></li>
@@ -182,43 +191,23 @@
           <p>Highlight key strategic pillars to improve the site UX, drive engagement, brand messaging, and e-commerce across the user journey.</p>
         </div>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-2x.jpg 2x" alt="Ham, Egg, and Cheese but it is on wheat bread. OOOOOOH!">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-02-2x.jpg 2x" alt="Ham, Egg, and Cheese but it is on wheat bread. OOOOOOH!">
           <figcaption>Ham, Egg, and Cheese but it is on wheat bread. OOOOOOH!</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-2x.jpg 2x" alt="Example of part an authenticated user&rsquo;s rewards experience on the home page">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-04-2x.jpg 2x" alt="Example of part an authenticated user&rsquo;s rewards experience on the home page">
           <figcaption>Example of part an authenticated user's rewards experience on the home page</figcaption>
         </figure>
         <figure class="wide" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-2x.jpg 2x" alt="Panera Bread gift card promotion">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-06-2x.jpg 2x" alt="Panera Bread gift card promotion">
           <figcaption>Panera Bread gift card promotion</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-2x.jpg 2x" alt="Panera Bread menu example with branded values like antibiotic-free chicken">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-07-2x.jpg 2x" alt="Panera Bread menu example with branded values like antibiotic-free chicken">
           <figcaption>Panera Bread menu example with branded values like antibiotic-free chicken</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-2x.jpg 2x" alt="Panera Bread menu example with relevant content">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-desktop-08-2x.jpg 2x" alt="Panera Bread menu example with relevant content">
           <figcaption>Panera Bread menu example with relevant content</figcaption>
         </figure>
         <div class="text" data-aos="fade-up">
@@ -239,35 +228,19 @@
           </ol>
         </div>
         <figure class="small" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-01-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
           <figcaption>Examples of new Panera Bread mobile experiences</figcaption>
         </figure>
         <figure class="small" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-02-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
           <figcaption>Examples of new Panera Bread mobile experiences</figcaption>
         </figure>
         <figure class="small" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-05-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
           <figcaption>Examples of new Panera Bread mobile experiences</figcaption>
         </figure>
         <figure class="small" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-classic-mobile-06-2x.jpg 2x" alt="Examples of new Panera Bread mobile experiences">
           <figcaption>Examples of new Panera Bread mobile experiences</figcaption>
         </figure>
         <div class="text" data-aos="fade-up">
@@ -308,27 +281,15 @@
           <p>Check out the final <a href="https://cdfournier.github.io/panera-bread-prototype/" target="_blank" rel="noopener noreferrer" class="tag--offsite-panera">responsive prototype</a> I built as part of the project.</p>
         </div>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-2x.jpg 2x" alt="A woman enjoys the Panera Bread user experience on her laptop">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-03-2x.jpg 2x" alt="A woman enjoys the Panera Bread user experience on her laptop">
           <figcaption>A woman enjoys the Panera Bread user experience on her laptop</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-2x.jpg 2x" alt="Panera Bread user experience homepage on a desktop">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-02-2x.jpg 2x" alt="Panera Bread user experience homepage on a desktop">
           <figcaption>Panera Bread user experience homepage on a desktop</figcaption>
         </figure>
         <figure class="wide" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-2x.jpg 2x" alt="A woman explores the Panera Bread user experience on a phone">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-04-2x.jpg 2x" alt="A woman explores the Panera Bread user experience on a phone">
           <figcaption>A woman explores the Panera Bread user experience on a phone</figcaption>
         </figure>
         <div class="highlight bg-panera" data-aos="fade-up">
@@ -338,74 +299,49 @@
           </div>
         </div>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-2x.jpg 2x" alt="Panera Bread user experience on a tablet and phone">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-05-2x.jpg 2x" alt="Panera Bread user experience on a tablet and phone">
           <figcaption>Panera Bread user experience on a tablet and phone</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-2x.jpg 2x" alt="Panera Bread user experience on a laptop and phone">
-          </picture>
+            <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-07-2x.jpg 2x" alt="Panera Bread user experience on a laptop and phone">
           <figcaption>Panera Bread user experience on a laptop and phone</figcaption>
         </figure>
         <figure class="wide" data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-2x.jpg 2x" alt="A woman enjoys the Panera Bread user experience on a tablet">
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-06-2x.jpg 2x" alt="A woman enjoys the Panera Bread user experience on a tablet">
           </picture>
           <figcaption>A woman enjoys the Panera Bread user experience on a tablet</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-2x.jpg 2x" alt="Panera Bread user experience on a phone">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-08-2x.jpg 2x" alt="Panera Bread user experience on a phone">
           <figcaption>Panera Bread user experience on a phone</figcaption>
         </figure>
         <figure data-aos="fade-up">
-          <picture>
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-2x.webp" type="image/webp">
-            <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-2x.jpg">
-            <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-2x.jpg 2x" alt="Panera Bread user experience on a desktop">
-          </picture>
+          <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-panera-09-2x.jpg 2x" alt="Panera Bread user experience on a desktop">
           <figcaption>Panera Bread user experience on a desktop</figcaption>
         </figure>
       </section>
       <section class="up-next">
         <h1 data-aos="fade">More Projects</h1>
-        <div class="card" data-aos="fade">
-          <figure><a href="../eberhardt-design/index.html" class="tag--next-eberhardt-figure">
+        <div class="card">
+          <figure data-aos="fade"><a href="https://chris.blackcoffeeshoppe.com/projects/eberhardt-design/index.html" class="tag--next-eberhardt-figure">
             <div class="overlay"></div>
-            <picture>
-              <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-2x.webp" type="image/webp">
-              <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-2x.jpg">
-              <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-2x.jpg 2x" alt="Woman browsing the Eberhardt Design website on her tablet">
+            <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-eberhardt-design-01-2x.jpg 2x" alt="Woman browsing the Eberhardt Design website on her tablet">
             </picture></a>
             <figcaption>Eberhardt Design website design</figcaption>
           </figure>
-          <div class="text">
-            <h2><a href="../eberhardt-design/index.html" class="tag--next-eberhardt-text"><span>Case Study</span>Eberhardt Design</a></h2>
+          <div class="text" data-aos="fade">
+            <h2><a href="https://chris.blackcoffeeshoppe.com/projects/eberhardt-design/index.html" class="tag--next-eberhardt-text"><span>Case Study</span>Eberhardt Design</a></h2>
           </div>
         </div>
-        <div class="card" data-aos="fade">
-          <figure><a href="../enservio/index.html" class="tag--next-enservio-figure">
+        <div class="card">
+          <figure data-aos="fade"><a href="https://chris.blackcoffeeshoppe.com/projects/enservio/index.html" class="tag--next-enservio-figure">
             <div class="overlay"></div>
-            <picture>
-              <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-2x.webp" type="image/webp">
-              <source data-srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-2x.jpg">
-              <img loading="lazy" class="lazyload" src="https://chris.blackcoffeeshoppe.com/assets/images/placeholder.png" data-src="https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-2x.jpg 2x" alt="Enservio Customer Portal on a tablet on a table with coffee">
+            <img loading="lazy" src="https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-1x.jpg" srcset="https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-1x.jpg 1x, https://chris.blackcoffeeshoppe.com/assets/images/work-enservio-06-2x.jpg 2x" alt="Enservio Customer Portal on a tablet on a table with coffee">
             </picture></a>
             <figcaption>Enservio Customer Portal UX design</figcaption>
           </figure>
-          <div class="text">
-            <h2><a href="../enservio/index.html" class="tag--next-enservio-figure"><span>Case Study</span>Enservio</a></h2>
+          <div class="text" data-aos="fade">
+            <h2><a href="https://chris.blackcoffeeshoppe.com/projects/enservio/index.html" class="tag--next-enservio-figure"><span>Case Study</span>Enservio</a></h2>
           </div>
         </div>
       </section>
@@ -414,13 +350,13 @@
       <div id="contact" class="contact">
         <div class="text">
           <h1>Contact Me</h1>
-          <p>Let&rsquo;s build something together. <a href="mailto:chris.d.fournier@gmail.com?subject=Let's%20talk%20about%20work%2C%20coffee%2C%20or%20beer" class="tag--contact-panera">Get in touch for work or chat</a>. Coffee or beer.</p>
+          <p>Let&rsquo;s build something together. <a href="mailto:chris.d.fournier@gmail.com?subject=Let's%20talk%20about%20work%2C%20coffee%2C%20or%20beer" class="tag--contact-eberhardt">Get in touch for work or chat</a>. Coffee or beer.</p>
         </div>
       </div>
       <nav id="footer-navigation">
         <ul aria-labelledby="footer-navigation">
           <li><a href="https://chris.blackcoffeeshoppe.com/index.html" class="tag--footer-home">Home</a></li>
-          <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html" class="tag--footer-reusme">Resume</a></li>
+          <li><a href="https://chris.blackcoffeeshoppe.com/resume/index.html" class="tag--footer-resume">Resume</a></li>
           <li><a href="https://github.com/cdfournier" target="_blank" rel="noopener noreferrer">Github</a></li>
           <li><a href="https://www.linkedin.com/in/christopher-fournier/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="#top">
@@ -436,46 +372,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".loader").fadeOut(2049);
+      });
+
       var myElement = document.querySelector("header");
       var headroom  = new Headroom(myElement);
       headroom.init(); 
-    </script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        offset: 35,
-      });
-    </script>
-    <script>
+
       const banner = document.querySelector('.banner .text');
       const speed = 0.2;
       banner.style.transform = 'translateY( calc( var(--scrollparallax) * 1px ) )';
-         
       function setScrollParallax() {
           banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
           window.requestAnimationFrame( setScrollParallax );
-      }
-      
+      }      
       window.requestAnimationFrame( setScrollParallax );
-    </script>
-    <script>
-      if ("loading" in HTMLImageElement.prototype) {
-          var images = document.querySelectorAll('img[loading="lazy"]');
-          var sources = document.querySelectorAll("source[data-srcset]");
-          sources.forEach(function (source) {
-              source.srcset = source.dataset.srcset;
-          });
-          images.forEach(function (img) {
-              img.src = img.dataset.src;
-          });
-      } else {
-          var script = document.createElement("script");
-          script.src = "https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js";
-          document.body.appendChild(script);
-      }
+
+      AOS.init({
+        duration: 1000,
+      });
     </script>
   </body>
 </html>
