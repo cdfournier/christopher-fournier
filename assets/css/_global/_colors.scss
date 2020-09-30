@@ -27,6 +27,7 @@ $mystuff-purple: #7645b6; // purple
 $mystuff-bg: #fae9f3;
 $panera: #4c753f;
 $panera-bg: #e9f0e5;
+$pine-tree-motel-bg: #34421e;
 $transferx: #0d1e27;
 $transferx-bg: #f0f5f8;
 
@@ -64,6 +65,10 @@ $transferx-bg: #f0f5f8;
   }
 }
 
+.bg-delta {
+  background: $delta-design-bg;
+}
+
 .bg-eberhardt {
   background: $eberhardt-design;
   .text h2, p {
@@ -96,6 +101,10 @@ $transferx-bg: #f0f5f8;
       span::after {background: white;}
     }
   }
+}
+
+.bg-pine-tree {
+  background: $pine-tree-motel-bg;
 }
 
 .bg-transferx {

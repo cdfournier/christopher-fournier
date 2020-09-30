@@ -218,7 +218,7 @@
     }
     figcaption {display: none;}
   }
-  figure.small {width: 50%;}
+  figure.small {width: calc(50% - 1rem);}
   video {
     display: grid;
     width: 100%;
@@ -246,6 +246,8 @@
   }
   .text > p:first-child {padding: 0;}
   .highlight {
+    display: flex;
+    flex-direction: column;
     width: calc(100% + 4rem);
     margin: 1rem -2rem;
     padding: 4rem 2rem;
@@ -254,6 +256,11 @@
       @include sans-bold;
       font-size: 3.441rem;
     }
+  }
+  .highlight.figures {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .highlight.home {
     background: $cream;
@@ -306,7 +313,7 @@
       .text {padding: 0 2rem 0 0;}
     }
     .highlight p {font-size: 150%;}
-    figure.small {width: 25%;}
+    figure.small {width: calc(25% - 2rem;}
   }
 }
 

@@ -41,6 +41,9 @@
   .bg-cream .text {
     color: #384332; }
 
+.bg-delta {
+  background: #eeeeee; }
+
 .bg-eberhardt {
   background: #ffe151; }
   .bg-eberhardt .text h2, .bg-eberhardt p {
@@ -70,6 +73,9 @@
     color: white; }
     .bg-panera .text ol li span::after {
       background: white; }
+
+.bg-pine-tree {
+  background: #34421e; }
 
 .bg-transferx {
   color: white;
@@ -665,7 +671,7 @@ footer.error {
     .content figure figcaption, .up-next figure figcaption {
       display: none; }
   .content figure.small, .up-next figure.small {
-    width: 50%; }
+    width: calc(50% - 1rem); }
   .content video, .up-next video {
     display: grid;
     width: 100%;
@@ -690,6 +696,8 @@ footer.error {
   .content .text > p:first-child, .up-next .text > p:first-child {
     padding: 0; }
   .content .highlight, .up-next .highlight {
+    display: flex;
+    flex-direction: column;
     width: calc(100% + 4rem);
     margin: 1rem -2rem;
     padding: 4rem 2rem; }
@@ -701,6 +709,10 @@ footer.error {
       font-weight: normal;
       font-style: normal;
       font-size: 3.441rem; }
+  .content .highlight.figures, .up-next .highlight.figures {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .content .highlight.home, .up-next .highlight.home {
     background: #eef1e8;
     color: #384332; }
@@ -747,7 +759,7 @@ footer.error {
   .content .highlight p {
     font-size: 150%; }
   .content figure.small {
-    width: 25%; } }
+    width: calc(25% - 2rem); } }
 
 @media (min-width: 64rem) {
   .content .text {
