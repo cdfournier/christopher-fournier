@@ -7,8 +7,8 @@
          url("../fonts/metropolis/metropolis-light.woff") format("woff"),
          url("../fonts/metropolis/metropolis-light.woff2") format("woff2"),
          url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
@@ -19,8 +19,8 @@
          url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
          url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"),
          url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
@@ -31,26 +31,26 @@
          url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
          url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"),
          url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
 }
 
 @mixin sans-light {
   font-family: "metropolis-light", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 }
 
 @mixin sans-regular {
   font-family: "metropolis-regular", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 }
 
 @mixin sans-bold {
   font-family: "metropolis-bold", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 }
 
 @mixin serif-regular {

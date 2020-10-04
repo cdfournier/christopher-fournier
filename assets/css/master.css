@@ -3,24 +3,24 @@
   font-display: swap;
   src: url("../fonts/metropolis/metropolis-light.eot");
   src: url("../fonts/metropolis/metropolis-light.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-light.woff") format("woff"), url("../fonts/metropolis/metropolis-light.woff2") format("woff2"), url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: normal; }
 
 @font-face {
   font-family: "metropolis-regular";
   font-display: swap;
   src: url("../fonts/metropolis/metropolis-regular.eot");
   src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-regular.woff") format("woff"), url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"), url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: normal; }
 
 @font-face {
   font-family: "metropolis-bold";
   font-display: swap;
   src: url("../fonts/metropolis/metropolis-bold.eot");
   src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/metropolis/metropolis-bold.woff") format("woff"), url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"), url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: normal; }
 
 ::-moz-selection {
   color: white;
@@ -89,8 +89,8 @@ html {
   margin: 0 auto;
   padding: 0;
   font-family: "metropolis-regular", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 1.65;
   color: black;
@@ -132,14 +132,14 @@ h1, h2, h3, h4, h5, p {
 
 h1, h2, h3, h4, h5 {
   font-family: "metropolis-light", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   line-height: 1.125; }
   h1 span, h2 span, h3 span, h4 span, h5 span {
     display: block;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: 0.75rem;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -169,8 +169,8 @@ p {
 strong, em {
   display: inline;
   font-family: "metropolis-bold", sans-serif;
-  font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: normal; }
 
 small {
   font-size: 0.8rem; }
@@ -210,10 +210,11 @@ ol {
     line-height: 1.5; }
     ol li span {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
       flex-direction: column;
       position: relative;
       width: auto;
+      min-width: 3.5rem;
       margin: 0; }
     ol li span::before {
       display: flex;
@@ -223,8 +224,8 @@ ol {
       padding: 0 0.32rem 0 0;
       border-right: 1px solid #384332;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 150%;
       color: #384332;
       counter-increment: count;
@@ -248,8 +249,8 @@ dl {
   dl dt {
     margin: 1rem 0 0;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: 110%; }
   dl dd {
     margin: 0; }
@@ -278,8 +279,8 @@ h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus {
 
 p a, li a, small a {
   font-family: "metropolis-bold", sans-serif;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   color: #384332; }
 
 p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {
@@ -304,8 +305,8 @@ nav {
       margin: 0;
       padding: 0 0.8rem 0 0;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 0.8rem;
       color: #af4433; }
 
@@ -517,8 +518,8 @@ footer.error {
     font-weight: 400;
     font-style: normal;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
-    font-style: normal; }
+    font-style: normal;
+    font-weight: normal; }
   .banner p {
     position: relative;
     max-width: 32rem; }
@@ -550,8 +551,8 @@ footer.error {
     background-size: 40%; }
     .banner.home h1 {
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 500%; }
     .banner.home .signature {
       display: block;
@@ -684,8 +685,8 @@ footer.error {
     .content .text h1, .up-next .text h1 {
       padding: 0 0 1rem;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       line-height: 1; }
     .content .text h2.deliverables + p, .up-next .text h2.deliverables + p {
       padding: 0;
@@ -699,21 +700,27 @@ footer.error {
         margin: 1rem auto 0;
         background: #e5e5e5;
         content: ""; }
+    .content .text .group h1, .content .text .group h2, .up-next .text .group h1, .up-next .text .group h2 {
+      padding: 2rem 0 0; }
+    .content .text .group:first-of-type h2, .up-next .text .group:first-of-type h2 {
+      padding: 0; }
+    .content .text .group + ol, .up-next .text .group + ol {
+      padding: 1rem 0 0; }
   .content .text > p:first-child, .up-next .text > p:first-child {
     padding: 0; }
   .content .highlight, .up-next .highlight {
     display: flex;
     flex-direction: column;
     width: calc(100% + 4rem);
-    margin: 1rem -2rem;
+    margin: 2rem -2rem;
     padding: 4rem 2rem; }
     .content .highlight h2, .up-next .highlight h2 {
       font-family: "Cardo", serif;
       font-weight: 400;
       font-style: normal;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 3.441rem; }
   .content .highlight.figures, .up-next .highlight.figures {
     flex-direction: row;
@@ -724,8 +731,8 @@ footer.error {
     color: #384332; }
     .content .highlight.home h2, .up-next .highlight.home h2 {
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 3.441rem; }
   .content .highlight + .card, .up-next .highlight + .card {
     padding: 1rem 0 0; }
@@ -846,8 +853,8 @@ header.resume {
     display: block;
     width: 100%;
     font-family: "metropolis-light", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: 1rem;
     letter-spacing: 0; }
   header.resume h1:after {
@@ -863,8 +870,8 @@ header.resume {
     margin: 0;
     padding: 0 0 0 0.8rem;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: inherit;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -907,16 +914,16 @@ header.resume {
         display: block;
         width: 100%;
         font-family: "metropolis-bold", sans-serif;
-        font-weight: normal;
         font-style: normal;
+        font-weight: normal;
         text-transform: uppercase;
         color: #384332; }
       header.resume .contact-me ul li a {
         display: block;
         overflow: hidden;
         font-family: "metropolis-bold", sans-serif;
-        font-weight: normal;
         font-style: normal;
+        font-weight: normal;
         font-size: 0.8rem;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -986,8 +993,8 @@ main.resume {
     width: 100%;
     margin: 0 0 1rem;
     font-family: "metropolis-light", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: 1rem;
     letter-spacing: 0; }
   main.resume h1:after {
@@ -1003,8 +1010,8 @@ main.resume {
     margin: 0;
     padding: 0 0 0 0.8rem;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: inherit;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -1057,8 +1064,8 @@ main.resume article.history section {
     justify-content: space-between;
     padding: 0;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     font-size: 1rem;
     line-height: 1;
     text-transform: uppercase;
@@ -1073,8 +1080,8 @@ main.resume article.history section {
       margin: 0;
       padding: 0;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 75%;
       letter-spacing: 0;
       line-height: inherit;
@@ -1082,8 +1089,8 @@ main.resume article.history section {
   main.resume article.history section h3 + p {
     padding: 0.25rem 0 0.8rem 0;
     font-family: "metropolis-bold", sans-serif;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     color: #384332; }
   main.resume article.history section p:last-of-type {
     margin: 0 0 1rem;
@@ -1139,8 +1146,8 @@ main.resume section.skills ul {
       width: 100%;
       overflow: hidden;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 0.8rem;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -1231,16 +1238,16 @@ main.resume section.contact-me {
       display: block;
       width: 100%;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       text-transform: uppercase;
       color: #384332; }
     main.resume section.contact-me ul li a {
       display: block;
       overflow: hidden;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 0.8rem;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -1280,8 +1287,8 @@ body.error {
       padding: 0.5rem 1rem;
       border: 1px solid white;
       font-family: "metropolis-bold", sans-serif;
-      font-weight: normal;
       font-style: normal;
+      font-weight: normal;
       font-size: 0.8rem;
       letter-spacing: 1px;
       text-transform: uppercase;

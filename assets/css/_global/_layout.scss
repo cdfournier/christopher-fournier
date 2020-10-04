@@ -248,13 +248,18 @@
         content: "";
       }
     }
+    .group {
+      h1, h2 {padding: 2rem 0 0;}
+      &:first-of-type h2 {padding: 0;}
+    }
+    .group + ol {padding: 1rem 0 0;}
   }
   .text > p:first-child {padding: 0;}
   .highlight {
     display: flex;
     flex-direction: column;
     width: calc(100% + 4rem);
-    margin: 1rem -2rem;
+    margin: 2rem -2rem;
     padding: 4rem 2rem;
     h2 {
       @include serif-regular;
