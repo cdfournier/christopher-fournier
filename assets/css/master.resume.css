@@ -303,16 +303,15 @@ nav {
     nav ul li {
       display: inline-block;
       margin: 0;
-      padding: 0 0.8rem 0 0;
+      padding: 0 1rem 0 0;
       font-family: "metropolis-bold", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: #af4433; }
 
 @media (orientation: landscape), (min-width: 48rem) {
   nav ul li {
-    font-size: 1rem;
     padding: 0 1.5rem 0 0; } }
 
 a .icon span {
@@ -422,6 +421,9 @@ footer {
       max-width: none;
       margin: 0 auto;
       font-size: inherit; }
+  footer nav ul li {
+    font-size: 0.8rem;
+    padding: 0 0.8rem 0 0; }
   footer p {
     font-size: 0.64rem; }
 
@@ -432,7 +434,10 @@ footer.error {
 
 @media (min-width: 48rem) {
   footer .contact {
-    margin: 0 0 4rem; } }
+    margin: 0 0 4rem; }
+  footer nav ul li {
+    font-size: 1rem;
+    padding: 0 1.5rem 0 0; } }
 
 .skip {
   display: flex;
