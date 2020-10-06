@@ -772,11 +772,24 @@ footer.error {
   .banner.transferx {
     background-image: url(../../../assets/images/work-transferx-01-2x.jpg); } }
 
-.content.transferx .highlight.figures figure.gallery-one, .content.transferx .highlight.figures figure.gallery-three {
+.content.transferx .highlight.figures .gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.content.transferx .highlight.figures .gallery.one figure, .content.transferx .highlight.figures .gallery.three figure {
   width: calc((100% / 4) - 0.5rem); }
 
-.content.transferx .highlight.figures figure.gallery-two {
+.content.transferx .highlight.figures .gallery.two figure {
   width: calc((100% / 6) - 0.5rem); }
 
-.content.transferx .highlight.figures figure.gallery-four {
+.content.transferx .highlight.figures .gallery.four figure {
   width: calc((100% / 5) - 0.5rem); }
+
+@media (min-width: 48rem) {
+  .content.transferx .highlight.figures .gallery.one figure:nth-child(1), .content.transferx .highlight.figures .gallery.one figure:nth-child(3), .content.transferx .highlight.figures .gallery.three figure:nth-child(1), .content.transferx .highlight.figures .gallery.three figure:nth-child(3) {
+    width: calc(20% - 1rem); }
+  .content.transferx .highlight.figures .gallery.one figure:nth-child(2), .content.transferx .highlight.figures .gallery.one figure:nth-child(4), .content.transferx .highlight.figures .gallery.three figure:nth-child(2), .content.transferx .highlight.figures .gallery.three figure:nth-child(4) {
+    width: calc(30% - 1rem); } }
