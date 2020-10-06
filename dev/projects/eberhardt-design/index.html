@@ -255,7 +255,10 @@
       }      
       window.requestAnimationFrame( setScrollParallax );
 
-      AOS.init();
+      AOS.init({
+        duration: 1000,
+        offset: 35,
+      });
     </script>
   </body>
 </html>

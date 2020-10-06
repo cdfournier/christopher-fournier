@@ -248,7 +248,10 @@
       var headroom  = new Headroom(myElement);
       headroom.init(); 
 
-      AOS.init();
+      AOS.init({
+        duration: 1000,
+        offset: 35,
+      });
     </script>
   </body>
 </html>
