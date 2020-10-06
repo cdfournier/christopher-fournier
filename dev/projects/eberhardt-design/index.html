@@ -31,8 +31,7 @@
         z-index: 9999;
         width: 100%;
         height: 100%;
-        background: white;
-      }
+        background: white;}
       .banner {
         display: flex;
         align-items: flex-start;
@@ -48,9 +47,10 @@
         padding: 2rem;
         color: white;
         background-attachment: inherit;
+        background-image: url(../../../assets/images/work-eberhardt-design-01-1x.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover; }
+        background-size: cover;}
       .banner .overlay {
         display: block;
         position: absolute;
@@ -61,47 +61,43 @@
         background: black;
         opacity: 0.5;
         -webkit-backdrop-filter: saturate(180%);
-        backdrop-filter: saturate(180%); }
+        backdrop-filter: saturate(180%);}
       .banner h1 {
         position: relative;
         max-width: 32rem;
         font-family: "metropolis-bold", sans-serif;
         font-weight: normal;
-        font-style: normal; }
+        font-style: normal;}
       .banner p {
         position: relative;
-        max-width: 32rem; }
+        max-width: 32rem;}
       .banner .scroll {
         display: flex;
         align-items: center;
         flex-direction: row;
-        margin: 2rem 0 0; }
+        margin: 2rem 0 0;}
       .banner .scroll div {
         width: calc(100vh / 4);
         height: 1px;
         background: white;
-        opacity: 0.5; }
+        opacity: 0.5;}
       .banner .scroll p {
         width: auto;
         padding: 0 0 0 1rem;
         font-size: 0.8rem;
-        text-transform: uppercase; }
-      .banner .scroll p a {
-        color: white; }
-      .banner .scroll p a:hover, .banner .scroll p a:focus {
-        color: #af4433; }
+        text-transform: uppercase;}
+      .banner .scroll p a {color: white;}
+      .banner .scroll p a:hover, .banner .scroll p a:focus {color: #af4433;}
       @media (min-width: 48rem) {
         .banner {
           width: calc(100% - 4rem);
           min-height: calc(100vh - 4rem);
           margin: 2rem auto 0;
-          padding: 2rem; } }
-      .banner.eberhardt-design {
-        background-image: url(../../../assets/images/work-eberhardt-design-01-1x.jpg); }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
-        .banner.eberhardt-design {
-          background-image: url(../../../assets/images/work-eberhardt-design-01-2x.jpg); }
+          padding: 2rem;}
+        .banner.eberhardt-design {background-image: url(../../../assets/images/work-eberhardt-design-01-2x.jpg);}
       }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
+        .banner.eberhardt-design {background-image: url(../../../assets/images/work-eberhardt-design-01-2x.jpg);}}
     </style>
   </head>
   <body>
@@ -137,13 +133,19 @@
       </section>
       <section id="content" class="content">
         <h1 class="visuallyhidden">Eberhardt Design Website Project Details</h1>
-        <div class="text" data-aos="fade-up">
-          <h2 class="deliverables">Deliverables</h2>
-          <p>Strategy, web design, HTML, and SCSS/CSS</p>
-          <h2>Brief</h2>
-          <p>Refresh the site experience and update the content for the Eberhardt Design website.</p>
-          <h2>Audience</h2>
-          <p>Small business and startup founders, non-profit, and civic leaders looking to improve their product design.</p>
+        <div class="text">
+          <div class="group" data-aos="fade-up">
+            <h2 class="deliverables">Deliverables</h2>
+            <p>Strategy, web design, HTML, and SCSS/CSS</p>
+          </div>
+          <div class="group" data-aos="fade-up">
+            <h2>Brief</h2>
+            <p>Refresh the site experience and update the content for the Eberhardt Design website.</p>
+          </div>
+          <div class="group" data-aos="fade-up">
+            <h2>Audience</h2>
+            <p>Small business and startup founders, non-profit, and civic leaders looking to improve their product design.</p>
+          </div>
         </div>
         <figure data-aos="fade-up">
           <img loading="lazy" src="../../../assets/images/work-eberhardt-design-02-1x.jpg" srcset="../../../assets/images/work-eberhardt-design-02-1x.jpg 1x, ../../../assets/images/work-eberhardt-design-02-2x.jpg 2x" alt="Eberhardt Design page on a phone and a tablet">
@@ -158,7 +160,7 @@
           <figcaption>Eberhardt Design page on a phone</figcaption>
         </figure>
         <div class="highlight bg-eberhardt" data-aos="fade-up">
-          <div class="text">
+          <div class="text" data-aos="fade-up">
             <h2>Intended Outcomes</h2>
             <p>The goal was to attract potential clients looking to find a small, but experienced and strategic, design partner for their business. A secondary intent was to get the site into production as quickly as possible so that we could test the UX through outreach campaigns, iterating as needed.</p>
           </div>

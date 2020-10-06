@@ -31,7 +31,68 @@
         z-index: 9999;
         width: 100%;
         height: 100%;
-        background: white;
+        background: white;}
+      .banner {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: inherit;
+        min-height: 90vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 2rem;
+        color: #eef1e8;
+        background-attachment: inherit;
+        background-blend-mode: multiply;
+        background-image: none;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 40%;}
+      .banner h1 {
+        position: relative;
+        max-width: 500%;
+        font-family: "metropolis-bold", sans-serif;
+        font-weight: normal;
+        font-style: normal;}
+      .banner p {
+        position: relative;
+        max-width: 32rem;}
+      .banner.home .signature {
+        display: block;
+        height: 4.5rem;
+        overflow: hidden;
+        margin: 1rem 0 0;}
+      .banner .scroll {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 2rem 0 0;}
+      .banner .scroll div {
+        width: calc(100vh / 4);
+        height: 1px;
+        background: #384332;
+        opacity: 0.5;}
+      .banner .scroll p {
+        width: auto;
+        padding: 0 0 0 1rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;}
+      .banner .scroll p a {color: #384332;}
+      .banner .scroll p a:hover, .banner .scroll p a:focus {color: #af4433;}
+      @media (min-width: 48rem) {
+        .banner {
+          width: calc(100% - 4rem);
+          min-height: calc(100vh - 4rem);
+          margin: 2rem auto 0;
+          padding: 2rem;}
+        .banner {background-image: url(../assets/images/mug-2x.png);}
+      }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
+        .banner {background-image: url(../assets/images/mug-2x.png);}
       }
     </style>
   </head>
@@ -113,17 +174,17 @@
           </div>
         </div>
         <div class="highlight home" data-aos="fade-up">
-          <div class="text" data-aos="fade-up">
-            <h2 style="max-width: 40rem;">What I Do</h2>
+          <div class="text">
+            <h2 style="max-width: 40rem;" data-aos="fade-up">What I Do</h2>
             <dl style="max-width: 40rem;">
-              <dt>Digital Design</dt>
-              <dd>High-quality prototypes and experiences for mobile and web.</dd>
-              <dt>Development</dt>
-              <dd>Bridging the gap between design and deployment with html, css, and more.</dd>
-              <dt>Branding</dt>
-              <dd>Unique brand identities and strategic visions for successful differentiation.</dd>
-              <dt>Management</dt>
-              <dd>Detail-oriented leadership for projects, accounts, and traffic.</dd>
+              <dt data-aos="fade-up">Digital Design</dt>
+              <dd data-aos="fade-up">High-quality prototypes and experiences for mobile and web.</dd>
+              <dt data-aos="fade-up">Development</dt>
+              <dd data-aos="fade-up">Bridging the gap between design and deployment with html, css, and more.</dd>
+              <dt data-aos="fade-up">Branding</dt>
+              <dd data-aos="fade-up">Unique brand identities and strategic visions for successful differentiation.</dd>
+              <dt data-aos="fade-up">Management</dt>
+              <dd data-aos="fade-up">Detail-oriented leadership for projects, accounts, and traffic.</dd>
             </dl>
           </div>
         </div>
