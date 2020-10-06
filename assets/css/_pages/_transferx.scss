@@ -1,0 +1,20 @@
+// BANNER
+.banner.transferx {background-image: url(../../../assets/images/work-panera-01-1x.jpg);}
+
+@media (min-width: 48rem) {
+  .banner.transferx {background-image: url(../../../assets/images/work-transferx-01-2x.jpg);}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
+  .banner.transferx {background-image: url(../../../assets/images/work-transferx-01-2x.jpg);}
+}
+
+
+// CONTENT
+.content.transferx {
+  .highlight.figures {
+    figure.gallery-one, figure.gallery-three {width: calc((100% / 4) - 0.5rem);}
+    figure.gallery-two {width: calc((100% / 6) - 0.5rem);}
+    figure.gallery-four {width: calc((100% / 5) - 0.5rem);}
+  }
+}

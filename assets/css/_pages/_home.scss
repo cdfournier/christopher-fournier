@@ -1,0 +1,64 @@
+// HOME BANNER
+.banner {
+  &.home {
+    color: $green;
+    background: $cream;
+    background-blend-mode: multiply;
+    background-image: url(../images/mug-1x.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    h1 {
+      @include sans-bold;
+      font-size: 500%;
+    }
+  }
+  .signature {
+    display: block;
+    height: 4.5rem;
+    overflow: hidden;
+    margin: 1rem 0 0;
+    svg {
+      height: 100%;
+      fill: $green;
+    }
+  }
+  .scroll {
+    margin: 2rem 0 0 auto;
+    div {background: $green;}
+    p a {
+      color: $green;
+      &:hover, &:focus {color: $orange;}
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .banner.home {background-image: url(../assets/images/mug-2x.jpg);}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .banner.home {background-image: url(../images/mug-2x.jpg);}
+}
+
+@media (min-width: 64rem) {
+  .banner {
+    &.home {
+      background-image: url(../images/mug-2x.png);
+      .scroll {margin: 2rem 0 0;}
+    }
+  }
+}
+
+
+// HOME CONTENT
+.content {
+  .highlight.home {
+    background: $cream;
+    color: $green;
+    h2 {
+      @include sans-bold;
+      font-size: 3.441rem;
+    }
+  }
+}

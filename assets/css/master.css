@@ -524,34 +524,6 @@ footer.error {
         color: white; }
         .banner .scroll p a:hover, .banner .scroll p a:focus {
           color: #af4433; }
-  .banner.home {
-    color: #384332;
-    background: #eef1e8;
-    background-blend-mode: multiply;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 40%; }
-    .banner.home h1 {
-      font-family: "metropolis-bold", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 500%; }
-    .banner.home .signature {
-      display: block;
-      height: 4.5rem;
-      overflow: hidden;
-      margin: 1rem 0 0; }
-      .banner.home .signature svg {
-        height: 100%;
-        fill: #384332; }
-    .banner.home .scroll {
-      margin: 2rem 0 0 auto; }
-      .banner.home .scroll div {
-        background: #384332; }
-      .banner.home .scroll p a {
-        color: #384332; }
-        .banner.home .scroll p a:hover, .banner.home .scroll p a:focus {
-          color: #af4433; }
 
 @media (min-width: 48rem) {
   .banner {
@@ -559,12 +531,6 @@ footer.error {
     min-height: calc(100vh - 4rem);
     margin: 2rem auto 0;
     padding: 2rem; } }
-
-@media (min-width: 64rem) {
-  .banner.home {
-    background-image: url(../images/mug-2x.png); }
-    .banner.home .scroll {
-      margin: 2rem 0 0; } }
 
 .banner.delta-design {
   background-image: url(../images/work-delta-design-01-1x.jpg); }
@@ -705,14 +671,6 @@ footer.error {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
-  .content .highlight.home, .up-next .highlight.home {
-    background: #eef1e8;
-    color: #384332; }
-    .content .highlight.home h2, .up-next .highlight.home h2 {
-      font-family: "metropolis-bold", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 3.441rem; }
   .content .highlight + .card, .up-next .highlight + .card {
     padding: 1rem 0 0; }
     .content .highlight + .card::before, .up-next .highlight + .card::before {
