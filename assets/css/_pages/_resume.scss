@@ -7,6 +7,7 @@ RESUME SECTIONS
   experience
   skills
   contact-me-again
+  footer
 */
 
 
@@ -481,4 +482,43 @@ main.resume section.contact-me {
     width: 48%;
     padding: 0 0 0 2rem;
   }
+}
+
+// FOOTER
+footer.resume {
+  margin: 4rem 0 0;
+  background: white;
+  nav ul {
+    justify-content: center;
+    li {
+      padding: 0 0.5rem;
+      color: $green;
+      a {
+        color: $orange;
+        &:hover, &:focus {color: $green;}
+      }
+      a {
+        .icon {
+          span {
+            svg {fill: $orange;}
+          }
+        }
+        &:hover, &:focus {
+          .icon {
+            span {
+              svg {fill: $green;}
+            }
+          }
+        }
+      }
+    }
+  }
+  p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.no-touch footer.resume {
+  nav ul {padding-left: 1.25rem;}
 }
