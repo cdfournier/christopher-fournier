@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../assets/icons/favicon.ico">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/normalize.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/master.home.css">
     <style>
       .loader {
@@ -238,7 +238,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/scripts/modernizr.min.js"></script>
     <script src="../assets/scripts/headroom.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../assets/scripts/aos.js"></script>
     <script>
       $(document).ready(function () {
         $(".loader").fadeOut(2049);
@@ -250,7 +250,6 @@
 
       AOS.init({
         duration: 1000,
-        offset: 35,
       });
 
       document.addEventListener('aos:in', ({ detail }) => {
