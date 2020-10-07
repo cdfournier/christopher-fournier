@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="../assets/icons/favicon.ico">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/normalize.min.css">
-    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="../assets/css/master.home.css">
     <style>
       .loader {
@@ -132,7 +132,7 @@
         <div class="card">
           <figure data-aos="fade-up"><a href="projects/panera/index.html" class="tag--home-panera-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-panera-01-1x.jpg" srcset="../assets/images/work-panera-01-1x.jpg 1x, ../assets/images/work-panera-01-2x.jpg 2x" alt="Woman looking at a salad on her phone"></a>
+            <img loading="lazy" src="../assets/images/work-panera-01-1x.jpg" srcset="../assets/images/work-panera-01-1x.jpg 1x, ../assets/images/work-panera-01-2x.jpg 2x" alt="Woman looking at a salad on her phone"></a>
             <figcaption>Panera Bread UX design</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -143,7 +143,7 @@
         <div class="card reverse">
           <figure data-aos="fade-up"><a href="projects/eberhardt-design/index.html" class="tag--home-eberhardt-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-eberhardt-design-01-1x.jpg" srcset="../assets/images/work-eberhardt-design-01-1x.jpg 1x, ../assets/images/work-eberhardt-design-01-2x.jpg 2x" alt="Woman browsing the Eberhardt Design website on her tablet"></a>
+            <img loading="lazy" src="../assets/images/work-eberhardt-design-01-1x.jpg" srcset="../assets/images/work-eberhardt-design-01-1x.jpg 1x, ../assets/images/work-eberhardt-design-01-2x.jpg 2x" alt="Woman browsing the Eberhardt Design website on her tablet"></a>
             <figcaption>Eberhardt Design website design</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -154,7 +154,7 @@
         <div class="card">
           <figure data-aos="fade-up"><a href="projects/enservio/index.html" class="tag--home-enservio-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-enservio-01-1x.jpg" srcset="../assets/images/work-enservio-01-1x.jpg 1x, ../assets/images/work-enservio-01-2x.jpg 2x" alt="Enservio Customer Portal on a tablet on a table with coffee"></a>
+            <img loading="lazy" src="../assets/images/work-enservio-01-1x.jpg" srcset="../assets/images/work-enservio-01-1x.jpg 1x, ../assets/images/work-enservio-01-2x.jpg 2x" alt="Enservio Customer Portal on a tablet on a table with coffee"></a>
             <figcaption>Enservio Customer Portal UX design</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -165,7 +165,7 @@
         <div class="card reverse">
           <figure data-aos="fade-up"><a href="projects/transferx/index.html" class="tag--home-transferx-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-transferx-01-1x.jpg" srcset="../assets/images/work-transferx-01-1x.jpg 1x, ../assets/images/work-transferx-01-2x.jpg 2x" alt="Gentleman using the TransferX app on his phone"></a>
+            <img loading="lazy" src="../assets/images/work-transferx-01-1x.jpg" srcset="../assets/images/work-transferx-01-1x.jpg 1x, ../assets/images/work-transferx-01-2x.jpg 2x" alt="Gentleman using the TransferX app on his phone"></a>
             <figcaption>TransferX brand and product design</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -191,7 +191,7 @@
         <div class="card">
           <figure data-aos="fade-up"><a href="projects/delta-design-system/index.html" class="tag--home-delta-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-delta-design-01-1x.jpg" srcset="../assets/images/work-delta-design-01-1x.jpg 1x, ../assets/images/work-delta-design-01-2x.jpg 2x" alt="The Delta Design System on a phone"></a>
+            <img loading="lazy" src="../assets/images/work-delta-design-01-1x.jpg" srcset="../assets/images/work-delta-design-01-1x.jpg 1x, ../assets/images/work-delta-design-01-2x.jpg 2x" alt="The Delta Design System on a phone"></a>
             <figcaption>The Delta Design System</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -202,7 +202,7 @@
         <div class="card reverse">
           <figure data-aos="fade-up"><a href="projects/mystuff/index.html" class="tag--home-mystuff-figure">
             <div class="overlay"></div>
-            <img src="../assets/images/work-mystuff-01-1x.jpg" srcset="../assets/images/work-mystuff-01-1x.jpg 1x, ../assets/images/work-mystuff-01-2x.jpg 2x" alt="Gentleman starting up the MyStuff app on his phone"></a>
+            <img loading="lazy" src="../assets/images/work-mystuff-01-1x.jpg" srcset="../assets/images/work-mystuff-01-1x.jpg 1x, ../assets/images/work-mystuff-01-2x.jpg 2x" alt="Gentleman starting up the MyStuff app on his phone"></a>
             <figcaption>MyStuff native web app</figcaption>
           </figure>
           <div class="text" data-aos="fade-up">
@@ -238,7 +238,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/scripts/modernizr.min.js"></script>
     <script src="../assets/scripts/headroom.js"></script>
-    <script src="../assets/scripts/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       $(document).ready(function () {
         $(".loader").fadeOut(2049);
@@ -251,6 +251,14 @@
       AOS.init({
         duration: 1000,
         offset: 35,
+      });
+
+      document.addEventListener('aos:in', ({ detail }) => {
+        console.log('animated in', detail);
+      });
+      
+      document.addEventListener('aos:out', ({ detail }) => {
+        console.log('animated out', detail);
       });
     </script>
   </body>
