@@ -779,7 +779,7 @@ footer.error {
   width: calc(25% - 1rem); }
 
 .content.panera .highlight.figures figure.wide img {
-  max-width: 64rem;
+  max-width: 56rem;
   margin: 0 auto; }
 
 @media (min-width: 48rem) {
