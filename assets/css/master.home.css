@@ -763,11 +763,26 @@ footer.error {
     .up-next::before {
       width: 100%; } }
 
+.animate {
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  will-change: transform; }
+  .animate.visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+
 .banner.home {
   color: #384332;
   background: #eef1e8;
   background-blend-mode: multiply;
-  background-image: url(../images/mug-1x.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 40%; }
@@ -794,14 +809,6 @@ footer.error {
     color: #384332; }
     .banner .scroll p a:hover, .banner .scroll p a:focus {
       color: #af4433; }
-
-@media (min-width: 48rem) {
-  .banner.home {
-    background-image: url(../assets/images/mug-2x.png); } }
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .banner.home {
-    background-image: url(../images/mug-2x.png); } }
 
 @media (min-width: 64rem) {
   .banner.home {

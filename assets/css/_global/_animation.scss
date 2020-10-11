@@ -1,0 +1,11 @@
+// ANIMATIONS
+.animate {
+  opacity: 0;
+  @include transition (all, 1s, ease);
+//   @include transform (translateY(50%));
+  will-change: transform;
+  &.visible {
+    opacity: 1;
+    @include transform (translateY(0));
+  }
+}
