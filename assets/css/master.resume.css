@@ -344,23 +344,6 @@ a .icon span {
     .no-touch a .icon span svg {
       fill: #384332; }
 
-.no-touch a .overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.15;
-  -webkit-backdrop-filter: saturate(180%);
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -ms-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  backdrop-filter: saturate(180%); }
-
 .no-touch a:hover .icon span, .no-touch a:focus .icon span {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -369,9 +352,6 @@ a .icon span {
   transform: translateY(0); }
   .no-touch a:hover .icon span svg, .no-touch a:focus .icon span svg {
     fill: #af4433; }
-
-.no-touch a:hover .overlay, .no-touch a:focus .overlay {
-  opacity: 0; }
 
 header {
   display: grid;
@@ -595,7 +575,40 @@ footer.error {
         display: none; }
       .content .card figure a, .up-next .card figure a {
         display: grid;
-        position: relative; }
+        position: relative;
+        /*
+        &:hover, &:focus {
+          .overlay {opacity: 0;}
+          img {@include transform(scale(1.5));}
+        }
+*/ }
+        .content .card figure a .overlay, .up-next .card figure a .overlay {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: black;
+          opacity: 0.25;
+          -webkit-backdrop-filter: saturate(180%);
+          -webkit-transition: all 0.5s ease 0s;
+          -moz-transition: all 0.5s ease 0s;
+          -ms-transition: all 0.5s ease 0s;
+          -o-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+          backdrop-filter: saturate(180%); }
+        .content .card figure a img, .up-next .card figure a img {
+          -webkit-transition: all 5s ease 0s;
+          -moz-transition: all 5s ease 0s;
+          -ms-transition: all 5s ease 0s;
+          -o-transition: all 5s ease 0s;
+          transition: all 5s ease 0s;
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1); }
     .content .card .text, .up-next .card .text {
       margin: 1rem 0 0; }
     .content .card::before, .up-next .card::before {
@@ -700,6 +713,14 @@ footer.error {
     flex-direction: row; }
     .content .card figure {
       width: 45%; }
+    .content .card .no-touch figure a:hover img, .content .card .no-touch figure a:focus img {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5); }
+    .content .card .no-touch figure a:hover .overlay, .content .card .no-touch figure a:focus .overlay {
+      opacity: 0; }
     .content .card .text {
       width: 55%;
       margin: 0;
@@ -762,6 +783,27 @@ footer.error {
         padding: 0; }
     .up-next::before {
       width: 100%; } }
+
+.animate {
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  -o-transform: translateY(10%);
+  transform: translateY(10%);
+  will-change: transform; }
+  .animate.visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
 
 /*
 RESUME SECTIONS
@@ -1100,7 +1142,7 @@ main.resume section.skills ul {
       background-color: #384332;
       background-color: #e5e5e5;
       background-color: #eef1e8; }
-    main.resume section.skills ul li div > span {
+    main.resume section.skills ul li div > span.animate {
       display: block;
       width: 0;
       height: inherit;
@@ -1114,36 +1156,24 @@ main.resume section.skills ul {
       transition: all 0.5s ease 0s; }
   main.resume section.skills ul li:first-of-type {
     margin: 0; }
-  main.resume section.skills ul li.adobe div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.adobe div > span.animate.visible {
+    width: 95%;
     transition-property: width; }
-    main.resume section.skills ul li.adobe div > span[data-aos="loaded"].aos-animate {
-      width: 95%; }
-  main.resume section.skills ul li.code div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.code div > span.animate.visible {
+    width: 85%;
     transition-property: width; }
-    main.resume section.skills ul li.code div > span[data-aos="loaded"].aos-animate {
-      width: 85%; }
-  main.resume section.skills ul li.sketch div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.sketch div > span.animate.visible {
+    width: 83%;
     transition-property: width; }
-    main.resume section.skills ul li.sketch div > span[data-aos="loaded"].aos-animate {
-      width: 83%; }
-  main.resume section.skills ul li.analytics div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.analytics div > span.animate.visible {
+    width: 75%;
     transition-property: width; }
-    main.resume section.skills ul li.analytics div > span[data-aos="loaded"].aos-animate {
-      width: 75%; }
-  main.resume section.skills ul li.git div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.git div > span.animate.visible {
+    width: 58%;
     transition-property: width; }
-    main.resume section.skills ul li.git div > span[data-aos="loaded"].aos-animate {
-      width: 58%; }
-  main.resume section.skills ul li.accessibility div > span[data-aos="loaded"] {
-    width: 0%;
+  main.resume section.skills ul li.accessibility div > span.animate.visible {
+    width: 45%;
     transition-property: width; }
-    main.resume section.skills ul li.accessibility div > span[data-aos="loaded"].aos-animate {
-      width: 45%; }
 
 @media (min-width: 35.5rem) {
   main.resume section.skills ul {

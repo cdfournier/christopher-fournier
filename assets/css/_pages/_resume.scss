@@ -363,7 +363,7 @@ main.resume section.skills {
         background-color: $gray-platinum;
         background-color: $cream;
       }
-      div > span {
+      div > span.animate {
         display: block;
         width: 0;
         height: inherit;
@@ -374,35 +374,29 @@ main.resume section.skills {
       }
     }
     li:first-of-type {margin: 0;}
-    li.adobe div > span[data-aos="loaded"] {
-      width: 0%;
+    li.adobe div > span.animate.visible {
+      width: 95%;
       transition-property: width;  
-      &.aos-animate {width: 95%;}
     }
-    li.code div > span[data-aos="loaded"] {
-      width: 0%;
+    li.code div > span.animate.visible {
+      width: 85%;
       transition-property: width;  
-      &.aos-animate {width: 85%;}
     }
-    li.sketch div > span[data-aos="loaded"] {
-      width: 0%;
+    li.sketch div > span.animate.visible {
+      width: 83%;
       transition-property: width;  
-      &.aos-animate {width: 83%;}
     }
-    li.analytics div > span[data-aos="loaded"] {
-      width: 0%;
+    li.analytics div > span.animate.visible {
+      width: 75%;
       transition-property: width;  
-      &.aos-animate {width: 75%;}
     }
-    li.git div > span[data-aos="loaded"] {
-      width: 0%;
+    li.git div > span.animate.visible {
+      width: 58%;
       transition-property: width;  
-      &.aos-animate {width: 58%;}
     }
-    li.accessibility div > span[data-aos="loaded"] {
-      width: 0%;
+    li.accessibility div > span.animate.visible {
+      width: 45%;
       transition-property: width;  
-      &.aos-animate {width: 45%;}
     }
   }
 }
