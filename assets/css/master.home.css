@@ -575,13 +575,7 @@ footer.error {
         display: none; }
       .content .card figure a, .up-next .card figure a {
         display: grid;
-        position: relative;
-        /*
-        &:hover, &:focus {
-          .overlay {opacity: 0;}
-          img {@include transform(scale(1.5));}
-        }
-*/ }
+        position: relative; }
         .content .card figure a .overlay, .up-next .card figure a .overlay {
           display: block;
           position: absolute;
@@ -609,6 +603,14 @@ footer.error {
           -ms-transform: scale(1);
           -o-transform: scale(1);
           transform: scale(1); }
+        .content .card figure a:hover .overlay, .content .card figure a:focus .overlay, .up-next .card figure a:hover .overlay, .up-next .card figure a:focus .overlay {
+          opacity: 0; }
+        .content .card figure a:hover img, .content .card figure a:focus img, .up-next .card figure a:hover img, .up-next .card figure a:focus img {
+          -webkit-transform: scale(1.5);
+          -moz-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          -o-transform: scale(1.5);
+          transform: scale(1.5); }
     .content .card .text, .up-next .card .text {
       margin: 1rem 0 0; }
     .content .card::before, .up-next .card::before {

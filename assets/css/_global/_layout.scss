@@ -168,12 +168,10 @@
           @include transition(all, 5s, ease);
           @include transform(scale(1));
         }
-/*
         &:hover, &:focus {
           .overlay {opacity: 0;}
           img {@include transform(scale(1.5));}
         }
-*/
       }
     }
     .text {margin: 1rem 0 0;}
