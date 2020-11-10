@@ -593,11 +593,11 @@ footer.error {
           transition: all 0.5s ease 0s;
           backdrop-filter: saturate(180%); }
         .content .card figure a img, .up-next .card figure a img {
-          -webkit-transition: all 5s ease 0s;
-          -moz-transition: all 5s ease 0s;
-          -ms-transition: all 5s ease 0s;
-          -o-transition: all 5s ease 0s;
-          transition: all 5s ease 0s;
+          -webkit-transition: all 15s ease 0s;
+          -moz-transition: all 15s ease 0s;
+          -ms-transition: all 15s ease 0s;
+          -o-transition: all 15s ease 0s;
+          transition: all 15s ease 0s;
           -webkit-transform: scale(1);
           -moz-transform: scale(1);
           -ms-transform: scale(1);
