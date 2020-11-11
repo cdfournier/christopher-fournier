@@ -586,11 +586,11 @@ footer.error {
           background: black;
           opacity: 0.25;
           -webkit-backdrop-filter: saturate(180%);
-          -webkit-transition: all 0.5s ease 0s;
-          -moz-transition: all 0.5s ease 0s;
-          -ms-transition: all 0.5s ease 0s;
-          -o-transition: all 0.5s ease 0s;
-          transition: all 0.5s ease 0s;
+          -webkit-transition: all 1s ease 0s;
+          -moz-transition: all 1s ease 0s;
+          -ms-transition: all 1s ease 0s;
+          -o-transition: all 1s ease 0s;
+          transition: all 1s ease 0s;
           backdrop-filter: saturate(180%); }
         .content .card figure a img, .up-next .card figure a img {
           -webkit-transition: all 15s ease 0s;

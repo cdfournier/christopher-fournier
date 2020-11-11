@@ -161,7 +161,7 @@
           background: black;
           opacity: 0.25;
           -webkit-backdrop-filter: saturate(180%);
-          @include transition(all, 0.5s, ease);
+          @include transition(all, 1s, ease);
           backdrop-filter: saturate(180%);
         }
         img {
