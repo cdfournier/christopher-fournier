@@ -161,19 +161,17 @@
           background: black;
           opacity: 0.25;
           -webkit-backdrop-filter: saturate(180%);
-          @include transition(all, 0.5s, ease);
+          @include transition(all, 1s, ease);
           backdrop-filter: saturate(180%);
         }
         img {
-          @include transition(all, 5s, ease);
+          @include transition(all, 15s, ease);
           @include transform(scale(1));
         }
-/*
         &:hover, &:focus {
           .overlay {opacity: 0;}
           img {@include transform(scale(1.5));}
         }
-*/
       }
     }
     .text {margin: 1rem 0 0;}
