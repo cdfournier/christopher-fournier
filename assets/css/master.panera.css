@@ -831,3 +831,47 @@ footer.error {
 @media (min-width: 48rem) {
   .content.panera figure.small {
     width: calc(8.333333333333333% - 1rem) !important; } }
+
+body.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: black;
+  background-image: url(../images/banner-error-1x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  body.error .error {
+    padding: 2rem;
+    color: white; }
+    body.error .error .button {
+      display: inline-block;
+      width: auto;
+      margin: 2rem 0 0;
+      padding: 0.5rem 1rem;
+      border: 1px solid white;
+      font-family: "metropolis-bold", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: white;
+      background-color: transparent; }
+    body.error .error .button:hover, body.error .error .button:focus {
+      color: #384332;
+      background-color: white; }
+  body.error footer {
+    justify-content: flex-end;
+    color: white; }
+    body.error footer nav ul li a {
+      color: white; }
+    body.error footer nav ul li a:hover, body.error footer nav ul li a:focus {
+      color: #af4433; }
+
+.no-touch body.error {
+  background-attachment: fixed; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body.error {
+    background-image: url(../images/banner-error-2x.jpg); } }
