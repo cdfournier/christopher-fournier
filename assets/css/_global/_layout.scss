@@ -165,12 +165,10 @@
           backdrop-filter: saturate(180%);
         }
         img {
-          @include transition(all, 15s, ease);
-          @include transform(scale(1));
+          @include transition(all, 1.5s, ease);
         }
         &:hover, &:focus {
           .overlay {opacity: 0;}
-          img {@include transform(scale(1.5));}
         }
       }
     }
@@ -286,7 +284,6 @@
       figure {width: 45%;}
       .no-touch figure {
         a:hover, a:focus {
-          img {@include transform(scale(1.5));}
           .overlay {opacity: 0;}
         }
       }
