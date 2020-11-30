@@ -673,6 +673,8 @@ footer.error {
       font-style: normal;
       font-weight: normal;
       font-size: 3.441rem; }
+    .content .highlight p, .up-next .highlight p {
+      font-size: 125%; }
   .content .highlight.figures, .up-next .highlight.figures {
     flex-direction: row;
     flex-wrap: wrap;
