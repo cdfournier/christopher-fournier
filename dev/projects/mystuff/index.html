@@ -40,7 +40,7 @@
         z-index: 100;
         width: 100%;
         height: inherit;
-        min-height: 90vh;
+        min-height: 100vh;
         overflow: hidden;
         margin: 0;
         padding: 2rem;
@@ -61,32 +61,43 @@
         opacity: 0.5;
         -webkit-backdrop-filter: saturate(180%);
         backdrop-filter: saturate(180%);}
-      .banner h1 {
+      .banner .text {margin: 0 0 2rem;}
+      .banner .text h1 {
         position: relative;
         max-width: 32rem;
         font-family: "metropolis-bold", sans-serif;
-        font-weight: normal;
-        font-style: normal;}
-      .banner p {
+        font-style: normal;
+        font-weight: normal;}
+      .banner .text p {
         position: relative;
         max-width: 32rem;}
-      .banner .scroll {
+      .banner a.scroll {
         display: flex;
         align-items: center;
-        flex-direction: row;
-        margin: 2rem 0 0;}
-      .banner .scroll div {
-        width: calc(100vh / 4);
-        height: 1px;
-        background: white;
-        opacity: 0.5;}
-      .banner .scroll p {
-        width: auto;
-        padding: 0 0 0 1rem;
-        font-size: 0.8rem;
-        text-transform: uppercase;}
-      .banner .scroll p a {color: white;}
-      .banner .scroll p a:hover, .banner .scroll p a:focus {color: #af4433;}
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+        border: 1px dashed white;
+        border-radius: 100%;
+        background: transparent;}
+      .banner a.scroll span {
+        width: 1.5rem;
+        height: 1.5rem;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -ms-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;}
+      .banner a.scroll span svg {fill: white;}
+      .banner a.scroll:hover, .banner a.scroll:focus {background: white;}
+      .banner a.scroll:hover span, .banner a.scroll:focus span {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);}
+      .banner a.scroll:hover span svg, .banner a.scroll:focus span svg {fill: #384332;}
       .content figure.small {width: calc(33% - 1rem;)}
       @media (min-width: 48rem) {
         .banner {
@@ -96,10 +107,10 @@
           padding: 2rem;}
         .banner.mystuff {background-image: url(../../../assets/images/work-mystuff-01-2x.jpg);}
         .content figure.small {width: calc(16.666666666666667% - 1rem);}
-      }
+     }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
         .banner.mystuff {background-image: url(../../../assets/images/work-mystuff-01-2x.jpg);}
-      }
+     }
     </style>
   </head>
   <body>
@@ -127,11 +138,8 @@
         <div class="text">
           <h1><span>Personal Project</span>MyStuff</h1>
           <p>An app prototype that makes it wicked easy to organize the details of all your stuff.</p>
-          <div class="scroll">
-            <div></div>
-            <p><a href="#content" class="tag--scroll">Scroll</a></p>
-          </div>
         </div>
+        <a href="#content" class="tag--scroll scroll animate"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg></span></a>
       </section>
       <section id="content" class="content">
         <h1 class="visuallyhidden">MyStuff Project Details</h1>
