@@ -16,6 +16,7 @@ header.resume {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   position: relative;
   width: 100%;
@@ -108,27 +109,27 @@ header.resume {
       li a:hover, li a:focus {color: $green;}
     }
   }
-  .scroll {
+  a.scroll {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    position: absolute;
-    right: 2rem;
-    bottom: 1rem;
-    div {
-      width: calc(100vh / 4);
-      height: 1px;
-      background: $green;
-      opacity: 0.5;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    border: 1px dashed $green;
+    border-radius: 100%;
+    background: transparent;
+    span {
+      width: 1.5rem;
+      height: 1.5rem;
+      @include transition(all, 0.5s, ease);
+      svg {fill: $green;}
     }
-    p {
-      width: auto;
-      padding: 0 0 0 1rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      a {
-        color: $green;
-        &:hover, &:focus {color: $orange;}
+    &:hover, &:focus {
+      background: $green;
+      span {
+        @include transform (rotate(360deg));
+        svg {fill: white;}
       }
     }
   }

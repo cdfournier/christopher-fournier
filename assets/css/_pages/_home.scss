@@ -16,28 +16,29 @@
     display: block;
     height: 4.5rem;
     overflow: hidden;
-    margin: 1rem 0 0;
+    margin: 1rem 0 2rem;
     svg {
       height: 100%;
       fill: $green;
     }
   }
-  .scroll {
-    margin: 2rem 0 0 auto;
-    div {background: $green;}
-    p a {
-      color: $green;
-      &:hover, &:focus {color: $orange;}
+  a.scroll {
+    border: 1px dashed $green;
+    span {
+      svg {fill: $green;}
+    }
+    &:hover, &:focus {
+      background: $green;
+      span {
+        svg {fill: white;}
+      }
     }
   }
 }
 
 @media (min-width: 64rem) {
   .banner {
-    &.home {
-      background-image: url(../images/mug-2x.png);
-      .scroll {margin: 2rem 0 0;}
-    }
+    &.home {background-image: url(../images/mug-2x.png);}
   }
 }
 

@@ -42,7 +42,7 @@
   z-index: 100;
   width: 100%;
   height: inherit;
-  min-height: 90vh;
+  min-height: 100vh;
   overflow: hidden;
   margin: 0;
   padding: 2rem;
@@ -63,34 +63,39 @@
     -webkit-backdrop-filter: saturate(180%);
     backdrop-filter: saturate(180%);
   }
-  h1 {
-    position: relative;
-    max-width: 32rem;
-    @include sans-bold;
-  }
-  p {
-    position: relative;
-    max-width: 32rem;
-  }
-  .scroll {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin: 2rem 0 0;
-    div {
-      width: calc(100vh / 4);
-      height: 1px;
-      background: white;
-      opacity: 0.5;
+  .text {
+    margin: 0 0 2rem;
+    h1 {
+      position: relative;
+      max-width: 32rem;
+      @include sans-bold;
     }
     p {
-      width: auto;
-      padding: 0 0 0 1rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      a {
-        color: white;
-        &:hover, &:focus {color: $orange;}
+      position: relative;
+      max-width: 32rem;
+    }
+  }
+  a.scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    border: 1px dashed white;
+    border-radius: 100%;
+    background: transparent;
+    span {
+      width: 1.5rem;
+      height: 1.5rem;
+      @include transition(all, 0.5s, ease);
+      svg {fill: white;}
+    }
+    &:hover, &:focus {
+      background: white;
+      span {
+        @include transform (rotate(360deg));
+        svg {fill: $green;}
       }
     }
   }
